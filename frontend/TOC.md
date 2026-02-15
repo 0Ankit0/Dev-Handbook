@@ -1,0 +1,1270 @@
+# 📘 The Complete Frontend Developer Handbook
+## Mastering HTML, CSS, and JavaScript — From Fundamentals to Expert
+
+---
+
+# Table of Contents
+
+---
+
+## Part I: Foundations of the Web
+
+### Chapter 1: How the Web Works
+- 1.1 The Internet vs The Web
+  - Understanding the difference
+  - How information travels across the web
+- 1.2 Client-Server Architecture
+  - What is a client?
+  - What is a server?
+  - The request-response cycle
+- 1.3 HTTP Protocol
+  - HTTP methods (GET, POST, PUT, DELETE)
+  - Status codes and their meanings
+  - Headers and their purpose
+  - HTTPS and security
+- 1.4 DNS and Domain Names
+  - How domain names work
+  - IP addresses
+  - The DNS resolution process
+- 1.5 Web Browsers and Rendering Engines
+  - How browsers work
+  - Rendering engines: Blink, WebKit, Gecko
+  - Browser developer tools introduction
+- 1.6 Setting Up Your Development Environment
+  - Choosing a code editor
+  - Essential extensions for web development
+  - Working with the file system
+  - Live servers and local development
+
+---
+
+### Chapter 2: HTML — The Structure of the Web
+- 2.1 Introduction to HTML
+  - What is HTML?
+  - HTML's role in web development
+  - Brief history of HTML and HTML5
+- 2.2 HTML Document Structure
+  - DOCTYPE declaration
+  - The `<html>` root element
+  - The `<head>` section
+  - The `<body>` section
+  - Document metadata
+- 2.3 HTML Syntax Fundamentals
+  - Elements, tags, and attributes
+  - Opening and closing tags
+  - Void/self-closing elements
+  - Nesting and indentation
+  - Case sensitivity and best practices
+- 2.4 Text Content Elements
+  - Headings (`h1` through `h6`)
+  - Paragraphs (`p`)
+  - Line breaks and horizontal rules
+  - Bold, italic, and emphasis
+  - Superscript and subscript
+  - Marking, deleting, and inserting text
+- 2.5 Lists
+  - Unordered lists (`ul`, `li`)
+  - Ordered lists (`ol`, `li`)
+  - Description lists (`dl`, `dt`, `dd`)
+  - Nested lists
+  - List styling possibilities
+- 2.6 Links and Anchors
+  - The anchor element (`a`)
+  - Absolute vs relative URLs
+  - Link targets (`_blank`, `_self`)
+  - Anchor links and page navigation
+  - Email and telephone links
+  - Download links
+- 2.7 Images
+  - The `<img>` element
+  - `src` and `alt` attributes
+  - Width and height
+  - Image formats: JPEG, PNG, GIF, SVG, WebP
+  - Image optimization basics
+- 2.8 Block vs Inline Elements
+  - Understanding the difference
+  - Block-level elements
+  - Inline elements
+  - Inline-block behavior
+  - Content categories
+
+---
+
+### Chapter 3: CSS — Styling the Web
+- 3.1 Introduction to CSS
+  - What is CSS?
+  - CSS's role in web development
+  - CSS syntax overview
+- 3.2 Including CSS in HTML
+  - Inline styles with the `style` attribute
+  - Internal styles with `<style>`
+  - External stylesheets with `<link>`
+  - When to use each method
+- 3.3 CSS Selectors
+  - Universal selector (`*`)
+  - Type selectors (element names)
+  - Class selectors (`.classname`)
+  - ID selectors (`#idname`)
+  - Attribute selectors
+  - Grouping selectors
+- 3.4 Combinators and Specificity
+  - Descendant combinator (space)
+  - Child combinator (`>`)
+  - Adjacent sibling combinator (`+`)
+  - General sibling combinator (`~`)
+  - Understanding specificity
+  - Calculating specificity values
+  - The `!important` declaration
+- 3.5 Colors in CSS
+  - Named colors
+  - Hexadecimal colors
+  - RGB and RGBA
+  - HSL and HSLA
+  - Current color keyword
+  - Choosing color palettes
+- 3.6 Typography
+  - `font-family` property
+  - Web-safe fonts
+  - `font-size` and units (px, em, rem, %)
+  - `font-weight` and `font-style`
+  - `line-height`
+  - `text-align`, `text-decoration`, `text-transform`
+  - Letter and word spacing
+  - Using web fonts (Google Fonts)
+- 3.7 The Box Model
+  - Understanding the box model
+  - Content area
+  - Padding
+  - Border
+  - Margin
+  - `box-sizing` property
+  - Margin auto for centering
+  - Margin collapsing
+- 3.8 Background Properties
+  - `background-color`
+  - `background-image`
+  - `background-repeat`
+  - `background-position`
+  - `background-size`
+  - `background-attachment`
+  - Shorthand `background` property
+
+---
+
+### Chapter 4: JavaScript — Adding Interactivity
+- 4.1 Introduction to JavaScript
+  - What is JavaScript?
+  - JavaScript's role in web development
+  - Client-side vs server-side JavaScript
+- 4.2 Including JavaScript in HTML
+  - The `<script>` tag
+  - Internal scripts
+  - External script files
+  - Script placement: head vs body
+  - `defer` and `async` attributes
+- 4.3 Variables and Constants
+  - `var`, `let`, and `const`
+  - Declaring and initializing variables
+  - Naming conventions and rules
+  - When to use let vs const
+- 4.4 Data Types
+  - Primitive types: string, number, boolean
+  - `null` and `undefined`
+  - Symbol (introduction)
+  - BigInt (introduction)
+  - The `typeof` operator
+  - Type coercion
+- 4.5 Numbers and Math
+  - Working with numbers
+  - Arithmetic operators
+  - Increment and decrement
+  - The Math object
+  - Common Math methods
+  - Rounding, random numbers, min/max
+- 4.6 Strings
+  - Creating strings
+  - String concatenation
+  - Template literals
+  - String methods: `toUpperCase()`, `toLowerCase()`, `trim()`
+  - String methods: `slice()`, `substring()`, `split()`
+  - String methods: `indexOf()`, `includes()`, `startsWith()`, `endsWith()`
+  - String immutability
+- 4.7 Booleans and Comparisons
+  - Truthy and falsy values
+  - Comparison operators (`==`, `===`, `!=`, `!==`, `<`, `>`, `<=`, `>=`)
+  - Logical operators (`&&`, `||`, `!`)
+  - Short-circuit evaluation
+
+---
+
+### Chapter 5: Control Flow and Functions
+- 5.1 Conditional Statements
+  - The `if` statement
+  - The `else` clause
+  - The `else if` clause
+  - Nested conditionals
+  - Best practices for conditionals
+- 5.2 The Ternary Operator
+  - Syntax and usage
+  - Chaining ternary operators
+  - When to use vs avoid
+- 5.3 Switch Statements
+  - Syntax and structure
+  - Case fall-through
+  - The `default` case
+  - Switch vs if-else
+- 5.4 Loops
+  - The `for` loop
+  - The `while` loop
+  - The `do...while` loop
+  - `break` and `continue`
+  - Avoiding infinite loops
+- 5.5 Functions Introduction
+  - What is a function?
+  - Function declarations
+  - Function expressions
+  - Calling/invoking functions
+- 5.6 Function Parameters and Arguments
+  - Defining parameters
+  - Passing arguments
+  - Default parameters
+  - The arguments object (legacy)
+  - Rest parameters (`...args`)
+- 5.7 Return Values
+  - The `return` statement
+  - Functions without return
+  - Early returns
+- 5.8 Arrow Functions
+  - Arrow function syntax
+  - Implicit returns
+  - Arrow functions vs regular functions
+- 5.9 Scope
+  - Global scope
+  - Function scope
+  - Block scope
+  - Scope chain
+  - Variable shadowing
+- 5.10 Hoisting
+  - Hoisting with `var`
+  - Hoisting with function declarations
+  - Temporal dead zone (let/const)
+
+---
+
+## Part II: Deep Dive into HTML
+
+### Chapter 6: Semantic HTML
+- 6.1 Why Semantics Matter
+  - Benefits for accessibility
+  - Benefits for SEO
+  - Benefits for maintainability
+- 6.2 Document Structure Elements
+  - `<header>`
+  - `<nav>`
+  - `<main>`
+  - `<footer>`
+  - `<aside>`
+- 6.3 Content Sectioning Elements
+  - `<article>`
+  - `<section>`
+  - `<hgroup>`
+  - Proper heading hierarchy
+  - Document outline
+- 6.4 Text Semantics
+  - `<blockquote>` and `<cite>`
+  - `<q>` for inline quotes
+  - `<code>`, `<pre>`, `<kbd>`, `<samp>`
+  - `<address>`
+  - `<time>`
+  - `<figure>` and `<figcaption>`
+- 6.5 Lists Revisited
+  - Navigation menus with lists
+  - Breadcrumb navigation
+  - Definition lists for key-value pairs
+- 6.6 Semantic vs Non-Semantic Elements
+  - When to use `<div>`
+  - When to use `<span>`
+  - Avoiding divitis
+
+---
+
+### Chapter 7: Forms in HTML
+- 7.1 Introduction to Forms
+  - The `<form>` element
+  - `action` and `method` attributes
+  - Form submission basics
+- 7.2 Input Types
+  - Text inputs
+  - Password inputs
+  - Email, tel, url inputs
+  - Number inputs
+  - Date and time inputs
+  - File inputs
+  - Hidden inputs
+  - Submit and reset buttons
+- 7.3 Input Attributes
+  - `type`
+  - `name` and `id`
+  - `value`
+  - `placeholder`
+  - `required`
+  - `disabled` and `readonly`
+  - `maxlength` and `minlength`
+  - `min`, `max`, and `step`
+  - `pattern` (regex validation)
+  - `autofocus` and `autocomplete`
+- 7.4 Labels and Accessibility
+  - The `<label>` element
+  - Explicit labeling (`for` attribute)
+  - Implicit labeling (wrapping)
+  - Why labels are essential
+- 7.5 Other Form Elements
+  - `<textarea>`
+  - `<select>` and `<option>`
+  - `<optgroup>`
+  - `<datalist>`
+  - `<fieldset>` and `<legend>`
+- 7.6 Buttons
+  - `<button>` element
+  - `type` attribute: submit, reset, button
+  - Button vs input type="button"
+- 7.7 Form Validation
+  - HTML5 built-in validation
+  - Required fields
+  - Pattern matching
+  - Custom validation messages
+  - The `novalidate` attribute
+
+---
+
+### Chapter 8: HTML Tables
+- 8.1 When to Use Tables
+  - Tables for tabular data
+  - When NOT to use tables
+- 8.2 Basic Table Structure
+  - `<table>`
+  - `<tr>` (table row)
+  - `<td>` (table data)
+  - `<th>` (table header)
+- 8.3 Table Sections
+  - `<thead>` (table head)
+  - `<tbody>` (table body)
+  - `<tfoot>` (table foot)
+- 8.4 Spanning Cells
+  - `colspan` attribute
+  - `rowspan` attribute
+  - Complex table layouts
+- 8.5 Table Accessibility
+  - `<caption>` element
+  - `scope` attribute on headers
+  - `headers` attribute
+  - Summary for screen readers
+- 8.6 Styling Tables (Preview)
+  - Borders and spacing
+  - Zebra striping
+  - Responsive tables
+
+---
+
+### Chapter 9: Multimedia and Embedded Content
+- 9.1 Images Revisited
+  - Responsive images with `srcset`
+  - The `sizes` attribute
+  - The `<picture>` element
+  - Art direction
+  - Lazy loading (`loading="lazy"`)
+- 9.2 Audio
+  - The `<audio>` element
+  - Audio formats (MP3, WAV, OGG)
+  - Attributes: `controls`, `autoplay`, `loop`, `muted`
+  - Multiple source files
+- 9.3 Video
+  - The `<video>` element
+  - Video formats (MP4, WebM, OGG)
+  - Attributes: `controls`, `autoplay`, `loop`, `muted`, `poster`
+  - Multiple source files
+- 9.4 Embedded Content
+  - `<iframe>` basics
+  - YouTube embeds
+  - Google Maps embeds
+  - Security considerations
+- 9.5 SVG Basics
+  - What is SVG?
+  - Inline SVG
+  - SVG as image source
+  - Basic SVG shapes
+  - SVG accessibility
+
+---
+
+### Chapter 10: HTML5 APIs Overview
+- 10.1 What Are Web APIs?
+  - Browser APIs vs third-party APIs
+  - The `navigator` object
+  - The `window` object
+- 10.2 Web Storage API
+  - `localStorage`
+  - `sessionStorage`
+  - Storing and retrieving data
+  - Removing data
+  - Storage limits and security
+- 10.3 Geolocation API
+  - Getting user location
+  - Handling permissions
+  - Error handling
+- 10.4 History API
+  - Understanding browser history
+  - `history.pushState()`
+  - `history.replaceState()`
+  - The `popstate` event
+- 10.5 Canvas API Introduction
+  - The `<canvas>` element
+  - 2D drawing context
+  - Drawing shapes
+  - Drawing images
+
+---
+
+## Part III: Deep Dive into CSS
+
+### Chapter 11: CSS Layouts — Positioning
+- 11.1 The Display Property
+  - `block`
+  - `inline`
+  - `inline-block`
+  - `none`
+- 11.2 CSS Positioning
+  - `position: static` (default)
+  - `position: relative`
+  - `position: absolute`
+  - `position: fixed`
+  - `position: sticky`
+  - Positioning contexts
+- 11.3 The z-index
+  - Stacking context
+  - Creating new stacking contexts
+  - Common z-index issues
+- 11.4 Overflow
+  - `overflow: visible`, `hidden`, `scroll`, `auto`
+  - `overflow-x` and `overflow-y`
+  - Creating scrollable containers
+- 11.5 Float and Clear (Legacy)
+  - Historical use of floats
+  - `float: left`, `right`, `none`
+  - The `clear` property
+  - Clearfix technique
+  - Why floats are rarely used for layout now
+
+---
+
+### Chapter 12: CSS Layouts — Flexbox
+- 12.1 Introduction to Flexbox
+  - Why Flexbox?
+  - Flex container and flex items
+  - Enabling flexbox (`display: flex`)
+- 12.2 Flex Container Properties
+  - `flex-direction`: row, column, reverse
+  - `flex-wrap`: wrapping items
+  - `flex-flow` shorthand
+  - `justify-content`: main axis alignment
+  - `align-items`: cross axis alignment
+  - `align-content`: multiple lines alignment
+  - `gap`, `row-gap`, `column-gap`
+- 12.3 Flex Item Properties
+  - `flex-grow`: expanding items
+  - `flex-shrink`: shrinking items
+  - `flex-basis`: initial size
+  - The `flex` shorthand
+  - `align-self`: individual alignment
+  - `order`: rearranging items
+- 12.4 Common Flexbox Patterns
+  - Centering elements
+  - Equal height columns
+  - Sticky footer
+  - Navigation menus
+  - Card layouts
+- 12.5 Flexbox Best Practices
+  - Accessibility considerations
+  - Browser support
+  - Common pitfalls
+
+---
+
+### Chapter 13: CSS Layouts — Grid
+- 13.1 Introduction to CSS Grid
+  - Why Grid?
+  - Grid container and grid items
+  - Enabling grid (`display: grid`)
+- 13.2 Defining the Grid
+  - `grid-template-columns`
+  - `grid-template-rows`
+  - The `fr` unit
+  - `minmax()`
+  - `repeat()`
+  - `auto-fill` and `auto-fit`
+- 13.3 Grid Gaps
+  - `row-gap` and `column-gap`
+  - The `gap` shorthand
+- 13.4 Placing Grid Items
+  - Line-based placement
+  - `grid-column` and `grid-row`
+  - Spanning multiple tracks
+- 13.5 Grid Template Areas
+  - Named grid areas
+  - `grid-template-areas`
+  - Visual layout definition
+  - Responsive grid areas
+- 13.6 Grid Alignment
+  - `justify-items` and `align-items`
+  - `justify-content` and `align-content`
+  - `place-items` and `place-content`
+- 13.7 Common Grid Patterns
+  - Holy grail layout
+  - Dashboard layouts
+  - Photo galleries
+  - Magazine-style layouts
+- 13.8 Grid vs Flexbox
+  - When to use each
+  - Combining Grid and Flexbox
+
+---
+
+### Chapter 14: Responsive Web Design
+- 14.1 Responsive Design Fundamentals
+  - What is responsive design?
+  - Mobile-first vs desktop-first
+  - The viewport meta tag
+- 14.2 Fluid Layouts
+  - Percentage widths
+  - `max-width` and `min-width`
+  - Fluid typography
+  - `clamp()` function
+- 14.3 Media Queries
+  - `@media` syntax
+  - Media types: screen, print, all
+  - Media features: width, height, orientation
+  - Logical operators: and, or, not
+  - Breakpoint strategies
+  - Common breakpoints
+- 14.4 Responsive Images
+  - `srcset` and `sizes` attributes
+  - The `<picture>` element
+  - Art direction
+  - CSS background images
+- 14.5 Responsive Typography
+  - Relative units: em, rem, vw, vh
+  - Fluid typography techniques
+  - Readability considerations
+- 14.6 Responsive Patterns
+  - Responsive navigation
+  - Responsive tables
+  - Responsive forms
+  - Responsive video
+- 14.7 Mobile Considerations
+  - Touch targets
+  - Font sizes on mobile
+  - Avoiding horizontal scroll
+  - Performance on mobile
+
+---
+
+### Chapter 15: Advanced CSS Styling
+- 15.1 Pseudo-Classes
+  - User action: `:hover`, `:active`, `:focus`
+  - Form states: `:checked`, `:disabled`, `:valid`, `:invalid`
+  - Structural: `:first-child`, `:last-child`, `:nth-child()`
+  - `:not()`
+  - Modern pseudo-classes: `:is()`, `:where()`, `:has()`
+- 15.2 Pseudo-Elements
+  - `::before` and `::after`
+  - `::first-letter` and `::first-line`
+  - `::selection`
+  - Content property
+- 15.3 CSS Transitions
+  - Transition properties
+  - `transition-property`
+  - `transition-duration`
+  - `transition-timing-function`
+  - `transition-delay`
+  - Shorthand syntax
+- 15.4 CSS Transforms
+  - `translate()`
+  - `rotate()`
+  - `scale()`
+  - `skew()`
+  - Combining transforms
+  - `transform-origin`
+- 15.5 CSS Animations
+  - `@keyframes` rule
+  - Animation properties
+  - `animation-name`, `animation-duration`
+  - `animation-timing-function`
+  - `animation-delay`
+  - `animation-iteration-count`
+  - `animation-direction`
+  - `animation-fill-mode`
+  - Shorthand syntax
+  - Performance considerations
+- 15.6 CSS Variables (Custom Properties)
+  - Defining custom properties
+  - Using `var()` function
+  - Scope and inheritance
+  - Fallback values
+  - Dynamic updates with JavaScript
+- 15.7 CSS Filters and Effects
+  - `filter` property
+  - `blur()`, `brightness()`, `contrast()`
+  - `drop-shadow()`
+  - `backdrop-filter`
+- 15.8 Modern CSS Features
+  - `aspect-ratio`
+  - `object-fit` and `object-position`
+  - `scroll-behavior`
+  - `scroll-snap`
+  - Container queries (introduction)
+
+---
+
+### Chapter 16: CSS Architecture and Organization
+- 16.1 The Challenges of CSS
+  - Specificity wars
+  - Naming conflicts
+  - Code duplication
+- 16.2 CSS Naming Conventions
+  - Meaningful class names
+  - BEM (Block Element Modifier)
+  - SMACSS introduction
+  - OOCSS principles
+- 16.3 Organizing CSS Files
+  - File structure strategies
+  - Component-based organization
+  - Using `@import` (and its problems)
+  - Modern CSS file organization
+- 16.4 CSS Specificity Management
+  - Low-specificity selectors
+  - Avoiding ID selectors
+  - Managing `!important`
+- 16.5 CSS Reset and Normalize
+  - What is a CSS reset?
+  - Normalize.css
+  - Modern CSS resets
+- 16.6 Writing Maintainable CSS
+  - Comments and documentation
+  - Consistent formatting
+  - Refactoring strategies
+
+---
+
+## Part IV: Deep Dive into JavaScript
+
+### Chapter 17: Objects in JavaScript
+- 17.1 Introduction to Objects
+  - What is an object?
+  - Creating objects with object literals
+  - Properties and methods
+- 17.2 Accessing Properties
+  - Dot notation
+  - Bracket notation
+  - When to use each
+- 17.3 Working with Objects
+  - Adding properties
+  - Modifying properties
+  - Deleting properties
+  - Checking if property exists (`in` operator, `hasOwnProperty()`)
+- 17.4 Object Methods
+  - `Object.keys()`
+  - `Object.values()`
+  - `Object.entries()`
+  - `Object.assign()`
+  - `Object.freeze()` and `Object.seal()`
+- 17.5 Object Destructuring
+  - Basic destructuring
+  - Renaming variables
+  - Default values
+  - Nested destructuring
+- 17.6 The Spread Operator with Objects
+  - Copying objects
+  - Merging objects
+  - Shallow copy vs deep copy
+- 17.7 `this` Keyword
+  - `this` in global context
+  - `this` in functions
+  - `this` in methods
+  - `this` and arrow functions
+  - `call()`, `apply()`, `bind()`
+
+---
+
+### Chapter 18: Arrays in JavaScript
+- 18.1 Introduction to Arrays
+  - What is an array?
+  - Creating arrays
+  - Accessing elements
+  - The `length` property
+- 18.2 Basic Array Operations
+  - Adding elements: `push()`, `unshift()`
+  - Removing elements: `pop()`, `shift()`
+  - Removing anywhere: `splice()`
+  - Copying portions: `slice()`
+- 18.3 Array Searching and Checking
+  - `indexOf()` and `lastIndexOf()`
+  - `includes()`
+  - `find()` and `findIndex()`
+  - `some()` and `every()`
+- 18.4 Array Transformation Methods
+  - `map()`
+  - `filter()`
+  - `reduce()`
+  - `sort()`
+  - `reverse()`
+  - Chaining methods
+- 18.5 Other Array Methods
+  - `join()` and `split()`
+  - `concat()`
+  - `flat()` and `flatMap()`
+  - `fill()`
+- 18.6 Array Destructuring
+  - Basic destructuring
+  - Skipping elements
+  - Rest pattern with arrays
+- 18.7 The Spread Operator with Arrays
+  - Copying arrays
+  - Merging arrays
+  - Spread in function calls
+- 18.8 Iterating Arrays
+  - `for` loop
+  - `for...of` loop
+  - `forEach()` method
+- 18.9 Multidimensional Arrays
+  - Creating nested arrays
+  - Accessing nested elements
+  - Iterating nested arrays
+
+---
+
+### Chapter 19: Functions Deep Dive
+- 19.1 Function Declarations vs Expressions
+  - Declaration syntax
+  - Expression syntax
+  - Hoisting differences
+- 19.2 First-Class Functions
+  - Functions as values
+  - Passing functions as arguments
+  - Returning functions from functions
+- 19.3 Higher-Order Functions
+  - What are higher-order functions?
+  - Creating your own
+  - Practical examples
+- 19.4 Callback Functions
+  - What is a callback?
+  - Synchronous callbacks
+  - Event callbacks
+- 19.5 Closures
+  - What is a closure?
+  - How closures work
+  - Practical use cases
+  - Private data with closures
+- 19.6 Immediately Invoked Function Expressions (IIFE)
+  - IIFE syntax
+  - Use cases
+  - Creating private scope
+- 19.7 Pure Functions
+  - What is a pure function?
+  - Side effects
+  - Benefits of pure functions
+- 19.8 Recursion
+  - What is recursion?
+  - Base case and recursive case
+  - Examples and use cases
+  - Stack overflow considerations
+
+---
+
+### Chapter 20: The DOM — Document Object Model
+- 20.1 Understanding the DOM
+  - What is the DOM?
+  - DOM tree structure
+  - Nodes vs elements
+  - The `document` object
+- 20.2 Selecting Elements
+  - `getElementById()`
+  - `getElementsByClassName()`
+  - `getElementsByTagName()`
+  - `querySelector()`
+  - `querySelectorAll()`
+  - Performance considerations
+- 20.3 Traversing the DOM
+  - Parent nodes: `parentNode`, `parentElement`
+  - Child nodes: `childNodes`, `children`, `firstElementChild`, `lastElementChild`
+  - Siblings: `nextElementSibling`, `previousElementSibling`
+- 20.4 Manipulating Elements
+  - `textContent` vs `innerHTML`
+  - `innerText`
+  - Changing styles: `style` property
+  - Manipulating classes: `className`, `classList`
+  - Manipulating attributes: `getAttribute()`, `setAttribute()`, `removeAttribute()`
+  - Data attributes: `dataset`
+- 20.5 Creating and Removing Elements
+  - `createElement()`
+  - `createTextNode()`
+  - `appendChild()`
+  - `insertBefore()`
+  - `replaceChild()`
+  - `removeChild()`
+  - `remove()`
+  - `cloneNode()`
+- 20.6 DOM Performance
+  - Reflows and repaints
+  - Batch DOM operations
+  - Document fragments
+  - Virtual DOM concept (introduction)
+
+---
+
+### Chapter 21: Events in JavaScript
+- 21.1 Introduction to Events
+  - What are events?
+  - Event types overview
+  - Event handlers
+- 21.2 Adding Event Listeners
+  - `addEventListener()` method
+  - Removing listeners with `removeEventListener()`
+  - Inline event handlers (and why to avoid them)
+  - `onclick` and similar properties
+- 21.3 The Event Object
+  - Event object properties
+  - `target` vs `currentTarget`
+  - `type`, `timeStamp`, and other properties
+- 21.4 Mouse Events
+  - `click`, `dblclick`
+  - `mousedown`, `mouseup`, `mousemove`
+  - `mouseenter`, `mouseleave`, `mouseover`, `mouseout`
+  - Mouse coordinates
+- 21.5 Keyboard Events
+  - `keydown`, `keyup`, `keypress` (deprecated)
+  - Key codes and key values
+  - Modifier keys (Shift, Ctrl, Alt)
+- 21.6 Form Events
+  - `submit`
+  - `input`, `change`
+  - `focus`, `blur`
+  - `reset`
+- 21.7 Window and Document Events
+  - `load`, `DOMContentLoaded`
+  - `resize`
+  - `scroll`
+  - `beforeunload`
+- 21.8 Event Propagation
+  - Capturing phase
+  - Bubbling phase
+  - `stopPropagation()`
+  - `stopImmediatePropagation()`
+- 21.9 Event Delegation
+  - What is event delegation?
+  - Benefits of delegation
+  - Implementing delegation
+  - When to use delegation
+- 21.10 Preventing Default Behavior
+  - `preventDefault()`
+  - Common use cases
+  - `return false` in inline handlers
+
+---
+
+### Chapter 22: Forms and JavaScript
+- 22.1 Accessing Form Elements
+  - The `forms` collection
+  - Accessing form elements by name
+  - The `elements` collection
+- 22.2 Working with Input Values
+  - Getting values
+  - Setting values
+  - Handling different input types
+- 22.3 Form Validation with JavaScript
+  - When to validate
+  - Validation functions
+  - Displaying error messages
+  - The Constraint Validation API
+  - `checkValidity()`, `setCustomValidity()`
+- 22.4 Handling Form Submission
+  - The `submit` event
+  - Preventing default submission
+  - Validating on submit
+  - AJAX form submission (introduction)
+- 22.5 Real-Time Validation
+  - Input events for live validation
+  - Debouncing input handlers
+  - User feedback patterns
+- 22.6 Working with Special Inputs
+  - Checkboxes and radio buttons
+  - Select dropdowns
+  - File inputs
+  - Date inputs
+
+---
+
+### Chapter 23: Asynchronous JavaScript
+- 23.1 Synchronous vs Asynchronous
+  - Understanding synchronous code
+  - Why asynchronous code?
+  - The JavaScript event loop
+  - Call stack, callback queue, event loop
+- 23.2 Callbacks
+  - What is a callback?
+  - Asynchronous callbacks
+  - Callback hell
+  - Error handling with callbacks
+- 23.3 Promises
+  - What is a Promise?
+  - Promise states: pending, fulfilled, rejected
+  - Creating a Promise
+  - `then()`, `catch()`, `finally()`
+  - Promise chaining
+  - Error handling with promises
+- 23.4 Promise Methods
+  - `Promise.all()`
+  - `Promise.allSettled()`
+  - `Promise.race()`
+  - `Promise.any()`
+- 23.5 Async/Await
+  - `async` functions
+  - The `await` keyword
+  - Error handling with try/catch
+  - Parallel async operations
+  - Sequential async operations
+- 23.6 Fetch API
+  - Making HTTP requests
+  - GET requests
+  - POST requests
+  - Handling responses
+  - Error handling
+  - Request headers
+  - CORS (Cross-Origin Resource Sharing)
+- 23.7 Working with JSON
+  - What is JSON?
+  - `JSON.parse()`
+  - `JSON.stringify()`
+  - Handling JSON responses
+- 23.8 Practical AJAX Examples
+  - Loading content dynamically
+  - Search with autocomplete
+  - Infinite scroll
+
+---
+
+### Chapter 24: JavaScript and Browser APIs
+- 24.1 Timers
+  - `setTimeout()`
+  - `setInterval()`
+  - Clearing timers: `clearTimeout()`, `clearInterval()`
+  - Debouncing and throttling
+- 24.2 The `window` Object
+  - Window properties
+  - Window dimensions
+  - `scrollTo()`, `scrollBy()`
+  - `alert()`, `confirm()`, `prompt()`
+- 24.3 The `navigator` Object
+  - Browser information
+  - User agent
+  - Online/offline status
+  - Clipboard API
+- 24.4 The `location` Object
+  - URL components
+  - Redirecting: `href`, `assign()`, `replace()`
+  - Reloading: `reload()`
+  - Parsing URLs
+- 24.5 Web Storage API
+  - `localStorage` vs `sessionStorage`
+  - `setItem()`, `getItem()`, `removeItem()`
+  - `clear()`
+  - Storage limits
+  - Storing complex data (JSON)
+  - Storage events
+- 24.6 Intersection Observer
+  - What is Intersection Observer?
+  - Creating an observer
+  - Use cases: lazy loading, infinite scroll, animations
+- 24.7 Mutation Observer
+  - Watching for DOM changes
+  - Use cases
+- 24.8 Resize Observer
+  - Watching for element resize
+  - Responsive components
+
+---
+
+### Chapter 25: Error Handling and Debugging
+- 25.1 Types of Errors
+  - Syntax errors
+  - Runtime errors
+  - Logical errors
+- 25.2 The `try...catch` Statement
+  - `try` block
+  - `catch` block
+  - `finally` block
+  - When to use try/catch
+- 25.3 Throwing Errors
+  - The `throw` statement
+  - Creating custom errors
+  - Error types: `Error`, `TypeError`, `RangeError`, etc.
+- 25.4 Debugging Techniques
+  - `console.log()` and console methods
+  - `debugger` statement
+  - Browser DevTools debugging
+  - Breakpoints
+  - Step-through debugging
+  - Watch expressions
+- 25.5 Common JavaScript Errors
+  - `undefined is not a function`
+  - `Cannot read property of undefined`
+  - `null is not an object`
+  - Syntax pitfalls
+- 25.6 Defensive Programming
+  - Validating inputs
+  - Type checking
+  - Null checks
+  - Fallback values
+
+---
+
+## Part V: Professional Practices
+
+### Chapter 26: Web Accessibility
+- 26.1 Why Accessibility Matters
+  - Accessibility for all users
+  - Legal requirements
+  - Business benefits
+- 26.2 WCAG Principles
+  - Perceivable
+  - Operable
+  - Understandable
+  - Robust
+- 26.3 Semantic HTML for Accessibility
+  - Proper heading structure
+  - Landmark elements
+  - Accessible forms
+  - Accessible tables
+  - Accessible images
+- 26.4 Keyboard Accessibility
+  - Tab order
+  - Focus indicators
+  - Skip links
+  - Keyboard traps
+  - `tabindex` attribute
+- 26.5 ARIA (Accessible Rich Internet Applications)
+  - When to use ARIA
+  - ARIA roles
+  - ARIA states and properties
+  - Live regions
+  - Common ARIA patterns
+- 26.6 Focus Management
+  - Programmatic focus
+  - `focus()` method
+  - Managing focus in dynamic content
+  - Focus in modals and dialogs
+- 26.7 Testing for Accessibility
+  - Automated testing tools
+  - Manual testing
+  - Keyboard testing
+  - Screen reader testing
+  - Common accessibility issues
+
+---
+
+### Chapter 27: Web Performance
+- 27.1 Why Performance Matters
+  - User experience impact
+  - Business impact
+  - SEO impact
+- 27.2 Understanding Core Web Vitals
+  - Largest Contentful Paint (LCP)
+  - First Input Delay (FID) / Interaction to Next Paint (INP)
+  - Cumulative Layout Shift (CLS)
+- 27.3 Performance Metrics
+  - First Contentful Paint (FCP)
+  - Time to Interactive (TTI)
+  - Total Blocking Time (TBT)
+  - Speed Index
+- 27.4 HTML Performance
+  - Minimizing DOM size
+  - Script loading strategies
+  - Preload, prefetch, preconnect
+- 27.5 CSS Performance
+  - Critical CSS
+  - Minification
+  - Avoiding expensive selectors
+  - Will-change property
+- 27.6 JavaScript Performance
+  - Minimizing main thread work
+  - Debouncing and throttling
+  - Efficient DOM manipulation
+  - Memory management
+  - Avoiding memory leaks
+- 27.7 Image Optimization
+  - Choosing the right format
+  - Compression
+  - Lazy loading
+  - Responsive images
+  - Modern formats: WebP, AVIF
+- 27.8 Caching Strategies
+  - Browser caching
+  - Cache-Control headers
+  - Service workers (introduction)
+- 27.9 Performance Testing Tools
+  - Lighthouse
+  - Chrome DevTools Performance tab
+  - WebPageTest
+  - Performance budgets
+
+---
+
+### Chapter 28: Web Security Fundamentals
+- 28.1 Security Principles
+  - Defense in depth
+  - Least privilege
+  - Never trust user input
+- 28.2 Cross-Site Scripting (XSS)
+  - What is XSS?
+  - Types of XSS attacks
+  - Preventing XSS
+  - Content Security Policy (CSP)
+- 28.3 Cross-Site Request Forgery (CSRF)
+  - What is CSRF?
+  - CSRF tokens
+  - SameSite cookies
+- 28.4 Secure Coding Practices
+  - Input validation
+  - Output encoding
+  - Sanitization
+  - Working with sensitive data
+- 28.5 HTTPS and Secure Connections
+  - What is HTTPS?
+  - SSL/TLS certificates
+  - Mixed content
+  - Secure cookies
+- 28.6 Security Headers
+  - Content-Security-Policy
+  - X-Frame-Options
+  - X-Content-Type-Options
+  - Strict-Transport-Security
+
+---
+
+### Chapter 29: Best Practices and Code Quality
+- 29.1 Writing Clean Code
+  - Meaningful names
+  - Functions should do one thing
+  - Avoiding magic numbers
+  - Comments and documentation
+- 29.2 Code Organization
+  - File structure
+  - Separation of concerns
+  - Module patterns (ES modules)
+- 29.3 Coding Standards
+  - Consistent formatting
+  - Style guides
+  - Linting with ESLint
+  - Formatting with Prettier
+- 29.4 Version Control with Git
+  - Git basics
+  - Branching strategies
+  - Commit messages
+  - Working with GitHub
+- 29.5 Documentation
+  - Code comments
+  - README files
+  - Inline documentation
+- 29.6 Code Review
+  - Why code review matters
+  - Giving constructive feedback
+  - Receiving feedback
+
+---
+
+### Chapter 30: Building Real-World Projects
+- 30.1 Project Planning
+  - Defining requirements
+  - Designing the structure
+  - Choosing the right approach
+- 30.2 Project 1: Interactive Quiz Application
+  - Requirements breakdown
+  - HTML structure
+  - CSS styling
+  - JavaScript functionality
+  - Complete implementation
+- 30.3 Project 2: Task Management Application
+  - Requirements breakdown
+  - Working with localStorage
+  - CRUD operations
+  - Complete implementation
+- 30.4 Project 3: Weather Application
+  - Working with APIs
+  - Fetching and displaying data
+  - Error handling
+  - Complete implementation
+- 30.5 Project 4: E-commerce Product Page
+  - Complex layouts
+  - Interactive components
+  - Form handling
+  - Complete implementation
+- 30.6 Project 5: Blog Layout
+  - Responsive design
+  - Grid and Flexbox combined
+  - Accessibility considerations
+  - Complete implementation
+
+---
+
+## Appendices
+
+### Appendix A: HTML Element Reference
+- Complete alphabetical reference
+- Elements by category
+- Attributes reference
+- Global attributes
+- Event attributes
+
+### Appendix B: CSS Property Reference
+- Common properties
+- Values and units
+- Selectors reference
+- Pseudo-classes reference
+- Pseudo-elements reference
+- At-rules reference
+- Functions reference
+
+### Appendix C: JavaScript Reference
+- Operators reference
+- Statements reference
+- Built-in objects
+- Array methods
+- String methods
+- Number methods
+- Math methods
+- Date methods
+- Object methods
+
+### Appendix D: Browser Developer Tools Guide
+- Chrome DevTools overview
+- Elements panel
+- Console panel
+- Sources panel
+- Network panel
+- Performance panel
+- Application panel
+
+### Appendix E: Useful Resources
+- Documentation sites
+- Learning resources
+- Community resources
+- Tools and utilities
+
+### Appendix F: Glossary
+- HTML terminology
+- CSS terminology
+- JavaScript terminology
+- Web development terminology
+
+---
+
+This comprehensive table of contents provides a complete learning path from absolute beginner to advanced practitioner, focusing exclusively on core HTML, CSS, and JavaScript without any frameworks. Each concept builds upon previous ones, ensuring a solid foundation for any frontend development career.
