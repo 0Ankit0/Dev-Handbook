@@ -8,85 +8,85 @@ This appendix summarizes essential mathematical formulas and identities frequent
 
 ### A.1.1 Arithmetic Series
 
-\[
+$$
 \sum_{k=1}^{n} k = \frac{n(n+1)}{2}
-\]
+$$
 
-\[
+$$
 \sum_{k=1}^{n} (2k-1) = n^2
-\]
+$$
 
 ### A.1.2 Geometric Series
 
-\[
+$$
 \sum_{k=0}^{n} r^k = \frac{r^{n+1}-1}{r-1} \quad (r \neq 1)
-\]
+$$
 
-\[
+$$
 \sum_{k=0}^{\infty} r^k = \frac{1}{1-r} \quad (|r| < 1)
-\]
+$$
 
-\[
+$$
 \sum_{k=0}^{n} k r^k = \frac{r - (n+1)r^{n+1} + n r^{n+2}}{(1-r)^2}
-\]
+$$
 
 ### A.1.3 Harmonic Numbers
 
-\[
+$$
 H_n = \sum_{k=1}^{n} \frac{1}{k} \approx \ln n + \gamma + \frac{1}{2n} - \frac{1}{12n^2} + \cdots
-\]
-where \(\gamma \approx 0.577216\) (Euler–Mascheroni constant).
+$$
+where $\gamma \approx 0.577216$ (Euler–Mascheroni constant).
 
 ### A.1.4 Other Useful Sums
 
-\[
+$$
 \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
-\]
+$$
 
-\[
+$$
 \sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2
-\]
+$$
 
-\[
+$$
 \sum_{k=0}^{n} \binom{n}{k} = 2^n
-\]
+$$
 
-\[
+$$
 \sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}
-\]
+$$
 
 ---
 
 ## A.2 Logarithmic Identities
 
-\[
+$$
 \log_a (xy) = \log_a x + \log_a y
-\]
+$$
 
-\[
+$$
 \log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y
-\]
+$$
 
-\[
+$$
 \log_a x^b = b \log_a x
-\]
+$$
 
-\[
+$$
 \log_a b = \frac{\log_c b}{\log_c a} \quad \text{(change of base)}
-\]
+$$
 
-\[
+$$
 a^{\log_b c} = c^{\log_b a}
-\]
+$$
 
-\[
+$$
 \ln(1+x) \approx x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots \quad (|x| < 1)
-\]
+$$
 
 **Common values:**
-- \(\log_2 10 \approx 3.3219\)
-- \(\ln 2 \approx 0.6931\)
-- \(\log_{10} 2 \approx 0.3010\)
+- $\log_2 10 \approx 3.3219$
+- $\ln 2 \approx 0.6931$
+- $\log_{10} 2 \approx 0.3010$
 
 ---
 
@@ -94,47 +94,47 @@ a^{\log_b c} = c^{\log_b a}
 
 ### A.3.1 Factorials
 
-\[
+$$
 n! = n \times (n-1) \times \cdots \times 1, \quad 0! = 1
-\]
+$$
 
 **Stirling’s approximation:**
-\[
+$$
 n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n
-\]
+$$
 
 ### A.3.2 Binomial Coefficients
 
-\[
+$$
 \binom{n}{k} = \frac{n!}{k!\,(n-k)!}, \quad 0 \le k \le n
-\]
+$$
 
 **Pascal’s identity:**
-\[
+$$
 \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
-\]
+$$
 
 **Symmetry:**
-\[
+$$
 \binom{n}{k} = \binom{n}{n-k}
-\]
+$$
 
 **Vandermonde’s convolution:**
-\[
+$$
 \sum_{k=0}^{r} \binom{m}{k} \binom{n}{r-k} = \binom{m+n}{r}
-\]
+$$
 
 ### A.3.3 Permutations
 
-\[
+$$
 P(n,k) = \frac{n!}{(n-k)!}
-\]
+$$
 
 ### A.3.4 Combinations with Repetition
 
-\[
+$$
 \binom{n+k-1}{k}
-\]
+$$
 
 ---
 
@@ -142,48 +142,48 @@ P(n,k) = \frac{n!}{(n-k)!}
 
 ### A.4.1 Basic Probability
 
-- **Union:** \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)
-- **Conditional probability:** \(P(A|B) = \frac{P(A \cap B)}{P(B)}\)
-- **Bayes’ theorem:** \(P(A|B) = \frac{P(B|A)P(A)}{P(B)}\)
+- **Union:** $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+- **Conditional probability:** $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+- **Bayes’ theorem:** $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
 
 ### A.4.2 Expectation and Variance
 
-- **Expectation:** \(E[X] = \sum_i x_i P(X=x_i)\)
-- **Linearity:** \(E[aX + bY] = aE[X] + bE[Y]\)
-- **Variance:** \(\operatorname{Var}(X) = E[(X - E[X])^2] = E[X^2] - (E[X])^2\)
-- **Covariance:** \(\operatorname{Cov}(X,Y) = E[XY] - E[X]E[Y]\)
+- **Expectation:** $E[X] = \sum_i x_i P(X=x_i)$
+- **Linearity:** $E[aX + bY] = aE[X] + bE[Y]$
+- **Variance:** $\operatorname{Var}(X) = E[(X - E[X])^2] = E[X^2] - (E[X])^2$
+- **Covariance:** $\operatorname{Cov}(X,Y) = E[XY] - E[X]E[Y]$
 
 ### A.4.3 Common Distributions
 
-- **Bernoulli:** \(P(X=1) = p,\ P(X=0)=1-p\); \(E[X]=p,\ \operatorname{Var}(X)=p(1-p)\)
-- **Binomial:** \(P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}\); \(E[X]=np,\ \operatorname{Var}(X)=np(1-p)\)
-- **Poisson:** \(P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}\); \(E[X]=\lambda,\ \operatorname{Var}(X)=\lambda\)
-- **Uniform (discrete):** \(P(X=k) = \frac{1}{n}\) for \(k=1,\dots,n\); \(E[X]=\frac{n+1}{2},\ \operatorname{Var}(X)=\frac{n^2-1}{12}\)
-- **Exponential:** \(f(x) = \lambda e^{-\lambda x}\) for \(x\ge0\); \(E[X]=\frac{1}{\lambda},\ \operatorname{Var}(X)=\frac{1}{\lambda^2}\)
+- **Bernoulli:** $P(X=1) = p,\ P(X=0)=1-p$; $E[X]=p,\ \operatorname{Var}(X)=p(1-p)$
+- **Binomial:** $P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$; $E[X]=np,\ \operatorname{Var}(X)=np(1-p)$
+- **Poisson:** $P(X=k) = \frac{\lambda^k e^{-\lambda}}{k!}$; $E[X]=\lambda,\ \operatorname{Var}(X)=\lambda$
+- **Uniform (discrete):** $P(X=k) = \frac{1}{n}$ for $k=1,\dots,n$; $E[X]=\frac{n+1}{2},\ \operatorname{Var}(X)=\frac{n^2-1}{12}$
+- **Exponential:** $f(x) = \lambda e^{-\lambda x}$ for $x\ge0$; $E[X]=\frac{1}{\lambda},\ \operatorname{Var}(X)=\frac{1}{\lambda^2}$
 
 ---
 
 ## A.5 Master Theorem Cheatsheet
 
 For recurrences of the form:
-\[
+$$
 T(n) = a\,T\!\left(\frac{n}{b}\right) + f(n)
-\]
-where \(a \ge 1,\ b > 1\), and \(f(n)\) is asymptotically positive.
+$$
+where $a \ge 1,\ b > 1$, and $f(n)$ is asymptotically positive.
 
-1. If \(f(n) = O(n^{\log_b a - \epsilon})\) for some \(\epsilon > 0\), then \(T(n) = \Theta(n^{\log_b a})\).
-2. If \(f(n) = \Theta(n^{\log_b a} \log^k n)\), then \(T(n) = \Theta(n^{\log_b a} \log^{k+1} n)\).
-3. If \(f(n) = \Omega(n^{\log_b a + \epsilon})\) for some \(\epsilon > 0\) and \(a f(n/b) \le c f(n)\) for some \(c < 1\) and sufficiently large \(n\), then \(T(n) = \Theta(f(n))\).
+1. If $f(n) = O(n^{\log_b a - \epsilon})$ for some $\epsilon > 0$, then $T(n) = \Theta(n^{\log_b a})$.
+2. If $f(n) = \Theta(n^{\log_b a} \log^k n)$, then $T(n) = \Theta(n^{\log_b a} \log^{k+1} n)$.
+3. If $f(n) = \Omega(n^{\log_b a + \epsilon})$ for some $\epsilon > 0$ and $a f(n/b) \le c f(n)$ for some $c < 1$ and sufficiently large $n$, then $T(n) = \Theta(f(n))$.
 
 ---
 
 ## A.6 Useful Inequalities
 
-- **Cauchy–Schwarz:** \((\sum x_i y_i)^2 \le (\sum x_i^2)(\sum y_i^2)\)
-- **Jensen’s inequality:** For convex \(\varphi\), \(\varphi(E[X]) \le E[\varphi(X)]\)
-- **Markov’s inequality:** \(P(X \ge a) \le \frac{E[X]}{a}\) for \(a > 0\)
-- **Chebyshev’s inequality:** \(P(|X - \mu| \ge k\sigma) \le \frac{1}{k^2}\)
-- **Union bound:** \(P(\cup_i A_i) \le \sum_i P(A_i)\)
+- **Cauchy–Schwarz:** $(\sum x_i y_i)^2 \le (\sum x_i^2)(\sum y_i^2)$
+- **Jensen’s inequality:** For convex $\varphi$, $\varphi(E[X]) \le E[\varphi(X)]$
+- **Markov’s inequality:** $P(X \ge a) \le \frac{E[X]}{a}$ for $a > 0$
+- **Chebyshev’s inequality:** $P(|X - \mu| \ge k\sigma) \le \frac{1}{k^2}$
+- **Union bound:** $P(\cup_i A_i) \le \sum_i P(A_i)$
 
 ---
 
