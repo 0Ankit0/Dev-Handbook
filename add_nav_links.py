@@ -45,22 +45,25 @@ for idx, (ch_num, folder, folder_path, notebook) in enumerate(all_notebooks):
     html = f"<div style='width:100%; display:flex; justify-content:space-between; align-items:center; margin: 1em 0;'>\n{prev_link}  <a href='../TOC.md' style='font-weight:bold; font-size:1.05em; text-align:center;'>Table of Contents</a>\n{next_link}</div>\n"
     
     nb_path = os.path.join(folder_path, notebook)
-    with open(nb_path, 'r') as f:
-        content = json.load(f)
-    
-    if content.get('cells') and 'width:100%' in str(content['cells'][-1].get('source', '')):
-        content['cells'].pop()
-    
-    nav_cell = {"cell_type": "markdown", "metadata": {}, "source": [line + '\n' for line in html.rstrip('\n').split('\n')]}
-    content['cells'].append(nav_cell)
-    
-    with open(nb_path, 'w') as f:
-        json.dump(content, f, indent=1)
-    
-    print(f"✓ Ch {ch_num:2d}: {folder}/{notebook}")
-    if prev_nb:
-        print(f"           ← Ch {prev_nb[0]}")
-    if next_nb:
-        print(f"           → Ch {next_nb[0]}")
+    try:
+        with open(nb_path, 'r') as f:
+            content = json.load(f)
+        
+        if content.get('cells') and 'width:100%' in str(content['cells'][-1].get('source', '')):
+            content['cells'].pop()
+        
+        nav_cell = {"cell_type": "markdown", "metadata": {}, "source": [line + '\n' for line in html.rstrip('\n').split('\n')]}
+        content['cells'].append(nav_cell)
+        
+        with open(nb_path, 'w') as f:
+            json.dump(content, f, indent=1)
+        
+        print(f"✓ Ch {ch_num:2d}: {folder}/{notebook}")
+        if prev_nb:
+            print(f"           ← Ch {prev_nb[0]}")
+        if next_nb:
+            print(f"           → Ch {next_nb[0]}")
+    except (json.JSONDecodeError, IOError, KeyError) as e:
+        print(f"✗ Ch {ch_num:2d}: {folder}/{notebook} - Error: {type(e).__name__}")
 
 print(f"\n✓ Updated {len(all_notebooks)} notebooks with cross-folder navigation")
