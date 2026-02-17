@@ -3,7 +3,7 @@
 ## Table of Contents
 
 ### Part I: Foundations and Philosophy
-**Chapter 1: Introduction to GraphQL**
+**[Chapter 1: Introduction to GraphQL](1.%20foundations_and_philosophy/1.%20introduction_to_graphql.ipynb)**
 *   1.1 What is GraphQL? The Query Language for APIs
 *   1.2 GraphQL vs. REST: A Paradigm Shift
     *   1.2.1 Over-fetching vs. Under-fetching
@@ -15,14 +15,14 @@
     *   1.5.2 Choosing an IDE (VS Code + GraphQL Extensions)
     *   1.5.3 Introduction to GraphQL Playground / GraphiQL
 
-**Chapter 2: Thinking in Graphs**
+**[Chapter 2: Thinking in Graphs](1.%20foundations_and_philosophy/2.%20thinking_in_graphs.ipynb)**
 *   2.1 Shifting Mindset from Endpoints to Data Graphs
 *   2.2 Modeling Your Business Domain as a Graph
 *   2.3 The Contract-First Approach: Schema-Driven Development
 *   2.4 Understanding the Type System: Strong Typing Advantages
 
 ### Part II: The Language of GraphQL
-**Chapter 3: Schemas and Types - The Blueprint**
+**[Chapter 3: Schemas and Types - The Blueprint](2.%20the_language_of_graphql/3.%20schemas_and_types_the_blueprint.ipynb)**
 *   3.1 The Root Types: `Query`, `Mutation`, and `Subscription`
 *   3.2 Object Types and Fields
 *   3.3 Scalar Types: Built-in (`Int`, `Float`, `String`, `Boolean`, `ID`) vs. Custom Scalars
@@ -33,7 +33,7 @@
 *   3.8 Union Types: Handling Heterogeneous Data
 *   3.9 Best Practices for Schema Design: Naming Conventions and Granularity
 
-**Chapter 4: Querying Data - Read Operations**
+**[Chapter 4: Querying Data - Read Operations](2.%20the_language_of_graphql/4.%20querying_data_read_operations.ipynb)**
 *   4.1 Anatomy of a GraphQL Query
 *   4.2 Fields and Nested Objects (Traversing the Graph)
 *   4.3 Arguments: Passing Parameters to Fields
@@ -46,7 +46,7 @@
 *   4.8 Directives: Dynamic Query Shaping
     *   4.8.1 `@include` and `@skip`
 
-**Chapter 5: Mutating Data - Write Operations**
+**[Chapter 5: Mutating Data - Write Operations](2.%20the_language_of_graphql/5.%20mutating_data_write_operations.ipynb)**
 *   5.1 Anatomy of a GraphQL Mutation
 *   5.2 Designing Mutation Payloads
     *   5.2.1 The "Input" Pattern: Single Object Arguments
@@ -55,14 +55,14 @@
 *   5.4 Nested Mutations: Pros, Cons, and Alternatives
 *   5.5 Optimistic UI Updates (Conceptual Overview)
 
-**Chapter 6: Real-Time Data - Subscriptions**
+**[Chapter 6: Real-Time Data - Subscriptions](2.%20the_language_of_graphql/6.%20real_time_data_subscriptions.ipynb)**
 *   6.1 What are Subscriptions? WebSocket Fundamentals
 *   6.2 Defining Subscription Schemas
 *   6.3 Subscription Arguments and Filters
 *   6.4 Client-Side Subscription Management (Connection Lifecycle)
 
 ### Part III: Server-Side Implementation
-**Chapter 7: Building a GraphQL Server**
+**[Chapter 7: Building a GraphQL Server](3.%20server_side_implementation/7.%20building_a_graphql_server.ipynb)**
 *   7.1 Choosing a Server Framework (Apollo Server, Express-GraphQL, GraphQL Yoga)
 *   7.2 Project Structure for Scalability
 *   7.3 The Anatomy of a Resolver
@@ -74,7 +74,7 @@
 *   7.5 The `context` Object: Passing User and Request Data
 *   7.6 Clean Architecture: Separating Business Logic from Resolvers
 
-**Chapter 8: Error Handling and Validation**
+**[Chapter 8: Error Handling and Validation](3.%20server_side_implementation/8.%20error_handling_and_validation.ipynb)**
 *   8.1 GraphQL Error Handling Philosophy
 *   8.2 Syntax Errors vs. Validation Errors vs. Resolver Errors
 *   8.3 Custom Errors and Error Extensions
@@ -82,7 +82,7 @@
 *   8.5 Input Validation (Library-based vs. Schema-based)
 *   8.6 Standardizing Error Responses for Clients
 
-**Chapter 9: Authentication and Authorization**
+**[Chapter 9: Authentication and Authorization](3.%20server_side_implementation/9.%20authentication_and_authorization.ipynb)**
 *   9.1 Authentication vs. Authorization in GraphQL
 *   9.2 Implementing Authentication (JWT, Session)
     *   9.2.1 Extracting Tokens in the Context
@@ -94,7 +94,7 @@
 *   9.5 Role-Based Access Control (RBAC) Implementation
 
 ### Part IV: Client-Side Mastery
-**Chapter 10: The Client Ecosystem**
+**[Chapter 10: The Client Ecosystem](4.%20client_side_mastery/10.%20the_client_ecosystem.ipynb)**
 *   10.1 Why use a GraphQL Client? (Beyond `fetch`)
 *   10.2 Client Options: Apollo Client, Relay, URQL
 *   10.3 Apollo Client Deep Dive
@@ -108,7 +108,7 @@
 *   10.6 Local State Management with GraphQL
 
 ### Part V: Production-Grade Engineering
-**Chapter 11: Performance Optimization**
+**[Chapter 11: Performance Optimization](5.%20production_grade_engineering/11.%20performance_optimization.ipynb)**
 *   11.1 The N+1 Problem: Understanding the Performance Killer
 *   11.2 DataLoader: Batching and Caching Database Requests
     *   11.2.1 How DataLoader Works
@@ -122,7 +122,7 @@
     *   11.4.2 The Relay Cursor Connections Specification
 *   11.5 Query Complexity Analysis and Cost
 
-**Chapter 12: Security Hardening**
+**[Chapter 12: Security Hardening](5.%20production_grade_engineering/12.%20security_hardening.ipynb)**
 *   12.1 Understanding the Attack Surface
 *   12.2 Introspection: Disabling in Production
 *   12.3 Query Depth Limiting
@@ -133,13 +133,13 @@
     *   12.6.2 Security Benefits of Trusted Documents
 *   12.7 SQL Injection and XSS Prevention in Resolvers
 
-**Chapter 13: Monitoring and Observability**
+**[Chapter 13: Monitoring and Observability](5.%20production_grade_engineering/13.%20monitoring_and_observability.ipynb)**
 *   13.1 Logging in a GraphQL World
 *   13.2 Tracing Resolver Execution Time
 *   13.3 Monitoring Tools (Apollo Studio, OpenTelemetry)
 *   13.4 Debugging with Apollo Sandbox and Extensions
 
-**Chapter 14: Testing GraphQL**
+**[Chapter 14: Testing GraphQL](5.%20production_grade_engineering/14.%20testing_graphql.ipynb)**
 *   14.1 Testing Strategy: Unit vs. Integration vs. E2E
 *   14.2 Unit Testing Resolvers
 *   14.3 Integration Testing the Server
@@ -147,7 +147,7 @@
 *   14.5 Contract Testing
 
 ### Part VI: Advanced Architecture and Scale
-**Chapter 15: Federation and Microservices**
+**[Chapter 15: Federation and Microservices](6.%20advanced_architecture_and_scale/15.%20federation_and_microservices.ipynb)**
 *   15.1 The Monolith vs. Microservices Dilemma
 *   15.2 Introduction to Apollo Federation
     *   15.2.1 The Gateway Pattern
@@ -158,14 +158,14 @@
 *   15.6 Schema Composition and Merging
 *   15.7 Migrating to Federation: A Step-by-Step Guide
 
-**Chapter 16: Tooling and Developer Experience**
+**[Chapter 16: Tooling and Developer Experience](6.%20advanced_architecture_and_scale/16.%20tooling_and_developer_experience.ipynb)**
 *   16.1 Code Generation (GraphQL Code Generator)
     *   16.1.1 Generating TypeScript Types for Frontend and Backend
 *   16.2 Schema Linting and Governance
 *   16.3 Schema Documentation Best Practices
 *   16.4 VS Code Extensions for GraphQL
 
-**Chapter 17: Future Trends and Conclusion**
+**[Chapter 17: Future Trends and Conclusion](6.%20advanced_architecture_and_scale/17.%20future_trends_and_conclusion.ipynb)**
 *   17.1 The Future of GraphQL (Defer/Stream, Live Queries)
 *   17.2 GraphQL in Serverless Architectures
 *   17.3 Final Checklist for Going to Production

@@ -16,7 +16,7 @@
 
 ## Part I: Foundations
 
-### Chapter 1: Introduction to CI/CD
+### [Chapter 1: Introduction to CI/CD](11.%20real_world_projects/1.%20simple_web_app.ipynb)
 - 1.1 What is Continuous Integration?
 - 1.2 What is Continuous Deployment?
 - 1.3 What is Continuous Delivery?
@@ -26,7 +26,7 @@
 - 1.7 Industry Standards and Best Practices
 - 1.8 Quick History of DevOps Evolution
 
-### Chapter 2: Essential Concepts and Terminology
+### [Chapter 2: Essential Concepts and Terminology](11.%20real_world_projects/2.%20microservices_architecture.ipynb)
 - 2.1 Version Control Fundamentals
 - 2.2 Build vs. Deploy vs. Release
 - 2.3 Environments: Development, Staging, Production
@@ -36,7 +36,7 @@
 - 2.7 Container Orchestration Concepts
 - 2.8 Pipeline Stages and Gates
 
-### Chapter 3: Development Environment Setup
+### [Chapter 3: Development Environment Setup](11.%20real_world_projects/3.%20multi_environment_enterprise_app.ipynb)
 - 3.1 Local Development Tools
 - 3.2 Installing Docker
 - 3.3 Installing Kubernetes (Minikube/Kind)
@@ -50,7 +50,7 @@
 
 ## Part II: Docker Fundamentals
 
-### Chapter 4: Docker Basics
+### [Chapter 4: Docker Basics](11.%20real_world_projects/4.%20database_intensive_app.ipynb)
 - 4.1 What are Containers?
 - 4.2 Docker Architecture Overview
 - 4.3 Running Your First Container
@@ -60,7 +60,7 @@
 - 4.7 Docker vs. Virtual Machines
 - 4.8 When to Use Docker
 
-### Chapter 5: Dockerfiles - Building Images
+### [Chapter 5: Dockerfiles - Building Images](2.%20docker_fundamentals/5.%20dockerfiles_building_images.ipynb)
 - 5.1 Dockerfile Anatomy and Syntax
 - 5.2 Base Images Selection
 - 5.3 Core Instructions (FROM, RUN, COPY, CMD)
@@ -71,7 +71,7 @@
 - 5.8 Health Checks
 - 5.9 Common Pitfalls and Solutions
 
-### Chapter 6: Building Multi-Language Applications
+### [Chapter 6: Building Multi-Language Applications](2.%20docker_fundamentals/6.%20building_multi_language_applications.ipynb)
 - 6.1 Python Applications
 - 6.2 Node.js Applications
 - 6.3 Java/Spring Boot Applications
@@ -80,7 +80,7 @@
 - 6.6 Database Containers
 - 6.7 Handling Dependencies
 
-### Chapter 7: Docker Compose for Local Development
+### [Chapter 7: Docker Compose for Local Development](2.%20docker_fundamentals/7.%20docker_compose_for_local_development.ipynb)
 - 7.1 Docker Compose Introduction
 - 7.2 compose.yaml Structure
 - 7.3 Defining Services
@@ -90,7 +90,7 @@
 - 7.7 Multi-Container Applications
 - 7.8 Development vs. Production Compose
 
-### Chapter 8: Advanced Docker Techniques
+### [Chapter 8: Advanced Docker Techniques](2.%20docker_fundamentals/8.%20advanced_docker_techniques.ipynb)
 - 8.1 Multi-Stage Builds
 - 8.2 Build Cache Optimization
 - 8.3 Layer Caching Strategies
@@ -100,7 +100,7 @@
 - 8.7 Signal Handling
 - 8.8 Init Processes
 
-### Chapter 9: Docker Image Optimization
+### [Chapter 9: Docker Image Optimization](2.%20docker_fundamentals/9.%20docker_image_optimization.ipynb)
 - 9.1 Image Size Reduction Techniques
 - 9.2 Using .dockerignore
 - 9.3 Alpine vs. Distroless Images
@@ -109,7 +109,7 @@
 - 9.6 Layer Analysis and Optimization
 - 9.7 Performance Benchmarking
 
-### Chapter 10: Docker Security Best Practices
+### [Chapter 10: Docker Security Best Practices](2.%20docker_fundamentals/10.%20docker_security_best_practices.ipynb)
 - 10.1 Running as Non-Root User
 - 10.2 Minimal Base Images
 - 10.3 Secrets Management in Containers
@@ -119,7 +119,7 @@
 - 10.7 Resource Constraints
 - 10.8 Security Profiles (AppArmor, Seccomp)
 
-### Chapter 11: Docker Registries
+### [Chapter 11: Docker Registries](2.%20docker_fundamentals/11.%20docker_registries.ipynb)
 - 11.1 Docker Hub Overview
 - 11.2 Private Registry Options
 - 11.3 AWS ECR
@@ -133,7 +133,7 @@
 
 ## Part III: Kubernetes Fundamentals
 
-### Chapter 12: Kubernetes Architecture
+### [Chapter 12: Kubernetes Architecture](3.%20kubernetes_fundamentals/12.%20kubernetes_architecture.ipynb)
 - 12.1 Control Plane Components
 - 12.2 Worker Nodes
 - 12.3 Kubernetes Objects Overview
@@ -143,7 +143,7 @@
 - 12.7 Cluster Communication
 - 12.8 High Availability Architecture
 
-### Chapter 13: Getting Started with Kubernetes
+### [Chapter 13: Getting Started with Kubernetes](3.%20kubernetes_fundamentals/13.%20getting_started_with_kubernetes.ipynb)
 - 13.1 Local Kubernetes Options (Minikube, Kind, k3d)
 - 13.2 Cloud Kubernetes Options
 - 13.3 Installing kubectl
@@ -153,7 +153,7 @@
 - 13.7 Context and Configuration
 - 13.8 First Deployment
 
-### Chapter 14: Kubernetes Core Resources
+### [Chapter 14: Kubernetes Core Resources](3.%20kubernetes_fundamentals/14.%20kubernetes_core_resources.ipynb)
 - 14.1 Pods
   - 14.1.1 Pod Lifecycle
   - 14.1.2 Pod Specifications
@@ -175,7 +175,7 @@
 - 14.7 Labels and Selectors
 - 14.8 Annotations
 
-### Chapter 15: Kubernetes Networking
+### [Chapter 15: Kubernetes Networking](3.%20kubernetes_fundamentals/15.%20kubernetes_networking.ipynb)
 - 15.1 Pod Networking Model
 - 15.2 Service DNS
 - 15.3 Ingress Controllers
@@ -185,7 +185,7 @@
 - 15.7 External DNS
 - 15.8 TLS/SSL Management
 
-### Chapter 16: Storage and Volumes
+### [Chapter 16: Storage and Volumes](3.%20kubernetes_fundamentals/16.%20storage_and_volumes.ipynb)
 - 16.1 Volume Types
 - 16.2 Persistent Volumes (PV)
 - 16.3 Persistent Volume Claims (PVC)
@@ -195,7 +195,7 @@
 - 16.7 Database Persistence Strategies
 - 16.8 Backup and Restore
 
-### Chapter 17: Advanced Kubernetes Concepts
+### [Chapter 17: Advanced Kubernetes Concepts](3.%20kubernetes_fundamentals/17.%20advanced_kubernetes_concepts.ipynb)
 - 17.1 DaemonSets
 - 17.2 StatefulSets Deep Dive
 - 17.3 Jobs and CronJobs
@@ -205,7 +205,7 @@
 - 17.7 Resource Quotas
 - 17.8 Limit Ranges
 
-### Chapter 18: Kubernetes Security
+### [Chapter 18: Kubernetes Security](3.%20kubernetes_fundamentals/18.%20kubernetes_security.ipynb)
 - 18.1 RBAC (Role-Based Access Control)
 - 18.2 Service Accounts
 - 18.3 Pod Security Standards
@@ -219,7 +219,7 @@
 
 ## Part IV: Continuous Integration
 
-### Chapter 19: CI Fundamentals
+### [Chapter 19: CI Fundamentals](4.%20continuous_integration/19.%20ci_fundamentals.ipynb)
 - 19.1 The CI Workflow
 - 19.2 Trigger Mechanisms
 - 19.3 Pipeline Stages
@@ -229,7 +229,7 @@
 - 19.7 Failure Handling
 - 19.8 CI Metrics
 
-### Chapter 20: Git Workflows for CI/CD
+### [Chapter 20: Git Workflows for CI/CD](4.%20continuous_integration/20.%20git_workflows_for_cicd.ipynb)
 - 20.1 Feature Branch Workflow
 - 20.2 Gitflow Workflow
 - 20.3 Trunk-Based Development
@@ -239,7 +239,7 @@
 - 20.7 Merge Strategies
 - 20.8 Choosing the Right Workflow
 
-### Chapter 21: CI with Docker
+### [Chapter 21: CI with Docker](4.%20continuous_integration/21.%20ci_with_docker.ipynb)
 - 21.1 Building Images in CI
 - 21.2 Multi-Stage Builds in CI
 - 21.3 Caching Docker Layers
@@ -249,7 +249,7 @@
 - 21.7 Registry Authentication
 - 21.8 Build Failures and Debugging
 
-### Chapter 22: Testing in CI
+### [Chapter 22: Testing in CI](4.%20continuous_integration/22.%20testing_in_ci.ipynb)
 - 22.1 Unit Testing
 - 22.2 Integration Testing
 - 22.3 End-to-End Testing
@@ -259,7 +259,7 @@
 - 22.7 Test Data Management
 - 22.8 Flaky Test Handling
 
-### Chapter 23: Code Quality and Security Scanning
+### [Chapter 23: Code Quality and Security Scanning](4.%20continuous_integration/23.%20code_quality_and_security_scanning.ipynb)
 - 23.1 Linting and Static Analysis
 - 23.2 Dependency Scanning
 - 23.3 Container Image Scanning
@@ -269,7 +269,7 @@
 - 23.7 License Compliance
 - 23.8 Security Gates in Pipelines
 
-### Chapter 24: CI Pipeline Orchestration
+### [Chapter 24: CI Pipeline Orchestration](4.%20continuous_integration/24.%20ci_pipeline_orchestration.ipynb)
 - 24.1 Sequential Pipelines
 - 24.2 Parallel Pipeline Stages
 - 24.3 Conditional Execution
@@ -283,7 +283,7 @@
 
 ## Part V: CI/CD Platforms
 
-### Chapter 25: Jenkins
+### [Chapter 25: Jenkins](5.%20cicd_platforms/25.%20jenkins.ipynb)
 - 25.1 Jenkins Architecture
 - 25.2 Installation and Setup
 - 25.3 Jenkins Pipeline (Declarative vs. Scripted)
@@ -295,7 +295,7 @@
 - 25.9 Security Configuration
 - 25.10 Best Practices
 
-### Chapter 26: GitHub Actions
+### [Chapter 26: GitHub Actions](5.%20cicd_platforms/26.%20github_actions.ipynb)
 - 26.1 GitHub Actions Concepts
 - 26.2 Workflow Syntax
 - 26.3 Events and Triggers
@@ -307,7 +307,7 @@
 - 26.9 Secrets and Security
 - 26.10 Advanced Patterns
 
-### Chapter 27: GitLab CI/CD
+### [Chapter 27: GitLab CI/CD](5.%20cicd_platforms/27.%20gitlab_cicd.ipynb)
 - 27.1 GitLab CI Architecture
 - 27.2 .gitlab-ci.yml Syntax
 - 27.3 Pipeline Stages and Jobs
@@ -319,7 +319,7 @@
 - 27.9 Environments and Deployments
 - 27.10 Best Practices
 
-### Chapter 28: Other CI/CD Tools
+### [Chapter 28: Other CI/CD Tools](5.%20cicd_platforms/28.%20other_cicd_tools.ipynb)
 - 28.1 CircleCI
 - 28.2 Azure DevOps Pipelines
 - 28.3 AWS CodePipeline
@@ -333,7 +333,7 @@
 
 ## Part VI: Continuous Deployment
 
-### Chapter 29: CD Fundamentals
+### [Chapter 29: CD Fundamentals](6.%20continuous_deployment/29.%20cd_fundamentals.ipynb)
 - 29.1 CI vs. CD vs. Continuous Delivery
 - 29.2 Deployment Strategies Overview
 - 29.3 The Deployment Pipeline
@@ -343,7 +343,7 @@
 - 29.7 Release Management
 - 29.8 CD Metrics
 
-### Chapter 30: Deployment Strategies
+### [Chapter 30: Deployment Strategies](6.%20continuous_deployment/30.%20deployment_strategies.ipynb)
 - 30.1 Recreate Strategy
 - 30.2 Rolling Update Strategy
 - 30.3 Blue/Green Deployment
@@ -353,7 +353,7 @@
 - 30.7 Choosing the Right Strategy
 - 30.8 Strategy Comparison
 
-### Chapter 31: Kubernetes Deployments
+### [Chapter 31: Kubernetes Deployments](6.%20continuous_deployment/31.%20kubernetes_deployments.ipynb)
 - 31.1 Deployments Deep Dive
 - 31.2 Deployment Controllers
 - 31.3 Rolling Update Configuration
@@ -363,7 +363,7 @@
 - 31.7 Rollback Commands
 - 31.8 Deployment Probes
 
-### Chapter 32: Helm - Kubernetes Package Manager
+### [Chapter 32: Helm - Kubernetes Package Manager](6.%20continuous_deployment/32.%20helm_kubernetes_package_manager.ipynb)
 - 32.1 Helm Architecture
 - 32.2 Helm Charts Structure
 - 32.3 Creating Your First Chart
@@ -374,7 +374,7 @@
 - 32.8 Chart Repositories
 - 32.9 Best Practices
 
-### Chapter 33: Advanced Helm
+### [Chapter 33: Advanced Helm](6.%20continuous_deployment/33.%20advanced_helm.ipynb)
 - 33.1 Writing Templates
 - 33.2 Template Functions
 - 33.3 Values Files and Overrides
@@ -384,7 +384,7 @@
 - 33.7 Helm 3 vs Helm 2
 - 33.8 CI/CD Integration with Helm
 
-### Chapter 34: Kubernetes Admission Controllers
+### [Chapter 34: Kubernetes Admission Controllers](6.%20continuous_deployment/34.%20kubernetes_admission_controllers.ipynb)
 - 34.1 ValidatingAdmissionWebhook
 - 34.2 MutatingAdmissionWebhook
 - 34.3 OPA Gatekeeper
@@ -393,7 +393,7 @@
 - 34.6 Resource Validation
 - 34.7 Custom Admission Controllers
 
-### Chapter 35: GitOps with ArgoCD
+### [Chapter 35: GitOps with ArgoCD](6.%20continuous_deployment/35.%20gitops_with_argocd.ipynb)
 - 35.1 GitOps Principles
 - 35.2 ArgoCD Architecture
 - 35.3 Installation and Setup
@@ -404,7 +404,7 @@
 - 35.8 Multi-Cluster Management
 - 35.9 Best Practices
 
-### Chapter 36: GitOps with Flux
+### [Chapter 36: GitOps with Flux](6.%20continuous_deployment/36.%20gitops_with_flux.ipynb)
 - 36.1 Flux Architecture
 - 36.2 Installation and Setup
 - 36.3 Kustomize Integration
@@ -418,7 +418,7 @@
 
 ## Part VII: Advanced CI/CD Patterns
 
-### Chapter 37: Microservices CI/CD
+### [Chapter 37: Microservices CI/CD](7.%20advanced_cicd_patterns/37.%20microservices_cicd.ipynb)
 - 37.1 Microservices Architecture Overview
 - 37.2 Challenges with Microservices CI/CD
 - 37.3 Independent Deployment
@@ -428,7 +428,7 @@
 - 37.7 Database Migrations
 - 37.8 Integration Strategies
 
-### Chapter 38: Monorepo vs. Polyrepo
+### [Chapter 38: Monorepo vs. Polyrepo](7.%20advanced_cicd_patterns/38.%20monorepo_vs_polyrepo.ipynb)
 - 38.1 Monorepo Strategies
 - 38.2 Polyrepo Strategies
 - 38.3 Build Tooling
@@ -438,7 +438,7 @@
 - 38.7 Pros and Cons
 - 38.8 Choosing the Right Approach
 
-### Chapter 39: Multi-Environment Deployments
+### [Chapter 39: Multi-Environment Deployments](7.%20advanced_cicd_patterns/39.%20multi_environment_deployments.ipynb)
 - 39.1 Environment Configuration
 - 39.2 Configuration Management
 - 39.3 Environment Promotion
@@ -448,7 +448,7 @@
 - 39.7 Testing Across Environments
 - 39.8 Production Readiness Checks
 
-### Chapter 40: Progressive Delivery
+### [Chapter 40: Progressive Delivery](7.%20advanced_cicd_patterns/40.%20progressive_delivery.ipynb)
 - 40.1 Feature Flags
 - 40.2 Canary Releases
 - 40.3 Traffic Splitting
@@ -458,7 +458,7 @@
 - 40.7 Progressive Delivery Tools
 - 40.8 Best Practices
 
-### Chapter 41: Database CI/CD
+### [Chapter 41: Database CI/CD](7.%20advanced_cicd_patterns/41.%20database_cicd.ipynb)
 - 41.1 Database Migration Strategies
 - 41.2 Version Control for Databases
 - 41.3 Database Change Management
@@ -468,7 +468,7 @@
 - 41.7 Rollback Strategies
 - 41.8 NoSQL Considerations
 
-### Chapter 42: Infrastructure as Code in CI/CD
+### [Chapter 42: Infrastructure as Code in CI/CD](7.%20advanced_cicd_patterns/42.%20infrastructure_as_code_in_cicd.ipynb)
 - 42.1 Terraform in CI/CD
 - 42.2 Kubernetes Manifests in Git
 - 42.3 Kustomize
@@ -482,7 +482,7 @@
 
 ## Part VIII: Monitoring, Observability, and Debugging
 
-### Chapter 43: Logging in CI/CD
+### [Chapter 43: Logging in CI/CD](8.%20monitoring_observability_and_debugging/43.%20logging_in_cicd.ipynb)
 - 43.1 Structured Logging
 - 43.2 Log Aggregation
 - 43.3 Centralized Logging
@@ -492,7 +492,7 @@
 - 43.7 Kubernetes Logs
 - 43.8 Log Analysis and Search
 
-### Chapter 44: Metrics and Monitoring
+### [Chapter 44: Metrics and Monitoring](8.%20monitoring_observability_and_debugging/44.%20metrics_and_monitoring.ipynb)
 - 44.1 Prometheus Fundamentals
 - 44.2 Custom Metrics
 - 44.3 Pipeline Metrics
@@ -502,7 +502,7 @@
 - 44.7 Dashboarding with Grafana
 - 44.8 SLOs and SLIs
 
-### Chapter 45: Distributed Tracing
+### [Chapter 45: Distributed Tracing](8.%20monitoring_observability_and_debugging/45.%20distributed_tracing.ipynb)
 - 45.1 Tracing Concepts
 - 45.2 OpenTelemetry
 - 45.3 Jaeger
@@ -511,7 +511,7 @@
 - 45.6 Performance Analysis
 - 45.7 Troubleshooting with Traces
 
-### Chapter 46: Debugging CI/CD Pipelines
+### [Chapter 46: Debugging CI/CD Pipelines](8.%20monitoring_observability_and_debugging/46.%20debugging_cicd_pipelines.ipynb)
 - 46.1 Common Pipeline Failures
 - 46.2 Debugging Techniques
 - 46.3 Container Debugging
@@ -521,7 +521,7 @@
 - 46.7 Resource Constraints
 - 46.8 Debugging Tools
 
-### Chapter 47: Pipeline Performance Optimization
+### [Chapter 47: Pipeline Performance Optimization](8.%20monitoring_observability_and_debugging/47.%20pipeline_performance_optimization.ipynb)
 - 47.1 Pipeline Bottleneck Analysis
 - 47.2 Caching Strategies
 - 47.3 Parallelization
@@ -535,7 +535,7 @@
 
 ## Part IX: Enterprise CI/CD
 
-### Chapter 48: Security in CI/CD
+### [Chapter 48: Security in CI/CD](9.%20enterprise_cicd/48.%20security_in_cicd.ipynb)
 - 48.1 Supply Chain Security
 - 48.2 SBOM (Software Bill of Materials)
 - 48.3 Image Signing and Verification
@@ -545,7 +545,7 @@
 - 48.7 Vulnerability Management
 - 48.8 Incident Response
 
-### Chapter 49: Secrets Management
+### [Chapter 49: Secrets Management](9.%20enterprise_cicd/49.%20secrets_management.ipynb)
 - 49.1 Kubernetes Secrets
 - 49.2 External Secret Managers
 - 49.3 Vault Integration
@@ -555,7 +555,7 @@
 - 49.7 Secret Rotation
 - 49.8 Encryption at Rest and in Transit
 
-### Chapter 50: Compliance and Governance
+### [Chapter 50: Compliance and Governance](9.%20enterprise_cicd/50.%20compliance_and_governance.ipynb)
 - 50.1 Regulatory Requirements
 - 50.2 Audit Trails
 - 50.3 Policy Enforcement
@@ -565,7 +565,7 @@
 - 50.7 Compliance Automation
 - 50.8 Reporting
 
-### Chapter 51: Scaling CI/CD Infrastructure
+### [Chapter 51: Scaling CI/CD Infrastructure](9.%20enterprise_cicd/51.%20scaling_cicd_infrastructure.ipynb)
 - 51.1 Horizontal Scaling
 - 51.2 Vertical Scaling
 - 51.3 Resource Optimization
@@ -575,7 +575,7 @@
 - 51.7 Capacity Planning
 - 51.8 Cost Management
 
-### Chapter 52: Multi-Cluster Deployments
+### [Chapter 52: Multi-Cluster Deployments](9.%20enterprise_cicd/52.%20multi_cluster_deployments.ipynb)
 - 52.1 Cluster Federation
 - 52.2 Multi-Cluster Management
 - 52.3 Service Mesh Across Clusters
@@ -589,7 +589,7 @@
 
 ## Part X: DevOps Culture and Best Practices
 
-### Chapter 53: CI/CD Team Collaboration
+### [Chapter 53: CI/CD Team Collaboration](10.%20devops_culture_and_best_practices/53.%20cicd_team_collaboration.ipynb)
 - 53.1 Cross-Functional Teams
 - 53.2 Developer Experience
 - 53.3 Onboarding New Team Members
@@ -599,7 +599,7 @@
 - 53.7 Blameless Post-Mortems
 - 53.8 Continuous Learning
 
-### Chapter 54: CI/CD Documentation
+### [Chapter 54: CI/CD Documentation](10.%20devops_culture_and_best_practices/54.%20cicd_documentation.ipynb)
 - 54.1 Pipeline Documentation
 - 54.2 Architecture Documentation
 - 54.3 Runbooks
@@ -609,7 +609,7 @@
 - 54.7 Automated Documentation
 - 54.8 Documentation Tools
 
-### Chapter 55: CI/CD Best Practices
+### [Chapter 55: CI/CD Best Practices](10.%20devops_culture_and_best_practices/55.%20cicd_best_practices.ipynb)
 - 55.1 The Twelve-Factor App
 - 55.2 Immutable Infrastructure
 - 55.3 Infrastructure as Code
@@ -619,7 +619,7 @@
 - 55.7 Make It Repeatable
 - 55.8 Keep It Simple
 
-### Chapter 56: Anti-Patterns to Avoid
+### [Chapter 56: Anti-Patterns to Avoid](10.%20devops_culture_and_best_practices/56.%20anti_patterns_to_avoid.ipynb)
 - 56.1 Giant Monolith Pipeline
 - 56.2 Manual Interventions
 - 56.3 Hardcoded Configurations
@@ -629,7 +629,7 @@
 - 56.7 Siloed Teams
 - 56.8 Ignoring Security
 
-### Chapter 57: Measuring CI/CD Success
+### [Chapter 57: Measuring CI/CD Success](10.%20devops_culture_and_best_practices/57.%20measuring_cicd_success.ipynb)
 - 57.1 DORA Metrics
 - 57.2 Lead Time
 - 57.3 Deployment Frequency
@@ -691,7 +691,7 @@
 
 ## Part XII: Advanced Topics
 
-### Chapter 58: Service Mesh in CI/CD
+### [Chapter 58: Service Mesh in CI/CD](12.%20advanced_topics/58.%20service_mesh_in_cicd.ipynb)
 - 58.1 Service Mesh Overview
 - 58.2 Istio Fundamentals
 - 58.3 Linkerd
@@ -701,7 +701,7 @@
 - 58.7 CI/CD Integration
 - 58.8 Best Practices
 
-### Chapter 59: Serverless CI/CD
+### [Chapter 59: Serverless CI/CD](12.%20advanced_topics/59.%20serverless_cicd.ipynb)
 - 59.1 Serverless Overview
 - 59.2 Knative
 - 59.3 AWS Lambda
@@ -710,7 +710,7 @@
 - 59.6 CI/CD for Serverless
 - 59.7 Challenges and Solutions
 
-### Chapter 60: AI/ML Model Deployment
+### [Chapter 60: AI/ML Model Deployment](12.%20advanced_topics/60.%20aiml_model_deployment.ipynb)
 - 60.1 ML Pipelines
 - 60.2 Model Training in CI
 - 60.3 Model Serving
@@ -720,7 +720,7 @@
 - 60.7 Model Versioning
 - 60.8 A/B Testing Models
 
-### Chapter 61: Mobile App CI/CD
+### [Chapter 61: Mobile App CI/CD](12.%20advanced_topics/61.%20mobile_app_cicd.ipynb)
 - 61.1 Mobile Build Processes
 - 61.2 iOS CI/CD
 - 61.3 Android CI/CD
@@ -729,7 +729,7 @@
 - 61.6 Testing Mobile Apps
 - 61.7 Code Signing
 
-### Chapter 62: Edge Computing and CI/CD
+### [Chapter 62: Edge Computing and CI/CD](12.%20advanced_topics/62.%20edge_computing_and_cicd.ipynb)
 - 62.1 Edge Computing Overview
 - 62.2 K3s and Lightweight K8s
 - 62.3 Edge Deployment Strategies

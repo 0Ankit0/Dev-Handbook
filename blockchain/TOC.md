@@ -7,7 +7,7 @@
 
 ## **Part I: Foundations and Fundamentals**
 
-### **Chapter 1: Introduction to Blockchain Technology**
+### **[Chapter 1: Introduction to Blockchain Technology](1.%20foundations_and_fundamentals/1.%20introduction_to_blockchain_technology.ipynb)**
 - 1.1 What is Blockchain? A Conceptual Overview
   - 1.1.1 Definition and Core Philosophy
   - 1.1.2 The Problem Blockchain Solves: Trust in Digital Transactions
@@ -32,7 +32,7 @@
   - 1.5.3 Code Editors and IDE Setup (VS Code, Remix IDE)
   - 1.5.4 Version Control with Git
 
-### **Chapter 2: Cryptography Fundamentals**
+### **[Chapter 2: Cryptography Fundamentals](1.%20foundations_and_fundamentals/2.%20cryptography_fundamentals.ipynb)**
 - 2.1 Understanding Cryptography in Blockchain
   - 2.1.1 Why Cryptography Matters
   - 2.1.2 Historical Context and Modern Applications
@@ -61,7 +61,7 @@
   - 2.5.4 Use Cases in Blockchain
   - 2.5.5 Code Implementation: Building a Merkle Tree
 
-### **Chapter 3: Blockchain Architecture and Data Structures**
+### **[Chapter 3: Blockchain Architecture and Data Structures](1.%20foundations_and_fundamentals/3.%20blockchain_architecture_and_data_structures.ipynb)**
 - 3.1 Anatomy of a Block
   - 3.1.1 Block Header Components
   - 3.1.2 Block Body and Transactions
@@ -93,7 +93,7 @@
 
 ## **Part II: Consensus Mechanisms**
 
-### **Chapter 4: Understanding Consensus**
+### **[Chapter 4: Understanding Consensus](2.%20consensus_mechanisms/4.%20understanding_consensus.ipynb)**
 - 4.1 The Byzantine Generals Problem
   - 4.1.1 The Problem Statement
   - 4.1.2 Byzantine Fault Tolerance (BFT)
@@ -106,7 +106,7 @@
   - 4.3.1 Consistency, Availability, Partition Tolerance
   - 4.3.2 Trade-offs in Blockchain Design
 
-### **Chapter 5: Proof of Work (PoW)**
+### **[Chapter 5: Proof of Work (PoW)](2.%20consensus_mechanisms/5.%20proof_of_work.ipynb)**
 - 5.1 How Proof of Work Operates
   - 5.1.1 Mining Process Explained
   - 5.1.2 Difficulty Target and Adjustment
@@ -127,7 +127,7 @@
   - 5.5.2 Difficulty Adjustment Algorithm
   - 5.5.3 Complete Mining Example
 
-### **Chapter 6: Proof of Stake (PoS)**
+### **[Chapter 6: Proof of Stake (PoS)](2.%20consensus_mechanisms/6.%20proof_of_stake.ipynb)**
 - 6.1 Fundamental Concepts
   - 6.1.1 Staking Mechanism
   - 6.1.2 Validator Selection Process
@@ -149,7 +149,7 @@
   - 6.5.2 Block Finalization Logic
   - 6.5.3 Slashing Mechanism
 
-### **Chapter 7: Other Consensus Mechanisms**
+### **[Chapter 7: Other Consensus Mechanisms](2.%20consensus_mechanisms/7.%20other_consensus_mechanisms.ipynb)**
 - 7.1 Practical Byzantine Fault Tolerance (PBFT)
   - 7.1.1 How PBFT Works
   - 7.1.2 Pre-prepare, Prepare, Commit Phases
@@ -173,7 +173,7 @@
 
 ## **Part III: Ethereum and Smart Contracts**
 
-### **Chapter 8: Ethereum Fundamentals**
+### **[Chapter 8: Ethereum Fundamentals](3.%20ethereum_and_smart_contracts/8.%20ethereum_fundamentals.ipynb)**
 - 8.1 Introduction to Ethereum
   - 8.1.1 Bitcoin vs. Ethereum: Key Differences
   - 8.1.2 The World Computer Concept
@@ -199,7 +199,7 @@
   - 8.5.2 Wei, Gwei, Ether Denominations
   - 8.5.3 Token Standards Overview
 
-### **Chapter 9: Solidity Programming Language**
+### **[Chapter 9: Solidity Programming Language](3.%20ethereum_and_smart_contracts/9.%20solidity_programming_language.ipynb)**
 - 9.1 Introduction to Solidity
   - 9.1.1 What is Solidity?
   - 9.1.2 Setting Up the Development Environment
@@ -252,7 +252,7 @@
   - 9.11.3 Library Usage
   - 9.11.4 Using For Directive
 
-### **Chapter 10: Smart Contract Development**
+### **[Chapter 10: Smart Contract Development](3.%20ethereum_and_smart_contracts/10.%20smart_contract_development.ipynb)**
 - 10.1 What are Smart Contracts?
   - 10.1.1 Definition and Characteristics
   - 10.1.2 Self-Executing Code
@@ -289,7 +289,7 @@
   - 10.7.5 Access Control Vulnerabilities
   - 10.7.6 Best Practices and Security Patterns
 
-### **Chapter 11: Development Tools and Frameworks**
+### **[Chapter 11: Development Tools and Frameworks](3.%20ethereum_and_smart_contracts/11.%20development_tools_and_frameworks.ipynb)**
 - 11.1 Hardhat Framework
   - 11.1.1 Installation and Setup
   - 11.1.2 Project Structure
@@ -322,7 +322,7 @@
 
 ## **Part IV: Decentralized Applications (DApps)**
 
-### **Chapter 12: DApp Architecture**
+### **[Chapter 12: DApp Architecture](4.%20decentralized_applications/12.%20dapp_architecture.ipynb)**
 - 12.1 Understanding DApps
   - 12.1.1 Definition and Characteristics
   - 12.1.2 DApps vs. Traditional Web Applications
@@ -337,7 +337,7 @@
   - 12.3.2 User Identity and Wallets
   - 12.3.3 Decentralized Identity (DID)
 
-### **Chapter 13: Web3.js and ethers.js Libraries**
+### **[Chapter 13: Web3.js and ethers.js Libraries](4.%20decentralized_applications/13.%20web3js_and_ethersjs_libraries.ipynb)**
 - 13.1 Introduction to Web3 Libraries
   - 13.1.1 Why Web3 Libraries are Needed
   - 13.1.2 Web3.js vs. ethers.js Comparison
@@ -359,7 +359,7 @@
   - 13.4.4 Listening to Events
   - 13.4.5 Signing Messages
 
-### **Chapter 14: Building a Complete DApp**
+### **[Chapter 14: Building a Complete DApp](4.%20decentralized_applications/14.%20building_a_complete_dapp.ipynb)**
 - 14.1 Project Planning
   - 14.1.1 Defining Requirements
   - 14.1.2 Choosing the Tech Stack
@@ -385,7 +385,7 @@
   - 14.5.4 Deploying to Mainnet
   - 14.5.5 Verification on Etherscan
 
-### **Chapter 15: Wallet Integration and User Authentication**
+### **[Chapter 15: Wallet Integration and User Authentication](4.%20decentralized_applications/15.%20wallet_integration_and_user_authentication.ipynb)**
 - 15.1 Understanding Crypto Wallets
   - 15.1.1 Hot Wallets vs. Cold Wallets
   - 15.1.2 Custodial vs. Non-Custodial
@@ -408,7 +408,7 @@
 
 ## **Part V: Advanced Concepts**
 
-### **Chapter 16: Layer 2 Scaling Solutions**
+### **[Chapter 16: Layer 2 Scaling Solutions](5.%20advanced_concepts/16.%20layer_2_scaling_solutions.ipynb)**
 - 16.1 The Scalability Trilemma
   - 16.1.1 Scalability, Security, Decentralization
   - 16.1.2 Why Scaling is Needed
@@ -435,7 +435,7 @@
   - 16.7.2 Deploying to Arbitrum
   - 16.7.3 Deploying to Polygon
 
-### **Chapter 17: DeFi (Decentralized Finance)**
+### **[Chapter 17: DeFi (Decentralized Finance)](5.%20advanced_concepts/17.%20defi.ipynb)**
 - 17.1 Introduction to DeFi
   - 17.1.1 What is DeFi?
   - 17.1.2 DeFi vs. Traditional Finance
@@ -465,7 +465,7 @@
   - 17.6.2 Oracle Manipulation
   - 17.6.3 Flash Loan Attacks
 
-### **Chapter 18: Oracles and External Data**
+### **[Chapter 18: Oracles and External Data](5.%20advanced_concepts/18.%20oracles_and_external_data.ipynb)**
 - 18.1 The Oracle Problem
   - 18.1.1 Blockchain Determinism
   - 18.1.2 Need for External Data
@@ -482,7 +482,7 @@
   - 18.4.2 Request-Response Pattern
   - 18.4.3 Best Practices
 
-### **Chapter 19: Token Standards**
+### **[Chapter 19: Token Standards](5.%20advanced_concepts/19.%20token_standards.ipynb)**
 - 19.1 ERC-20: Fungible Tokens
   - 19.1.1 Standard Functions and Events
   - 19.1.2 Implementation Details
@@ -504,7 +504,7 @@
   - 19.4.3 ERC-2612: Permit (Gasless Approvals)
   - 19.4.4 ERC-1967: Proxy Storage Slots
 
-### **Chapter 20: Zero-Knowledge Proofs**
+### **[Chapter 20: Zero-Knowledge Proofs](5.%20advanced_concepts/20.%20zero_knowledge_proofs.ipynb)**
 - 20.1 Introduction to Zero-Knowledge
   - 20.1.1 What is a Zero-Knowledge Proof?
   - 20.1.2 Properties: Completeness, Soundness, Zero-Knowledge
@@ -523,7 +523,7 @@
   - 20.4.2 Identity Verification
   - 20.4.3 Code Examples
 
-### **Chapter 21: Smart Contract Upgradeability**
+### **[Chapter 21: Smart Contract Upgradeability](5.%20advanced_concepts/21.%20smart_contract_upgradeability.ipynb)**
 - 21.1 The Immutable Challenge
   - 21.1.1 Why Upgradeability Matters
   - 21.1.2 Risks of Mutable Contracts
@@ -542,7 +542,7 @@
   - 21.4.3 Initialization Functions
   - 21.4.4 Complete Implementation Guide
 
-### **Chapter 22: DAOs (Decentralized Autonomous Organizations)**
+### **[Chapter 22: DAOs (Decentralized Autonomous Organizations)](5.%20advanced_concepts/22.%20daos.ipynb)**
 - 22.1 Introduction to DAOs
   - 22.1.1 What is a DAO?
   - 22.1.2 Governance Without Central Authority
@@ -566,7 +566,7 @@
 
 ## **Part VI: Blockchain Networks and Ecosystems**
 
-### **Chapter 23: Ethereum Ecosystem Deep Dive**
+### **[Chapter 23: Ethereum Ecosystem Deep Dive](6.%20blockchain_networks_and_ecosystems/23.%20ethereum_ecosystem_deep_dive.ipynb)**
 - 23.1 Ethereum Clients
   - 23.1.1 Geth (Go Ethereum)
   - 23.1.2 Nethermind
@@ -588,7 +588,7 @@
   - 23.4.2 Registering and Managing Names
   - 23.4.3 Integrating ENS in DApps
 
-### **Chapter 24: Other Blockchain Platforms**
+### **[Chapter 24: Other Blockchain Platforms](6.%20blockchain_networks_and_ecosystems/24.%20other_blockchain_platforms.ipynb)**
 - 24.1 Bitcoin Deep Dive
   - 24.1.1 UTXO Model Explained
   - 24.1.2 Bitcoin Script
@@ -628,7 +628,7 @@
 
 ## **Part VII: Testing, Security, and Best Practices**
 
-### **Chapter 25: Smart Contract Testing**
+### **[Chapter 25: Smart Contract Testing](7.%20testing_security_and_best_practices/25.%20smart_contract_testing.ipynb)**
 - 25.1 Testing Philosophy
   - 25.1.1 Why Testing is Critical
   - 25.1.2 Testing Pyramid
@@ -651,7 +651,7 @@
   - 25.6.1 Mainnet Forking
   - 25.6.2 Testing with Real Protocol States
 
-### **Chapter 26: Smart Contract Security**
+### **[Chapter 26: Smart Contract Security](7.%20testing_security_and_best_practices/26.%20smart_contract_security.ipynb)**
 - 26.1 Security Mindset
   - 26.1.1 Immutable Code, Permanent Bugs
   - 26.1.2 Value at Risk
@@ -685,7 +685,7 @@
   - 26.6.1 Preparing for Hacks
   - 26.6.2 Post-Mortem Analysis
 
-### **Chapter 27: Gas Optimization**
+### **[Chapter 27: Gas Optimization](7.%20testing_security_and_best_practices/27.%20gas_optimization.ipynb)**
 - 27.1 Understanding Gas Costs
   - 27.1.1 Gas Cost Breakdown
   - 27.1.2 Opcodes and Their Costs
@@ -710,7 +710,7 @@
 
 ## **Part VIII: Advanced Development Topics**
 
-### **Chapter 28: MEV (Maximal Extractable Value)**
+### **[Chapter 28: MEV (Maximal Extractable Value)](8.%20advanced_development_topics/28.%20mev.ipynb)**
 - 28.1 Understanding MEV
   - 28.1.1 What is MEV?
   - 28.1.2 How MEV is Extracted
@@ -729,7 +729,7 @@
   - 28.4.1 Designing MEV-Resistant Protocols
   - 28.4.2 Fair Ordering Solutions
 
-### **Chapter 29: Cross-Chain Development**
+### **[Chapter 29: Cross-Chain Development](8.%20advanced_development_topics/29.%20cross_chain_development.ipynb)**
 - 29.1 Blockchain Interoperability
   - 29.1.1 Why Cross-Chain Matters
   - 29.1.2 Cross-Chain Challenges
@@ -747,7 +747,7 @@
   - 29.4.2 Handling Cross-Chain State
   - 29.4.3 Security Considerations
 
-### **Chapter 30: Decentralized Storage**
+### **[Chapter 30: Decentralized Storage](8.%20advanced_development_topics/30.%20decentralized_storage.ipynb)**
 - 30.1 The Need for Decentralized Storage
   - 30.1.1 Limitations of On-Chain Storage
   - 30.1.2 Decentralized vs. Centralized Storage
@@ -769,7 +769,7 @@
   - 30.5.2 Building a Decentralized Website
   - 30.5.3 Code Examples
 
-### **Chapter 31: Indexing and Querying Blockchain Data**
+### **[Chapter 31: Indexing and Querying Blockchain Data](8.%20advanced_development_topics/31.%20indexing_and_querying_blockchain_data.ipynb)**
 - 31.1 Challenges of Blockchain Data
   - 31.1.1 Data Retrieval Limitations
   - 31.1.2 Event Logs and Filtering
@@ -791,7 +791,7 @@
 
 ## **Part IX: Production and Deployment**
 
-### **Chapter 32: Deploying to Production**
+### **[Chapter 32: Deploying to Production](9.%20production_and_deployment/32.%20deploying_to_production.ipynb)**
 - 32.1 Deployment Strategies
   - 32.1.1 Testnet to Mainnet
   - 32.1.2 Gradual Rollout
@@ -808,7 +808,7 @@
   - 32.4.2 Initial Configuration
   - 32.4.3 Documentation
 
-### **Chapter 33: Monitoring and Maintenance**
+### **[Chapter 33: Monitoring and Maintenance](9.%20production_and_deployment/33.%20monitoring_and_maintenance.ipynb)**
 - 33.1 Monitoring Smart Contracts
   - 33.1.1 Event Monitoring
   - 33.1.2 Transaction Monitoring
@@ -825,7 +825,7 @@
   - 33.4.2 Communicating Changes
   - 33.4.3 Migration Strategies
 
-### **Chapter 34: Legal and Regulatory Considerations**
+### **[Chapter 34: Legal and Regulatory Considerations](9.%20production_and_deployment/34.%20legal_and_regulatory_considerations.ipynb)**
 - 34.1 Regulatory Landscape
   - 34.1.1 Securities Regulations
   - 34.1.2 KYC/AML Requirements
@@ -840,7 +840,7 @@
 
 ## **Part X: Real-World Projects**
 
-### **Chapter 35: Building a Decentralized Exchange (DEX)**
+### **[Chapter 35: Building a Decentralized Exchange (DEX)](10.%20real_world_projects/35.%20building_a_decentralized_exchange.ipynb)**
 - 35.1 Project Overview
   - 35.1.1 Requirements and Features
   - 35.1.2 Architecture Design
@@ -858,7 +858,7 @@
   - 35.4.2 Security Considerations
 - 35.5 Deployment and Launch
 
-### **Chapter 36: Building an NFT Marketplace**
+### **[Chapter 36: Building an NFT Marketplace](10.%20real_world_projects/36.%20building_an_nft_marketplace.ipynb)**
 - 36.1 Project Overview
   - 36.1.1 Requirements and Features
   - 36.1.2 Architecture Design
@@ -876,7 +876,7 @@
   - 36.4.2 Image Storage
 - 36.5 Complete Walkthrough
 
-### **Chapter 37: Building a DAO Governance System**
+### **[Chapter 37: Building a DAO Governance System](10.%20real_world_projects/37.%20building_a_dao_governance_system.ipynb)**
 - 37.1 Project Overview
   - 37.1.1 Requirements and Features
   - 37.1.2 Architecture Design
@@ -891,7 +891,7 @@
   - 37.3.3 Execution Interface
 - 37.4 Complete Walkthrough
 
-### **Chapter 38: Building a DeFi Yield Aggregator**
+### **[Chapter 38: Building a DeFi Yield Aggregator](10.%20real_world_projects/38.%20building_a_defi_yield_aggregator.ipynb)**
 - 38.1 Project Overview
   - 38.1.1 Requirements and Features
   - 38.1.2 Architecture Design
@@ -909,7 +909,7 @@
 
 ## **Part XI: Advanced Topics and Future Directions**
 
-### **Chapter 39: Account Abstraction (ERC-4337)**
+### **[Chapter 39: Account Abstraction (ERC-4337)](11.%20advanced_topics_and_future_directions/39.%20account_abstraction.ipynb)**
 - 39.1 The Problem with EOAs
   - 39.1.1 Limitations of External Accounts
   - 39.1.2 Benefits of Smart Contract Wallets
@@ -924,7 +924,7 @@
   - 39.3.3 Gasless Transactions
   - 39.3.4 Code Examples
 
-### **Chapter 40: The Future of Blockchain**
+### **[Chapter 40: The Future of Blockchain](11.%20advanced_topics_and_future_directions/40.%20the_future_of_blockchain.ipynb)**
 - 40.1 Emerging Trends
   - 40.1.1 Modular Blockchains
   - 40.1.2 Data Availability Layers

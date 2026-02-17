@@ -9,20 +9,20 @@
 
 ## **PART I: CYBERSECURITY FOUNDATIONS & THE DEVELOPER CONTEXT**
 
-### **Chapter 1: The Cybersecurity Landscape**
+### **[Chapter 1: The Cybersecurity Landscape](1.%20cybersecurity_foundations_and_the_developer_context/1.%20the_cybersecurity_landscape.ipynb)**
 *   1.1 CIA Triad: Confidentiality, Integrity, Availability
 *   1.2 The Threat Landscape: Attackers, motivations, and the kill chain
 *   1.3 Risk Management Basics: Assets, vulnerabilities, threats, and risk
 *   1.4 The Developer's Role in Security: Shift Left, DevSecOps, and Shared Responsibility
 *   1.5 Legal, Ethical, and Regulatory Landscape Overview (GDPR, CCPA, etc.)
 
-### **Chapter 2: Networking & System Fundamentals for Security**
+### **[Chapter 2: Networking & System Fundamentals for Security](1.%20cybersecurity_foundations_and_the_developer_context/2.%20networking_system_fundamentals_for_security.ipynb)**
 *   2.1 Networking Refresher: OSI/TCP IP Models, Protocols (HTTP/S, DNS, SMTP), and Ports
 *   2.2 Network Security Basics: Firewalls, IDS/IPS, VPNs, and Segmentation
 *   2.3 Operating System Security: Windows & Linux Hardening, Permissions, and Services
 *   2.4 Virtualization & Containers: Security Implications of VMs, Docker, and Kubernetes Basics
 
-### **Chapter 3: Cryptography Essentials**
+### **[Chapter 3: Cryptography Essentials](1.%20cybersecurity_foundations_and_the_developer_context/3.%20cryptography_essentials.ipynb)**
 *   3.1 Core Concepts: Symmetric vs. Asymmetric Encryption, Hashing, and Digital Signatures
 *   3.2 Common Algorithms & When to Use Them: AES, RSA, SHA-256, ECDSA
 *   3.3 Key Management: Generation, Storage, Rotation, and HSMs
@@ -33,42 +33,42 @@
 
 ## **PART II: THE NIST CYBERSECURITY FRAMEWORK (CSF) 2.0 CORE**
 
-### **Chapter 4: GOVERN (GV) – Cybersecurity Governance & Strategy**
+### **[Chapter 4: GOVERN (GV) – Cybersecurity Governance & Strategy](2.%20the_nist_cybersecurity_framework_csf_20_core/4.%20govern_gv_cybersecurity_governance_strategy.ipynb)**
 *   4.1 Understanding the Govern Function: Executive Accountability and Strategy
 *   4.2 Security Policies, Standards, and Procedures
 *   4.3 Risk Management Framework (RMF) Integration (NIST SP 800-37)
 *   4.4 Supply Chain Risk Management (C-SCRM) for Developers
 *   4.5 Security Metrics, KPIs, and Board Reporting
 
-### **Chapter 5: IDENTIFY (ID) – Asset & Risk Management**
+### **[Chapter 5: IDENTIFY (ID) – Asset & Risk Management](2.%20the_nist_cybersecurity_framework_csf_20_core/5.%20identify_id_asset_risk_management.ipynb)**
 *   5.1 Asset Discovery: Data, Systems, Applications, and APIs
 *   5.2 Business Context & Impact Analysis
 *   5.3 Threat Modeling Methodologies: STRIDE, PASTA, and LINDDUN
 *   5.4 Vulnerability Management: Scanning, Assessment, and Prioritization
 *   5.5 Risk Assessment & Treatment: Quantitative vs. Qualitative Approaches
 
-### **Chapter 6: PROTECT (PR) – Safeguards & Implementation**
+### **[Chapter 6: PROTECT (PR) – Safeguards & Implementation](2.%20the_nist_cybersecurity_framework_csf_20_core/6.%20protect_pr_safeguards_implementation.ipynb)**
 *   6.1 Identity & Access Management (IAM): MFA, SSO, PAM, and Least Privilege
 *   6.2 Data Security: Classification, Encryption at Rest/Transit, and DLP
 *   6.3 Secure Software Development Lifecycle (SSDLC): Integrating Security from Design to Deploy
 *   6.4 Platform Security: Hardening Applications, APIs, and Cloud Infrastructure
 *   6.5 Awareness & Training: Building a Security-First Development Culture
 
-### **Chapter 7: DETECT (DE) – Continuous Monitoring & Discovery**
+### **[Chapter 7: DETECT (DE) – Continuous Monitoring & Discovery](2.%20the_nist_cybersecurity_framework_csf_20_core/7.%20detect_de_continuous_monitoring_discovery.ipynb)**
 *   7.1 Security Logging: What, When, and How to Log Effectively (OWASP A09)
 *   7.2 SIEM Fundamentals: Aggregation, Correlation, and Alerting
 *   7.3 Application Security Monitoring (ASM) and RASP
 *   7.4 Threat Intelligence Feeds: Integrating External Context
 *   7.5 Anomaly Detection: Network, User, and Entity Behavior Analytics (UEBA)
 
-### **Chapter 8: RESPOND (RS) – Incident Management**
+### **[Chapter 8: RESPOND (RS) – Incident Management](2.%20the_nist_cybersecurity_framework_csf_20_core/8.%20respond_rs_incident_management.ipynb)**
 *   8.1 Incident Response Lifecycle: Preparation, Detection, Containment, Eradication, Recovery, Lessons Learned
 *   8.2 Building an Incident Response Plan (IRP) and Playbooks
 *   8.3 Forensics Fundamentals for Developers: Chain of Custody and Artifact Collection
 *   8.4 Communication During Incidents: Stakeholders, Customers, and Regulators
 *   8.5 Post-Incident Activity: Analysis, Reporting, and Improvement
 
-### **Chapter 9: RECOVER (RC) – Resilience & Restoration**
+### **[Chapter 9: RECOVER (RC) – Resilience & Restoration](2.%20the_nist_cybersecurity_framework_csf_20_core/9.%20recover_rc_resilience_restoration.ipynb)**
 *   9.1 Business Continuity & Disaster Recovery (BC/DR) Planning
 *   9.2 Data Backup and Recovery Strategies
 *   9.3 System Restoration and Validation
@@ -79,7 +79,7 @@
 
 ## **PART III: APPLICATION SECURITY IN DEPTH**
 
-### **Chapter 10: OWASP Top 10 (2026) – Mitigation & Defense**
+### **[Chapter 10: OWASP Top 10 (2026) – Mitigation & Defense](3.%20application_security_in_depth/10.%20owasp_top_10_2026_mitigation_defense.ipynb)**
 *   10.1 A01: Broken Access Control – Design Patterns, Testing, and Fixes
 *   10.2 A02: Security Misconfiguration – Hardening, Secrets Management, and IaC Security
 *   10.3 A03: Software Supply Chain Failures – SBOMs, Vetting Dependencies, and CI/CD Security
@@ -91,14 +91,14 @@
 *   10.9 A09: Logging & Monitoring Failures – Implementing Comprehensive Observability
 *   10.10 A10: Mishandling of Exceptional Conditions – Robust Error Handling and Failsafes
 
-### **Chapter 11: API Security**
+### **[Chapter 11: API Security](3.%20application_security_in_depth/11.%20api_security.ipynb)**
 *   11.1 API Security Fundamentals: REST vs. GraphQL vs. gRPC
 *   11.2 Authentication & Authorization for APIs: OAuth 2.0, OpenID Connect, and API Keys
 *   11.3 Common API Vulnerabilities (OWASP API Security Top 10)
 *   11.4 API Gateway Security: Rate Limiting, Input Validation, and WAF Integration
 *   11.5 Secure API Design and Documentation (e.g., OpenAPI Specification)
 
-### **Chapter 12: Secure Coding Practices & Patterns**
+### **[Chapter 12: Secure Coding Practices & Patterns](3.%20application_security_in_depth/12.%20secure_coding_practices_patterns.ipynb)**
 *   12.1 Input Validation and Output Encoding
 *   12.2 Memory-Safe Languages & Managing Memory Vulnerabilities (Buffer Overflows)
 *   12.3 Secure Error Handling and Exception Management
@@ -109,14 +109,14 @@
 
 ## **PART IV: ADVANCED & EMERGING DOMAINS**
 
-### **Chapter 13: Cloud-Native Security**
+### **[Chapter 13: Cloud-Native Security](4.%20advanced_emerging_domains/13.%20cloud_native_security.ipynb)**
 *   13.1 Cloud Security Fundamentals: Shared Responsibility Model (AWS/Azure/GCP)
 *   13.2 IAM in the Cloud: Identity Federation, Roles, and Policies
 *   13.3 Container and Kubernetes Security: Image Scanning, Runtime Protection, and Network Policies
 *   13.4 Infrastructure as Code (IaC) Security: Terraform, Ansible, and CloudFormation
 *   13.5 Cloud-Native Logging, Monitoring, and Incident Response
 
-### **Chapter 14: AI and Agentic Application Security**
+### **[Chapter 14: AI and Agentic Application Security](4.%20advanced_emerging_domains/14.%20ai_and_agentic_application_security.ipynb)**
 *   14.1 Understanding AI/ML Security Risks (MITRE ATLAS)
 *   14.2 OWASP Top 10 for LLM Applications & OWASP Top 10 for Agentic AI Applications (2026)
     *   ASI01: Agent Behavior Hijacking
@@ -128,14 +128,14 @@
 *   14.4 Privacy-Preserving Machine Learning: Differential Privacy and Federated Learning
 *   14.5 Governance and Compliance for AI Systems (ISO 42001:2023)
 
-### **Chapter 15: DevSecOps & Automation**
+### **[Chapter 15: DevSecOps & Automation](4.%20advanced_emerging_domains/15.%20devsecops_automation.ipynb)**
 *   15.1 Integrating Security into CI/CD Pipelines (Jenkins, GitLab CI, GitHub Actions)
 *   15.2 Security as Code: Policy-as-Code and Infrastructure-as-Code
 *   15.3 Automated Security Testing in CI/CD: SAST, DAST, SCA, IAST, and Dependency Scanning
 *   15.4 Orchestration and Automation Tools for Security (SOAR)
 *   15.5 Case Studies: Building a DevSecOps Pipeline from Scratch
 
-### **Chapter 16: Specialized Security Domains**
+### **[Chapter 16: Specialized Security Domains](4.%20advanced_emerging_domains/16.%20specialized_security_domains.ipynb)**
 *   16.1 Industrial Control Systems (ICS) & OT Security: ICS/SCADA Fundamentals (ICS410, ISA/IEC 62443)
 *   16.2 Mobile Application Security: Android and iOS Secure Development
 *   16.3 IoT Security: Securing Devices, Gateways, and Data
@@ -145,21 +145,21 @@
 
 ## **PART V: COMPLIANCE, AUDITING & PROFESSIONAL SKILLS**
 
-### **Chapter 17: Governance, Risk, and Compliance (GRC)**
+### **[Chapter 17: Governance, Risk, and Compliance (GRC)](5.%20compliance_auditing_professional_skills/17.%20governance_risk_and_compliance_grc.ipynb)**
 *   17.1 ISO/IEC 27001:2022 Deep Dive: Implementing an ISMS and Annex A Controls
 *   17.2 PCI DSS: Securing Cardholder Data Environments
 *   17.3 HIPAA & Healthcare Data Security
 *   17.4 SOC 2 Type II: Demonstrating Trust through Audits
 *   17.5 Preparing for and Managing External Audits
 
-### **Chapter 18: Security Architecture & Engineering**
+### **[Chapter 18: Security Architecture & Engineering](5.%20compliance_auditing_professional_skills/18.%20security_architecture_engineering.ipynb)**
 *   18.1 Zero Trust Architecture: Principles and Implementation
 *   18.2 Secure Network Design: Segmentation, DMZs, and Cloud VPCs
 *   18.3 Application Security Architecture: WAFs, RASPs, and Microservices Security
 *   18.4 Designing for Resilience: Redundancy, Failover, and Chaos Engineering
 *   18.5 Security Pattern Library: Reusable Solutions for Common Problems
 
-### **Chapter 19: Career Development & Continuous Learning**
+### **[Chapter 19: Career Development & Continuous Learning](5.%20compliance_auditing_professional_skills/19.%20career_development_continuous_learning.ipynb)**
 *   19.1 Building a Cybersecurity Career: Roles, Progression, and Networking
 *   19.2 Key Certifications Explained: SANS/GIAC, CISSP, OSCP, and Cloud Security Certs
 *   19.3 Staying Current: Threat Feeds, Conferences, Research, and Communities

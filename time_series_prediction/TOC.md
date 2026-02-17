@@ -7,7 +7,7 @@
 
 ## **Part I: Foundations**
 
-### **Chapter 1: Introduction to Time-Series Prediction Systems**
+### **[Chapter 1: Introduction to Time-Series Prediction Systems](1.%20foundations/1.%20introduction_to_time_series_prediction_systems.ipynb)**
 
 - 1.1 What is a Time-Series Prediction System?
 - 1.2 Real-World Applications and Use Cases
@@ -18,7 +18,7 @@
 - 1.7 Industry Trends and Best Practices
 - 1.8 Case Study Overview: NEPSE Stock Prediction
 
-### **Chapter 2: Understanding Time-Series Data**
+### **[Chapter 2: Understanding Time-Series Data](1.%20foundations/2.%20understanding_time_series_data.ipynb)**
 
 - 2.1 What Defines Time-Series Data?
 - 2.2 Components of Time-Series
@@ -35,7 +35,7 @@
 - 2.6 Visual Inspection Techniques
 - 2.7 Statistical Summary and Diagnostics
 
-### **Chapter 3: Setting Up Your Development Environment**
+### **[Chapter 3: Setting Up Your Development Environment](1.%20foundations/3.%20setting_up_your_development_environment.ipynb)**
 
 - 3.1 System Requirements and Hardware Considerations
 - 3.2 Operating System Setup
@@ -59,7 +59,7 @@
 - 3.10 Collaborative Development Setup
 - 3.11 Setting Up Your First Project
 
-### **Chapter 4: Data Fundamentals and Programming Basics**
+### **[Chapter 4: Data Fundamentals and Programming Basics](1.%20foundations/4.%20data_fundamentals_and_programming_basics.ipynb)**
 
 - 4.1 Python for Data Science
   - 4.1.1 NumPy Fundamentals
@@ -90,7 +90,7 @@
 
 ## **Part II: Data Engineering**
 
-### **Chapter 5: Data Collection and Ingestion**
+### **[Chapter 5: Data Collection and Ingestion](2.%20data_engineering/5.%20data_collection_and_ingestion.ipynb)**
 
 - 5.1 Data Sources Identification
 - 5.2 API Integration
@@ -114,7 +114,7 @@
 - 5.10 Data Versioning
 - 5.11 Building a Robust Ingestion System
 
-### **Chapter 6: Data Cleaning and Preprocessing**
+### **[Chapter 6: Data Cleaning and Preprocessing](2.%20data_engineering/6.%20data_cleaning_and_preprocessing.ipynb)**
 
 - 6.1 Data Cleaning Strategy
 - 6.2 Duplicate Detection and Removal
@@ -137,7 +137,7 @@
 - 6.11 Data Transformation Pipelines
 - 6.12 Reproducible Preprocessing
 
-### **Chapter 7: Exploratory Data Analysis**
+### **[Chapter 7: Exploratory Data Analysis](2.%20data_engineering/7.%20exploratory_data_analysis.ipynb)**
 
 - 7.1 The EDA Process
 - 7.2 Univariate Analysis
@@ -161,7 +161,7 @@
 - 7.9 Communicating Insights
 - 7.10 EDA Checklist
 
-### **Chapter 8: Data Storage and Management**
+### **[Chapter 8: Data Storage and Management](2.%20data_engineering/8.%20data_storage_and_management.ipynb)**
 
 - 8.1 Storage Architecture Decisions
 - 8.2 File-Based Storage
@@ -187,7 +187,7 @@
 - 8.10 Data Security and Compliance
 - 8.11 Choosing the Right Storage
 
-### **Chapter 9: Data Pipelines and Automation**
+### **[Chapter 9: Data Pipelines and Automation](2.%20data_engineering/9.%20data_pipelines_and_automation.ipynb)**
 
 - 9.1 Pipeline Architecture Patterns
 - 9.2 Batch Processing Pipelines
@@ -208,7 +208,7 @@
 
 ## **Part III: Feature Engineering**
 
-### **Chapter 10: Introduction to Feature Engineering**
+### **[Chapter 10: Introduction to Feature Engineering](3.%20feature_engineering/10.%20introduction_to_feature_engineering.ipynb)**
 
 - 10.1 What Are Features?
 - 10.2 The Feature Engineering Process
@@ -220,7 +220,7 @@
 - 10.8 Common Pitfalls
 - 10.9 Feature Documentation
 
-### **Chapter 11: Basic Feature Creation**
+### **[Chapter 11: Basic Feature Creation](3.%20feature_engineering/11.%20basic_feature_creation.ipynb)**
 
 - 11.1 Raw Value Features
 - 11.2 Difference Features
@@ -237,7 +237,7 @@
 - 11.9 Transformation Features
 - 11.10 Implementation Patterns
 
-### **Chapter 12: Advanced Rolling Window Features**
+### **[Chapter 12: Advanced Rolling Window Features](3.%20feature_engineering/12.%20advanced_rolling_window_features.ipynb)**
 
 - 12.1 Window Selection Strategies
 - 12.2 Statistical Rolling Features
@@ -253,7 +253,7 @@
 - 12.8 Efficient Computation Techniques
 - 12.9 Window Feature Selection
 
-### **Chapter 13: Indicator Engineering for Time-Series Systems**
+### **[Chapter 13: Indicator Engineering for Time-Series Systems](3.%20feature_engineering/13.%20indicator_engineering_for_time_series_systems.ipynb)**
 
 - 13.1 Understanding Domain-Specific Indicators
 - 13.2 Trend-Based Indicators
@@ -282,7 +282,7 @@
 - 13.9 Indicator Selection Framework
 - 13.10 Custom Indicator Development
 
-### **Chapter 14: Domain-Specific Feature Engineering**
+### **[Chapter 14: Domain-Specific Feature Engineering](3.%20feature_engineering/14.%20domain_specific_feature_engineering.ipynb)**
 
 - 14.1 Financial Domain Features
   - 14.1.1 Price Action Features
@@ -311,7 +311,7 @@
 - 14.6 Domain Knowledge Integration
 - 14.7 Feature Domain Adaptation
 
-### **Chapter 15: Feature Scaling and Normalization**
+### **[Chapter 15: Feature Scaling and Normalization](3.%20feature_engineering/15.%20feature_scaling_and_normalization.ipynb)**
 
 - 15.1 Why Scale Features?
 - 15.2 Standardization (Z-Score)
@@ -328,7 +328,7 @@
 - 15.10 Inverse Transformation
 - 15.11 Common Pitfalls
 
-### **Chapter 16: Feature Selection and Dimensionality Reduction**
+### **[Chapter 16: Feature Selection and Dimensionality Reduction](3.%20feature_engineering/16.%20feature_selection_and_dimensionality_reduction.ipynb)**
 
 - 16.1 The Need for Feature Selection
 - 16.2 Filter Methods
@@ -356,7 +356,7 @@
 - 16.8 Automated Feature Selection
 - 16.9 Evaluation and Validation
 
-### **Chapter 17: Advanced Feature Engineering Techniques**
+### **[Chapter 17: Advanced Feature Engineering Techniques](3.%20feature_engineering/17.%20advanced_feature_engineering_techniques.ipynb)**
 
 - 17.1 Automated Feature Engineering
   - 17.1.1 tsfresh
@@ -376,7 +376,7 @@
 
 ## **Part IV: Model Development**
 
-### **Chapter 18: Machine Learning Fundamentals for Time-Series**
+### **[Chapter 18: Machine Learning Fundamentals for Time-Series](4.%20model_development/18.%20machine_learning_fundamentals_for_time_series.ipynb)**
 
 - 18.1 Supervised Learning Basics
 - 18.2 Prediction Problem Types
@@ -391,7 +391,7 @@
 - 18.8 Generalization
 - 18.9 Model Selection Strategy
 
-### **Chapter 19: Defining Prediction Targets**
+### **[Chapter 19: Defining Prediction Targets](4.%20model_development/19.%20defining_prediction_targets.ipynb)**
 
 - 19.1 Understanding Your Prediction Goal
 - 19.2 Target Variable Design
@@ -407,7 +407,7 @@
 - 19.9 Target Leakage Prevention
 - 19.10 Target Validation
 
-### **Chapter 20: Data Splitting Strategies**
+### **[Chapter 20: Data Splitting Strategies](4.%20model_development/20.%20data_splitting_strategies.ipynb)**
 
 - 20.1 Why Time-Series Splitting is Different
 - 20.2 Random Split Problems
@@ -424,7 +424,7 @@
 - 20.10 Multiple Asset Splitting
 - 20.11 Splitting Best Practices
 
-### **Chapter 21: Traditional Statistical Models**
+### **[Chapter 21: Traditional Statistical Models](4.%20model_development/21.%20traditional_statistical_models.ipynb)**
 
 - 21.1 Introduction to Statistical Models
 - 21.2 Autoregressive Models (AR)
@@ -444,7 +444,7 @@
 - 21.10 Model Diagnostics
 - 21.11 Strengths and Limitations
 
-### **Chapter 22: Tree-Based Models**
+### **[Chapter 22: Tree-Based Models](4.%20model_development/22.%20tree_based_models.ipynb)**
 
 - 22.1 Decision Trees Fundamentals
   - 22.1.1 Tree Construction
@@ -473,7 +473,7 @@
 - 22.7 Comparison of Tree Models
 - 22.8 Best Practices
 
-### **Chapter 23: Linear Models for Time-Series**
+### **[Chapter 23: Linear Models for Time-Series](4.%20model_development/23.%20linear_models_for_time_series.ipynb)**
 
 - 23.1 Linear Regression Fundamentals
 - 23.2 Ridge Regression (L2)
@@ -486,7 +486,7 @@
 - 23.9 Time-Series Linear Models
 - 23.10 Interpretation and Diagnostics
 
-### **Chapter 24: Support Vector Machines**
+### **[Chapter 24: Support Vector Machines](4.%20model_development/24.%20support_vector_machines.ipynb)**
 
 - 24.1 SVM Fundamentals
 - 24.2 Kernel Tricks
@@ -496,7 +496,7 @@
 - 24.6 Scaling and Preprocessing
 - 24.7 Strengths and Limitations
 
-### **Chapter 25: Neural Network Fundamentals**
+### **[Chapter 25: Neural Network Fundamentals](4.%20model_development/25.%20neural_network_fundamentals.ipynb)**
 
 - 25.1 Introduction to Neural Networks
 - 25.2 Perceptrons and Activation Functions
@@ -514,7 +514,7 @@
 - 25.8 Training Neural Networks
 - 25.9 Common Pitfalls
 
-### **Chapter 26: Recurrent Neural Networks**
+### **[Chapter 26: Recurrent Neural Networks](4.%20model_development/26.%20recurrent_neural_networks.ipynb)**
 
 - 26.1 Sequential Data Processing
 - 26.2 Basic RNN Architecture
@@ -529,7 +529,7 @@
 - 26.8 Training RNNs
 - 26.9 Practical Considerations
 
-### **Chapter 27: Convolutional Neural Networks for Time-Series**
+### **[Chapter 27: Convolutional Neural Networks for Time-Series](4.%20model_development/27.%20convolutional_neural_networks_for_time_series.ipynb)**
 
 - 27.1 CNNs for Sequential Data
 - 27.2 1D Convolutions
@@ -541,7 +541,7 @@
 - 27.8 Architectural Patterns
 - 27.9 Implementation Strategies
 
-### **Chapter 28: Transformer Models for Time-Series**
+### **[Chapter 28: Transformer Models for Time-Series](4.%20model_development/28.%20transformer_models_for_time_series.ipynb)**
 
 - 28.1 Attention Mechanism
 - 28.2 Self-Attention
@@ -556,7 +556,7 @@
 - 28.8 Fine-tuning Approaches
 - 28.9 Implementation Considerations
 
-### **Chapter 29: Specialized Time-Series Architectures**
+### **[Chapter 29: Specialized Time-Series Architectures](4.%20model_development/29.%20specialized_time_series_architectures.ipynb)**
 
 - 29.1 N-BEATS
 - 29.2 DeepAR
@@ -567,7 +567,7 @@
 - 29.7 Hybrid Models
 - 29.8 Architecture Selection
 
-### **Chapter 30: Model Training Best Practices**
+### **[Chapter 30: Model Training Best Practices](4.%20model_development/30.%20model_training_best_practices.ipynb)**
 
 - 30.1 Data Preparation
 - 30.2 Batch Size Selection
@@ -584,7 +584,7 @@
 
 ## **Part V: Model Evaluation and Validation**
 
-### **Chapter 31: Evaluation Metrics for Regression**
+### **[Chapter 31: Evaluation Metrics for Regression](5.%20model_evaluation_and_validation/31.%20evaluation_metrics_for_regression.ipynb)**
 
 - 31.1 Mean Absolute Error (MAE)
 - 31.2 Mean Squared Error (MSE)
@@ -597,7 +597,7 @@
 - 31.9 Metrics Comparison
 - 31.10 Choosing the Right Metric
 
-### **Chapter 32: Evaluation Metrics for Classification**
+### **[Chapter 32: Evaluation Metrics for Classification](5.%20model_evaluation_and_validation/32.%20evaluation_metrics_for_classification.ipynb)**
 
 - 32.1 Accuracy
 - 32.2 Precision
@@ -612,7 +612,7 @@
 - 32.11 Metrics for Imbalanced Data
 - 32.12 Multi-Class Metrics
 
-### **Chapter 33: Time-Series Specific Evaluation**
+### **[Chapter 33: Time-Series Specific Evaluation](5.%20model_evaluation_and_validation/33.%20time_series_specific_evaluation.ipynb)**
 
 - 33.1 Forecast Horizon Evaluation
 - 33.2 Cumulative Forecast Error
@@ -625,7 +625,7 @@
 - 33.9 Model Comparison Framework
 - 33.10 Evaluation Best Practices
 
-### **Chapter 34: Cross-Validation Techniques**
+### **[Chapter 34: Cross-Validation Techniques](5.%20model_evaluation_and_validation/34.%20cross_validation_techniques.ipynb)**
 
 - 34.1 K-Fold Cross-Validation
 - 34.2 Stratified K-Fold
@@ -638,7 +638,7 @@
 - 34.9 Rolling Origin Evaluation
 - 34.10 Implementation Strategies
 
-### **Chapter 35: Hyperparameter Tuning**
+### **[Chapter 35: Hyperparameter Tuning](5.%20model_evaluation_and_validation/35.%20hyperparameter_tuning.ipynb)**
 
 - 35.1 Understanding Hyperparameters
 - 35.2 Hyperparameter Types
@@ -655,7 +655,7 @@
 - 35.10 Early Stopping in Tuning
 - 35.11 Practical Considerations
 
-### **Chapter 36: Model Interpretation and Explainability**
+### **[Chapter 36: Model Interpretation and Explainability](5.%20model_evaluation_and_validation/36.%20model_interpretation_and_explainability.ipynb)**
 
 - 36.1 Why Interpretability Matters
 - 36.2 Global vs. Local Interpretability
@@ -671,7 +671,7 @@
 - 36.9 Interpreting Neural Networks
 - 36.10 Communicating Results
 
-### **Chapter 37: Error Analysis**
+### **[Chapter 37: Error Analysis](5.%20model_evaluation_and_validation/37.%20error_analysis.ipynb)**
 
 - 37.1 Systematic Error Patterns
 - 37.2 Residual Analysis
@@ -688,7 +688,7 @@
 
 ## **Part VI: Production Systems**
 
-### **Chapter 38: From Development to Production**
+### **[Chapter 38: From Development to Production](6.%20production_systems/38.%20from_development_to_production.ipynb)**
 
 - 38.1 The Development-Production Gap
 - 38.2 Production Requirements
@@ -702,7 +702,7 @@
 - 38.10 Testing Strategies
 - 38.11 Documentation
 
-### **Chapter 39: Model Serialization and Storage**
+### **[Chapter 39: Model Serialization and Storage](6.%20production_systems/39.%20model_serialization_and_storage.ipynb)**
 
 - 39.1 Serialization Formats
   - 39.1.1 Pickle
@@ -721,7 +721,7 @@
 - 39.8 Security Considerations
 - 39.9 Best Practices
 
-### **Chapter 40: Building Prediction Services**
+### **[Chapter 40: Building Prediction Services](6.%20production_systems/40.%20building_prediction_services.ipynb)**
 
 - 40.1 Service Architecture Patterns
 - 40.2 REST API Design
@@ -738,7 +738,7 @@
 - 40.10 API Documentation
 - 40.11 Service Testing
 
-### **Chapter 41: Batch Prediction Systems**
+### **[Chapter 41: Batch Prediction Systems](6.%20production_systems/41.%20batch_prediction_systems.ipynb)**
 
 - 41.1 Batch Processing Architecture
 - 41.2 Scheduling Systems
@@ -754,7 +754,7 @@
 - 41.9 Error Handling
 - 41.10 Performance Optimization
 
-### **Chapter 42: Real-Time Prediction Systems**
+### **[Chapter 42: Real-Time Prediction Systems](6.%20production_systems/42.%20real_time_prediction_systems.ipynb)**
 
 - 42.1 Real-Time Architecture
 - 42.2 Streaming Platforms
@@ -772,7 +772,7 @@
 - 42.8 Monitoring Real-Time Systems
 - 42.9 Scaling Strategies
 
-### **Chapter 43: Model Deployment Strategies**
+### **[Chapter 43: Model Deployment Strategies](6.%20production_systems/43.%20model_deployment_strategies.ipynb)**
 
 - 43.1 Deployment Patterns
   - 43.1.1 Canary Deployment
@@ -792,7 +792,7 @@
 - 43.7 Deployment Pipelines
 - 43.8 Rollback Strategies
 
-### **Chapter 44: Monitoring and Observability**
+### **[Chapter 44: Monitoring and Observability](6.%20production_systems/44.%20monitoring_and_observability.ipynb)**
 
 - 44.1 Observability Pillars
   - 44.1.1 Metrics
@@ -811,7 +811,7 @@
 - 44.9 Root Cause Analysis
 - 44.10 Incident Response
 
-### **Chapter 45: Model Drift Detection**
+### **[Chapter 45: Model Drift Detection](6.%20production_systems/45.%20model_drift_detection.ipynb)**
 
 - 45.1 Types of Model Drift
   - 45.1.1 Data Drift
@@ -828,7 +828,7 @@
 - 45.7 Drift Mitigation
 - 45.8 Retraining Triggers
 
-### **Chapter 46: Continuous Retraining Strategies**
+### **[Chapter 46: Continuous Retraining Strategies](6.%20production_systems/46.%20continuous_retraining_strategies.ipynb)**
 
 - 46.1 When to Retrain
 - 46.2 Retraining Triggers
@@ -841,7 +841,7 @@
 - 46.9 Model Comparison
 - 46.10 Automated Retraining
 
-### **Chapter 47: A/B Testing and Model Comparison**
+### **[Chapter 47: A/B Testing and Model Comparison](6.%20production_systems/47.%20ab_testing_and_model_comparison.ipynb)**
 
 - 47.1 A/B Testing Fundamentals
 - 47.2 Experimental Design
@@ -854,7 +854,7 @@
 - 47.9 Incrementality Measurement
 - 47.10 Best Practices
 
-### **Chapter 48: Scalability and Performance Optimization**
+### **[Chapter 48: Scalability and Performance Optimization](6.%20production_systems/48.%20scalability_and_performance_optimization.ipynb)**
 
 - 48.1 Performance Bottlenecks
 - 48.2 Profiling Techniques
@@ -874,7 +874,7 @@
 - 48.10 Cloud Scaling
 - 48.11 Cost Optimization
 
-### **Chapter 49: Security and Compliance**
+### **[Chapter 49: Security and Compliance](6.%20production_systems/49.%20security_and_compliance.ipynb)**
 
 - 49.1 Security Fundamentals
 - 49.2 Data Security
@@ -901,7 +901,7 @@
 - 49.8 Auditing and Logging
 - 49.9 Security Best Practices
 
-### **Chapter 50: Cloud Deployment**
+### **[Chapter 50: Cloud Deployment](6.%20production_systems/50.%20cloud_deployment.ipynb)**
 
 - 50.1 Cloud Providers Overview
   - 50.1.1 AWS
@@ -924,7 +924,7 @@
 
 ## **Part VII: Advanced Topics**
 
-### **Chapter 51: Ensemble Methods**
+### **[Chapter 51: Ensemble Methods](7.%20advanced_topics/51.%20ensemble_methods.ipynb)**
 
 - 51.1 Ensemble Learning Principles
 - 51.2 Bagging
@@ -940,7 +940,7 @@
 - 51.9 Ensemble Pruning
 - 51.10 Implementation Strategies
 
-### **Chapter 52: Transfer Learning and Pre-training**
+### **[Chapter 52: Transfer Learning and Pre-training](7.%20advanced_topics/52.%20transfer_learning_and_pre_training.ipynb)**
 
 - 52.1 Transfer Learning Concepts
 - 52.2 Pre-training Strategies
@@ -953,7 +953,7 @@
 - 52.9 Few-Shot Learning
 - 52.10 Implementation
 
-### **Chapter 53: Automated Machine Learning**
+### **[Chapter 53: Automated Machine Learning](7.%20advanced_topics/53.%20automated_machine_learning.ipynb)**
 
 - 53.1 AutoML Overview
 - 53.2 Automated Feature Engineering
@@ -970,7 +970,7 @@
 - 53.9 Customizing AutoML
 - 53.10 Best Practices
 
-### **Chapter 54: Reinforcement Learning for Time-Series**
+### **[Chapter 54: Reinforcement Learning for Time-Series](7.%20advanced_topics/54.%20reinforcement_learning_for_time_series.ipynb)**
 
 - 54.1 RL Fundamentals
 - 54.2 MDP Formulation
@@ -983,7 +983,7 @@
 - 54.9 Reward Design
 - 54.10 Practical Considerations
 
-### **Chapter 55: Probabilistic Forecasting**
+### **[Chapter 55: Probabilistic Forecasting](7.%20advanced_topics/55.%20probabilistic_forecasting.ipynb)**
 
 - 55.1 Deterministic vs. Probabilistic
 - 55.2 Uncertainty Quantification
@@ -996,7 +996,7 @@
 - 55.9 Evaluating Probabilistic Forecasts
 - 55.10 Communication
 
-### **Chapter 56: Multi-Variate Time-Series**
+### **[Chapter 56: Multi-Variate Time-Series](7.%20advanced_topics/56.%20multi_variate_time_series.ipynb)**
 
 - 56.1 Multi-Variate Challenges
 - 56.2 Vector Autoregression (VAR)
@@ -1009,7 +1009,7 @@
 - 56.9 Feature Interactions
 - 56.10 Implementation
 
-### **Chapter 57: Hierarchical and Grouped Time-Series**
+### **[Chapter 57: Hierarchical and Grouped Time-Series](7.%20advanced_topics/57.%20hierarchical_and_grouped_time_series.ipynb)**
 
 - 57.1 Hierarchical Structures
 - 57.2 Grouped Time-Series
@@ -1023,7 +1023,7 @@
 - 57.7 Scalability
 - 57.8 Implementation
 
-### **Chapter 58: Anomaly Detection**
+### **[Chapter 58: Anomaly Detection](7.%20advanced_topics/58.%20anomaly_detection.ipynb)**
 
 - 58.1 Anomaly Types
 - 58.2 Statistical Methods
@@ -1044,7 +1044,7 @@
 - 58.8 Real-Time Detection
 - 58.9 Interpretation
 
-### **Chapter 59: Causal Inference**
+### **[Chapter 59: Causal Inference](7.%20advanced_topics/59.%20causal_inference.ipynb)**
 
 - 59.1 Causality vs. Correlation
 - 59.2 Causal Graphs
@@ -1057,7 +1057,7 @@
 - 59.9 Time-Series Causality
 - 59.10 Applications
 
-### **Chapter 60: Advanced Optimization Techniques**
+### **[Chapter 60: Advanced Optimization Techniques](7.%20advanced_topics/60.%20advanced_optimization_techniques.ipynb)**
 
 - 60.1 Gradient Descent Variants
 - 60.2 Second-Order Methods
@@ -1074,7 +1074,7 @@
 
 ## **Part VIII: MLOps and DevOps**
 
-### **Chapter 61: Introduction to MLOps**
+### **[Chapter 61: Introduction to MLOps](8.%20mlops_and_devops/61.%20introduction_to_mlops.ipynb)**
 
 - 61.1 What is MLOps?
 - 61.2 MLOps vs. DevOps
@@ -1085,7 +1085,7 @@
 - 61.7 Maturity Models
 - 61.8 Getting Started
 
-### **Chapter 62: CI/CD for Machine Learning**
+### **[Chapter 62: CI/CD for Machine Learning](8.%20mlops_and_devops/62.%20cicd_for_machine_learning.ipynb)**
 
 - 62.1 CI/CD Fundamentals
 - 62.2 ML-Specific CI/CD
@@ -1102,7 +1102,7 @@
 - 62.9 Pipeline Orchestration
 - 62.10 Best Practices
 
-### **Chapter 63: Feature Stores**
+### **[Chapter 63: Feature Stores](8.%20mlops_and_devops/63.%20feature_stores.ipynb)**
 
 - 63.1 Feature Store Concepts
 - 63.2 Why Feature Stores?
@@ -1119,7 +1119,7 @@
 - 63.9 Best Practices
 - 63.10 Implementation Guide
 
-### **Chapter 64: Experiment Tracking**
+### **[Chapter 64: Experiment Tracking](8.%20mlops_and_devops/64.%20experiment_tracking.ipynb)**
 
 - 64.1 Why Track Experiments?
 - 64.2 What to Track
@@ -1135,7 +1135,7 @@
 - 64.8 Collaboration
 - 64.9 Best Practices
 
-### **Chapter 65: Data and Model Lineage**
+### **[Chapter 65: Data and Model Lineage](8.%20mlops_and_devops/65.%20data_and_model_lineage.ipynb)**
 
 - 65.1 Lineage Concepts
 - 65.2 Data Lineage
@@ -1148,7 +1148,7 @@
 - 65.9 Best Practices
 - 65.10 Implementation
 
-### **Chapter 66: Model Governance**
+### **[Chapter 66: Model Governance](8.%20mlops_and_devops/66.%20model_governance.ipynb)**
 
 - 66.1 Governance Framework
 - 66.2 Model Documentation
@@ -1161,7 +1161,7 @@
 - 66.9 Ethics and Fairness
 - 66.10 Best Practices
 
-### **Chapter 67: Infrastructure as Code**
+### **[Chapter 67: Infrastructure as Code](8.%20mlops_and_devops/67.%20infrastructure_as_code.ipynb)**
 
 - 67.1 IaC Fundamentals
 - 67.2 Terraform
@@ -1174,7 +1174,7 @@
 - 67.9 Environment Management
 - 67.10 Best Practices
 
-### **Chapter 68: Monitoring and Alerting**
+### **[Chapter 68: Monitoring and Alerting](8.%20mlops_and_devops/68.%20monitoring_and_alerting.ipynb)**
 
 - 68.1 Monitoring Strategy
 - 68.2 Metrics Collection
@@ -1187,7 +1187,7 @@
 - 68.9 Monitoring Tools
 - 68.10 Best Practices
 
-### **Chapter 69: Cost Management**
+### **[Chapter 69: Cost Management](8.%20mlops_and_devops/69.%20cost_management.ipynb)**
 
 - 69.1 Cost Optimization Strategies
 - 69.2 Cloud Cost Management
@@ -1204,7 +1204,7 @@
 
 ## **Part IX: User Interfaces and Visualization**
 
-### **Chapter 70: Building Dashboards**
+### **[Chapter 70: Building Dashboards](9.%20user_interfaces_and_visualization/70.%20building_dashboards.ipynb)**
 
 - 70.1 Dashboard Design Principles
 - 70.2 Dashboard Architecture
@@ -1225,7 +1225,7 @@
 - 70.8 Real-Time Dashboards
 - 70.9 Best Practices
 
-### **Chapter 71: Data Visualization**
+### **[Chapter 71: Data Visualization](9.%20user_interfaces_and_visualization/71.%20data_visualization.ipynb)**
 
 - 71.1 Visualization Principles
 - 71.2 Time-Series Visualizations
@@ -1248,7 +1248,7 @@
 - 71.9 Performance
 - 71.10 Best Practices
 
-### **Chapter 72: Interactive Exploration Tools**
+### **[Chapter 72: Interactive Exploration Tools](9.%20user_interfaces_and_visualization/72.%20interactive_exploration_tools.ipynb)**
 
 - 72.1 Interactive Analysis
 - 72.2 Parameter Tuning Interfaces
@@ -1261,7 +1261,7 @@
 - 72.9 Collaboration Features
 - 72.10 Implementation
 
-### **Chapter 73: Alerting and Notification Systems**
+### **[Chapter 73: Alerting and Notification Systems](9.%20user_interfaces_and_visualization/73.%20alerting_and_notification_systems.ipynb)**
 
 - 73.1 Alert Design Principles
 - 73.2 Alert Types
@@ -1282,7 +1282,7 @@
 
 ## **Part X: Case Studies and Real-World Applications**
 
-### **Chapter 74: Complete Financial Prediction System**
+### **[Chapter 74: Complete Financial Prediction System](10.%20case_studies_and_real_world_applications/74.%20complete_financial_prediction_system.ipynb)**
 
 - 74.1 System Architecture
 - 74.2 Data Collection Pipeline
@@ -1295,7 +1295,7 @@
 - 74.9 Lessons Learned
 - 74.10 Future Improvements
 
-### **Chapter 75: Retail Sales Forecasting System**
+### **[Chapter 75: Retail Sales Forecasting System](10.%20case_studies_and_real_world_applications/75.%20retail_sales_forecasting_system.ipynb)**
 
 - 75.1 Business Requirements
 - 75.2 Data Sources
@@ -1308,7 +1308,7 @@
 - 75.9 Deployment
 - 75.10 Results and Insights
 
-### **Chapter 76: Weather and Climate Prediction**
+### **[Chapter 76: Weather and Climate Prediction](10.%20case_studies_and_real_world_applications/76.%20weather_and_climate_prediction.ipynb)**
 
 - 76.1 Meteorological Data
 - 76.2 Spatial Considerations
@@ -1321,7 +1321,7 @@
 - 76.9 Challenges
 - 76.10 Future Directions
 
-### **Chapter 77: Healthcare Prediction Systems**
+### **[Chapter 77: Healthcare Prediction Systems](10.%20case_studies_and_real_world_applications/77.%20healthcare_prediction_systems.ipynb)**
 
 - 77.1 Patient Data Features
 - 77.2 Privacy Considerations
@@ -1334,7 +1334,7 @@
 - 77.9 Validation
 - 77.10 Best Practices
 
-### **Chapter 78: IoT and Sensor Analytics**
+### **[Chapter 78: IoT and Sensor Analytics](10.%20case_studies_and_real_world_applications/78.%20iot_and_sensor_analytics.ipynb)**
 
 - 78.1 Sensor Data Characteristics
 - 78.2 Signal Processing
@@ -1347,7 +1347,7 @@
 - 78.9 Challenges
 - 78.10 Case Studies
 
-### **Chapter 79: Energy Demand Forecasting**
+### **[Chapter 79: Energy Demand Forecasting](10.%20case_studies_and_real_world_applications/79.%20energy_demand_forecasting.ipynb)**
 
 - 79.1 Energy Market Dynamics
 - 79.2 Data Sources
@@ -1360,7 +1360,7 @@
 - 79.9 Business Impact
 - 79.10 Future Trends
 
-### **Chapter 80: Supply Chain Optimization**
+### **[Chapter 80: Supply Chain Optimization](10.%20case_studies_and_real_world_applications/80.%20supply_chain_optimization.ipynb)**
 
 - 80.1 Supply Chain Dynamics
 - 80.2 Demand Forecasting
@@ -1377,7 +1377,7 @@
 
 ## **Part XI: Advanced Implementation Patterns**
 
-### **Chapter 81: Microservices Architecture**
+### **[Chapter 81: Microservices Architecture](11.%20advanced_implementation_patterns/81.%20microservices_architecture.ipynb)**
 
 - 81.1 Microservices Principles
 - 81.2 Service Decomposition
@@ -1390,7 +1390,7 @@
 - 81.9 Testing
 - 81.10 Best Practices
 
-### **Chapter 82: Event-Driven Architecture**
+### **[Chapter 82: Event-Driven Architecture](11.%20advanced_implementation_patterns/82.%20event_driven_architecture.ipynb)**
 
 - 82.1 Event-Driven Principles
 - 82.2 Event Sourcing
@@ -1403,7 +1403,7 @@
 - 82.9 Testing
 - 82.10 Best Practices
 
-### **Chapter 83: Multi-Model Systems**
+### **[Chapter 83: Multi-Model Systems](11.%20advanced_implementation_patterns/83.%20multi_model_systems.ipynb)**
 
 - 83.1 When to Use Multiple Models
 - 83.2 Model Ensemble
@@ -1415,7 +1415,7 @@
 - 83.8 Monitoring
 - 83.9 Best Practices
 
-### **Chapter 84: Real-Time Learning Systems**
+### **[Chapter 84: Real-Time Learning Systems](11.%20advanced_implementation_patterns/84.%20real_time_learning_systems.ipynb)**
 
 - 84.1 Online Learning Fundamentals
 - 84.2 Streaming Algorithms
@@ -1427,7 +1427,7 @@
 - 84.8 Testing
 - 84.9 Best Practices
 
-### **Chapter 85: Distributed Systems**
+### **[Chapter 85: Distributed Systems](11.%20advanced_implementation_patterns/85.%20distributed_systems.ipynb)**
 
 - 85.1 Distributed Computing Concepts
 - 85.2 Distributed Training
@@ -1444,7 +1444,7 @@
 
 ## **Part XII: Industry Best Practices and Standards**
 
-### **Chapter 86: Development Best Practices**
+### **[Chapter 86: Development Best Practices](12.%20industry_best_practices_and_standards/86.%20development_best_practices.ipynb)**
 
 - 86.1 Code Quality Standards
 - 86.2 Testing Strategies
@@ -1457,7 +1457,7 @@
 - 86.9 Knowledge Sharing
 - 86.10 Continuous Improvement
 
-### **Chapter 87: Team Collaboration**
+### **[Chapter 87: Team Collaboration](12.%20industry_best_practices_and_standards/87.%20team_collaboration.ipynb)**
 
 - 87.1 Team Structure
 - 87.2 Roles and Responsibilities
@@ -1470,7 +1470,7 @@
 - 87.9 Culture
 - 87.10 Best Practices
 
-### **Chapter 88: Project Management**
+### **[Chapter 88: Project Management](12.%20industry_best_practices_and_standards/88.%20project_management.ipynb)**
 
 - 88.1 Agile Methodologies
 - 88.2 Sprint Planning
@@ -1483,7 +1483,7 @@
 - 88.9 Retrospectives
 - 88.10 Best Practices
 
-### **Chapter 89: Documentation Strategies**
+### **[Chapter 89: Documentation Strategies](12.%20industry_best_practices_and_standards/89.%20documentation_strategies.ipynb)**
 
 - 89.1 Documentation Types
 - 89.2 Code Documentation
@@ -1496,7 +1496,7 @@
 - 89.9 Maintenance
 - 89.10 Best Practices
 
-### **Chapter 90: Quality Assurance**
+### **[Chapter 90: Quality Assurance](12.%20industry_best_practices_and_standards/90.%20quality_assurance.ipynb)**
 
 - 90.1 QA Strategy
 - 90.2 Testing Frameworks
@@ -1509,7 +1509,7 @@
 - 90.9 Integration Testing
 - 90.10 Best Practices
 
-### **Chapter 91: Performance Optimization**
+### **[Chapter 91: Performance Optimization](12.%20industry_best_practices_and_standards/91.%20performance_optimization.ipynb)**
 
 - 91.1 Optimization Strategy
 - 91.2 Profiling
@@ -1522,7 +1522,7 @@
 - 91.9 Cloud Optimization
 - 91.10 Best Practices
 
-### **Chapter 92: Troubleshooting and Debugging**
+### **[Chapter 92: Troubleshooting and Debugging](12.%20industry_best_practices_and_standards/92.%20troubleshooting_and_debugging.ipynb)**
 
 - 92.1 Debugging Methodology
 - 92.2 Common Issues
@@ -1539,7 +1539,7 @@
 
 ## **Part XIII: Emerging Technologies and Future Trends**
 
-### **Chapter 93: Foundation Models for Time-Series**
+### **[Chapter 93: Foundation Models for Time-Series](13.%20emerging_technologies_and_future_trends/93.%20foundation_models_for_time_series.ipynb)**
 
 - 93.1 What Are Foundation Models?
 - 93.2 Time-Series Foundation Models
@@ -1556,7 +1556,7 @@
 - 93.9 Implementation
 - 93.10 Best Practices
 
-### **Chapter 94: Large Language Models for Time-Series**
+### **[Chapter 94: Large Language Models for Time-Series](13.%20emerging_technologies_and_future_trends/94.%20large_language_models_for_time_series.ipynb)**
 
 - 94.1 LLM Capabilities
 - 94.2 Time-Series Reasoning
@@ -1569,7 +1569,7 @@
 - 94.9 Limitations
 - 94.10 Future Directions
 
-### **Chapter 95: Automated Scientific Discovery**
+### **[Chapter 95: Automated Scientific Discovery](13.%20emerging_technologies_and_future_trends/95.%20automated_scientific_discovery.ipynb)**
 
 - 95.1 AI for Science
 - 95.2 Symbolic Regression
@@ -1582,7 +1582,7 @@
 - 95.9 Case Studies
 - 95.10 Best Practices
 
-### **Chapter 96: Edge AI and TinyML**
+### **[Chapter 96: Edge AI and TinyML](13.%20emerging_technologies_and_future_trends/96.%20edge_ai_and_tinyml.ipynb)**
 
 - 96.1 Edge Computing
 - 96.2 TinyML Fundamentals
@@ -1598,7 +1598,7 @@
 - 96.9 Best Practices
 - 96.10 Future Directions
 
-### **Chapter 97: Quantum Machine Learning**
+### **[Chapter 97: Quantum Machine Learning](13.%20emerging_technologies_and_future_trends/97.%20quantum_machine_learning.ipynb)**
 
 - 97.1 Quantum Computing Basics
 - 97.2 Quantum ML Algorithms
@@ -1611,7 +1611,7 @@
 - 97.9 Preparation
 - 97.10 Best Practices
 
-### **Chapter 98: Ethical AI and Responsible ML**
+### **[Chapter 98: Ethical AI and Responsible ML](13.%20emerging_technologies_and_future_trends/98.%20ethical_ai_and_responsible_ml.ipynb)**
 
 - 98.1 AI Ethics Principles
 - 98.2 Fairness and Bias
@@ -1624,7 +1624,7 @@
 - 98.9 Best Practices
 - 98.10 Implementation
 
-### **Chapter 99: Future of Time-Series Prediction**
+### **[Chapter 99: Future of Time-Series Prediction](13.%20emerging_technologies_and_future_trends/99.%20future_of_time_series_prediction.ipynb)**
 
 - 99.1 Current State
 - 99.2 Emerging Trends

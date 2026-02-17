@@ -14,21 +14,21 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part I: Foundations of FastAPI
 
-**Chapter 1: Setting Up the Development Environment**
+**[Chapter 1: Setting Up the Development Environment](1.%20foundations_of_fastapi/1.%20setting_up_the_development_environment.ipynb)**
 *   1.1 Modern Python Setup: Virtual environments (`venv`) and package management (`pip` vs `uv`).
 *   1.2 Installing FastAPI: The `fastapi[standard]` bundle vs. minimal installation.
 *   1.3 The ASGI Server: Understanding Uvicorn and the role of ASGI.
 *   1.4 The FastAPI CLI: Using `fastapi dev` for development and `fastapi run` for production.
 *   1.5 Your First API: Creating a "Hello World" endpoint and understanding the instance `app`.
 
-**Chapter 2: Routing and Basic Path Operations**
+**[Chapter 2: Routing and Basic Path Operations](1.%20foundations_of_fastapi/2.%20routing_and_basic_path_operations.ipynb)**
 *   2.1 The Path Operation Decorator: `@app.get`, `@app.post`, `@app.put`, `@app.delete`.
 *   2.2 Path Parameters: Dynamic URLs, type conversion, and validation.
 *   2.3 Query Parameters: Optional arguments, default values, and required query params.
 *   2.4 Request Bodies: Sending JSON data using Pydantic models.
 *   2.5 Response Models: Defining response shapes and automatic filtering.
 
-**Chapter 3: Automatic Documentation**
+**[Chapter 3: Automatic Documentation](1.%20foundations_of_fastapi/3.%20automatic_documentation.ipynb)**
 *   3.1 Swagger UI: Interactive API exploration at `/docs`.
 *   3.2 ReDoc: Alternative documentation at `/redoc`.
 *   3.3 OpenAPI Specification: Understanding the JSON Schema behind your API.
@@ -38,14 +38,14 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part II: Data Validation and Serialization with Pydantic
 
-**Chapter 4: Deep Dive into Pydantic Models**
+**[Chapter 4: Deep Dive into Pydantic Models](2.%20data_validation_and_serialization_with_pydantic/4.%20deep_dive_into_pydantic_models.ipynb)**
 *   4.1 Model Structure: Defining fields, types, and default values.
 *   4.2 Field Validation: Using `Field()` for constraints (min_length, max_length, regex).
 *   4.3 Nested Models: Structuring complex JSON data.
 *   4.4 Special Types: `EmailStr`, `HttpUrl`, `UUID`, and `datetime` handling.
 *   4.5 Validators: Custom validation logic using `@field_validator` and `@model_validator`.
 
-**Chapter 5: Advanced Data Handling**
+**[Chapter 5: Advanced Data Handling](2.%20data_validation_and_serialization_with_pydantic/5.%20advanced_data_handling.ipynb)**
 *   5.1 `BaseModel` vs `dataclasses`: Choosing the right tool.
 *   5.2 Serialization: Controlling JSON output, aliases, and excluding fields.
 *   5.3 Parsing & Validation: Handling form data and file uploads.
@@ -55,19 +55,19 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part III: Core FastAPI Concepts
 
-**Chapter 6: Dependency Injection System**
+**[Chapter 6: Dependency Injection System](3.%20core_fastapi_concepts/6.%20dependency_injection_system.ipynb)**
 *   6.1 The `Depends` Function: Creating reusable logic (database sessions, authentication).
 *   6.2 Dependency Trees: Dependencies calling other dependencies.
 *   6.3 Yield Dependencies: Setup and teardown logic (e.g., database cleanup).
 *   6.4 Overrides: Testing and mocking dependencies efficiently.
 
-**Chapter 7: Request Handling and Context**
+**[Chapter 7: Request Handling and Context](3.%20core_fastapi_concepts/7.%20request_handling_and_context.ipynb)**
 *   7.1 The `Request` Object: Direct access to headers, cookies, and client info.
 *   7.2 Form Data and File Uploads: Handling `multipart/form-data`.
 *   7.3 Cookies: Reading and setting cookies securely.
 *   7.4 Headers: Accessing and manipulating HTTP headers.
 
-**Chapter 8: Response Handling**
+**[Chapter 8: Response Handling](3.%20core_fastapi_concepts/8.%20response_handling.ipynb)**
 *   8.1 Status Codes: Setting explicit status codes for different scenarios.
 *   8.2 `JSONResponse` and `ORJSONResponse`: Optimizing response performance.
 *   8.3 Streaming Responses: Sending large files or real-time data.
@@ -77,13 +77,13 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part IV: Structuring Large Applications
 
-**Chapter 9: Project Architecture**
+**[Chapter 9: Project Architecture](4.%20structuring_large_applications/9.%20project_architecture.ipynb)**
 *   9.1 Modularization: Breaking the app into multiple files.
 *   9.2 `APIRouter`: Creating mini-applications and mounting them.
 *   9.3 The "Service-Repository" Pattern: Separating business logic from route logic.
 *   9.4 Configuration Management: Centralizing settings.
 
-**Chapter 10: Middleware and Events**
+**[Chapter 10: Middleware and Events](4.%20structuring_large_applications/10.%20middleware_and_events.ipynb)**
 *   10.1 Middleware Basics: Intercepting requests and responses.
 *   10.2 Built-in Middleware: CORS, GZip, Trusted Host, and HTTPS Redirect.
 *   10.3 Custom Middleware: Creating your own middleware classes.
@@ -94,12 +94,12 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part V: Security and Authentication
 
-**Chapter 11: Security Fundamentals**
+**[Chapter 11: Security Fundamentals](5.%20security_and_authentication/11.%20security_fundamentals.ipynb)**
 *   11.1 Security Schemes in OpenAPI: API Keys, HTTP Basic, OAuth2.
 *   11.2 `HTTPBasic`: Implementing simple authentication.
 *   11.3 Password Hashing: Using `passlib` or `bcrypt` securely.
 
-**Chapter 12: OAuth2 and JWT**
+**[Chapter 12: OAuth2 and JWT](5.%20security_and_authentication/12.%20oauth2_and_jwt.ipynb)**
 *   12.1 OAuth2 Password Flow: Understanding the standard.
 *   12.2 JSON Web Tokens (JWT): Generating and validating tokens.
 *   12.3 Dependency-Based Auth: Protecting routes using `Depends`.
@@ -110,13 +110,13 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part VI: Database Integration
 
-**Chapter 13: SQL Databases with SQLAlchemy**
+**[Chapter 13: SQL Databases with SQLAlchemy](6.%20database_integration/13.%20sql_databases_with_sqlalchemy.ipynb)**
 *   13.1 Async SQLAlchemy: Setting up async engines and sessions.
 *   13.2 Dependency Injection for DB Sessions: Managing connections per request.
 *   13.3 CRUD Operations: Creating, Reading, Updating, and Deleting data.
 *   13.4 Relationships: Handling foreign keys and relationships in API responses.
 
-**Chapter 14: NoSQL and ORMs**
+**[Chapter 14: NoSQL and ORMs](6.%20database_integration/14.%20nosql_and_orms.ipynb)**
 *   14.1 MongoDB with Motor/Beanie: Async integration.
 *   14.2 SQLModel: Using Tiangolo's SQLModel (Pydantic + SQLAlchemy).
 *   14.3 Migrations: Using Alembic for database schema evolution.
@@ -125,13 +125,13 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part VII: Testing and Quality Assurance
 
-**Chapter 15: Testing Strategies**
+**[Chapter 15: Testing Strategies](7.%20testing_and_quality_assurance/15.%20testing_strategies.ipynb)**
 *   15.1 `TestClient`: Writing unit tests for endpoints.
 *   15.2 Testing Authentication: Sending tokens in tests.
 *   15.3 Dependency Overriding: Mocking databases and external services.
 *   15.4 Async Testing: Using `pytest-asyncio` with async endpoints.
 
-**Chapter 16: Code Quality**
+**[Chapter 16: Code Quality](7.%20testing_and_quality_assurance/16.%20code_quality.ipynb)**
 *   16.1 Linting and Formatting: `ruff`, `black`, and `isort`.
 *   16.2 Type Checking: Integrating `mypy` with FastAPI.
 *   16.3 Pre-commit Hooks: Automating quality checks.
@@ -140,13 +140,13 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part VIII: Asynchronous Programming
 
-**Chapter 17: Mastering Async/Await**
+**[Chapter 17: Mastering Async/Await](8.%20asynchronous_programming/17.%20mastering_asyncawait.ipynb)**
 *   17.1 `def` vs `async def`: When to use which.
 *   17.2 Blocking vs Non-Blocking: Identifying performance bottlenecks.
 *   17.3 Running Blocking Code: `run_in_threadpool`.
 *   17.4 Background Tasks: `BackgroundTasks` class for fire-and-forget operations.
 
-**Chapter 18: WebSockets**
+**[Chapter 18: WebSockets](8.%20asynchronous_programming/18.%20websockets.ipynb)**
 *   18.1 WebSocket Basics: Establishing a persistent connection.
 *   18.2 Handling Messages: Sending and receiving data.
 *   18.3 Broadcasting: Implementing real-time chat or notifications.
@@ -156,17 +156,17 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part IX: Production Deployment
 
-**Chapter 19: Containerization**
+**[Chapter 19: Containerization](9.%20production_deployment/19.%20containerization.ipynb)**
 *   19.1 Dockerizing FastAPI: Writing optimized `Dockerfile` (Multi-stage builds).
 *   19.2 Docker Compose: Managing multi-container apps (App + DB + Redis).
 
-**Chapter 20: Deployment Strategies**
+**[Chapter 20: Deployment Strategies](9.%20production_deployment/20.%20deployment_strategies.ipynb)**
 *   20.1 Process Managers: Using Gunicorn with Uvicorn workers.
 *   20.2 Reverse Proxies: Nginx configuration for FastAPI.
 *   20.3 Cloud Deployment: Overview of AWS, Google Cloud, and modern platforms (Render, Fly.io).
 *   20.4 CI/CD Pipelines: GitHub Actions for automated testing and deployment.
 
-**Chapter 21: Performance Tuning**
+**[Chapter 21: Performance Tuning](9.%20production_deployment/21.%20performance_tuning.ipynb)**
 *   21.1 Concurrency settings: Workers, threads, and limits.
 *   21.2 Caching: Integrating Redis.
 *   21.3 Connection Pooling: Database optimization.
@@ -175,16 +175,16 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 
 ### Part X: Advanced Topics and Ecosystem
 
-**Chapter 22: Error Handling**
+**[Chapter 22: Error Handling](10.%20advanced_topics_and_ecosystem/22.%20error_handling.ipynb)**
 *   22.1 `HTTPException`: Raising HTTP errors.
 *   22.2 Custom Exception Handlers: Global error handling and custom error responses.
 *   22.3 Logging: Structured logging for production.
 
-**Chapter 23: GraphQL**
+**[Chapter 23: GraphQL](10.%20advanced_topics_and_ecosystem/23.%20graphql.ipynb)**
 *   23.1 Introduction to GraphQL.
 *   23.2 Integrating Strawberry or Ariadne with FastAPI.
 
-**Chapter 24: Advanced Patterns**
+**[Chapter 24: Advanced Patterns](10.%20advanced_topics_and_ecosystem/24.%20advanced_patterns.ipynb)**
 *   24.1 Server-Sent Events (SSE): Streaming updates to clients.
 *   24.2 Custom OpenAPI: Modifying the schema manually.
 *   24.3 Sub-Applications: Mounting other ASGI apps (e.g., Django, Flask).

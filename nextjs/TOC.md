@@ -2,14 +2,14 @@
 
 ## **Part 1: Foundations (Beginner Level)**
 
-### **Chapter 1: Introduction to Next.js**
+### **[Chapter 1: Introduction to Next.js](1.%20Foundations/1.%20introduction_to_nextjs.ipynb)**
 - 1.1 What is Next.js and Why It Matters
 - 1.2 Next.js Ecosystem and Industry Adoption
 - 1.3 Key Benefits Over Plain React
 - 1.4 Prerequisites and Setup Requirements
 - 1.5 Understanding the Modern Web Development Landscape
 
-### **Chapter 2: Getting Started**
+### **[Chapter 2: Getting Started](1.%20Foundations/2.%20getting_started.ipynb)**
 - 2.1 Installing Node.js and Package Managers
 - 2.2 Creating Your First Next.js App with create-next-app
 - 2.3 Project Structure Overview
@@ -17,7 +17,7 @@
 - 2.5 Development Server and Hot Reload
 - 2.6 TypeScript vs JavaScript Setup
 
-### **Chapter 3: Core React Fundamentals for Next.js**
+### **[Chapter 3: Core React Fundamentals for Next.js](1.%20Foundations/3.%20core_react_fundamentals_for_nextjs.ipynb)**
 - 3.1 React Components and JSX
 - 3.2 Props and State Management
 - 3.3 Event Handling
@@ -25,7 +25,7 @@
 - 3.5 Component Composition Patterns
 - 3.6 Common React Anti-Patterns to Avoid
 
-### **Chapter 4: App Router Fundamentals**
+### **[Chapter 4: App Router Fundamentals](1.%20Foundations/4.%20app_router_fundamentals.ipynb)**
 - 4.1 Understanding File-Based Routing
 - 4.2 Creating Your First Pages
 - 4.3 Dynamic Routes and Route Parameters
@@ -35,7 +35,7 @@
 
 ## **Part 2: Core Concepts (Intermediate Level)**
 
-### **Chapter 5: Layouts and Pages**
+### **[Chapter 5: Layouts and Pages](2.%20Core_concepts/5.%20layouts_and_pages.ipynb)**
 - 5.1 Root Layout and Nested Layouts
 - 5.2 Layout Composition Patterns
 - 5.3 Shared UI Components
@@ -43,7 +43,7 @@
 - 5.5 Loading States and Skeletons
 - 5.6 Error Handling at Route Level
 
-### **Chapter 6: Server vs Client Components**
+### **[Chapter 6: Server vs Client Components](2.%20Core_concepts/6.%20server_vs_client_components.ipynb)**
 - 6.1 Understanding the Mental Model Shift
 - 6.2 Server Components by Default
 - 6.3 Client Components with "use client"
@@ -52,7 +52,7 @@
 - 6.6 Passing Data Between Components
 - 6.7 Common Pitfalls and Solutions
 
-### **Chapter 7: Styling Approaches**
+### **[Chapter 7: Styling Approaches](2.%20Core_concepts/7.%20styling_approaches.ipynb)**
 - 7.1 Global CSS and CSS Modules
 - 7.2 Tailwind CSS Integration
 - 7.3 CSS-in-JS Solutions (Styled Components, Emotion)
@@ -60,7 +60,7 @@
 - 7.5 Responsive Design Patterns
 - 7.6 Dark Mode Implementation
 
-### **Chapter 8: Data Fetching Fundamentals**
+### **[Chapter 8: Data Fetching Fundamentals](2.%20Core_concepts/8.%20data_fetching_fundamentals.ipynb)**
 - 8.1 Fetching Data in Server Components
 - 8.2 Fetching Data in Client Components
 - 8.3 Understanding fetch() and Built-in Caching
@@ -68,7 +68,7 @@
 - 8.5 Error Handling and Loading States
 - 8.6 Data Fetching Best Practices
 
-### **Chapter 9: Optimizations Built-in**
+### **[Chapter 9: Optimizations Built-in](2.%20Core_concepts/9.%20optimizations_built-in.ipynb)**
 - 9.1 Image Optimization with next/image
 - 9.2 Font Optimization with next/font
 - 9.3 Script Optimization
@@ -78,7 +78,7 @@
 
 ## **Part 3: Advanced Features (Advanced Level)**
 
-### **Chapter 10: Advanced Data Fetching & Caching**
+### **[Chapter 10: Advanced Data Fetching & Caching](3.%20Advanced_Features/10.%20advanced_data_fetching_and_caching.ipynb)**
 - 10.1 Cache Components and "use cache" Directive
 - 10.2 Revalidation Strategies
 - 10.3 On-Demand Revalidation
@@ -87,7 +87,7 @@
 - 10.6 Streaming with Suspense
 - 10.7 Parallel and Sequential Data Fetching
 
-### **Chapter 11: Server Actions**
+### **[Chapter 11: Server Actions](3.%20Advanced_Features/11.%20server_actions.ipynb)**
 - 11.1 Introduction to Server Actions
 - 11.2 Creating Server Actions
 - 11.3 Form Handling with Server Actions
@@ -96,7 +96,7 @@
 - 11.6 Error Handling in Server Actions
 - 11.7 Security Best Practices
 
-### **Chapter 12: Route Handlers & APIs**
+### **[Chapter 12: Route Handlers & APIs](3.%20Advanced_Features/12.%20route_handlers_APIs.ipynb)**
 - 12.1 Creating API Routes
 - 12.2 RESTful API Design
 - 12.3 Handling HTTP Methods
@@ -105,7 +105,7 @@
 - 12.6 Dynamic API Routes
 - 12.7 API Route Best Practices
 
-### **Chapter 13: Rendering Strategies**
+### **[Chapter 13: Rendering Strategies](3.%20Advanced_Features/13.%20rendering_strategies.ipynb)**
 - 13.1 Static Site Generation (SSG)
 - 13.2 Server-Side Rendering (SSR)
 - 13.3 Incremental Static Regeneration (ISR)
@@ -114,7 +114,7 @@
 - 13.6 Choosing the Right Strategy
 - 13.7 Performance Implications
 
-### **Chapter 14: Middleware & Proxy**
+### **[Chapter 14: Middleware & Proxy](3.%20Advanced_Features/14.%20middleware_and_proxy.ipynb)**
 - 14.1 Understanding Middleware
 - 14.2 Request/Response Interception
 - 14.3 Authentication Guards
@@ -123,7 +123,7 @@
 - 14.6 Edge Runtime Considerations
 - 14.7 Common Middleware Patterns
 
-### **Chapter 15: State Management**
+### **[Chapter 15: State Management](3.%20Advanced_Features/15.%20state_management.ipynb)**
 - 15.1 React Context API
 - 15.2 Server-Side State Patterns
 - 15.3 Client-Side State Libraries (Zustand, Redux)
@@ -132,7 +132,7 @@
 - 15.6 Optimistic Updates
 - 15.7 State Synchronization
 
-### **Chapter 16: Authentication & Authorization**
+### **[Chapter 16: Authentication & Authorization](3.%20Advanced_Features/16.%20authentication_and_authorization.ipynb)**
 - 16.1 Authentication Fundamentals
 - 16.2 NextAuth.js Integration
 - 16.3 OAuth Providers
@@ -142,7 +142,7 @@
 - 16.7 Role-Based Access Control
 - 16.8 Security Best Practices
 
-### **Chapter 17: Database Integration**
+### **[Chapter 17: Database Integration](3.%20Advanced_Features/17.%20database_integration.ipynb)**
 - 17.1 Choosing a Database
 - 17.2 ORM Integration (Prisma, Drizzle)
 - 17.3 Connection Management
@@ -151,7 +151,7 @@
 - 17.6 Query Optimization
 - 17.7 Migration Strategies
 
-### **Chapter 18: Advanced Routing Patterns**
+### **[Chapter 18: Advanced Routing Patterns](3.%20Advanced_Features/18.%20advanced_routing_patterns.ipynb)**
 - 18.1 Parallel Routes
 - 18.2 Intercepting Routes
 - 18.3 Route Groups Advanced Usage
@@ -162,7 +162,7 @@
 
 ## **Part 4: Production-Ready Development**
 
-### **Chapter 19: Error Handling & Debugging**
+### **[Chapter 19: Error Handling & Debugging](4.%20Production_ready_development/19.%20error_handling_and_debugging.ipynb)**
 - 19.1 Error Boundaries
 - 19.2 Global Error Handling
 - 19.3 notFound() Function
@@ -171,7 +171,7 @@
 - 19.6 Logging and Monitoring
 - 19.7 Common Error Patterns
 
-### **Chapter 20: Testing Strategies**
+### **[Chapter 20: Testing Strategies](4.%20Production_ready_development/20.%20testing_strategies.ipynb)**
 - 20.1 Unit Testing with Jest/Vitest
 - 20.2 Component Testing
 - 20.3 End-to-End Testing with Playwright
@@ -180,7 +180,7 @@
 - 20.6 Mocking and Stubbing
 - 20.7 Test-Driven Development
 
-### **Chapter 21: Performance Optimization**
+### **[Chapter 21: Performance Optimization](4.%20Production_ready_development/21.%20performance_optimization.ipynb)**
 - 21.1 Core Web Vitals
 - 21.2 Bundle Optimization
 - 21.3 Image and Asset Optimization
@@ -189,7 +189,7 @@
 - 21.6 React Compiler Integration
 - 21.7 Performance Profiling
 
-### **Chapter 22: SEO & Metadata**
+### **[Chapter 22: SEO & Metadata](4.%20Production_ready_development/22.%20seo_and_metadata.ipynb)**
 - 22.1 Metadata API
 - 22.2 Dynamic Metadata
 - 22.3 Open Graph Tags
@@ -199,7 +199,7 @@
 - 22.7 Canonical URLs
 - 22.8 Social Media Optimization
 
-### **Chapter 23: Security Best Practices**
+### **[Chapter 23: Security Best Practices](4.%20Production_ready_development/23.%20security_best_practices.ipynb)**
 - 23.1 Common Security Vulnerabilities
 - 23.2 Environment Variables Management
 - 23.3 Data Security in Server Components
@@ -209,7 +209,7 @@
 - 23.7 Secure Data Transmission
 - 23.8 Dependency Security
 
-### **Chapter 24: Deployment Strategies**
+### **[Chapter 24: Deployment Strategies](4.%20Production_ready_development/24.%20deployment_strategies.ipynb)**
 - 24.1 Vercel Deployment
 - 24.2 Self-Hosting Options
 - 24.3 Docker Containerization
@@ -221,7 +221,7 @@
 
 ## **Part 5: Advanced Architecture & Patterns**
 
-### **Chapter 25: Architecture Patterns**
+### **[Chapter 25: Architecture Patterns](5.%20Advanced_architecture_and_patterns/25.%20architecture_patterns.ipynb)**
 - 25.1 Feature-Sliced Design (FSD)
 - 25.2 Layered Architecture
 - 25.3 Monorepo Setup
@@ -230,7 +230,7 @@
 - 25.6 Scalable Project Structures
 - 25.7 Team Collaboration Patterns
 
-### **Chapter 26: Advanced Component Patterns**
+### **[Chapter 26: Advanced Component Patterns](5.%20Advanced_architecture_and_patterns/26.%20advanced_component_patterns.ipynb)**
 - 26.1 Compound Components
 - 26.2 Render Props
 - 26.3 Higher-Order Components
@@ -239,7 +239,7 @@
 - 26.6 Server Component Patterns
 - 26.7 Performance Component Patterns
 
-### **Chapter 27: Real-Time Features**
+### **[Chapter 27: Real-Time Features](5.%20Advanced_architecture_and_patterns/27.%20real_time_features.ipynb)**
 - 27.1 WebSockets Integration
 - 27.2 Server-Sent Events (SSE)
 - 27.3 Real-time Data Sync
@@ -248,7 +248,7 @@
 - 27.6 Collaborative Features
 - 27.7 Real-time Best Practices
 
-### **Chapter 28: Advanced Caching Strategies**
+### **[Chapter 28: Advanced Caching Strategies](5.%20Advanced_architecture_and_patterns/28.%20advanced_caching_strategies.ipynb)**
 - 28.1 Multi-Layer Caching
 - 28.2 CDN Integration
 - 28.3 Edge Caching
@@ -257,7 +257,7 @@
 - 28.6 Distributed Caching
 - 28.7 Cache Performance Monitoring
 
-### **Chapter 29: Progressive Web Applications**
+### **[Chapter 29: Progressive Web Applications](5.%20Advanced_architecture_and_patterns/29.%20progressive_web_applications.ipynb)**
 - 29.1 PWA Fundamentals
 - 29.2 Service Workers
 - 29.3 Offline Functionality
@@ -266,7 +266,7 @@
 - 29.6 Background Sync
 - 29.7 PWA Best Practices
 
-### **Chapter 30: AI Integration**
+### **[Chapter 30: AI Integration](5.%20Advanced_architecture_and_patterns/30.%20ai_integration.ipynb)**
 - 30.1 Next.js AI SDK
 - 30.2 AI-Powered Features
 - 30.3 Streaming AI Responses
@@ -277,7 +277,7 @@
 
 ## **Part 6: Specialized Topics**
 
-### **Chapter 31: Internationalization**
+### **[Chapter 31: Internationalization](6.%20Specialized_topics/31.%20internationalization.ipynb)**
 - 31.1 i18n Setup
 - 31.2 Locale Detection
 - 31.3 Translated Routes
@@ -286,7 +286,7 @@
 - 31.6 Right-to-Left Language Support
 - 31.7 SEO for Multi-Language Sites
 
-### **Chapter 32: Accessibility (a11y)**
+### **[Chapter 32: Accessibility (a11y)](6.%20Specialized_topics/32.%20accessibility.ipynb)**
 - 32.1 Semantic HTML
 - 32.2 ARIA Attributes
 - 32.3 Keyboard Navigation
@@ -295,7 +295,7 @@
 - 32.6 Color Contrast and Visual Design
 - 32.7 Accessibility Testing
 
-### **Chapter 33: Analytics & Monitoring**
+### **[Chapter 33: Analytics & Monitoring](6.%20Specialized_topics/33.%20analytics_and_monitoring.ipynb)**
 - 33.1 Setting Up Analytics
 - 33.2 User Behavior Tracking
 - 33.3 Performance Monitoring
@@ -304,7 +304,7 @@
 - 33.6 Privacy Compliance (GDPR, CCPA)
 - 33.7 Analytics Best Practices
 
-### **Chapter 34: Content Management**
+### **[Chapter 34: Content Management](6.%20Specialized_topics/34.%20content_management.ipynb)**
 - 34.1 Headless CMS Integration
 - 34.2 Contentful Integration
 - 34.3 Sanity CMS
@@ -313,7 +313,7 @@
 - 34.6 Content Caching
 - 34.7 Content Preview Mode
 
-### **Chapter 35: E-commerce Integration**
+### **[Chapter 35: E-commerce Integration](6.%20Specialized_topics/35.%20e-commerce_integration.ipynb)**
 - 35.1 Shopify Integration
 - 35.2 Stripe Integration
 - 35.3 Payment Processing
@@ -322,7 +322,7 @@
 - 35.6 Checkout Flows
 - 35.7 Order Management
 
-### **Chapter 36: File Handling & Uploads**
+### **[Chapter 36: File Handling & Uploads](6.%20Specialized_topics/36.%20file_handling_and_uploads.ipynb)**
 - 36.1 File Upload Strategies
 - 36.2 Cloud Storage Integration (S3, Cloudflare R2)
 - 36.3 Image Processing
@@ -333,7 +333,7 @@
 
 ## **Part 7: Tooling & Workflow**
 
-### **Chapter 37: Development Tooling**
+### **[Chapter 37: Development Tooling](7.%20Tooling_and_workflow/37.%20development_tooling.ipynb)**
 - 37.1 VS Code Setup
 - 37.2 ESLint Configuration
 - 37.3 Prettier Integration
@@ -342,7 +342,7 @@
 - 37.6 Debugging Tools
 - 37.7 Development Best Practices
 
-### **Chapter 38: Turbopack Deep Dive**
+### **[Chapter 38: Turbopack Deep Dive](7.%20Tooling_and_workflow/38.%20turbopack_deep_dive.ipynb)**
 - 38.1 Turbopack Fundamentals
 - 38.2 Turbopack Configuration
 - 38.3 Performance Benefits
@@ -351,7 +351,7 @@
 - 38.6 Build Optimization
 - 38.7 Troubleshooting Turbopack
 
-### **Chapter 39: Build Adapters API**
+### **[Chapter 39: Build Adapters API](7.%20Tooling_and_workflow/39.%20build_adapters_api.ipynb)**
 - 39.1 Understanding Build Adapters
 - 39.2 Custom Adapter Development
 - 39.3 Deployment Platform Integration
@@ -360,7 +360,7 @@
 - 39.6 Adapter Testing
 - 39.7 Community Adapters
 
-### **Chapter 40: Next.js DevTools**
+### **[Chapter 40: Next.js DevTools](7.%20Tooling_and_workflow/40.%20nextjs_devtools.ipynb)**
 - 40.1 Next.js DevTools Setup
 - 40.2 React DevTools Integration
 - 40.3 Performance Profiling
@@ -369,7 +369,7 @@
 - 40.6 Network Monitoring
 - 40.7 Next.js MCP Server
 
-### **Chapter 41: TypeScript Advanced**
+### **[Chapter 41: TypeScript Advanced](7.%20Tooling_and_workflow/41.%20typescript_advanced.ipynb)**
 - 41.1 Advanced Type Definitions
 - 41.2 Generic Types
 - 41.3 Type Guards and Assertions
@@ -380,7 +380,7 @@
 
 ## **Part 8: Migration & Modernization**
 
-### **Chapter 42: Migrating to Next.js**
+### **[Chapter 42: Migrating to Next.js](8.%20Migration_and_modernization/42.%20migration_to_nextjs.ipynb)**
 - 42.1 From React to Next.js
 - 42.2 From Create React App
 - 42.3 From Gatsby
@@ -389,7 +389,7 @@
 - 42.6 Incremental Migration
 - 42.7 Common Migration Challenges
 
-### **Chapter 43: Pages Router to App Router Migration**
+### **[Chapter 43: Pages Router to App Router Migration](8.%20Migration_and_modernization/43.%20pages_router_to_app_router.ipynb)**
 - 43.1 Understanding the Differences
 - 43.2 Migration Planning
 - 43.3 Route Migration
@@ -398,7 +398,7 @@
 - 43.6 Component Migration
 - 43.7 Testing After Migration
 
-### **Chapter 44: Upgrading Next.js Versions**
+### **[Chapter 44: Upgrading Next.js Versions](8.%20Migration_and_modernization/44.%20upgrading_nextjs_versions.ipynb)**
 - 44.1 Upgrade Strategies
 - 44.2 Breaking Changes
 - 44.3 Using Codemods
@@ -409,7 +409,7 @@
 
 ## **Part 9: Real-World Projects**
 
-### **Chapter 45: Building a Blog Platform**
+### **[Chapter 45: Building a Blog Platform](9.%20Real_world_projects/45.%20blog_platform.ipynb)**
 - 45.1 Project Planning
 - 45.2 Database Schema Design
 - 45.3 Authentication Setup
@@ -418,7 +418,7 @@
 - 45.6 Deployment
 - 45.7 Scaling Considerations
 
-### **Chapter 46: Building an E-commerce Store**
+### **[Chapter 46: Building an E-commerce Store](9.%20Real_world_projects/46.%20e-commerce_store.ipynb)**
 - 46.1 Product Catalog Setup
 - 46.2 Shopping Cart Implementation
 - 46.3 Checkout Integration
@@ -427,7 +427,7 @@
 - 46.6 Order Management
 - 46.7 Performance Optimization
 
-### **Chapter 47: Building a SaaS Dashboard**
+### **[Chapter 47: Building a SaaS Dashboard](9.%20Real_world_projects/47.%20saas_dashboard.ipynb)**
 - 47.1 Dashboard Architecture
 - 47.2 Authentication & Authorization
 - 47.3 Data Visualization
@@ -436,7 +436,7 @@
 - 47.6 Analytics Integration
 - 47.7 Enterprise Features
 
-### **Chapter 48: Building a Social Media Platform**
+### **[Chapter 48: Building a Social Media Platform](9.%20Real_world_projects/48.%20social_media_platform.ipynb)**
 - 48.1 Feed Architecture
 - 48.2 User Profiles
 - 48.3 Post Management
@@ -447,7 +447,7 @@
 
 ## **Part 10: Advanced Topics & Future Trends**
 
-### **Chapter 49: Edge Computing**
+### **[Chapter 49: Edge Computing](10.%20Advanced_topics_and_future_trends/49.%20edge_computing.ipynb)**
 - 49.1 Understanding Edge Computing
 - 49.2 Edge Functions
 - 49.3 Edge Middleware
@@ -456,7 +456,7 @@
 - 49.6 Edge Database Access
 - 49.7 Performance Considerations
 
-### **Chapter 50: Serverless Architecture**
+### **[Chapter 50: Serverless Architecture](10.%20Advanced_topics_and_future_trends/50.%20serverless_architecture.ipynb)**
 - 50.1 Serverless Fundamentals
 - 50.2 Next.js in Serverless
 - 50.3 Function Optimization
@@ -465,7 +465,7 @@
 - 50.6 Scaling Serverless Apps
 - 50.7 Serverless Best Practices
 
-### **Chapter 51: Microservices Integration**
+### **[Chapter 51: Microservices Integration](10.%20Advanced_topics_and_future_trends/51.%20microservices_integration.ipynb)**
 - 51.1 Microservices Architecture
 - 51.2 Service Communication
 - 51.3 API Gateway Integration
@@ -474,7 +474,7 @@
 - 51.6 Error Handling
 - 51.7 Monitoring Distributed Systems
 
-### **Chapter 52: Advanced Performance Techniques**
+### **[Chapter 52: Advanced Performance Techniques](10.%20Advanced_topics_and_future_trends/52.%20advanced_performance_techniques.ipynb)**
 - 52.1 Rendering Optimization
 - 52.2 Network Optimization
 - 52.3 Memory Optimization
@@ -483,7 +483,7 @@
 - 52.6 Performance Testing
 - 52.7 Continuous Optimization
 
-### **Chapter 53: WebAssembly Integration**
+### **[Chapter 53: WebAssembly Integration](10.%20Advanced_topics_and_future_trends/53.%20webassembly_integration.ipynb)**
 - 53.1 WebAssembly Fundamentals
 - 53.2 Rust Integration
 - 53.3 Performance-Critical Modules
@@ -492,7 +492,7 @@
 - 53.6 Debugging WASM
 - 53.7 Future of WASM
 
-### **Chapter 54: Future of Next.js**
+### **[Chapter 54: Future of Next.js](10.%20Advanced_topics_and_future_trends/54.%20future_of_nextjs.ipynb)**
 - 54.1 Emerging Features
 - 54.2 React Server Components Evolution
 - 54.3 Performance Trends

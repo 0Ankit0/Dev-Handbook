@@ -3,7 +3,7 @@
 
 ## **Module I: Foundations of Cloud Computing**
 
-### **Chapter 1: Introduction to Cloud Computing**
+### **[Chapter 1: Introduction to Cloud Computing](1.%20foundations_of_cloud_computing/1.%20introduction_to_cloud_computing.ipynb)**
 *   **1.1 Defining the Cloud:** What it is, history, and evolution from on-premises to the cloud.
 *   **1.2 Why Cloud Matters:** Business drivers (agility, scalability, cost-efficiency, innovation) and the shift to cloud-first strategies.
 *   **1.3 Key Characteristics:** On-demand self-service, broad network access, resource pooling, rapid elasticity, measured service.
@@ -17,7 +17,7 @@
     *   **Hybrid Cloud:** Connecting public and private, data and application portability, governance.
     *   **Multi-Cloud:** Strategies to avoid vendor lock-in, best-of-breed service selection, management challenges.
 
-### **Chapter 2: Essential Technical Prerequisites**
+### **[Chapter 2: Essential Technical Prerequisites](1.%20foundations_of_cloud_computing/2.%20essential_technical_prerequisites.ipynb)**
 *   **2.1 Operating Systems:** Linux fundamentals (command line, file systems, permissions) for cloud environments.
 *   **2.2 Networking Basics:** TCP/IP, DNS, HTTP/HTTPS, load balancing concepts, VPNs.
 *   **2.3 Data Fundamentals:** Relational (SQL) vs. NoSQL databases, data modeling basics, CAP theorem introduction.
@@ -28,13 +28,13 @@
 
 ## **Module II: Selecting and Navigating Cloud Platforms**
 
-### **Chapter 3: The Big Three Platforms Overview**
+### **[Chapter 3: The Big Three Platforms Overview](2.%20selecting_and_navigating_cloud_platforms/3.%20the_big_three_platforms_overview.ipynb)**
 *   **3.1 Amazon Web Services (AWS):** Market leader, core services ecosystem, global footprint, philosophy.
 *   **3.2 Microsoft Azure:** Enterprise integration, Windows-centric heritage, hybrid cloud strength, services portfolio.
 *   **3.3 Google Cloud Platform (GCP):** Data and AI heritage, Kubernetes leadership, container-native design, analytics focus.
 *   **3.4 Choosing Your Starting Platform:** Decision factors (career goals, project needs, prior experience) and a "pick one to start" strategy.
 
-### **Chapter 4: Core Cloud Services - The Universal Toolkit**
+### **[Chapter 4: Core Cloud Services - The Universal Toolkit](2.%20selecting_and_navigating_cloud_platforms/4.%20core_cloud_services_the_universal_toolkit.ipynb)**
 *   **4.1 Compute Services:**
     *   **Virtual Machines (VMs):** Instance types, sizing, scaling, security groups.
     *   **Container Services:** Introduction to containers (Docker), orchestration concepts.
@@ -62,13 +62,13 @@
 
 ## **Module III: Building and Deploying Cloud Applications**
 
-### **Chapter 5: Cloud-Native Application Design**
+### **[Chapter 5: Cloud-Native Application Design](3.%20building_and_deploying_cloud_applications/5.%20cloud_native_application_design.ipynb)**
 *   **5.1 The Twelve-Factor App Methodology:** Principles for building SaaS apps (codebase, dependencies, config, backing services, build, release, run, processes, port binding, concurrency, disposability, dev/prod parity, logs, admin processes).
 *   **5.2 Microservices Architecture:** Monolith to microservices, benefits, challenges, communication patterns (REST, gRPC, message queues).
 *   **5.3 Designing for Resilience:** High availability, fault tolerance, redundancy (Availability Zones, Regions), graceful degradation.
 *   **5.4 Statelessness and Scalability:** Why stateless services scale better, handling state outside the application.
 
-### **Chapter 6: Infrastructure as Code (IaC)**
+### **[Chapter 6: Infrastructure as Code (IaC)](3.%20building_and_deploying_cloud_applications/6.%20infrastructure_as_code.ipynb)**
 *   **6.1 What is IaC?:** Benefits (repeatability, version control, consistency), declarative vs. imperative approaches.
 *   **6.2 Terraform - The Cross-Cloud Standard:**
     *   **Syntax and Structure:** Providers, resources, variables, outputs, modules.
@@ -77,7 +77,7 @@
     *   **Code Snippet:** Example Terraform configuration to deploy a web server and database.
 *   **6.3 Cloud-Native IaC Tools:** AWS CloudFormation, Azure ARM Templates/Bicep, Google Deployment Manager (brief overview).
 
-### **Chapter 7: CI/CD Pipelines in the Cloud**
+### **[Chapter 7: CI/CD Pipelines in the Cloud](3.%20building_and_deploying_cloud_applications/7.%20cicd_pipelines_in_the_cloud.ipynb)**
 *   **7.1 The CI/CD Philosophy:** Continuous Integration, Continuous Delivery/Deployment, automation.
 *   **7.2 Building a Pipeline:**
     *   **Source Control:** Triggering from Git events.
@@ -87,7 +87,7 @@
     *   **Tools:** AWS CodePipeline, Azure DevOps, Google Cloud Build, Jenkins (for comparison).
 *   **7.3 Code Snippet:** Example GitHub Actions workflow to build, test, and deploy a containerized app to Kubernetes.
 
-### **Chapter 8: Container Orchestration with Kubernetes**
+### **[Chapter 8: Container Orchestration with Kubernetes](3.%20building_and_deploying_cloud_applications/8.%20container_orchestration_with_kubernetes.ipynb)**
 *   **8.1 Containerization Deep Dive with Docker:** Images, containers, Dockerfile, Docker Compose for local dev.
 *   **8.2 Kubernetes (K8s) Essentials:**
     *   **Architecture:** Control plane vs. worker nodes, pods, deployments, services.
@@ -100,13 +100,13 @@
 
 ## **Module IV: Advanced Cloud Architecture and Patterns**
 
-### **Chapter 9: Serverless Architectures**
+### **[Chapter 9: Serverless Architectures](4.%20advanced_cloud_architecture_and_patterns/9.%20serverless_architectures.ipynb)**
 *   **9.1 Beyond Functions:** Serverless databases, storage, event buses, APIs.
 *   **9.2 Event-Driven Architectures:** Event sources, processors, consumers. Use cases (data pipelines, real-time processing).
 *   **9.3 Design Patterns:** Fan-out/fan-in, choreography vs. orchestration.
 *   **9.4 Code Snippet:** Example serverless workflow (e.g., image upload triggers resize function via SNS/SQS).
 
-### **Chapter 10: Modern Data Architectures in the Cloud**
+### **[Chapter 10: Modern Data Architectures in the Cloud](4.%20advanced_cloud_architecture_and_patterns/10.%20modern_data_architectures_in_the_cloud.ipynb)**
 *   **10.1 Data Lakes vs. Data Warehouses:** Concepts, when to use which, unified data platforms.
 *   **10.2 Data Pipelines (ELT/ETL):** Ingestion, transformation, loading. Tools (AWS Glue, Azure Data Factory, Google Dataflow).
 *   **10.3 Streaming Data:** Concepts (events, streams), use cases (real-time analytics, IoT). Tools (Kinesis, Event Hubs, Pub/Sub).
@@ -114,7 +114,7 @@
     *   **Managed ML Services:** SageMaker, Azure Machine Learning, Vertex AI.
     *   **MLOps in the Cloud:** Training, deploying, and monitoring models at scale.
 
-### **Chapter 11: Hybrid and Multi-Cloud Architectures**
+### **[Chapter 11: Hybrid and Multi-Cloud Architectures](4.%20advanced_cloud_architecture_and_patterns/11.%20hybrid_and_multi_cloud_architectures.ipynb)**
 *   **11.1 Design Principles for Portability:** Avoiding vendor lock-in, using open standards and APIs.
 *   **11.2 Connectivity Models:** VPNs, Direct Connect/ExpressRoute/Interconnect, API gateways.
 *   **11.3 Data and Application Consistency:** Challenges and strategies across environments.
@@ -124,16 +124,16 @@
 
 ## **Module V: Security, Governance, and Compliance**
 
-### **Chapter 12: The Cloud Shared Responsibility Model**
+### **[Chapter 12: The Cloud Shared Responsibility Model](5.%20security_governance_and_compliance/12.%20the_cloud_shared_responsibility_model.ipynb)**
 *   **12.1 Understanding the Boundary:** What the provider secures vs. what you secure (for IaaS, PaaS, SaaS).
 *   **12.2 Security in the Lifecycle:** Integrating security from design to operations (Shift Left).
 
-### **Chapter 13: Identity and Access Management (IAM) Deep Dive**
+### **[Chapter 13: Identity and Access Management (IAM) Deep Dive](5.%20security_governance_and_compliance/13.%20identity_and_access_management_deep_dive.ipynb)**
 *   **13.1 Advanced IAM:** Role-based access control (RBAC), attribute-based access control (ABAC), temporary credentials.
 *   **13.2 Privilege Management:** Just-in-time access, eliminating long-term credentials.
 *   **13.3 Service Accounts & Machine Identities:** Managing non-human identities securely.
 
-### **Chapter 14: Securing Cloud Infrastructure**
+### **[Chapter 14: Securing Cloud Infrastructure](5.%20security_governance_and_compliance/14.%20securing_cloud_infrastructure.ipynb)**
 *   **14.1 Network Security:** Security groups, network ACLs, web application firewalls (WAF), DDoS protection.
 *   **14.2 Data Protection:**
     *   **Encryption at Rest:** Customer-managed keys (CMKs), key management services (KMS).
@@ -141,7 +141,7 @@
 *   **14.3 Secrets Management:** Storing and rotating database credentials, API keys, tokens (e.g., AWS Secrets Manager).
 *   **14.4 Vulnerability and Compliance Management:** Automated scanning (IaC, containers, workloads), compliance frameworks (NIST, CIS, PCI-DSS, GDPR, HIPAA).
 
-### **Chapter 15: Cloud Security Operations**
+### **[Chapter 15: Cloud Security Operations](5.%20security_governance_and_compliance/15.%20cloud_security_operations.ipynb)**
 *   **15.1 Threat Detection and Response:** SIEM integration, anomaly detection, incident response playbooks.
 *   **15.2 Zero Trust Architecture:** Principles in the cloud, implementation strategies (verify explicitly, use least privilege, assume breach).
 
@@ -149,12 +149,12 @@
 
 ## **Module VI: Cloud Financial Management (FinOps) and Operations**
 
-### **Chapter 16: Understanding Cloud Economics**
+### **[Chapter 16: Understanding Cloud Economics](6.%20cloud_financial_management_and_operations/16.%20understanding_cloud_economics.ipynb)**
 *   **16.1 Pricing Models:** On-demand, reserved instances, savings plans, spot instances.
 *   **16.2 The Hidden Costs of Cloud:** Data transfer (egress fees), idle resources, over-provisioning.
 *   **16.3 Total Cost of Ownership (TCO) Analysis:** Cloud vs. on-premises, long-term projections.
 
-### **Chapter 17: Implementing FinOps**
+### **[Chapter 17: Implementing FinOps](6.%20cloud_financial_management_and_operations/17.%20implementing_finops.ipynb)**
 *   **17.1 The FinOps Framework:** Inform, Optimize, Operate phases.
 *   **17.2 Cost Visibility and Allocation:** Tagging strategies, cost centers, showback/chargeback.
 *   **17.3 Cost Optimization Strategies:**
@@ -163,7 +163,7 @@
     *   **Governance:** Budgets, alerts, policy enforcement.
 *   **17.4 Tools:** Cloud-native cost tools (AWS Cost Explorer, Azure Cost Management) and third-party solutions.
 
-### **Chapter 18: Cloud Observability and Site Reliability Engineering (SRE)**
+### **[Chapter 18: Cloud Observability and Site Reliability Engineering (SRE)](6.%20cloud_financial_management_and_operations/18.%20cloud_observability_and_site_reliability_engineering.ipynb)**
 *   **18.1 Beyond Monitoring:** Observability (metrics, logs, traces) for deeper insights.
 *   **18.2 Distributed Tracing:** Understanding request flow across microservices (e.g., AWS X-Ray, Azure Monitor).
 *   **18.3 SRE Principles:** SLIs, SLOs, error budgets, blameless postmortems.
@@ -173,24 +173,24 @@
 
 ## **Module VII: Emerging Technologies and Future Trends**
 
-### **Chapter 19: Edge Computing**
+### **[Chapter 19: Edge Computing](7.%20emerging_technologies_and_future_trends/19.%20edge_computing.ipynb)**
 *   **19.1 Concepts:** Computing closer to the data source/device to reduce latency and bandwidth.
 *   **19.2 Cloud-Edge Continuum:** How central cloud and edge devices collaborate.
 *   **19.3 Use Cases:** IoT, real-time analytics, content delivery.
 *   **19.4 Edge Platforms:** AWS IoT Greengrass, Azure IoT Edge, Google Anthos on bare metal.
 
-### **Chapter 20: AI-Native Cloud Computing**
+### **[Chapter 20: AI-Native Cloud Computing](7.%20emerging_technologies_and_future_trends/20.%20ai_native_cloud_computing.ipynb)**
 *   **20.1 AI as a Foundation:** How AI services are built into the cloud platform (not just add-ons).
 *   **20.2 AI Infrastructure:** Optimized compute (GPUs, TPUs), specialized storage.
 *   **20.3 AI-Enhanced Operations:** AIOps for automated monitoring, troubleshooting, and resource optimization.
 *   **20.4 Generative AI in the Cloud:** Building and deploying gen AI applications, vector databases, model orchestration.
 
-### **Chapter 21: Quantum Computing in the Cloud**
+### **[Chapter 21: Quantum Computing in the Cloud](7.%20emerging_technologies_and_future_trends/21.%20quantum_computing_in_the_cloud.ipynb)**
 *   **21.1 Introduction to Quantum Computing:** Qubits, superposition, entanglement (conceptual overview).
 *   **21.2 Cloud Access:** Quantum processors and simulators available via the cloud (AWS Braket, Azure Quantum, Google Quantum AI).
 *   **21.3 Potential Use Cases:** Optimization, simulation, cryptography (exploratory).
 
-### **Chapter 22: Sustainability and Green Cloud**
+### **[Chapter 22: Sustainability and Green Cloud](7.%20emerging_technologies_and_future_trends/22.%20sustainability_and_green_cloud.ipynb)**
 *   **22.1 The Carbon Footprint of Computing:** Data center energy consumption.
 *   **22.2 Cloud Provider Sustainability Efforts:** Renewable energy commitments, carbon-neutral goals.
 *   **22.3 Sustainable Cloud Practices:** Architecting for efficiency, selecting carbon-aware regions, optimizing resource usage.
@@ -199,13 +199,13 @@
 
 ## **Module VIII: Capstone Project and Career Development**
 
-### **Chapter 23: End-to-End Cloud Project**
+### **[Chapter 23: End-to-End Cloud Project](8.%20capstone_project_and_career_development/23.%20end_to_end_cloud_project.ipynb)**
 *   **23.1 Project Scenarios:** Choose from complex, real-world projects (e.g., "Build a scalable, serverless e-commerce backend with multi-region resilience").
 *   **23.2 Architecture Design:** Create detailed diagrams, select services, plan security and cost.
 *   **23.3 Implementation:** Apply all learned skills – IaC, CI/CD, containerization, monitoring.
 *   **23.4 Documentation and Presentation:** Operational runbooks, architecture decision records (ADRs).
 
-### **Chapter 24: Cloud Certifications and Career Paths**
+### **[Chapter 24: Cloud Certifications and Career Paths](8.%20capstone_project_and_career_development/24.%20cloud_certifications_and_career_paths.ipynb)**
 *   **24.1 Certification Roadmaps:**
     *   **Foundational:** AWS Cloud Practitioner, Azure Fundamentals, Google Cloud Digital Leader.
     *   **Associate:** AWS Solutions Architect Associate, Azure Administrator Associate, Google Associate Cloud Engineer.

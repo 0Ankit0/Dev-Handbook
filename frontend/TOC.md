@@ -9,7 +9,7 @@
 
 ## Part I: Foundations of the Web
 
-### Chapter 1: How the Web Works
+### [Chapter 1: How the Web Works](1.%20foundations_of_the_web/1.%20how_the_web_works.ipynb)
 - 1.1 The Internet vs The Web
   - Understanding the difference
   - How information travels across the web
@@ -38,7 +38,7 @@
 
 ---
 
-### Chapter 2: HTML — The Structure of the Web
+### [Chapter 2: HTML — The Structure of the Web](1.%20foundations_of_the_web/2.%20html_the_structure_of_the_web.ipynb)
 - 2.1 Introduction to HTML
   - What is HTML?
   - HTML's role in web development
@@ -90,7 +90,7 @@
 
 ---
 
-### Chapter 3: CSS — Styling the Web
+### [Chapter 3: CSS — Styling the Web](1.%20foundations_of_the_web/3.%20css_styling_the_web.ipynb)
 - 3.1 Introduction to CSS
   - What is CSS?
   - CSS's role in web development
@@ -151,7 +151,7 @@
 
 ---
 
-### Chapter 4: JavaScript — Adding Interactivity
+### [Chapter 4: JavaScript — Adding Interactivity](1.%20foundations_of_the_web/4.%20javascript_adding_interactivity.ipynb)
 - 4.1 Introduction to JavaScript
   - What is JavaScript?
   - JavaScript's role in web development
@@ -197,7 +197,7 @@
 
 ---
 
-### Chapter 5: Control Flow and Functions
+### [Chapter 5: Control Flow and Functions](1.%20foundations_of_the_web/5.%20control_flow_and_functions.ipynb)
 - 5.1 Conditional Statements
   - The `if` statement
   - The `else` clause
@@ -253,7 +253,7 @@
 
 ## Part II: Deep Dive into HTML
 
-### Chapter 6: Semantic HTML
+### [Chapter 6: Semantic HTML](2.%20deep_dive_into_html/6.%20semantic_html.ipynb)
 - 6.1 Why Semantics Matter
   - Benefits for accessibility
   - Benefits for SEO
@@ -288,7 +288,7 @@
 
 ---
 
-### Chapter 7: Forms in HTML
+### [Chapter 7: Forms in HTML](2.%20deep_dive_into_html/7.%20forms_in_html.ipynb)
 - 7.1 Introduction to Forms
   - The `<form>` element
   - `action` and `method` attributes
@@ -337,7 +337,7 @@
 
 ---
 
-### Chapter 8: HTML Tables
+### [Chapter 8: HTML Tables](2.%20deep_dive_into_html/8.%20html_tables.ipynb)
 - 8.1 When to Use Tables
   - Tables for tabular data
   - When NOT to use tables
@@ -366,7 +366,7 @@
 
 ---
 
-### Chapter 9: Multimedia and Embedded Content
+### [Chapter 9: Multimedia and Embedded Content](2.%20deep_dive_into_html/9.%20multimedia_and_embedded_content.ipynb)
 - 9.1 Images Revisited
   - Responsive images with `srcset`
   - The `sizes` attribute
@@ -397,7 +397,7 @@
 
 ---
 
-### Chapter 10: HTML5 APIs Overview
+### [Chapter 10: HTML5 APIs Overview](2.%20deep_dive_into_html/10.%20html5_apis_overview.ipynb)
 - 10.1 What Are Web APIs?
   - Browser APIs vs third-party APIs
   - The `navigator` object
@@ -427,7 +427,7 @@
 
 ## Part III: Deep Dive into CSS
 
-### Chapter 11: CSS Layouts — Positioning
+### [Chapter 11: CSS Layouts — Positioning](3.%20deep_dive_into_css/11.%20css_layouts_positioning.ipynb)
 - 11.1 The Display Property
   - `block`
   - `inline`
@@ -457,7 +457,7 @@
 
 ---
 
-### Chapter 12: CSS Layouts — Flexbox
+### [Chapter 12: CSS Layouts — Flexbox](3.%20deep_dive_into_css/12.%20css_layouts_flexbox.ipynb)
 - 12.1 Introduction to Flexbox
   - Why Flexbox?
   - Flex container and flex items
@@ -490,7 +490,7 @@
 
 ---
 
-### Chapter 13: CSS Layouts — Grid
+### [Chapter 13: CSS Layouts — Grid](3.%20deep_dive_into_css/13.%20css_layouts_grid.ipynb)
 - 13.1 Introduction to CSS Grid
   - Why Grid?
   - Grid container and grid items
@@ -529,7 +529,7 @@
 
 ---
 
-### Chapter 14: Responsive Web Design
+### [Chapter 14: Responsive Web Design](3.%20deep_dive_into_css/14.%20responsive_web_design.ipynb)
 - 14.1 Responsive Design Fundamentals
   - What is responsive design?
   - Mobile-first vs desktop-first
@@ -568,7 +568,7 @@
 
 ---
 
-### Chapter 15: Advanced CSS Styling
+### [Chapter 15: Advanced CSS Styling](3.%20deep_dive_into_css/15.%20advanced_css_styling.ipynb)
 - 15.1 Pseudo-Classes
   - User action: `:hover`, `:active`, `:focus`
   - Form states: `:checked`, `:disabled`, `:valid`, `:invalid`
@@ -625,7 +625,7 @@
 
 ---
 
-### Chapter 16: CSS Architecture and Organization
+### [Chapter 16: CSS Architecture and Organization](3.%20deep_dive_into_css/16.%20css_architecture_and_organization.ipynb)
 - 16.1 The Challenges of CSS
   - Specificity wars
   - Naming conflicts
@@ -657,7 +657,7 @@
 
 ## Part IV: Deep Dive into JavaScript
 
-### Chapter 17: Objects in JavaScript
+### [Chapter 17: Objects in JavaScript](4.%20deep_dive_into_javascript/17.%20objects_in_javascript.ipynb)
 - 17.1 Introduction to Objects
   - What is an object?
   - Creating objects with object literals
@@ -695,7 +695,7 @@
 
 ---
 
-### Chapter 18: Arrays in JavaScript
+### [Chapter 18: Arrays in JavaScript](4.%20deep_dive_into_javascript/18.%20arrays_in_javascript.ipynb)
 - 18.1 Introduction to Arrays
   - What is an array?
   - Creating arrays
@@ -742,7 +742,7 @@
 
 ---
 
-### Chapter 19: Functions Deep Dive
+### [Chapter 19: Functions Deep Dive](4.%20deep_dive_into_javascript/19.%20functions_deep_dive.ipynb)
 - 19.1 Function Declarations vs Expressions
   - Declaration syntax
   - Expression syntax
@@ -780,7 +780,7 @@
 
 ---
 
-### Chapter 20: The DOM — Document Object Model
+### [Chapter 20: The DOM — Document Object Model](4.%20deep_dive_into_javascript/20.%20the_dom_document_object_model.ipynb)
 - 20.1 Understanding the DOM
   - What is the DOM?
   - DOM tree structure
@@ -821,7 +821,7 @@
 
 ---
 
-### Chapter 21: Events in JavaScript
+### [Chapter 21: Events in JavaScript](4.%20deep_dive_into_javascript/21.%20events_in_javascript.ipynb)
 - 21.1 Introduction to Events
   - What are events?
   - Event types overview
@@ -871,7 +871,7 @@
 
 ---
 
-### Chapter 22: Forms and JavaScript
+### [Chapter 22: Forms and JavaScript](4.%20deep_dive_into_javascript/22.%20forms_and_javascript.ipynb)
 - 22.1 Accessing Form Elements
   - The `forms` collection
   - Accessing form elements by name
@@ -903,7 +903,7 @@
 
 ---
 
-### Chapter 23: Asynchronous JavaScript
+### [Chapter 23: Asynchronous JavaScript](4.%20deep_dive_into_javascript/23.%20asynchronous_javascript.ipynb)
 - 23.1 Synchronous vs Asynchronous
   - Understanding synchronous code
   - Why asynchronous code?
@@ -952,7 +952,7 @@
 
 ---
 
-### Chapter 24: JavaScript and Browser APIs
+### [Chapter 24: JavaScript and Browser APIs](4.%20deep_dive_into_javascript/24.%20javascript_and_browser_apis.ipynb)
 - 24.1 Timers
   - `setTimeout()`
   - `setInterval()`
@@ -993,7 +993,7 @@
 
 ---
 
-### Chapter 25: Error Handling and Debugging
+### [Chapter 25: Error Handling and Debugging](4.%20deep_dive_into_javascript/25.%20error_handling_and_debugging.ipynb)
 - 25.1 Types of Errors
   - Syntax errors
   - Runtime errors
@@ -1029,7 +1029,7 @@
 
 ## Part V: Professional Practices
 
-### Chapter 26: Web Accessibility
+### [Chapter 26: Web Accessibility](5.%20professional_practices/26.%20web_accessibility.ipynb)
 - 26.1 Why Accessibility Matters
   - Accessibility for all users
   - Legal requirements
@@ -1071,7 +1071,7 @@
 
 ---
 
-### Chapter 27: Web Performance
+### [Chapter 27: Web Performance](5.%20professional_practices/27.%20web_performance.ipynb)
 - 27.1 Why Performance Matters
   - User experience impact
   - Business impact
@@ -1118,7 +1118,7 @@
 
 ---
 
-### Chapter 28: Web Security Fundamentals
+### [Chapter 28: Web Security Fundamentals](5.%20professional_practices/28.%20web_security_fundamentals.ipynb)
 - 28.1 Security Principles
   - Defense in depth
   - Least privilege
@@ -1150,7 +1150,7 @@
 
 ---
 
-### Chapter 29: Best Practices and Code Quality
+### [Chapter 29: Best Practices and Code Quality](5.%20professional_practices/29.%20best_practices_and_code_quality.ipynb)
 - 29.1 Writing Clean Code
   - Meaningful names
   - Functions should do one thing
@@ -1181,7 +1181,7 @@
 
 ---
 
-### Chapter 30: Building Real-World Projects
+### [Chapter 30: Building Real-World Projects](5.%20professional_practices/30.%20building_real_world_projects.ipynb)
 - 30.1 Project Planning
   - Defining requirements
   - Designing the structure

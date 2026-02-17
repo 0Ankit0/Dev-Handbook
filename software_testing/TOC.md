@@ -6,7 +6,7 @@
 
 ## **Part I: Foundations of Software Testing**
 
-### **Chapter 1: Introduction to Software Testing**
+### **[Chapter 1: Introduction to Software Testing](1.%20foundations_of_software_testing/1.%20introduction_to_software_testing.ipynb)**
 1.1 What is Software Testing?
 1.2 Why is Testing Essential?
 1.3 Common Misconceptions About Testing
@@ -14,7 +14,7 @@
 1.5 The Role of a Software Tester
 1.6 Career Paths in Software Testing
 
-### **Chapter 2: Testing Principles and Philosophy**
+### **[Chapter 2: Testing Principles and Philosophy](1.%20foundations_of_software_testing/2.%20testing_principles_and_philosophy.ipynb)**
 2.1 The Seven Principles of Testing
 2.2 Test Early, Test Often
 2.3 The Pesticide Paradox
@@ -22,7 +22,7 @@
 2.5 The Pareto Principle in Testing
 2.6 Industry Standards: IEEE, ISO, ISTQB
 
-### **Chapter 3: The Software Development Life Cycle (SDLC)**
+### **[Chapter 3: The Software Development Life Cycle (SDLC)](1.%20foundations_of_software_testing/3.%20the_software_development_life_cycle.ipynb)**
 3.1 Waterfall Model
 3.2 V-Model
 3.3 Agile Methodology
@@ -30,7 +30,7 @@
 3.5 Testing in Each SDLC Phase
 3.6 The Software Testing Life Cycle (STLC)
 
-### **Chapter 4: Testing Terminology and Concepts**
+### **[Chapter 4: Testing Terminology and Concepts](1.%20foundations_of_software_testing/4.%20testing_terminology_and_concepts.ipynb)**
 4.1 Key Testing Vocabulary
 4.2 Test Artifacts
 4.3 Defect/Bug Lifecycle
@@ -41,7 +41,7 @@
 
 ## **Part II: Manual Testing Fundamentals**
 
-### **Chapter 5: Test Planning and Strategy**
+### **[Chapter 5: Test Planning and Strategy](2.%20manual_testing_fundamentals/5.%20test_planning_and_strategy.ipynb)**
 5.1 Test Plan Document Structure
 5.2 Test Scope and Objectives
 5.3 Resource Planning
@@ -50,7 +50,7 @@
 5.6 Entry and Exit Criteria
 5.7 Sample Test Plan Template
 
-### **Chapter 6: Test Design Techniques**
+### **[Chapter 6: Test Design Techniques](2.%20manual_testing_fundamentals/6.%20test_design_techniques.ipynb)**
 6.1 Black Box Testing Techniques
 6.1.1 Equivalence Partitioning
 6.1.2 Boundary Value Analysis
@@ -67,7 +67,7 @@
 6.3 Grey Box Testing
 6.4 Practical Examples and Exercises
 
-### **Chapter 7: Test Case Development**
+### **[Chapter 7: Test Case Development](2.%20manual_testing_fundamentals/7.%20test_case_development.ipynb)**
 7.1 Anatomy of a Test Case
 7.2 Writing Effective Test Cases
 7.3 Test Case Templates
@@ -76,7 +76,7 @@
 7.6 Traceability Matrix
 7.7 Sample Test Cases with Code Examples
 
-### **Chapter 8: Test Execution and Reporting**
+### **[Chapter 8: Test Execution and Reporting](2.%20manual_testing_fundamentals/8.%20test_execution_and_reporting.ipynb)**
 8.1 Test Execution Process
 8.2 Test Data Management
 8.3 Defect Reporting
@@ -85,7 +85,7 @@
 8.6 Test Summary Reports
 8.7 Communication with Stakeholders
 
-### **Chapter 9: Exploratory Testing**
+### **[Chapter 9: Exploratory Testing](2.%20manual_testing_fundamentals/9.%20exploratory_testing.ipynb)**
 9.1 Introduction to Exploratory Testing
 9.2 Session-Based Test Management
 9.3 Charters and Timeboxing
@@ -97,7 +97,7 @@
 
 ## **Part III: Test Automation Foundations**
 
-### **Chapter 10: Introduction to Test Automation**
+### **[Chapter 10: Introduction to Test Automation](3.%20test_automation_foundations/10.%20introduction_to_test_automation.ipynb)**
 10.1 What is Test Automation?
 10.2 Benefits and Limitations
 10.3 When to Automate vs. When to Manually Test
@@ -105,7 +105,7 @@
 10.5 Common Automation Pitfalls
 10.6 Automation Strategy
 
-### **Chapter 11: Programming Fundamentals for Testers**
+### **[Chapter 11: Programming Fundamentals for Testers](3.%20test_automation_foundations/11.%20programming_fundamentals_for_testers.ipynb)**
 11.1 Introduction to Programming
 11.2 Variables, Data Types, and Operators
 11.3 Control Structures (If, Loops, Switch)
@@ -114,7 +114,7 @@
 11.6 Exception Handling
 11.7 Code Snippets in Python and JavaScript
 
-### **Chapter 12: Test Automation Frameworks**
+### **[Chapter 12: Test Automation Frameworks](3.%20test_automation_foundations/12.%20test_automation_frameworks.ipynb)**
 12.1 Types of Frameworks
 12.1.1 Linear Scripting Framework
 12.1.2 Modular Framework
@@ -127,7 +127,7 @@
 12.4 Framework Selection Criteria
 12.5 Framework Implementation Guide
 
-### **Chapter 13: Version Control for Test Automation**
+### **[Chapter 13: Version Control for Test Automation](3.%20test_automation_foundations/13.%20version_control_for_test_automation.ipynb)**
 13.1 Git Basics
 13.2 Git Branching Strategies
 13.3 Collaborative Workflows
@@ -135,7 +135,7 @@
 13.5 Code Review Best Practices
 13.6 CI/CD Integration
 
-### **Chapter 14: Continuous Integration and Continuous Testing**
+### **[Chapter 14: Continuous Integration and Continuous Testing](3.%20test_automation_foundations/14.%20continuous_integration_and_continuous_testing.ipynb)**
 14.1 CI/CD Overview
 14.2 Popular CI/CD Tools (Jenkins, GitHub Actions, GitLab CI)
 14.3 Integrating Tests in CI Pipeline
@@ -147,7 +147,7 @@
 
 ## **Part IV: Web Application Testing**
 
-### **Chapter 15: Web Application Fundamentals**
+### **[Chapter 15: Web Application Fundamentals](4.%20web_application_testing/15.%20web_application_fundamentals.ipynb)**
 15.1 How Web Applications Work
 15.2 HTTP/HTTPS Protocol
 15.3 Browser Developer Tools
@@ -155,7 +155,7 @@
 15.5 Cookies, Sessions, and Local Storage
 15.6 Cross-Origin Resource Sharing (CORS)
 
-### **Chapter 16: Selenium WebDriver**
+### **[Chapter 16: Selenium WebDriver](4.%20web_application_testing/16.%20selenium_webdriver.ipynb)**
 16.1 Introduction to Selenium
 16.2 Selenium WebDriver Architecture
 16.3 Setting Up Selenium Environment
@@ -170,7 +170,7 @@
 16.8 Code Examples in Python and Java
 16.9 Best Practices and Tips
 
-### **Chapter 17: Modern Browser Automation Tools**
+### **[Chapter 17: Modern Browser Automation Tools](4.%20web_application_testing/17.%20modern_browser_automation_tools.ipynb)**
 17.1 Cypress
 17.1.1 Cypress Architecture
 17.1.2 Installation and Setup
@@ -185,7 +185,7 @@
 17.3 Comparison of Selenium vs. Cypress vs. Playwright
 17.4 Tool Selection Guide
 
-### **Chapter 18: Web Application Testing Types**
+### **[Chapter 18: Web Application Testing Types](4.%20web_application_testing/18.%20web_application_testing_types.ipynb)**
 18.1 Functional Testing
 18.2 UI/UX Testing
 18.3 Cross-Browser Testing
@@ -195,7 +195,7 @@
 18.7 Performance Testing for Web Apps
 18.8 Security Testing Basics for Web
 
-### **Chapter 19: Handling Advanced Web Scenarios**
+### **[Chapter 19: Handling Advanced Web Scenarios](4.%20web_application_testing/19.%20handling_advanced_web_scenarios.ipynb)**
 19.1 Dynamic Content Handling
 19.2 AJAX and Asynchronous Calls
 19.3 Frames and iFrames
@@ -209,7 +209,7 @@
 
 ## **Part V: API Testing**
 
-### **Chapter 20: API Fundamentals**
+### **[Chapter 20: API Fundamentals](5.%20api_testing/20.%20api_fundamentals.ipynb)**
 20.1 What is an API?
 20.2 API Types: REST, SOAP, GraphQL
 20.3 HTTP Methods and Status Codes
@@ -217,7 +217,7 @@
 20.5 API Documentation Reading
 20.6 API vs. UI Testing
 
-### **Chapter 21: REST API Testing**
+### **[Chapter 21: REST API Testing](5.%20api_testing/21.%20rest_api_testing.ipynb)**
 21.1 REST API Principles
 21.2 Endpoints and Resources
 21.3 Request Headers, Parameters, Body
@@ -226,7 +226,7 @@
 21.6 Common HTTP Status Codes
 21.7 Code Examples
 
-### **Chapter 22: API Testing Tools**
+### **[Chapter 22: API Testing Tools](5.%20api_testing/22.%20api_testing_tools.ipynb)**
 22.1 Postman
 22.1.1 Installation and Interface
 22.1.2 Creating and Managing Collections
@@ -240,7 +240,7 @@
 22.2.4 Code Examples in Java
 22.3 Other Tools (Insomnia, Swagger, Karate)
 
-### **Chapter 23: Advanced API Testing**
+### **[Chapter 23: Advanced API Testing](5.%20api_testing/23.%20advanced_api_testing.ipynb)**
 23.1 API Authentication Strategies
 23.1.1 Basic Auth
 23.1.2 Bearer Token
@@ -256,14 +256,14 @@
 
 ## **Part VI: Mobile Application Testing**
 
-### **Chapter 24: Mobile Application Fundamentals**
+### **[Chapter 24: Mobile Application Fundamentals](6.%20mobile_application_testing/24.%20mobile_application_fundamentals.ipynb)**
 24.1 Mobile App Types: Native, Hybrid, PWA
 24.2 Mobile OS: iOS and Android
 24.3 Mobile App Architecture
 24.4 Mobile-Specific Challenges
 24.5 Mobile Testing Strategy
 
-### **Chapter 25: Appium**
+### **[Chapter 25: Appium](6.%20mobile_application_testing/25.%20appium.ipynb)**
 25.1 Introduction to Appium
 25.2 Appium Architecture
 25.3 Appium Server Setup
@@ -273,7 +273,7 @@
 25.7 Code Examples in Python and Java
 25.8 Appium Inspector
 
-### **Chapter 26: Mobile Testing Tools and Platforms**
+### **[Chapter 26: Mobile Testing Tools and Platforms](6.%20mobile_application_testing/26.%20mobile_testing_tools_and_platforms.ipynb)**
 26.1 Real Device vs. Emulator/Simulator
 26.2 Cloud Testing Platforms
 26.2.1 BrowserStack
@@ -284,7 +284,7 @@
 26.4 XCUITest (iOS Native)
 26.5 Espresso (Android Native)
 
-### **Chapter 27: Mobile Testing Types**
+### **[Chapter 27: Mobile Testing Types](6.%20mobile_application_testing/27.%20mobile_testing_types.ipynb)**
 27.1 Functional Testing
 27.2 UI Testing
 27.3 Installation and Update Testing
@@ -294,7 +294,7 @@
 27.7 Security Testing for Mobile
 27.8 Compatibility Testing
 
-### **Chapter 28: Mobile-Specific Scenarios**
+### **[Chapter 28: Mobile-Specific Scenarios](6.%20mobile_application_testing/28.%20mobile_specific_scenarios.ipynb)**
 28.1 Orientation Changes
 28.2 Background and Foreground Modes
 28.3 Push Notifications
@@ -308,7 +308,7 @@
 
 ## **Part VII: Database Testing**
 
-### **Chapter 29: Database Fundamentals for Testers**
+### **[Chapter 29: Database Fundamentals for Testers](7.%20database_testing/29.%20database_fundamentals_for_testers.ipynb)**
 29.1 What is Database Testing?
 29.2 Database Components
 29.3 SQL Basics
@@ -316,7 +316,7 @@
 29.5 CRUD Operations
 29.6 Database vs. Application Testing
 
-### **Chapter 30: SQL for Testers**
+### **[Chapter 30: SQL for Testers](7.%20database_testing/30.%20sql_for_testers.ipynb)**
 30.1 SELECT Queries
 30.2 Filtering with WHERE
 30.3 Sorting and Limiting
@@ -326,7 +326,7 @@
 30.7 INSERT, UPDATE, DELETE
 30.8 Code Examples and Exercises
 
-### **Chapter 31: Database Testing Techniques**
+### **[Chapter 31: Database Testing Techniques](7.%20database_testing/31.%20database_testing_techniques.ipynb)**
 31.1 Data Integrity Testing
 31.2 Data Consistency Testing
 31.3 Performance Testing for Databases
@@ -335,7 +335,7 @@
 31.6 Trigger Testing
 31.7 Migration Testing
 
-### **Chapter 32: Database Testing Tools**
+### **[Chapter 32: Database Testing Tools](7.%20database_testing/32.%20database_testing_tools.ipynb)**
 32.1 Database Clients
 32.2 Automation with Database Connections
 32.3 Test Data Management
@@ -346,7 +346,7 @@
 
 ## **Part VIII: Performance Testing**
 
-### **Chapter 33: Performance Testing Fundamentals**
+### **[Chapter 33: Performance Testing Fundamentals](8.%20performance_testing/33.%20performance_testing_fundamentals.ipynb)**
 33.1 What is Performance Testing?
 33.2 Types of Performance Testing
 33.2.1 Load Testing
@@ -357,7 +357,7 @@
 33.3 Performance Metrics and KPIs
 33.4 Performance Testing Strategy
 
-### **Chapter 34: Performance Testing Tools**
+### **[Chapter 34: Performance Testing Tools](8.%20performance_testing/34.%20performance_testing_tools.ipynb)**
 34.1 JMeter
 34.1.1 Introduction and Architecture
 34.1.2 Installation and Setup
@@ -380,7 +380,7 @@
 34.4.4 Code Examples
 34.5 Tool Comparison
 
-### **Chapter 35: Performance Test Execution**
+### **[Chapter 35: Performance Test Execution](8.%20performance_testing/35.%20performance_test_execution.ipynb)**
 35.1 Test Environment Setup
 35.2 Test Data Preparation
 35.3 Baseline Testing
@@ -389,7 +389,7 @@
 35.6 Monitoring and Observability
 35.7 Bottleneck Identification
 
-### **Chapter 36: Performance Test Analysis**
+### **[Chapter 36: Performance Test Analysis](8.%20performance_testing/36.%20performance_test_analysis.ipynb)**
 36.1 Analyzing Test Results
 36.2 Response Time Analysis
 36.3 Throughput Analysis
@@ -402,7 +402,7 @@
 
 ## **Part IX: Security Testing**
 
-### **Chapter 37: Security Testing Fundamentals**
+### **[Chapter 37: Security Testing Fundamentals](9.%20security_testing/37.%20security_testing_fundamentals.ipynb)**
 37.1 What is Security Testing?
 37.2 Security Testing Principles
 37.3 OWASP Top 10
@@ -410,7 +410,7 @@
 37.5 Security Testing vs. Penetration Testing
 37.6 Security Testing Strategy
 
-### **Chapter 38: Common Security Vulnerabilities**
+### **[Chapter 38: Common Security Vulnerabilities](9.%20security_testing/38.%20common_security_vulnerabilities.ipynb)**
 38.1 Injection Attacks (SQL, Command, LDAP)
 38.2 Cross-Site Scripting (XSS)
 38.3 Cross-Site Request Forgery (CSRF)
@@ -422,7 +422,7 @@
 38.9 Using Components with Known Vulnerabilities
 38.10 Insufficient Logging and Monitoring
 
-### **Chapter 39: Security Testing Tools**
+### **[Chapter 39: Security Testing Tools](9.%20security_testing/39.%20security_testing_tools.ipynb)**
 39.1 OWASP ZAP
 39.1.1 Introduction and Setup
 39.1.2 Scanning Web Applications
@@ -441,7 +441,7 @@
 39.4.2 Command Examples
 39.5 Other Security Tools
 
-### **Chapter 40: Security Testing Techniques**
+### **[Chapter 40: Security Testing Techniques](9.%20security_testing/40.%20security_testing_techniques.ipynb)**
 40.1 Authentication Testing
 40.2 Authorization Testing
 40.3 Session Management Testing
@@ -456,7 +456,7 @@
 
 ## **Part X: Test-Driven Development and Behavior-Driven Development**
 
-### **Chapter 41: Test-Driven Development (TDD)**
+### **[Chapter 41: Test-Driven Development (TDD)](10.%20test_driven_development_and_behavior_driven_development/41.%20test_driven_development.ipynb)**
 41.1 What is TDD?
 41.2 The Red-Green-Refactor Cycle
 41.3 TDD Benefits and Challenges
@@ -466,7 +466,7 @@
 41.7 TDD Code Examples in Java
 41.8 TDD Code Examples in JavaScript
 
-### **Chapter 42: Unit Testing Frameworks**
+### **[Chapter 42: Unit Testing Frameworks](10.%20test_driven_development_and_behavior_driven_development/42.%20unit_testing_frameworks.ipynb)**
 42.1 JUnit (Java)
 42.1.1 Annotations and Assertions
 42.1.2 Test Lifecycle
@@ -484,7 +484,7 @@
 42.3.4 Code Examples
 42.4 Other Frameworks Overview
 
-### **Chapter 43: Behavior-Driven Development (BDD)**
+### **[Chapter 43: Behavior-Driven Development (BDD)](10.%20test_driven_development_and_behavior_driven_development/43.%20behavior_driven_development.ipynb)**
 43.1 What is BDD?
 43.2 BDD vs. TDD
 43.3 Gherkin Syntax
@@ -492,7 +492,7 @@
 43.5 BDD Benefits and Best Practices
 43.6 BDD in the Development Lifecycle
 
-### **Chapter 44: BDD Frameworks and Tools**
+### **[Chapter 44: BDD Frameworks and Tools](10.%20test_driven_development_and_behavior_driven_development/44.%20bdd_frameworks_and_tools.ipynb)**
 44.1 Cucumber
 44.1.1 Installation and Setup
 44.1.2 Feature Files
@@ -511,7 +511,7 @@
 
 ## **Part XI: Testing in Agile and DevOps**
 
-### **Chapter 45: Agile Testing**
+### **[Chapter 45: Agile Testing](11.%20testing_in_agile_and_devops/45.%20agile_testing.ipynb)**
 45.1 Testing in Agile Methodology
 45.2 Agile Testing Manifesto
 45.3 Tester's Role in Agile Teams
@@ -520,7 +520,7 @@
 45.6 Sprint Testing Activities
 45.7 Backlog Refinement and Grooming
 
-### **Chapter 46: Scrum and Testing**
+### **[Chapter 46: Scrum and Testing](11.%20testing_in_agile_and_devops/46.%20scrum_and_testing.ipynb)**
 46.1 Scrum Framework Overview
 46.2 Testing in Scrum Events
 46.3 Definition of Done
@@ -529,7 +529,7 @@
 46.6 Daily Stand-up for Testers
 46.7 Sprint Review and Retrospective
 
-### **Chapter 47: DevOps and Continuous Testing**
+### **[Chapter 47: DevOps and Continuous Testing](11.%20testing_in_agile_and_devops/47.%20devops_and_continuous_testing.ipynb)**
 47.1 DevOps Culture and Testing
 47.2 Shift-Left Testing
 47.3 Continuous Testing Pipeline
@@ -538,7 +538,7 @@
 47.6 Container Testing (Docker, Kubernetes)
 47.7 Monitoring and Observability in Testing
 
-### **Chapter 48: Test Reporting and Metrics in DevOps**
+### **[Chapter 48: Test Reporting and Metrics in DevOps](11.%20testing_in_agile_and_devops/48.%20test_reporting_and_metrics_in_devops.ipynb)**
 48.1 Test Automation Reporting
 48.2 Dashboard Creation
 48.3 Real-time Test Results
@@ -550,7 +550,7 @@
 
 ## **Part XII: Accessibility and Usability Testing**
 
-### **Chapter 49: Accessibility Testing**
+### **[Chapter 49: Accessibility Testing](12.%20accessibility_and_usability_testing/49.%20accessibility_testing.ipynb)**
 49.1 What is Accessibility?
 49.2 WCAG Guidelines
 49.3 Accessibility Laws and Compliance
@@ -558,7 +558,7 @@
 49.5 Assistive Technologies
 49.6 Accessibility Testing Strategy
 
-### **Chapter 50: Accessibility Testing Tools**
+### **[Chapter 50: Accessibility Testing Tools](12.%20accessibility_and_usability_testing/50.%20accessibility_testing_tools.ipynb)**
 50.1 Browser Developer Tools Accessibility Panel
 50.2 axe DevTools
 50.3 WAVE
@@ -568,7 +568,7 @@
 50.7 Keyboard Navigation Testing
 50.8 Testing with Code Examples
 
-### **Chapter 51: Usability Testing**
+### **[Chapter 51: Usability Testing](12.%20accessibility_and_usability_testing/51.%20usability_testing.ipynb)**
 51.1 What is Usability Testing?
 51.2 Usability Testing Methods
 51.3 Planning Usability Tests
@@ -581,7 +581,7 @@
 
 ## **Part XIII: Advanced Testing Topics**
 
-### **Chapter 52: Visual Regression Testing**
+### **[Chapter 52: Visual Regression Testing](13.%20advanced_testing_topics/52.%20visual_regression_testing.ipynb)**
 52.1 What is Visual Regression Testing?
 52.2 Visual Testing Tools
 52.3 Percy
@@ -590,7 +590,7 @@
 52.6 Code Examples
 52.7 Best Practices
 
-### **Chapter 53: Contract Testing**
+### **[Chapter 53: Contract Testing](13.%20advanced_testing_topics/53.%20contract_testing.ipynb)**
 53.1 What is Contract Testing?
 53.2 Consumer-Driven Contracts
 53.3 Pact
@@ -601,7 +601,7 @@
 53.4 Spring Cloud Contract
 53.5 Contract Testing in Microservices
 
-### **Chapter 54: Chaos Engineering**
+### **[Chapter 54: Chaos Engineering](13.%20advanced_testing_topics/54.%20chaos_engineering.ipynb)**
 54.1 Introduction to Chaos Engineering
 54.2 Principles of Chaos
 54.3 Chaos Testing Tools
@@ -610,7 +610,7 @@
 54.6 Implementing Chaos Tests
 54.7 Best Practices
 
-### **Chapter 55: Service Virtualization**
+### **[Chapter 55: Service Virtualization](13.%20advanced_testing_topics/55.%20service_virtualization.ipynb)**
 55.1 What is Service Virtualization?
 55.2 When to Use Service Virtualization
 55.3 Service Virtualization Tools
@@ -619,7 +619,7 @@
 55.6 Code Examples
 55.7 Best Practices
 
-### **Chapter 56: AI and Machine Learning in Testing**
+### **[Chapter 56: AI and Machine Learning in Testing](13.%20advanced_testing_topics/56.%20ai_and_machine_learning_in_testing.ipynb)**
 56.1 AI in Test Automation
 56.2 Machine Learning for Test Generation
 56.3 AI-Powered Test Maintenance
@@ -628,7 +628,7 @@
 56.6 Tools and Frameworks
 56.7 Future Trends
 
-### **Chapter 57: IoT Testing**
+### **[Chapter 57: IoT Testing](13.%20advanced_testing_topics/57.%20iot_testing.ipynb)**
 57.1 Introduction to IoT Testing
 57.2 IoT Architecture and Challenges
 57.3 IoT Testing Types
@@ -636,7 +636,7 @@
 57.5 Security in IoT Testing
 57.6 Code Examples
 
-### **Chapter 58: Big Data Testing**
+### **[Chapter 58: Big Data Testing](13.%20advanced_testing_topics/58.%20big_data_testing.ipynb)**
 58.1 Big Data Fundamentals
 58.2 Big Data Testing Challenges
 58.3 Big Data Testing Strategy
@@ -648,7 +648,7 @@
 
 ## **Part XIV: Test Documentation and Reporting**
 
-### **Chapter 59: Test Documentation Standards**
+### **[Chapter 59: Test Documentation Standards](14.%20test_documentation_and_reporting/59.%20test_documentation_standards.ipynb)**
 59.1 IEEE 829 Standard
 59.2 Test Plan Document
 59.3 Test Design Specification
@@ -658,7 +658,7 @@
 59.7 Test Summary Report
 59.8 Templates and Examples
 
-### **Chapter 60: Test Metrics and Analysis**
+### **[Chapter 60: Test Metrics and Analysis](14.%20test_documentation_and_reporting/60.%20test_metrics_and_analysis.ipynb)**
 60.1 Test Coverage Metrics
 60.2 Defect Metrics
 60.3 Execution Metrics
@@ -668,7 +668,7 @@
 60.7 Metrics Dashboard Creation
 60.8 Interpreting Metrics
 
-### **Chapter 61: Test Reporting**
+### **[Chapter 61: Test Reporting](14.%20test_documentation_and_reporting/61.%20test_reporting.ipynb)**
 61.1 Types of Test Reports
 61.2 Daily Status Reports
 61.3 Weekly/Monthly Reports
@@ -681,7 +681,7 @@
 
 ## **Part XV: Test Management**
 
-### **Chapter 62: Test Management Overview**
+### **[Chapter 62: Test Management Overview](15.%20test_management/62.%20test_management_overview.ipynb)**
 62.1 What is Test Management?
 62.2 Test Manager Responsibilities
 62.3 Test Management Process
@@ -689,7 +689,7 @@
 62.5 Resource Management
 62.6 Stakeholder Management
 
-### **Chapter 63: Test Management Tools**
+### **[Chapter 63: Test Management Tools](15.%20test_management/63.%20test_management_tools.ipynb)**
 63.1 TestRail
 63.1.1 Features and Setup
 63.1.2 Creating Test Suites
@@ -704,7 +704,7 @@
 63.4 Azure DevOps Test Plans
 63.5 Tool Comparison and Selection
 
-### **Chapter 64: Test Environment Management**
+### **[Chapter 64: Test Environment Management](15.%20test_management/64.%20test_environment_management.ipynb)**
 64.1 Test Environment Strategy
 64.2 Environment Types
 64.3 Environment Configuration
@@ -717,7 +717,7 @@
 
 ## **Part XVI: Industry Standards and Certifications**
 
-### **Chapter 65: ISTQB Foundation Level**
+### **[Chapter 65: ISTQB Foundation Level](16.%20industry_standards_and_certifications/65.%20istqb_foundation_level.ipynb)**
 65.1 ISTQB Overview
 65.2 Fundamental Test Process
 65.3 Testing Throughout the SDLC
@@ -727,14 +727,14 @@
 65.7 Test Tools
 65.8 Sample Questions and Preparation
 
-### **Chapter 66: ISTQB Advanced Level**
+### **[Chapter 66: ISTQB Advanced Level](16.%20industry_standards_and_certifications/66.%20istqb_advanced_level.ipynb)**
 66.1 Advanced Test Manager
 66.2 Advanced Test Analyst
 66.3 Advanced Technical Test Analyst
 66.4 Preparation Strategies
 66.5 Practice Questions
 
-### **Chapter 67: Other Certifications**
+### **[Chapter 67: Other Certifications](16.%20industry_standards_and_certifications/67.%20other_certifications.ipynb)**
 67.1 CSTE (Certified Software Tester)
 67.2 CAST (Certified Associate in Software Testing)
 67.3 CSTM (Certified Software Test Manager)
@@ -745,21 +745,21 @@
 
 ## **Part XVII: Soft Skills and Professional Development**
 
-### **Chapter 68: Communication Skills for Testers**
+### **[Chapter 68: Communication Skills for Testers](17.%20soft_skills_and_professional_development/68.%20communication_skills_for_testers.ipynb)**
 68.1 Effective Communication
 68.2 Writing Clear Bug Reports
 68.3 Presenting Test Results
 68.4 Negotiation Skills
 68.5 Cross-Team Collaboration
 
-### **Chapter 69: Critical Thinking and Problem Solving**
+### **[Chapter 69: Critical Thinking and Problem Solving](17.%20soft_skills_and_professional_development/69.%20critical_thinking_and_problem_solving.ipynb)**
 69.1 Analytical Thinking in Testing
 69.2 Root Cause Analysis
 69.3 Troubleshooting Skills
 69.4 Creative Testing Approaches
 69.5 Pattern Recognition
 
-### **Chapter 70: Leadership and Mentoring**
+### **[Chapter 70: Leadership and Mentoring](17.%20soft_skills_and_professional_development/70.%20leadership_and_mentoring.ipynb)**
 70.1 Leading Test Teams
 70.2 Mentoring Junior Testers
 70.3 Building Testing Culture
@@ -770,7 +770,7 @@
 
 ## **Part XVIII: Practical Projects and Case Studies**
 
-### **Chapter 71: Building a Complete Test Suite**
+### **[Chapter 71: Building a Complete Test Suite](18.%20practical_projects_and_case_studies/71.%20building_a_complete_test_suite.ipynb)**
 71.1 Project Overview
 71.2 Test Planning Phase
 71.3 Test Design Phase
@@ -779,7 +779,7 @@
 71.6 Reporting and Analysis
 71.7 Complete Code Repository
 
-### **Chapter 72: End-to-End Testing Project**
+### **[Chapter 72: End-to-End Testing Project](18.%20practical_projects_and_case_studies/72.%20end_to_end_testing_project.ipynb)**
 72.1 Application Under Test
 72.2 Testing Strategy
 72.3 Test Environment Setup
@@ -787,14 +787,14 @@
 72.5 CI/CD Integration
 72.6 Complete Solution with Code
 
-### **Chapter 73: Real-World Case Studies**
+### **[Chapter 73: Real-World Case Studies](18.%20practical_projects_and_case_studies/73.%20real_world_case_studies.ipynb)**
 73.1 Case Study 1: E-commerce Application Testing
 73.2 Case Study 2: Banking Application Testing
 73.3 Case Study 3: Healthcare Application Testing
 73.4 Case Study 4: Social Media Platform Testing
 73.5 Lessons Learned and Best Practices
 
-### **Chapter 74: Industry-Specific Testing**
+### **[Chapter 74: Industry-Specific Testing](18.%20practical_projects_and_case_studies/74.%20industry_specific_testing.ipynb)**
 74.1 Fintech Testing Considerations
 74.2 Healthcare Testing Compliance
 74.3 E-commerce Testing Challenges
@@ -805,7 +805,7 @@
 
 ## **Part XIX: Emerging Trends and Future of Testing**
 
-### **Chapter 75: Future of Software Testing**
+### **[Chapter 75: Future of Software Testing](19.%20emerging_trends_and_future_of_testing/75.%20future_of_software_testing.ipynb)**
 75.1 Industry Trends
 75.2 Evolving Tester Roles
 75.3 Shift-Right Testing
@@ -814,14 +814,14 @@
 75.6 Quantum Computing and Testing
 75.7 Preparing for the Future
 
-### **Chapter 76: No-Code/Low-Code Testing Tools**
+### **[Chapter 76: No-Code/Low-Code Testing Tools](19.%20emerging_trends_and_future_of_testing/76.%20no_codelow_code_testing_tools.ipynb)**
 76.1 Introduction to No-Code Testing
 76.2 Popular No-Code Tools
 76.3 Benefits and Limitations
 76.4 When to Use No-Code Tools
 76.5 Comparison with Traditional Automation
 
-### **Chapter 77: Continuous Quality Assurance**
+### **[Chapter 77: Continuous Quality Assurance](19.%20emerging_trends_and_future_of_testing/77.%20continuous_quality_assurance.ipynb)**
 77.1 Beyond Continuous Testing
 77.2 Quality Gates
 77.3 Quality Metrics in DevOps
