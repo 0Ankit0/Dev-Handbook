@@ -189,6 +189,13 @@ I'll search for the latest FastAPI documentation and industry best practices to 
 *   24.2 Custom OpenAPI: Modifying the schema manually.
 *   24.3 Sub-Applications: Mounting other ASGI apps (e.g., Django, Flask).
 
+**[Chapter 25: Access Control Using Casbin](10.%20advanced_topics_and_ecosystem/25.%20access_control_using_casbin.ipynb)**
+*   25.1 Introduction to Casbin: What is Casbin and why use it?
+*   25.2 Integrating Casbin with FastAPI: Setting up Casbin in a FastAPI application.
+*   25.3 Defining Policies: Writing access control policies in Casbin.
+*   25.4 Enforcing Access Control: Using Casbin in route dependencies.
+*   25.5 Advanced Casbin Features: Role-based access control (RBAC), attribute-based access control (ABAC), and policy management.
+
 ---
 
 ### Appendices
