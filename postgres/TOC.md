@@ -12,14 +12,14 @@
 
 ## Part I — Foundations (Getting Oriented)
 
-### [1. What PostgreSQL Is (and Isn’t)](1.%20Foundations/1.%20Introduction.ipynb)
+### [1. What PostgreSQL Is (and Isn’t)](1.%20Foundations/1.%20what_postgresql_is.ipynb)
 - PostgreSQL philosophy and strengths
 - Relational model refresher (tables, keys, constraints)
 - ACID properties in practical terms
 - When to use Postgres vs alternatives
 - Postgres ecosystem and extensions overview
 
-### [2. Installing PostgreSQL (Local + Team Standards)](1.%20Foundations/2.%20installing_postgres.ipynb)
+### [2. Installing PostgreSQL (Local + Team Standards)](1.%20Foundations/2.%20installing_postgresql.ipynb)
 - Installation options (package manager, installer, Docker, cloud)
 - Choosing a Postgres version (LTS mindset, upgrade cadence)
 - Directory layout and key files
@@ -31,7 +31,7 @@
 - Running SQL files and repeatable workflows
 - Output formatting, timing, error handling
 
-### [4. Core Concepts You Must Get Right Early](1.%20Foundations/4.%20core_concepts_to_get_right_early.ipynb)
+### [4. Core Concepts You Must Get Right Early](1.%20Foundations/4.%20core_concepts_you_must_get_right_early.ipynb)
 - Cluster vs database vs schema
 - Tables vs views vs materialized views
 - Rows, pages, heap, TOAST (high-level)
@@ -84,7 +84,7 @@
 - Many-to-many tables and association metadata
 - Soft deletes, audit fields, and temporal considerations
 
-### [11. Working with Schemas (Namespaces)](3.%20Schema_design_for_real_applications/11.%20working_with_schemas.ipynb)
+### [11. Working with Schemas (Namespaces)](3.%20Schema_design_for_real_applications/11.%20working_with_schemas_namespaces.ipynb)
 - Multi-schema patterns (tenancy, bounded contexts)
 - Search path and safety
 - Schema ownership and permissions
@@ -106,7 +106,7 @@
 
 ## Part IV — Indexing and Query Performance (The Practical Core)
 
-### [14. How PostgreSQL Executes Queries](4.%20Indexing_and_query_performance/14.%20how_postgres_executes_queries.ipynb)
+### [14. How PostgreSQL Executes Queries](4.%20Indexing_and_query_performance/14.%20how_postgresql_executes_queries.ipynb)
 - Planner vs executor
 - Statistics, selectivity, and cost model basics
 - Common scan types (seq, index, bitmap)
