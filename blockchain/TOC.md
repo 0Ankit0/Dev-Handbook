@@ -1,10 +1,4 @@
-# **Blockchain Development Handbook**
----
-
-# **Table of Contents**
-
----
-
+# Blockchain Development Handbook
 ## **Part I: Foundations and Fundamentals**
 
 ### **[Chapter 1: Introduction to Blockchain Technology](1.%20foundations_and_fundamentals/1.%20introduction_to_blockchain_technology.ipynb)**
@@ -984,4 +978,3 @@ The progression follows industry guidelines and incorporates knowledge from:
 - Industry security audit findings
 
 ---
-

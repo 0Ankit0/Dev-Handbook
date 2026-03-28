@@ -1,21 +1,4 @@
-
----
-
-# **DEV HANDBOOK: The Complete Guide to Software Project Management**
-*From Concept to Production: A Technical Project Management Reference*
-
----
-
-## **TABLE OF CONTENTS**
-
-### **Front Matter**
-- Preface: The Intersection of Code and Management
-- How to Use This Handbook
-- The Project Management Landscape for Developers
-- Industry Standards and Frameworks Reference (PMBOK 7, Agile, DevOps, Lean)
-
----
-
+# DEV HANDBOOK: Guide to Software Project Management
 ### **PART I: FOUNDATIONS** *(The Simplex: Core Concepts)*
 
 **[Chapter 1: The Anatomy of Software Projects](1.%20Foundations/1.%20the_anatomy_of_software_projects.ipynb)**

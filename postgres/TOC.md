@@ -1,15 +1,6 @@
+# Postgres Handbook
+
 ## PostgreSQL Developer Handbook — Table of Contents (Simple → Advanced)
-
-### Front Matter
-- Foreword
-- Who This Book Is For (Developers, Data Engineers, DBAs, SREs)
-- What You’ll Be Able to Do After Finishing
-- How to Use This Book (progressive path, labs, reference sections)
-- Conventions Used (SQL style, psql, OS notes, diagrams)
-- Companion Repo / Sample Dataset Overview
-
----
-
 ## Part I — Foundations (Getting Oriented)
 
 ### [1. What PostgreSQL Is (and Isn’t)](1.%20Foundations/1.%20what_postgresql_is.ipynb)
@@ -25,7 +16,7 @@
 - Directory layout and key files
 - Environment setup checklist (dev vs prod parity)
 
-### [3. First Steps with `psql` (Your Primary Interface)](1.%20Foundations/3.%20first_steps_with_psql.ipynb)
+### [3. First Steps with psql (Your Primary Interface)](1.%20Foundations/3.%20first_steps_with_psql.ipynb)
 - Connecting, roles, databases, schemas
 - `psql` essentials (meta-commands, variables, scripting)
 - Running SQL files and repeatable workflows
@@ -199,7 +190,7 @@
 - Object ownership and schema hygiene
 - Least privilege checklist
 
-### [27. Authentication, `pg_hba.conf`, and TLS](7.%20security_and_access_control_industry_baselines/27.%20authentication_pg_hbaconf_and_tls.ipynb)
+### [27. Authentication, pg_hba.conf, and TLS](7.%20security_and_access_control_industry_baselines/27.%20authentication_pg_hbaconf_and_tls.ipynb)
 - Auth methods (scram, peer, cert-based)
 - TLS configuration basics
 - Secure connection strings and secret management

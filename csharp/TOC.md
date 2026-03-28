@@ -1,10 +1,6 @@
+# Csharp Handbook
 
----
-
-### The C# Developer's Handbook: From Fundamentals to Enterprise
-
----
-
+### The C# Developer's Handbook
 ### Part I: The Foundation - Core Concepts
 
 *This part assumes no prior programming knowledge and builds a solid base in C# syntax and logic.*
@@ -219,4 +215,3 @@
 - B: Common .NET CLI Commands
 - C: Recommended Tools and Libraries
 - D: Glossary of Terms
-

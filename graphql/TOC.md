@@ -1,7 +1,4 @@
-# The Ultimate GraphQL Developer Handbook: From Zero to Production Hero
-
-## Table of Contents
-
+# The Ultimate GraphQL Developer Handbook
 ### Part I: Foundations and Philosophy
 **[Chapter 1: Introduction to GraphQL](1.%20foundations_and_philosophy/1.%20introduction_to_graphql.ipynb)**
 *   1.1 What is GraphQL? The Query Language for APIs

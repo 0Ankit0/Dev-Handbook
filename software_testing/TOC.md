@@ -1,9 +1,4 @@
-# **Software Testing Handbook: A Complete Guide from Basics to Mastery**
-
-## **Table of Contents**
-
----
-
+# Software Testing Handbook: A Complete Guide from Basics to Mastery
 ## **Part I: Foundations of Software Testing**
 
 ### **[Chapter 1: Introduction to Software Testing](1.%20foundations_of_software_testing/1.%20introduction_to_software_testing.ipynb)**

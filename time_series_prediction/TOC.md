@@ -1,10 +1,4 @@
-# **Time-Series Prediction System**
-## **A Comprehensive Developer Handbook**
-
----
-## **Table of Contents**
----
-
+# Time-Series Prediction System
 ## **Part I: Foundations**
 
 ### **[Chapter 1: Introduction to Time-Series Prediction Systems](1.%20foundations/1.%20introduction_to_time_series_prediction_systems.ipynb)**

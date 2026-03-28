@@ -1,14 +1,6 @@
-
+# Fastapi Handbook
 
 ## Table of Contents
-
-### Introduction
-*   **About This Book**: Who this book is for, learning philosophy, and how to use this guide.
-*   **Prerequisites**: Essential Python knowledge (type hints, async/await basics, packaging) and HTTP concepts.
-*   **The FastAPI Philosophy**: Understanding the "why" behind FastAPI—performance, developer experience, and standards.
-
----
-
 ### Part I: Foundations of FastAPI
 
 **[Chapter 1: Setting Up the Development Environment](1.%20foundations_of_fastapi/1.%20setting_up_the_development_environment.ipynb)**
@@ -85,7 +77,6 @@
 *   10.2 Built-in Middleware: CORS, GZip, Trusted Host, and HTTPS Redirect.
 *   10.3 Custom Middleware: Creating your own middleware classes.
 *   10.4 Lifespan Events: Handling startup and shutdown logic (replacing `on_event`).
-    *   *Note: The `lifespan` context manager is the modern standard.*
 
 ---
 

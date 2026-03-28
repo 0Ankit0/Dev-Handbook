@@ -1,12 +1,4 @@
-# 📘 The Complete Frontend Developer Handbook
-## Mastering HTML, CSS, and JavaScript — From Fundamentals to Expert
-
----
-
-# Table of Contents
-
----
-
+# 📘 Frontend Developer Handbook
 ## Part I: Foundations of the Web
 
 ### [Chapter 1: How the Web Works](1.%20foundations_of_the_web/1.%20how_the_web_works.ipynb)

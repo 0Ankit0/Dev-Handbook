@@ -1,13 +1,4 @@
-# The Complete Flask Developer's Handbook: From Zero to Production
-
-## Preface
-* **Introduction to the Handbook**: How to use this book effectively.
-* **Why Flask?**: Flask's philosophy — micro, extensible, and unopinionated. When to choose Flask over Django or FastAPI.
-* **What You'll Build**: An overview of the capstone project and the mini-projects threaded throughout.
-* **Prerequisites**: Basic Python knowledge (variables, functions, classes). If you're new to Python, start with the [Python Handbook](../python/TOC.md).
-
----
-
+# Flask Developer's Handbook
 ## Part I: Flask Foundations
 
 ### [Chapter 1: Getting Started with Flask](1.%20flask_foundations/1.%20getting_started.ipynb)

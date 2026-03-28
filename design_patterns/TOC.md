@@ -1,10 +1,4 @@
-
-
-# **The Modern Developer's Handbook: Design Patterns**
-*A Comprehensive Guide from Fundamentals to Distributed Systems*
-
----
-
+# The Modern Developer's Handbook: Design Patterns
 ## **Part I: Foundations of Software Design**
 **Goal:** Establish the mental models and vocabulary necessary before applying specific patterns.
 

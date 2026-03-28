@@ -1,21 +1,6 @@
+# ASP.NET Handbook
 
-
----
-
-### The Complete ASP.NET Developer's Handbook: From First Project to Production
-
----
-
-### Table of Contents
-
-**Introduction**
-- Who Is This Book For?
-- What is ASP.NET? (The Big Picture: .NET Framework vs. .NET Core vs. .NET 5+)
-- Setting Up Your Development Environment (VS Code, Visual Studio 2022, Docker Desktop)
-- Your First "Hello World" Web Application
-
----
-
+### ASP.NET Developer's Handbook
 ### Part I: The Foundation (Beginner)
 
 **[Chapter 1: C# Fundamentals for Web Developers](1.%20the_foundation/1.%20csharp_fundamentals_for_web_developers.ipynb)**

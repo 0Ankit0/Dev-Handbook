@@ -1,69 +1,131 @@
 #!/usr/bin/env python3
-import os, json, re, sys
+from __future__ import annotations
 
-def extract_chapter_number(filename):
-    match = re.match(r'(\d+)', filename)
-    return int(match.group(1)) if match else float('inf')
+import argparse
+import json
+import os
+import re
+from pathlib import Path
 
 
-python_folder = sys.argv[1] if len(sys.argv) > 1 else "./python"
+def chapter_number(path: Path) -> int:
+    match = re.match(r"^\s*(\d+)", path.name)
+    return int(match.group(1)) if match else 10**9
 
-all_notebooks = []
-for folder_name in sorted(os.listdir(python_folder)):
-    folder_path = os.path.join(python_folder, folder_name)
-    if not os.path.isdir(folder_path) or not re.match(r'^\d+\.', folder_name):
-        continue
-    
-    for notebook in sorted(os.listdir(folder_path)):
-        if notebook.endswith('.ipynb'):
-            chapter_num = extract_chapter_number(notebook)
-            all_notebooks.append((chapter_num, folder_name, folder_path, notebook))
 
-all_notebooks.sort(key=lambda x: x[0])
-print(f"Found {len(all_notebooks)} notebooks\n")
+def discover_notebooks(handbook_dir: Path) -> list[Path]:
+    notebooks = [
+        path
+        for path in handbook_dir.rglob("*.ipynb")
+        if path.is_file() and ".ipynb_checkpoints" not in path.parts
+    ]
+    notebooks.sort(key=lambda item: (chapter_number(item), item.relative_to(handbook_dir).as_posix()))
+    return notebooks
 
-for idx, (ch_num, folder, folder_path, notebook) in enumerate(all_notebooks):
-    prev_nb = all_notebooks[idx - 1] if idx > 0 else None
-    next_nb = all_notebooks[idx + 1] if idx < len(all_notebooks) - 1 else None
-    
-    prev_link = ""
-    if prev_nb:
-        prev_ch, prev_folder, prev_folder_path, prev_notebook = prev_nb
-        prev_path = prev_notebook if folder_path == prev_folder_path else f"../{prev_folder}/{prev_notebook}"
-        prev_link = f"  <a href='{prev_path}' style='font-weight:bold; font-size:1.05em;'>&larr; Previous</a>\n"
+
+def source_to_text(source: object) -> str:
+    if isinstance(source, str):
+        return source
+    if isinstance(source, list):
+        return "".join(source)
+    return ""
+
+
+def text_to_source(text: str) -> list[str]:
+    return text.splitlines(keepends=True)
+
+
+def is_nav_cell(cell: dict) -> bool:
+    if cell.get("cell_type") != "markdown":
+        return False
+    text = source_to_text(cell.get("source"))
+    return (
+        "Table of Contents" in text
+        and ("Previous" in text or "&larr;" in text)
+        and ("Next" in text or "&rarr;" in text)
+    )
+
+
+def relative_href(from_path: Path, to_path: Path) -> str:
+    return Path(os.path.relpath(to_path, from_path.parent)).as_posix()
+
+
+def nav_html(handbook_dir: Path, notebook: Path, previous_notebook: Path | None, next_notebook: Path | None) -> str:
+    toc_path = handbook_dir / "TOC.md"
+    toc_href = relative_href(notebook, toc_path)
+
+    if previous_notebook is None:
+        previous_html = "  <span style='color:gray; font-size:1.05em;'>Previous</span>"
     else:
-        prev_link = "  <span style='color:gray; font-size:1.05em;'>Previous</span>\n"
-    
-    next_link = ""
-    if next_nb:
-        next_ch, next_folder, next_folder_path, next_notebook = next_nb
-        next_path = next_notebook if folder_path == next_folder_path else f"../{next_folder}/{next_notebook}"
-        next_link = f"  <a href='{next_path}' style='font-weight:bold; font-size:1.05em;'>Next &rarr;</a>\n"
-    else:
-        next_link = "  <span style='color:gray; font-size:1.05em;'>Next</span>\n"
-    
-    html = f"<div style='width:100%; display:flex; justify-content:space-between; align-items:center; margin: 1em 0;'>\n{prev_link}  <a href='../TOC.md' style='font-weight:bold; font-size:1.05em; text-align:center;'>Table of Contents</a>\n{next_link}</div>\n"
-    
-    nb_path = os.path.join(folder_path, notebook)
-    try:
-        with open(nb_path, 'r') as f:
-            content = json.load(f)
-        
-        if content.get('cells') and 'width:100%' in str(content['cells'][-1].get('source', '')):
-            content['cells'].pop()
-        
-        nav_cell = {"cell_type": "markdown", "metadata": {}, "source": [line + '\n' for line in html.rstrip('\n').split('\n')]}
-        content['cells'].append(nav_cell)
-        
-        with open(nb_path, 'w') as f:
-            json.dump(content, f, indent=1)
-        
-        print(f"✓ Ch {ch_num:2d}: {folder}/{notebook}")
-        if prev_nb:
-            print(f"           ← Ch {prev_nb[0]}")
-        if next_nb:
-            print(f"           → Ch {next_nb[0]}")
-    except (json.JSONDecodeError, IOError, KeyError) as e:
-        print(f"✗ Ch {ch_num:2d}: {folder}/{notebook} - Error: {type(e).__name__}")
+        previous_href = relative_href(notebook, previous_notebook)
+        previous_html = (
+            f"  <a href='{previous_href}' style='font-weight:bold; font-size:1.05em;'>&larr; Previous</a>"
+        )
 
-print(f"\n✓ Updated {len(all_notebooks)} notebooks with cross-folder navigation")
+    if next_notebook is None:
+        next_html = "  <span style='color:gray; font-size:1.05em;'>Next</span>"
+    else:
+        next_href = relative_href(notebook, next_notebook)
+        next_html = f"  <a href='{next_href}' style='font-weight:bold; font-size:1.05em;'>Next &rarr;</a>"
+
+    return (
+        "<div style='width:100%; display:flex; justify-content:space-between; align-items:center; margin: 1em 0;'>\n"
+        f"{previous_html}\n"
+        f"  <a href='{toc_href}' style='font-weight:bold; font-size:1.05em; text-align:center;'>Table of Contents</a>\n"
+        f"{next_html}\n"
+        "</div>\n"
+    )
+
+
+def update_notebook(handbook_dir: Path, notebook_path: Path, previous_notebook: Path | None, next_notebook: Path | None) -> bool:
+    notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
+    cells = notebook.get("cells", [])
+    if cells and is_nav_cell(cells[-1]):
+        cells.pop()
+
+    html = nav_html(handbook_dir, notebook_path, previous_notebook, next_notebook)
+    nav_cell = {
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": text_to_source(html),
+    }
+    cells.append(nav_cell)
+    notebook["cells"] = cells
+    new_text = json.dumps(notebook, indent=1) + "\n"
+    old_text = notebook_path.read_text(encoding="utf-8")
+    if new_text == old_text:
+        return False
+    notebook_path.write_text(new_text, encoding="utf-8")
+    return True
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Append previous/next navigation to handbook notebooks.")
+    parser.add_argument("targets", nargs="+", help="One or more handbook directories.")
+    args = parser.parse_args()
+
+    root = Path.cwd()
+    total_updated = 0
+
+    for target in args.targets:
+        handbook_dir = root / target
+        if not handbook_dir.is_dir():
+            print(f"{target}: skipped (directory not found)")
+            continue
+        notebooks = discover_notebooks(handbook_dir)
+        print(f"{target}: found {len(notebooks)} notebook(s)")
+        updated = 0
+        for index, notebook_path in enumerate(notebooks):
+            previous_notebook = notebooks[index - 1] if index > 0 else None
+            next_notebook = notebooks[index + 1] if index + 1 < len(notebooks) else None
+            if update_notebook(handbook_dir, notebook_path, previous_notebook, next_notebook):
+                updated += 1
+        total_updated += updated
+        print(f"{target}: updated {updated} notebook(s)")
+
+    print(f"\nUpdated {total_updated} notebook(s) with navigation.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

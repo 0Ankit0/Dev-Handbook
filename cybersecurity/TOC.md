@@ -1,12 +1,4 @@
-
----
-
-# **The Cybersecurity Developer Handbook: From Foundations to Mastery**
-
-**Preface:** How to Use This Book – Learning Paths, Prerequisites, and Lab Setup
-
----
-
+# The Cybersecurity Developer Handbook
 ## **PART I: CYBERSECURITY FOUNDATIONS & THE DEVELOPER CONTEXT**
 
 ### **[Chapter 1: The Cybersecurity Landscape](1.%20cybersecurity_foundations_and_the_developer_context/1.%20the_cybersecurity_landscape.ipynb)**
@@ -178,9 +170,9 @@
 ---
 
 **Key Features of this Structure:**
-1.  **Progressive Complexity:** Starts with foundational concepts and systematically builds to advanced, specialized domains.
-2.  **Framework-Aligned:** Deeply integrated with NIST CSF 2.0 (Govern, Identify, Protect, Detect, Respond, Recover) as the primary organizing principle for Part II.
-3.  **Current & Emerging:** Incorporates the latest OWASP Top 10 (2026), the new Agentic AI risks, and modern cloud/dev practices.
-4.  **Developer-Focused:** Emphasizes the developer's role throughout, with dedicated chapters on secure coding, APIs, and DevSecOps.
-5.  **Practical:** Designed to include code snippets, labs, and real-world scenarios for every major concept.
-6.  **Professional:** Includes compliance, architecture, and career development sections to guide holistic growth.
+1. **Progressive Complexity:** Starts with foundational concepts and systematically builds to advanced, specialized domains.
+2. **Framework-Aligned:** Deeply integrated with NIST CSF 2.0 (Govern, Identify, Protect, Detect, Respond, Recover) as the primary organizing principle for Part II.
+3. **Current & Emerging:** Incorporates the latest OWASP Top 10 (2026), the new Agentic AI risks, and modern cloud/dev practices.
+4. **Developer-Focused:** Emphasizes the developer's role throughout, with dedicated chapters on secure coding, APIs, and DevSecOps.
+5. **Practical:** Designed to include code snippets, labs, and real-world scenarios for every major concept.
+6. **Professional:** Includes compliance, architecture, and career development sections to guide holistic growth.

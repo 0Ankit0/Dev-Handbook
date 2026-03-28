@@ -1,15 +1,4 @@
-Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Workbook. This follows industry-standard learning paths (similar to Google's ML Engineer certification, AWS ML Specialty, and MLOps pipelines) while ensuring progressive difficulty from foundations to research-level concepts.
-
----
-
-# **THE COMPLETE AI ENGINEER WORKBOOK**
-## *From Zero to Production-Ready AI Systems*
-
----
-
-## **PHASE 1: FOUNDATIONS & PREREQUISITES**
-*Duration: 8-12 weeks | Level: Beginner*
-
+# AI Engineering Handbook
 ### **[Chapter 1: Mathematical Foundations for AI](1.%20Foundations/1.%20mathematical_foundations_for_ai.ipynb)**
 - 1.1 Linear Algebra: Vectors, Matrices, Tensors
 - 1.2 Matrix Operations: Multiplication, Transpose, Inverse, Eigenvalues/vectors
@@ -42,7 +31,6 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 2: MACHINE LEARNING FUNDAMENTALS**
-*Duration: 12-16 weeks | Level: Beginner to Intermediate*
 
 ### **[Chapter 5: Data Preprocessing & Feature Engineering](2.%20Machine_learning_fundamentals/5.%20data_preprocessing_and_feature_engineering.ipynb)**
 - 5.1 Data Cleaning: Missing values, Outliers, Duplicates, Anomalies
@@ -87,9 +75,8 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 3: DEEP LEARNING & NEURAL NETWORKS**
-*Duration: 16-20 weeks | Level: Intermediate*
 
-### **[Chapter 10: Neural Network Fundamentals](3.%20Deep_learning_and_neural_networks.ipynb/10.%20neural_network_fundamentals.ipynb)**
+### **[Chapter 10: Neural Network Fundamentals](3.%20Deep_learning_and_neural_networks/10.%20neural_network_fundamentals.ipynb)**
 - 10.1 Biological Inspiration to Artificial Neurons: Perceptron, Activation Functions (Sigmoid, ReLU, Tanh, Leaky ReLU, GELU, Swish)
 - 10.2 Feedforward Neural Networks: Architecture, Forward Propagation
 - 10.3 Loss Functions: MSE, Cross-Entropy, Hinge Loss, Contrastive Loss, Triplet Loss
@@ -98,7 +85,7 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 - 10.6 Regularization: Dropout, Batch Normalization, Layer Normalization, Weight Decay, Early Stopping, Data Augmentation
 - **Workbook Labs:** Implement NN from scratch (NumPy), MNIST classifier with PyTorch/TensorFlow
 
-### **[Chapter 11: Deep Learning Frameworks](3.%20Deep_learning_and_neural_networks.ipynb/11.%20deep_learning_frameworks.ipynb)**
+### **[Chapter 11: Deep Learning Frameworks](3.%20Deep_learning_and_neural_networks/11.%20deep_learning_frameworks.ipynb)**
 - 11.1 PyTorch Deep Dive: Tensors, Autograd, nn.Module, DataLoader, Transforms
 - 11.2 TensorFlow/Keras: Eager execution, Functional API, Subclassing, tf.data
 - 11.3 JAX/Flax: Functional programming, JIT compilation, vmap
@@ -106,7 +93,7 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 - 11.5 Model Export: ONNX, TorchScript, TensorRT, Quantization basics
 - **Workbook Labs:** Implement same model in PyTorch, TF, and JAX; Benchmark comparison
 
-### **[Chapter 12: Convolutional Neural Networks (CNNs)](3.%20Deep_learning_and_neural_networks.ipynb/12.%20convolutional_neural_networks.ipynb)**
+### **[Chapter 12: Convolutional Neural Networks (CNNs)](3.%20Deep_learning_and_neural_networks/12.%20convolutional_neural_networks.ipynb)**
 - 12.1 Convolution Operations: Kernels, Stride, Padding, Dilation
 - 12.2 Pooling and Downsampling: MaxPool, AvgPool, Global Pooling
 - 12.3 Modern Architectures: LeNet, AlexNet, VGG, ResNet, DenseNet, EfficientNet, ConvNeXt
@@ -115,14 +102,14 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 - 12.6 Image Segmentation: Semantic segmentation (U-Net, DeepLab), Instance segmentation (Mask R-CNN), Panoptic segmentation
 - **Workbook Labs:** Image classification pipeline, Object detection on COCO, Medical image segmentation
 
-### **[Chapter 13: Recurrent Neural Networks & Sequence Modeling](3.%20Deep_learning_and_neural_networks.ipynb/13.%20recurrent_neural_networks_and_sequence_modeling.ipynb)**
+### **[Chapter 13: Recurrent Neural Networks & Sequence Modeling](3.%20Deep_learning_and_neural_networks/13.%20recurrent_neural_networks_and_sequence_modeling.ipynb)**
 - 13.1 RNNs: Vanilla RNN, Backpropagation through time (BPTT), Vanishing gradients
 - 13.2 LSTM and GRU: Gating mechanisms, Peephole connections, Bidirectional RNNs
 - 13.3 Sequence-to-Sequence Models: Encoder-Decoder architecture, Attention mechanism (Bahdanau, Luong)
 - 13.4 Applications: Time series prediction, Text generation, Named Entity Recognition (NER), Machine Translation
 - **Workbook Labs:** Character-level text generation, Stock price prediction, Attention visualization
 
-### **[Chapter 14: Transformers & Modern NLP](3.%20Deep_learning_and_neural_networks.ipynb/14.%20transformers_and_modern_nlp.ipynb)**
+### **[Chapter 14: Transformers & Modern NLP](3.%20Deep_learning_and_neural_networks/14.%20transformers_and_modern_nlp.ipynb)**
 - 14.1 Attention is All You Need: Self-attention, Multi-head attention, Positional encodings
 - 14.2 Transformer Architecture: Encoder-only, Decoder-only, Encoder-Decoder variants
 - 14.3 Pre-training Strategies: Masked Language Modeling (MLM), Causal LM, Span corruption
@@ -134,7 +121,6 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 4: SPECIALIZED AI DOMAINS**
-*Duration: 20-24 weeks | Level: Advanced*
 
 ### **[Chapter 15: Large Language Models (LLMs) & Generative AI](4.%20Specialized_AI_domains/15.%20LLMs_and_generative_AI.ipynb)**
 - 15.1 Scaling Laws: Chinchilla scaling, Compute-optimal training, Emergent abilities
@@ -174,7 +160,6 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 5: MLOPS & PRODUCTION ENGINEERING**
-*Duration: 16-20 weeks | Level: Advanced to Expert*
 
 ### **[Chapter 19: ML System Design & Architecture](5.%20MLOPs_and_production_engineering/19.%20ml_system_design_and_architecture.ipynb)**
 - 19.1 ML System Components: Data ingestion, Feature store, Training, Serving, Monitoring
@@ -227,12 +212,11 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 6: ADVANCED TOPICS & RESEARCH**
-*Duration: Ongoing | Level: Expert*
 
 ### **[Chapter 25: Transformer Architecture Deep Dive](6.%20Advanced_topics_and_research/25.%20transformer_architecture_deep_dive.ipynb)**
 - 25.1 Attention Mechanisms: Self-attention, Cross-attention, Multi-head attention, Linear attention
 - 25.2 Positional Encodings: Sinusoidal, Learned, Relative, Rotary (RoPE), ALiBi
-- 25.3 Advanced Architectures: 
+- 25.3 Advanced Architectures:
   - Encoder-only (BERT, RoBERTa, DeBERTa)
   - Decoder-only (GPT family, LLaMA, Mistral)
   - Encoder-Decoder (T5, BART, UL2)
@@ -243,10 +227,10 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ### **[Chapter 26: Generative AI & Diffusion Models](6.%20Advanced_topics_and_research/26.%20generative_AI_and_diffusion_models.ipynb)**
 - 26.1 Autoregressive Models: GPT, PixelCNN, WaveNet
 - 26.2 Variational Autoencoders (VAEs): ELBO, Reparameterization trick, Beta-VAE, VQ-VAE
-- 26.3 Generative Adversarial Networks (GANs): 
+- 26.3 Generative Adversarial Networks (GANs):
   - DCGAN, Conditional GANs, CycleGAN, StyleGAN architectures
   - Training stability: WGAN, Spectral normalization, Progressive growing
-- 26.4 Diffusion Models: 
+- 26.4 Diffusion Models:
   - DDPM, DDIM, Score-based models
   - Latent Diffusion Models (Stable Diffusion)
   - Classifier-free guidance, Inpainting, ControlNet
@@ -264,7 +248,7 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ### **[Chapter 28: AI Safety, Alignment & Robustness](6.%20Advanced_topics_and_research/28.%20ai_safety_alignment_and_robustness.ipynb)**
 - 28.1 Alignment Problem: Outer vs Inner alignment, Reward hacking, Specification gaming
 - 28.2 Interpretability: Mechanistic interpretability, Circuit tracing, Superposition, Sparse autoencoders
-- 28.3 Red Teaming & Adversarial Robustness: 
+- 28.3 Red Teaming & Adversarial Robustness:
   - Adversarial attacks (FGSM, PGD, Carlini & Wagner)
   - Defenses: Adversarial training, Certified defenses, Randomized smoothing
 - 28.4 Uncertainty Quantification: Bayesian Neural Networks, MC Dropout, Ensembles, Evidential learning
@@ -274,14 +258,13 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 ---
 
 ## **PHASE 7: MASTERY & CAREER**
-*Duration: Ongoing | Level: Expert/Professional*
 
 ### **[Chapter 29: AI System Design & Architecture](7.%20%20Mastery_and_career/29.%20ai_system_design_and_architecture.ipynb)**
 - 29.1 Designing ML Systems: Requirements gathering, Constraints (latency, cost, accuracy), Trade-offs
 - 29.2 Feature Platform Design: Real-time vs batch features, Feature stores (Feast, Tecton), Feature monitoring
 - 29.3 Training Infrastructure: Distributed training design, Spot instance training, Check-pointing strategies
 - 29.4 Serving Patterns: Model servers (TF Serving, TorchServe, Triton), Edge deployment, Serverless (AWS Lambda)
-- 29.5 Case Studies: 
+- 29.5 Case Studies:
   - Search & Recommendation (Google, Netflix)
   - Ads & Ranking (Meta, Google Ads)
   - Computer Vision at scale (Tesla Autopilot, Instagram)
@@ -302,7 +285,7 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 
 ### **[Chapter 31: Interview Preparation & Career Strategy](7.%20%20Mastery_and_career/31.%20interview_preparation_and_career_strategy.ipynb)**
 - 31.1 Coding Interviews: LeetCode for ML (Python, SQL), ML-specific algorithms
-- 31.2 ML Theory Interviews: 
+- 31.2 ML Theory Interviews:
   - Bias-variance, Overfitting solutions
   - Gradient descent variants
   - CNN/RNN/Transformer architecture details
@@ -353,22 +336,5 @@ Here is the **comprehensive Table of Contents** for the AI Engineer Mastery Work
 
 ### **Appendix E: Glossary of Terms**
 - Comprehensive terminology covering all phases (from "Ablation Study" to "Zero-Shot Learning")
-
----
-
-## **WORKBOOK STRUCTURE & PEDAGOGY**
-
-Each chapter follows this consistent format to ensure practical mastery:
-
-1. **Learning Objectives** (What you'll know by the end)
-2. **Prerequisites** (What you need to know first)
-3. **Theory Section** (Concepts with visual diagrams)
-4. **Mathematical Deep Dive** (Equations with intuition)
-5. **Implementation** (Code walkthroughs)
-6. **Workbook Labs** (Hands-on exercises with solutions)
-7. **Common Pitfalls** (Mistakes to avoid)
-8. **Interview Questions** (FAQs from top companies)
-9. **Further Reading** (Papers, blogs, courses)
-10. **Checkpoint Project** (Mini-project to validate learning)
 
 ---

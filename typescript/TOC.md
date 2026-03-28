@@ -1,12 +1,4 @@
 # TypeScript Developer Handbook
-## A Comprehensive Guide from Fundamentals to Mastery
-
----
-
-# Table of Contents
-
----
-
 ## Part I: Foundations
 
 ### [Chapter 1: Introduction to TypeScript](1.%20foundations/1.%20introduction_to_typescript.ipynb)
@@ -482,7 +474,7 @@
 - 21.7 Creating Custom Utility Types
 - 21.8 Chapter Summary and Exercises
 
-### [Chapter 22: The `keyof` Operator](6.%20advanced_type_features/22.%20the_keyof_operator.ipynb)
+### [Chapter 22: The keyof Operator](6.%20advanced_type_features/22.%20the_keyof_operator.ipynb)
 - 22.1 Understanding `keyof`
   - 22.1.1 Basic Usage
   - 22.1.2 `keyof` with Object Types

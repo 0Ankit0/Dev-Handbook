@@ -1,13 +1,4 @@
-
-# The Modern Python Developer's Handbook: From Novice to Professional
-
-## Preface
-*   **Introduction to the Handbook**: How to use this book effectively.
-*   **The Philosophy of Python**: Readability, simplicity, and "The Zen of Python" (PEP 20).
-*   **Setting Up the Environment**: Installing Python, managing versions (pyenv), and choosing the right IDE (VS Code, PyCharm).
-
----
-
+# The Modern Python Developer's Handbook
 ## Part I: Python Fundamentals (The Foundation)
 
 ### [Chapter 1: Getting Started](1.%20python_fundamentals/1.%20getting_started.ipynb)
@@ -67,7 +58,7 @@
 
 ---
 
-## Part IV: Professional Development Practices (Industry Standards)
+## Part IV: Professional Development Practices
 
 ### [Chapter 8: Code Style and Quality (PEP 8)](4.%20professional_development_practices/8.%20code_style_and_quality.ipynb)
 *   **8.1 PEP 8 Guidelines**: Naming conventions, indentation, and line length.

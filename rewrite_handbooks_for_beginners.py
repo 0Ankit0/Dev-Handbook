@@ -2,15 +2,15 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
-import os
 import re
 import subprocess
 import sys
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass, field
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Iterable
+from urllib.parse import unquote
 
 
 HANDBOOK_ORDER = [
@@ -42,177 +42,111 @@ HANDBOOK_ORDER = [
     "project_management",
 ]
 
-DISALLOWED_HEADINGS = {
-    "questions",
-    "faq",
-    "q&a",
-    "common questions",
-    "frequently asked questions",
+MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+HEADING_RE = re.compile(r"^#{1,6}\s+(.+?)\s*$", re.MULTILINE)
+PART_RE = re.compile(r"^#{2,6}\s+\*{0,2}(?:Part|Module)\b", re.IGNORECASE)
+NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
+MULTISPACE_RE = re.compile(r"\s+")
+PARENS_RE = re.compile(r"\s*[\(\[].*?[\)\]]")
+STOPWORDS = {
+    "a",
+    "an",
+    "and",
+    "are",
+    "as",
+    "basics",
+    "chapter",
+    "concepts",
+    "core",
+    "data",
+    "development",
+    "for",
+    "fundamentals",
+    "guide",
+    "how",
+    "in",
+    "introduction",
+    "is",
+    "of",
+    "overview",
+    "part",
+    "the",
+    "to",
+    "using",
+    "what",
+    "with",
+    "your",
 }
 
-HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
-TOC_LINK_RE = re.compile(r"\(([^)]+\.ipynb)\)")
-LEADING_NUMBER_RE = re.compile(r"^\s*\d+[\.\)]?\s*")
-NON_ALNUM_RE = re.compile(r"[^a-z0-9]+")
-FENCED_CODE_RE = re.compile(r"(?ms)^```([^\n`]*)\n(.*?)^```[ \t]*\n?")
-
-
-INTRO_TEMPLATES = [
-    "If this topic is new to you, keep translating it back to three practical ideas: what job it does, when you would reach for it, and which nearby concepts it is easy to confuse with. That lens will make the details in this chapter feel connected instead of memorized.",
-    "A first-time learner usually gets the most value from this chapter by asking what problem this topic solves, what changes when you apply it correctly, and what breaks when you misunderstand it. The sections below are much easier to follow once that thread is visible.",
-    "You do not need to memorize every term on first read. Focus on the responsibility this topic carries, the situations where it becomes useful, and the small signals that tell you you are using it well. The rest of the chapter fills in the supporting detail around that core idea.",
+BANNED_META_PATTERNS = [
+    re.compile(r"^\s*Here is\b", re.IGNORECASE),
+    re.compile(r"\bthe complete first chapter of your\b", re.IGNORECASE),
+    re.compile(r"\bthe complete .* workbook\b", re.IGNORECASE),
+    re.compile(r"\bworkbook guidelines\b", re.IGNORECASE),
+    re.compile(r"\bwithout full spoonfed code\b", re.IGNORECASE),
+    re.compile(r"\bnot spoonfeeding(?: full code)?\b", re.IGNORECASE),
+    re.compile(r"\brewritten with full explanations\b", re.IGNORECASE),
+    re.compile(r"\bcomprehensive workbook chapter\b", re.IGNORECASE),
 ]
 
-SECTION_TEMPLATES = {
-    "concept": [
-        "The easiest way to read this section is to keep one plain-language question in view: what is {concept} actually responsible for? Once that job is clear, the terminology stops feeling arbitrary and the details start to line up.",
-        "If the wording here feels abstract at first, anchor it to the concrete job {concept} performs in a real system. That mental model makes the definitions easier to retain and easier to use later.",
-    ],
-    "setup": [
-        "Setup steps are easier to remember when you know what each one unlocks. Read this section as a map from each command, option, or file to the problem it solves, so later errors are easier to diagnose instead of feeling random.",
-        "A beginner usually learns this material faster by connecting each setup step to its purpose rather than treating it as a checklist. Keep asking what each piece enables and what would fail if you skipped it.",
-    ],
-    "comparison": [
-        "The hard part here is usually not the syntax but the boundary between similar ideas. Keep comparing the job each option does best, the tradeoff it introduces, and the clues that tell you which one fits the situation in front of you.",
-        "Sections like this become clearer when you separate capabilities from tradeoffs. As you read, ask what each option is optimized for and what complexity you accept in exchange.",
-    ],
-    "workflow": [
-        "The key to this section is sequence. If you can explain what happens first, what happens next, and where control moves after that, the moving parts here become much easier to reason about.",
-        "Whenever a process has several stages, beginners benefit from tracing the handoff between them. Follow the order carefully and notice what information each step receives, transforms, and passes on.",
-    ],
-    "data": [
-        "A useful beginner mental model here is to separate the shape of the data from the operations performed on it. Once you know what is being represented and who depends on that representation, the rules become easier to predict.",
-        "If this section feels dense, pause and identify the data structure or model first. Most of the APIs here make more sense once you know what is being stored, queried, or transformed.",
-    ],
-    "security": [
-        "Security topics become much easier to follow when you separate the threat from the defense. As you read, keep asking what can go wrong, what protection addresses it, and what assumption that protection depends on.",
-        "A beginner-friendly way to approach this section is to pair each risk with the mechanism meant to reduce it. That keeps the advice grounded and helps you see why the defaults matter.",
-    ],
-    "testing": [
-        "Treat this section as a feedback loop: define an expectation, exercise the behavior, compare the result, and use the difference to learn. That framing keeps testing ideas concrete instead of procedural.",
-        "Testing concepts stick better when you remember the purpose behind each step: create evidence that the behavior you care about still works, and learn quickly when it stops working.",
-    ],
-    "performance": [
-        "This topic is easier to understand if you split it into two questions: how do you notice a problem, and which lever changes it? Measurement comes first, optimization second, and mixing those steps usually creates confusion.",
-        "Performance advice only becomes useful once you tie each technique to the bottleneck it addresses. Keep asking what is slow, how you can prove it, and what side effect each optimization introduces.",
-    ],
-    "deployment": [
-        "The important beginner shift here is moving from “it works on my machine” to “it behaves predictably in a real environment.” Each step matters because it reduces surprises when the software runs elsewhere.",
-        "Production-oriented material makes more sense when you see it as reliability work. The tools and steps here exist to make behavior repeatable, observable, and safer to change.",
-    ],
-    "api": [
-        "When a section introduces a boundary between systems, focus on the contract first: what information crosses the boundary, who is allowed to send it, and what the caller can safely assume in return.",
-        "API and integration material becomes easier when you treat it as agreement design rather than just endpoint syntax. Watch the shape of the data, the guarantees around it, and the failure cases.",
-    ],
-    "architecture": [
-        "Architecture material sounds bigger than it is if you read it only as terminology. Start by identifying the responsibility of each part and the reason those responsibilities are separated; the structure usually becomes much clearer from there.",
-        "A helpful beginner shortcut here is to ask why the system is split this way at all. Once the separation of responsibilities is clear, the patterns feel like practical decisions instead of abstract rules.",
-    ],
-    "debugging": [
-        "Debugging-oriented sections are easiest to learn when you keep cause and evidence connected. Notice what symptom shows up first, what tool exposes it, and what the result tells you about the next step.",
-        "When a topic involves troubleshooting, focus on the signals before the fixes. The more clearly you can read the evidence, the less likely you are to cargo-cult a solution.",
-    ],
-    "default": [
-        "If this topic is new, keep translating each new term into a simple question: what job does it do, when would you reach for it, and what would you confuse it with if you were moving too quickly? That habit makes the section easier to retain.",
-        "A first read goes better when you connect every new idea to a concrete responsibility and a concrete use case. Once those anchors are in place, the terminology in this section becomes much easier to reuse accurately.",
-    ],
+PROMOTIONAL_PATTERNS = [
+    (re.compile(r"\s*[—-]\s*Rewritten With Full Explanations\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*Comprehensive Workbook Chapter\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*Industry Standard\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*The Right Way\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*Like a Pro\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*Done Right\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*[—-]\s*Practical\b", re.IGNORECASE), ""),
+    (re.compile(r"\s*\((?:[^)]*(?:Crash Course|Industry Standard|The Right Way|Like a Pro|Done Right)[^)]*)\)", re.IGNORECASE), ""),
+]
+
+TOC_META_SECTION_HEADINGS = {
+    "preface",
+    "pedagogical features throughout the book",
+    "table of contents",
+    "workbook structure and pedagogy",
+    "workbook structure pedagogy",
 }
 
 
 @dataclass(frozen=True)
-class NotebookEntry:
+class NotebookRecord:
     handbook: str
     path: Path
     relative_path: str
     chapter_number: int
 
 
+@dataclass(frozen=True)
+class TocChapter:
+    number: int
+    title: str
+    link: str | None
+    line_index: int
+    subtopics: list[str]
+    part_title: str | None
+
+
 @dataclass
-class RewriteSummary:
-    path: str
-    changed: bool
-    question_count: int
-    intro_added: bool
-    section_leads_added: int
-    code_cells_created: int
+class HandbookAudit:
+    handbook: str
+    toc_chapter_count: int
+    notebook_count: int
+    intro_issues_in_toc: bool
+    notebook_intro_issues: list[str] = field(default_factory=list)
+    malformed_directories: list[str] = field(default_factory=list)
+    missing_toc_links: list[str] = field(default_factory=list)
+    broken_toc_links: list[str] = field(default_factory=list)
+    orphan_notebooks: list[str] = field(default_factory=list)
+    unmatched_toc_chapters: list[str] = field(default_factory=list)
+    likely_missing_subtopics: dict[str, list[str]] = field(default_factory=dict)
 
 
-def numeric_prefix(value: str) -> int:
-    match = re.match(r"^\s*(\d+)", value)
-    return int(match.group(1)) if match else sys.maxsize
-
-
-def slugify(value: str) -> str:
-    value = value.lower()
-    value = NON_ALNUM_RE.sub("-", value)
-    return value.strip("-")
-
-
-def clean_heading_text(text: str) -> str:
-    text = re.sub(r"`([^`]+)`", r"\1", text)
-    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-    text = re.sub(r"\*([^*]+)\*", r"\1", text)
-    text = re.sub(r"<[^>]+>", " ", text)
-    text = LEADING_NUMBER_RE.sub("", text)
-    text = re.sub(r"[#*_>\[\]\(\)]+", " ", text)
-    text = re.sub(r"\s+", " ", text).strip(" -:|")
-    return text
-
-
-def is_handbook_dir(path: Path) -> bool:
-    return path.is_dir() and (path / "TOC.md").exists()
-
-
-def ordered_handbooks(root: Path) -> list[str]:
-    available = {path.name for path in root.iterdir() if is_handbook_dir(path)}
-    ordered = [name for name in HANDBOOK_ORDER if name in available]
-    ordered.extend(sorted(available - set(ordered)))
-    return ordered
-
-
-def discover_notebooks(root: Path, handbook: str) -> list[NotebookEntry]:
-    handbook_dir = root / handbook
-    entries: list[NotebookEntry] = []
-    for path in handbook_dir.rglob("*.ipynb"):
-        if not path.is_file():
-            continue
-        if ".ipynb_checkpoints" in path.parts:
-            continue
-        relative = path.relative_to(root).as_posix()
-        entries.append(
-            NotebookEntry(
-                handbook=handbook,
-                path=path,
-                relative_path=relative,
-                chapter_number=numeric_prefix(path.name),
-            )
-        )
-    entries.sort(key=lambda item: (item.chapter_number, item.relative_path))
-    return entries
-
-
-def run_git_show(root: Path, relative_path: str) -> str | None:
-    proc = subprocess.run(
-        ["git", "show", f"HEAD:{relative_path}"],
-        cwd=root,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.DEVNULL,
-        text=True,
-    )
-    if proc.returncode != 0:
-        return None
-    return proc.stdout
-
-
-def load_json_from_text(text: str, label: str) -> dict:
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError as exc:
-        raise ValueError(f"Invalid notebook JSON in {label}: {exc}") from exc
-
-
-def notebook_to_text(notebook: dict) -> str:
-    return json.dumps(notebook, indent=1) + "\n"
+@dataclass
+class CleanupSummary:
+    handbook: str
+    toc_changed: bool = False
+    notebooks_changed: int = 0
 
 
 def source_to_text(source: object) -> str:
@@ -227,674 +161,618 @@ def text_to_source(text: str) -> list[str]:
     return text.splitlines(keepends=True)
 
 
-def is_nav_cell(cell: dict) -> bool:
-    if cell.get("cell_type") != "markdown":
-        return False
-    text = source_to_text(cell.get("source"))
-    return (
-        "Table of Contents" in text
-        and ("Previous" in text or "&larr;" in text)
-        and ("Next" in text or "&rarr;" in text)
-    )
+def numeric_prefix(value: str) -> int:
+    match = re.match(r"^\s*(\d+)", value)
+    return int(match.group(1)) if match else sys.maxsize
 
 
-def is_two_cell_nav_notebook(notebook: dict) -> bool:
-    cells = notebook.get("cells", [])
-    return (
-        len(cells) == 2
-        and all(cell.get("cell_type") == "markdown" for cell in cells)
-        and is_nav_cell(cells[-1])
-    )
+def strip_markdown(text: str) -> str:
+    text = MARKDOWN_LINK_RE.sub(r"\1", text)
+    text = re.sub(r"`([^`]+)`", r"\1", text)
+    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
+    text = re.sub(r"\*([^*]+)\*", r"\1", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return MULTISPACE_RE.sub(" ", text).strip()
 
 
-def extract_headings(markdown: str) -> list[tuple[int, str]]:
-    return [(len(match.group(1)), clean_heading_text(match.group(2))) for match in HEADING_RE.finditer(markdown)]
+def normalize_text(text: str) -> str:
+    text = strip_markdown(text)
+    text = PARENS_RE.sub("", text)
+    text = text.replace("&", " and ")
+    text = text.lower()
+    text = NON_ALNUM_RE.sub(" ", text)
+    return MULTISPACE_RE.sub(" ", text).strip()
 
 
-def choose_template(options: list[str], key: str) -> str:
-    if not options:
-        return ""
-    digest = hashlib.sha256(key.encode("utf-8")).hexdigest()
-    index = int(digest[:8], 16) % len(options)
-    return options[index]
+def title_tokens(text: str) -> set[str]:
+    return {token for token in normalize_text(text).split() if token not in STOPWORDS and len(token) > 2}
 
 
-def classify_heading(heading: str) -> str:
-    lowered = heading.lower()
-    if any(token in lowered for token in ("install", "setup", "getting started", "configuration", "environment", "tooling")):
-        return "setup"
-    if any(token in lowered for token in ("what is", "introduction", "overview", "foundations", "fundamentals", "basics", "core concepts", "mental model")):
-        return "concept"
-    if any(token in lowered for token in (" vs ", "versus", "comparison", "choose", "tradeoff", "differences")):
-        return "comparison"
-    if any(token in lowered for token in ("lifecycle", "flow", "pipeline", "workflow", "routing", "request", "execution", "how it works")):
-        return "workflow"
-    if any(token in lowered for token in ("data", "database", "model", "schema", "orm", "query", "storage", "state", "cache")):
-        return "data"
-    if any(token in lowered for token in ("security", "auth", "authorization", "authentication", "permission", "csrf", "xss", "threat", "oauth", "jwt")):
-        return "security"
-    if any(token in lowered for token in ("test", "quality", "validation", "assert", "mock", "debug", "troubleshoot", "error handling")):
-        return "testing" if "debug" not in lowered and "troubleshoot" not in lowered else "debugging"
-    if any(token in lowered for token in ("performance", "scal", "optimiz", "profil", "observability", "monitoring", "latency", "throughput")):
-        return "performance"
-    if any(token in lowered for token in ("deployment", "production", "release", "operations", "ci", "cd", "container", "hosting", "day 2")):
-        return "deployment"
-    if any(token in lowered for token in ("api", "rest", "graphql", "websocket", "integration", "service", "messaging", "endpoint")):
-        return "api"
-    if any(token in lowered for token in ("architecture", "design", "pattern", "components", "module", "layer", "domain-driven")):
-        return "architecture"
-    return "default"
+def similarity(left: str, right: str) -> float:
+    normalized_left = normalize_text(left)
+    normalized_right = normalize_text(right)
+    if not normalized_left or not normalized_right:
+        return 0.0
+    if normalized_left == normalized_right:
+        return 1.0
+    ratio = SequenceMatcher(None, normalized_left, normalized_right).ratio()
+    left_tokens = title_tokens(left)
+    right_tokens = title_tokens(right)
+    overlap = len(left_tokens & right_tokens) / max(len(left_tokens | right_tokens), 1)
+    contains = 1.0 if normalized_left in normalized_right or normalized_right in normalized_left else 0.0
+    return max(ratio, overlap, (ratio + overlap + contains) / 3)
 
 
-def build_question_inventory(topic: str, headings: list[tuple[int, str]]) -> list[str]:
-    topic_name = topic or "this topic"
-    questions = [
-        f"What problem does {topic_name} solve?",
-        f"Why does {topic_name} matter in real projects instead of only in examples?",
-        f"When would I reach for {topic_name}, and when is it the wrong tool?",
-        f"What is the smallest mental model I need before copying the examples in {topic_name}?",
-        f"What mistakes or confusions usually trip beginners up in {topic_name}?",
-    ]
-    seen = {slugify(question) for question in questions}
-    for _, heading in headings:
-        if not heading:
-            continue
-        cleaned = heading.rstrip("?")
-        candidates = [
-            f"What does {cleaned} actually do?",
-            f"How does {cleaned} fit into {topic_name}?",
-            f"What would break if I misunderstood {cleaned}?",
-        ]
-        for question in candidates:
-            key = slugify(question)
-            if key and key not in seen:
-                questions.append(question)
-                seen.add(key)
-            if len(questions) >= 12:
-                return questions
-    return questions[:12]
+def has_banned_meta(text: str) -> bool:
+    return any(pattern.search(text) for pattern in BANNED_META_PATTERNS)
 
 
-def preamble_has_intro(text: str) -> bool:
-    sanitized_lines = []
-    for line in text.splitlines():
-        stripped = line.strip()
-        if not stripped:
-            continue
-        if stripped.startswith("#"):
-            continue
-        if stripped.startswith("<"):
-            continue
-        if stripped.startswith("---"):
-            continue
-        sanitized_lines.append(stripped)
-    combined = " ".join(sanitized_lines)
-    return len(combined) >= 120
+def sanitize_promotional_text(text: str) -> str:
+    cleaned = text
+    for pattern, replacement in PROMOTIONAL_PATTERNS:
+        cleaned = pattern.sub(replacement, cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned)
+    cleaned = re.sub(r"\s+([)\]])", r"\1", cleaned)
+    cleaned = re.sub(r"([(\[])\s+", r"\1", cleaned)
+    cleaned = re.sub(r"\s+[—-]\s*$", "", cleaned)
+    return cleaned.strip()
 
 
-def first_body_block(body: str) -> tuple[str, str]:
-    text = body.lstrip("\n")
-    if not text:
-        return "empty", ""
+def sanitize_heading_line(line: str) -> str:
+    if not re.match(r"^\s*#{1,6}\s+", line):
+        return sanitize_promotional_text(line.rstrip())
+    prefix, title = line.split(" ", 1)
+    title = sanitize_promotional_text(title.rstrip())
+    return f"{prefix} {title}".rstrip()
+
+
+def fallback_handbook_title(handbook: str) -> str:
+    replacements = {
+        "ai_engineering": "AI Engineering Handbook",
+        "asp_net": "ASP.NET Handbook",
+        "ci_cd": "CI/CD Handbook",
+        "dsa": "Data Structures and Algorithms Handbook",
+    }
+    if handbook in replacements:
+        return replacements[handbook]
+    return f"{handbook.replace('_', ' ').title()} Handbook"
+
+
+def sanitize_toc_title_line(line: str, handbook: str) -> str:
+    if not re.match(r"^\s*#{1,6}\s+", line):
+        return sanitize_promotional_text(line.rstrip())
+    prefix, title = line.split(" ", 1)
+    title_text = strip_markdown(title.rstrip())
+    title_text = re.sub(r":\s*Complete Guide to\s+", ": ", title_text, flags=re.IGNORECASE)
+    title_text = re.sub(r":\s*(?:The Complete Guide|From .+)$", "", title_text, flags=re.IGNORECASE)
+    title_text = re.sub(r"\bthe complete\b", "", title_text, flags=re.IGNORECASE)
+    title_text = re.sub(r"\bmastery workbook\b", "Handbook", title_text, flags=re.IGNORECASE)
+    title_text = re.sub(r"\bworkbook\b", "Handbook", title_text, flags=re.IGNORECASE)
+    title_text = re.sub(r"\s{2,}", " ", title_text).strip(" :-")
+    if not title_text:
+        title_text = fallback_handbook_title(handbook)
+    return f"{prefix} {title_text}".rstrip()
+
+
+def collapse_blank_lines(text: str) -> str:
+    text = re.sub(r"\n{3,}", "\n\n", text.strip("\n"))
+    return f"{text}\n" if text else ""
+
+
+def clean_notebook_intro_text(text: str) -> tuple[str, bool]:
+    original = text
     lines = text.splitlines()
-    first = lines[0].strip()
-    if first.startswith("```"):
-        return "code", first
-    if first.startswith(">"):
-        return "quote", first
-    if re.match(r"^[-*+]\s+", first) or re.match(r"^\d+\.\s+", first):
-        return "list", first
-    if first.startswith("|"):
-        return "table", first
-    if first.startswith("<"):
-        return "html", first
-    paragraph_lines = []
+    first_heading_index = next((index for index, line in enumerate(lines) if re.match(r"^\s*#{1,6}\s+", line)), None)
+    if first_heading_index is not None:
+        leading = "\n".join(lines[:first_heading_index]).strip()
+        if leading and has_banned_meta(leading):
+            lines = lines[first_heading_index:]
+
+    cleaned_lines: list[str] = []
     for line in lines:
         stripped = line.strip()
-        if not stripped:
-            break
-        if stripped.startswith("```"):
-            break
-        if stripped.startswith("|") or stripped.startswith(">"):
-            break
-        if re.match(r"^[-*+]\s+", stripped) or re.match(r"^\d+\.\s+", stripped):
-            break
-        paragraph_lines.append(stripped)
-    paragraph = " ".join(paragraph_lines)
-    return "paragraph", paragraph
-
-
-def paragraph_is_dense(paragraph: str) -> bool:
-    if len(paragraph) >= 430:
-        return True
-    if paragraph.count("`") >= 4:
-        return True
-    if paragraph.count("(") >= 4:
-        return True
-    acronyms = re.findall(r"\b[A-Z]{2,}\b", paragraph)
-    if len(acronyms) >= 4:
-        return True
-    return False
-
-
-def section_needs_lead(body: str) -> bool:
-    block_type, payload = first_body_block(body)
-    if block_type in {"empty", "code", "list", "table", "html"}:
-        return True
-    if block_type == "quote":
-        return True
-    if block_type == "paragraph":
-        lowered = payload.lower()
-        if lowered.startswith(
-            (
-                "before ",
-                "this ",
-                "these ",
-                "in this ",
-                "understanding ",
-                "treat ",
-                "think of ",
-                "we ",
-                "the goal ",
-                "unlike ",
-                "once ",
-            )
-        ):
-            return False
-        if len(payload) < 35:
-            return True
-        return paragraph_is_dense(payload)
-    return False
-
-
-def make_chapter_intro(topic: str) -> str:
-    topic_key = slugify(topic) or "chapter"
-    return choose_template(INTRO_TEMPLATES, topic_key)
-
-
-def concept_from_heading(heading: str, chapter_topic: str) -> str:
-    cleaned = clean_heading_text(heading) or chapter_topic or "this concept"
-    if ":" in cleaned:
-        left, right = [part.strip() for part in cleaned.split(":", 1)]
-        left_slug = slugify(left)
-        if right and left_slug in {"core-concepts", "chapter", "part", "section"}:
-            cleaned = right
-    lowered = cleaned.lower().rstrip("?")
-    for pattern in (
-        r"^what is\s+(.+)$",
-        r"^why\s+(.+)$",
-        r"^how\s+does\s+(.+?)\s+work$",
-        r"^understanding\s+(.+)$",
-        r"^introduction to\s+(.+)$",
-        r"^overview of\s+(.+)$",
-    ):
-        match = re.match(pattern, lowered)
-        if match:
-            extracted = match.group(1).strip(" -:")
-            if extracted:
-                return extracted
-    return cleaned
-
-
-def make_section_lead(heading: str, chapter_topic: str) -> str:
-    category = classify_heading(heading)
-    concept = concept_from_heading(heading, chapter_topic)
-    template = choose_template(SECTION_TEMPLATES.get(category, SECTION_TEMPLATES["default"]), f"{category}:{concept}")
-    return template.format(concept=concept, topic=chapter_topic or "this topic")
-
-
-def inject_chapter_intro(markdown: str, topic: str) -> tuple[str, bool]:
-    matches = list(HEADING_RE.finditer(markdown))
-    if not matches:
-        return markdown, False
-    title_match = matches[0]
-    next_heading = matches[1] if len(matches) > 1 else None
-    title_block_end = next_heading.start() if next_heading else len(markdown)
-    title_block = markdown[title_match.end() : title_block_end]
-    if preamble_has_intro(title_block):
-        return markdown, False
-    structural_offset = 0
-    for line in title_block.splitlines(keepends=True):
-        stripped = line.strip()
-        if not stripped or stripped.startswith("<") or stripped.startswith("---"):
-            structural_offset += len(line)
+        if has_banned_meta(stripped):
             continue
-        break
-    intro = make_chapter_intro(topic)
-    insert_at = title_match.end() + structural_offset
-    rebuilt = markdown[:insert_at].rstrip() + "\n\n" + intro + "\n\n" + markdown[insert_at:].lstrip("\n")
-    return rebuilt, True
-
-
-def rewrite_sections(markdown: str, chapter_topic: str) -> tuple[str, int]:
-    matches = list(HEADING_RE.finditer(markdown))
-    if not matches:
-        return markdown, 0
-    pieces: list[str] = []
-    cursor = 0
-    inserted = 0
-    for index, match in enumerate(matches):
-        start = match.start()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(markdown)
-        section = markdown[start:end]
-        if start > cursor:
-            pieces.append(markdown[cursor:start])
-        level = len(match.group(1))
-        heading = clean_heading_text(match.group(2))
-        if level < 2:
-            pieces.append(section)
-            cursor = end
+        if re.match(r"^\s*#{1,6}\s+", line):
+            line = sanitize_heading_line(line)
+            stripped = line.strip()
+            if has_banned_meta(stripped):
+                continue
+        if stripped == "---" and not cleaned_lines:
             continue
-        if any(token in heading.lower() for token in ("next up", "summary", "review", "conclusion", "takeaway")):
-            pieces.append(section)
-            cursor = end
+        if not stripped and (not cleaned_lines or not cleaned_lines[-1].strip()):
             continue
-        section_lines = section.splitlines()
-        heading_line = section_lines[0]
-        body = "\n".join(section_lines[1:])
-        if section_needs_lead(body):
-            lead = make_section_lead(heading, chapter_topic)
-            rebuilt = heading_line.rstrip() + "\n\n" + lead + "\n\n"
-            stripped_body = body.lstrip("\n")
-            if stripped_body:
-                rebuilt += stripped_body
-                if section.endswith("\n") and not rebuilt.endswith("\n"):
-                    rebuilt += "\n"
-            pieces.append(rebuilt)
-            inserted += 1
-        else:
-            pieces.append(section)
-        cursor = end
-    if cursor < len(markdown):
-        pieces.append(markdown[cursor:])
-    return "".join(pieces), inserted
+        cleaned_lines.append(line.rstrip())
+
+    cleaned = collapse_blank_lines("\n".join(cleaned_lines))
+    return cleaned, cleaned != original
 
 
-def rewrite_markdown(markdown: str, chapter_path: str, *, allow_chapter_intro: bool) -> tuple[str, list[str], bool, int]:
-    headings = extract_headings(markdown)
-    title = next((text for level, text in headings if level == 1), clean_heading_text(Path(chapter_path).stem.replace("_", " ")))
-    questions = build_question_inventory(title, headings)
-    rewritten = markdown
-    intro_added = False
-    if allow_chapter_intro:
-        rewritten, intro_added = inject_chapter_intro(markdown, title)
-    rewritten, section_leads_added = rewrite_sections(rewritten, title)
-    return rewritten, questions, intro_added, section_leads_added
+def parse_toc_chapter_line(line: str) -> tuple[int, str, str | None] | None:
+    stripped = line.strip()
+    patterns = [
+        re.compile(r"^\*\*\[Chapter (\d+): (.+?)\]\(([^)]+)\)\*\*\s*$"),
+        re.compile(r"^\*\*Chapter (\d+): (.+?)\*\*\s*$"),
+        re.compile(r"^#{2,6}\s+\*\*\[Chapter (\d+): (.+?)\]\(([^)]+)\)\*\*\s*$"),
+        re.compile(r"^#{2,6}\s+\[Chapter (\d+): (.+?)\]\(([^)]+)\)\s*$"),
+        re.compile(r"^#{2,6}\s+\*\*Chapter (\d+): (.+?)\*\*\s*$"),
+        re.compile(r"^#{2,6}\s+Chapter (\d+): (.+?)\s*$"),
+        re.compile(r"^#{2,6}\s+\*\*\[(\d+)\. (.+?)\]\(([^)]+)\)\*\*\s*$"),
+        re.compile(r"^#{2,6}\s+\[(\d+)\. (.+?)\]\(([^)]+)\)\s*$"),
+        re.compile(r"^#{2,6}\s+\*\*(\d+)\. (.+?)\*\*\s*$"),
+        re.compile(r"^#{2,6}\s+(\d+)\. (.+?)\s*$"),
+        re.compile(r"^(\d+)\.\s+\*\*\[(.+?)\]\(([^)]+)\)\*\*\s*$"),
+        re.compile(r"^(\d+)\.\s+\[(.+?)\]\(([^)]+)\)\s*$"),
+        re.compile(r"^(\d+)\.\s+\*\*(.+?)\*\*\s*$"),
+    ]
+    for pattern in patterns:
+        match = pattern.match(stripped)
+        if not match:
+            continue
+        groups = match.groups()
+        if len(groups) == 3:
+            number, title, link = groups
+            return int(number), strip_markdown(title), link
+        number, title = groups
+        return int(number), strip_markdown(title), None
+    return None
 
 
-def should_promote_code_block(info_string: str, code: str) -> bool:
-    language = info_string.strip().split()[0].lower() if info_string.strip() else ""
-    if language in {"text", "plaintext", "plain", "mermaid"}:
+def is_meta_toc_section_heading(line: str) -> bool:
+    stripped = line.strip()
+    if not re.match(r"^#{1,6}\s+", stripped):
         return False
-    if language:
-        return True
-    stripped = code.strip()
+    heading = normalize_text(HEADING_RE.match(stripped).group(1)) if HEADING_RE.match(stripped) else ""
+    return heading in TOC_META_SECTION_HEADINGS
+
+
+def is_duration_or_tagline(line: str) -> bool:
+    stripped = line.strip()
     if not stripped:
         return False
-    return any(
-        token in stripped
-        for token in (
-            "import ",
-            "from ",
-            "def ",
-            "class ",
-            "SELECT ",
-            "INSERT ",
-            "UPDATE ",
-            "DELETE ",
-            "{",
-            "}",
-            "=>",
-            "console.",
-            "pip ",
-            "npm ",
-            "docker ",
-            "kubectl ",
-            "python ",
-            "$ ",
-        )
-    )
+    lowered = normalize_text(stripped)
+    if "duration" in lowered and "level" in lowered:
+        return True
+    if lowered.startswith("from zero to") or lowered.startswith("from novice to"):
+        return True
+    if stripped.startswith("*") and stripped.endswith("*") and not stripped.startswith("**") and not stripped.endswith("**") and "chapter" not in lowered and "part" not in lowered:
+        return True
+    return False
 
 
-def make_markdown_cell(text: str) -> dict | None:
-    normalized = text.strip("\n")
-    if not normalized.strip():
-        return None
-    return {
-        "cell_type": "markdown",
-        "metadata": {},
-        "source": text_to_source(normalized + "\n"),
-    }
+def clean_toc_text(text: str, handbook: str) -> tuple[str, bool]:
+    original = text
+    lines = text.splitlines()
+    cleaned_lines: list[str] = []
+    seen_title = False
+    in_meta_section = False
+    structure_started = False
 
+    for line in lines:
+        stripped = line.strip()
 
-def make_code_cell(code: str) -> dict:
-    normalized = code
-    if normalized and not normalized.endswith("\n"):
-        normalized += "\n"
-    return {
-        "cell_type": "code",
-        "metadata": {},
-        "execution_count": None,
-        "outputs": [],
-        "source": text_to_source(normalized),
-    }
-
-
-def split_markdown_into_cells(markdown: str) -> tuple[list[dict], int]:
-    cells: list[dict] = []
-    buffer: list[str] = []
-    created_code_cells = 0
-    position = 0
-    for match in FENCED_CODE_RE.finditer(markdown):
-        buffer.append(markdown[position : match.start()])
-        info_string = match.group(1).strip()
-        code = match.group(2)
-        full_block = match.group(0)
-        if should_promote_code_block(info_string, code):
-            markdown_cell = make_markdown_cell("".join(buffer))
-            if markdown_cell is not None:
-                cells.append(markdown_cell)
-            buffer = []
-            cells.append(make_code_cell(code))
-            created_code_cells += 1
-        else:
-            buffer.append(full_block)
-        position = match.end()
-    buffer.append(markdown[position:])
-    markdown_cell = make_markdown_cell("".join(buffer))
-    if markdown_cell is not None:
-        cells.append(markdown_cell)
-    return cells, created_code_cells
-
-
-def compare_notebooks(original: dict, current: dict, path: str) -> list[str]:
-    problems: list[str] = []
-    original_cells = original.get("cells", [])
-    current_cells = current.get("cells", [])
-    if original.get("metadata") != current.get("metadata"):
-        problems.append(f"{path}: notebook metadata changed")
-    if is_two_cell_nav_notebook(original):
-        if not current_cells:
-            problems.append(f"{path}: notebook has no cells after rewrite")
-            return problems
-        if not is_nav_cell(current_cells[-1]):
-            problems.append(f"{path}: trailing nav cell missing after rewrite")
-        else:
-            if source_to_text(original_cells[-1].get("source")) != source_to_text(current_cells[-1].get("source")):
-                problems.append(f"{path}: trailing nav cell content changed")
-        for index, cell in enumerate(current_cells[:-1]):
-            if cell.get("cell_type") not in {"markdown", "code"}:
-                problems.append(f"{path}: cell {index} has unexpected type {cell.get('cell_type')}")
+        if not seen_title:
+            if not stripped or stripped == "---" or has_banned_meta(stripped) or is_duration_or_tagline(stripped):
                 continue
-            if cell.get("cell_type") == "code":
-                if cell.get("outputs") != []:
-                    problems.append(f"{path}: generated code cell {index} has outputs")
-                if cell.get("execution_count") is not None:
-                    problems.append(f"{path}: generated code cell {index} has execution_count")
-        disallowed = find_disallowed_headings(current)
-        if disallowed:
-            problems.append(f"{path}: disallowed heading(s) introduced: {', '.join(disallowed)}")
-        return problems
-    if len(original_cells) != len(current_cells):
-        problems.append(f"{path}: cell count changed ({len(original_cells)} -> {len(current_cells)})")
-        return problems
-    original_nav = is_nav_cell(original_cells[-1]) if original_cells else False
-    current_nav = is_nav_cell(current_cells[-1]) if current_cells else False
-    if original_nav != current_nav:
-        problems.append(f"{path}: trailing nav cell presence changed")
-    if original_nav and current_nav:
-        if source_to_text(original_cells[-1].get("source")) != source_to_text(current_cells[-1].get("source")):
-            problems.append(f"{path}: trailing nav cell content changed")
-    for index, (before, after) in enumerate(zip(original_cells, current_cells)):
-        if before.get("cell_type") != after.get("cell_type"):
-            problems.append(f"{path}: cell {index} type changed")
+            if re.match(r"^#{1,6}\s+", stripped):
+                cleaned_lines.append(sanitize_toc_title_line(line, handbook))
+                seen_title = True
             continue
-        if before.get("cell_type") == "code":
-            if before.get("source") != after.get("source"):
-                problems.append(f"{path}: code cell {index} source changed")
-            if before.get("outputs") != after.get("outputs"):
-                problems.append(f"{path}: code cell {index} outputs changed")
-            if before.get("execution_count") != after.get("execution_count"):
-                problems.append(f"{path}: code cell {index} execution_count changed")
-            if before.get("metadata") != after.get("metadata"):
-                problems.append(f"{path}: code cell {index} metadata changed")
-    disallowed = find_disallowed_headings(current)
-    if disallowed:
-        problems.append(f"{path}: disallowed heading(s) introduced: {', '.join(disallowed)}")
-    return problems
+
+        if is_meta_toc_section_heading(line):
+            in_meta_section = True
+            continue
+
+        if in_meta_section:
+            if PART_RE.match(stripped):
+                in_meta_section = False
+            elif re.match(r"^#{1,6}\s+", stripped):
+                in_meta_section = False
+            else:
+                continue
+
+        chapter_match = parse_toc_chapter_line(line)
+        if PART_RE.match(stripped) or chapter_match:
+            in_meta_section = False
+        if has_banned_meta(stripped) or is_duration_or_tagline(stripped):
+            continue
+        if stripped.lower() == "## table of contents":
+            continue
+        if stripped == "---":
+            if not structure_started:
+                continue
+            if cleaned_lines and cleaned_lines[-1] == "---":
+                continue
+            cleaned_lines.append("---")
+            continue
+        if PART_RE.match(stripped):
+            structure_started = True
+            cleaned_lines.append(sanitize_heading_line(line))
+            continue
+        if chapter_match:
+            structure_started = True
+            cleaned_lines.append(sanitize_promotional_text(line.rstrip()))
+            continue
+        if structure_started:
+            if not stripped and (not cleaned_lines or not cleaned_lines[-1].strip()):
+                continue
+            cleaned_lines.append(line.rstrip())
+
+    cleaned = collapse_blank_lines("\n".join(cleaned_lines))
+    first_nonempty = next((line for line in cleaned.splitlines() if line.strip()), "")
+    if not first_nonempty or PART_RE.match(first_nonempty) or parse_toc_chapter_line(first_nonempty) or first_nonempty.startswith("##"):
+        cleaned = collapse_blank_lines(f"# {fallback_handbook_title(handbook)}\n\n{cleaned}")
+    return cleaned, cleaned != original
 
 
-def find_disallowed_headings(notebook: dict) -> list[str]:
-    matches: list[str] = []
-    seen = set()
+def is_handbook_dir(path: Path) -> bool:
+    return path.is_dir() and (path / "TOC.md").exists()
+
+
+def ordered_handbooks(root: Path, selected: list[str] | None) -> list[str]:
+    if selected:
+        return [name for name in selected if is_handbook_dir(root / name)]
+    available = {path.name for path in root.iterdir() if is_handbook_dir(path)}
+    ordered = [name for name in HANDBOOK_ORDER if name in available]
+    ordered.extend(sorted(available - set(ordered)))
+    return ordered
+
+
+def discover_notebooks(root: Path, handbook: str) -> list[NotebookRecord]:
+    handbook_dir = root / handbook
+    notebooks = []
+    for path in handbook_dir.rglob("*.ipynb"):
+        if not path.is_file() or ".ipynb_checkpoints" in path.parts:
+            continue
+        notebooks.append(
+            NotebookRecord(
+                handbook=handbook,
+                path=path,
+                relative_path=path.relative_to(root).as_posix(),
+                chapter_number=numeric_prefix(path.name),
+            )
+        )
+    notebooks.sort(key=lambda item: (item.chapter_number, item.relative_path))
+    return notebooks
+
+
+def load_notebook(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def first_markdown_text(notebook: dict) -> str:
+    for cell in notebook.get("cells", []):
+        if cell.get("cell_type") == "markdown":
+            return source_to_text(cell.get("source"))
+    return ""
+
+
+def notebook_headings(notebook: dict) -> list[str]:
+    headings: list[str] = []
     for cell in notebook.get("cells", []):
         if cell.get("cell_type") != "markdown":
             continue
         text = source_to_text(cell.get("source"))
-        for heading_match in HEADING_RE.finditer(text):
-            heading = clean_heading_text(heading_match.group(2)).lower()
-            if heading in DISALLOWED_HEADINGS and heading not in seen:
-                seen.add(heading)
-                matches.append(heading)
-    return matches
+        headings.extend(strip_markdown(match.group(1)) for match in HEADING_RE.finditer(text))
+    return headings
 
 
-def rewrite_notebook(root: Path, entry: NotebookEntry) -> RewriteSummary:
-    baseline_text = run_git_show(root, entry.relative_path)
-    current_text = entry.path.read_text(encoding="utf-8")
-    source_text = baseline_text or current_text
-    notebook = load_json_from_text(source_text, entry.relative_path)
-    original = load_json_from_text(source_text, entry.relative_path)
-    cells = notebook.get("cells", [])
-    if not cells:
-        return RewriteSummary(entry.relative_path, False, 0, False, 0, 0)
-    if is_two_cell_nav_notebook(notebook):
-        main_text = source_to_text(cells[0].get("source"))
-        rewritten, questions, intro_added, section_leads_added = rewrite_markdown(
-            main_text,
-            entry.relative_path,
-            allow_chapter_intro=True,
-        )
-        rebuilt_cells, code_cells_created = split_markdown_into_cells(rewritten)
-        if not rebuilt_cells:
-            rebuilt_cells = [cells[0]]
-        notebook["cells"] = rebuilt_cells + [cells[-1]]
-        problems = compare_notebooks(original, notebook, entry.relative_path)
-        if problems:
-            raise ValueError("\n".join(problems))
-        new_text = notebook_to_text(notebook)
-        if new_text != current_text:
-            entry.path.write_text(new_text, encoding="utf-8")
-            return RewriteSummary(
-                entry.relative_path,
-                True,
-                len(questions),
-                intro_added,
-                section_leads_added,
-                code_cells_created,
-            )
-        return RewriteSummary(
-            entry.relative_path,
-            False,
-            len(questions),
-            intro_added,
-            section_leads_added,
-            code_cells_created,
-        )
-    rewritten_any = False
-    intro_added = False
-    section_leads_added = 0
-    question_count = 0
-    code_cells_created = 0
-    first_markdown_index = next(
-        (
-            index
-            for index, cell in enumerate(cells)
-            if cell.get("cell_type") == "markdown" and not (index == len(cells) - 1 and is_nav_cell(cell))
-        ),
-        None,
-    )
-    for index, cell in enumerate(cells):
-        if cell.get("cell_type") != "markdown":
-            continue
-        if index == len(cells) - 1 and is_nav_cell(cell):
-            continue
-        text = source_to_text(cell.get("source"))
-        rewritten, questions, cell_intro_added, cell_section_leads = rewrite_markdown(
-            text,
-            entry.relative_path,
-            allow_chapter_intro=index == first_markdown_index,
-        )
-        question_count = max(question_count, len(questions))
-        intro_added = intro_added or cell_intro_added
-        section_leads_added += cell_section_leads
-        if rewritten != text:
-            cell["source"] = text_to_source(rewritten)
-            rewritten_any = True
-    if not rewritten_any:
-        return RewriteSummary(entry.relative_path, False, question_count, intro_added, section_leads_added, code_cells_created)
-    problems = compare_notebooks(original, notebook, entry.relative_path)
-    if problems:
-        raise ValueError("\n".join(problems))
-    new_text = notebook_to_text(notebook)
-    if new_text != current_text:
-        entry.path.write_text(new_text, encoding="utf-8")
-        return RewriteSummary(entry.relative_path, True, question_count, intro_added, section_leads_added, code_cells_created)
-    return RewriteSummary(entry.relative_path, False, question_count, intro_added, section_leads_added, code_cells_created)
+def notebook_markdown_text(notebook: dict) -> str:
+    parts = []
+    for cell in notebook.get("cells", []):
+        if cell.get("cell_type") == "markdown":
+            parts.append(source_to_text(cell.get("source")))
+    return "\n".join(parts)
 
 
-def extract_toc_paths(root: Path, handbook: str) -> list[str]:
+def parse_toc(root: Path, handbook: str) -> list[TocChapter]:
     toc_path = root / handbook / "TOC.md"
     if not toc_path.exists():
         return []
-    links = TOC_LINK_RE.findall(toc_path.read_text(encoding="utf-8"))
-    return [f"{handbook}/{link.replace('%20', ' ')}" for link in links]
+    lines = toc_path.read_text(encoding="utf-8").splitlines()
+    chapters: list[TocChapter] = []
+    current_part: str | None = None
+    current_index: int | None = None
+
+    for index, line in enumerate(lines):
+        stripped = line.strip()
+        if PART_RE.match(stripped):
+            current_part = strip_markdown(stripped)
+            continue
+        chapter_match = parse_toc_chapter_line(line)
+        if chapter_match:
+            number, title, link = chapter_match
+            chapters.append(
+                TocChapter(
+                    number=number,
+                    title=sanitize_promotional_text(title),
+                    link=unquote(link) if link else None,
+                    line_index=index,
+                    subtopics=[],
+                    part_title=current_part,
+                )
+            )
+            current_index = len(chapters) - 1
+            continue
+        if current_index is None:
+            continue
+        if stripped.startswith(("-", "*")):
+            chapters[current_index].subtopics.append(strip_markdown(stripped[1:].strip()))
+
+    return chapters
 
 
-def inventory_command(root: Path) -> int:
-    print("handbook\tchapters\tmixed\tlong_markdown\ttoc_links\torder_mismatch")
-    for handbook in ordered_handbooks(root):
-        notebooks = discover_notebooks(root, handbook)
-        mixed = 0
-        long_markdown = 0
-        for entry in notebooks:
-            notebook = load_json_from_text(entry.path.read_text(encoding="utf-8"), entry.relative_path)
-            cells = notebook.get("cells", [])
-            if any(cell.get("cell_type") == "code" for cell in cells):
-                mixed += 1
-            if len(cells) == 2 and all(cell.get("cell_type") == "markdown" for cell in cells):
-                body = source_to_text(cells[0].get("source"))
-                if len(body) >= 20000:
-                    long_markdown += 1
-        toc_paths = extract_toc_paths(root, handbook)
-        notebook_paths = [entry.relative_path for entry in notebooks]
-        order_mismatch = toc_paths and toc_paths != notebook_paths[: len(toc_paths)]
-        print(
-            f"{handbook}\t{len(notebooks)}\t{mixed}\t{long_markdown}\t{len(toc_paths)}\t"
-            f"{'yes' if order_mismatch else 'no'}"
-        )
-    return 0
+def best_notebook_match(entry: TocChapter, notebooks: list[NotebookRecord]) -> NotebookRecord | None:
+    candidates = [record for record in notebooks if record.chapter_number == entry.number]
+    if not candidates:
+        return None
+    best_record: NotebookRecord | None = None
+    best_score = -1.0
+    for candidate in candidates:
+        score = similarity(entry.title, candidate.path.stem)
+        if entry.part_title:
+            score += similarity(entry.part_title, candidate.path.parent.name) * 0.2
+        if score > best_score:
+            best_score = score
+            best_record = candidate
+    return best_record
 
 
-def rewrite_command(root: Path, handbook: str) -> int:
+def subtopic_is_covered(subtopic: str, headings: list[str], full_text: str) -> bool:
+    normalized_subtopic = normalize_text(subtopic)
+    if not normalized_subtopic:
+        return True
+    subtopic_tokens = title_tokens(subtopic)
+    full_text_normalized = normalize_text(full_text)
+
+    for heading in headings:
+        normalized_heading = normalize_text(heading)
+        if normalized_subtopic in normalized_heading or normalized_heading in normalized_subtopic:
+            return True
+        if similarity(subtopic, heading) >= 0.72:
+            return True
+        heading_tokens = title_tokens(heading)
+        if subtopic_tokens and len(subtopic_tokens & heading_tokens) / len(subtopic_tokens) >= 0.6:
+            return True
+
+    if subtopic_tokens and len([token for token in subtopic_tokens if token in full_text_normalized.split()]) / len(subtopic_tokens) >= 0.8:
+        return True
+    return False
+
+
+def audit_handbook(root: Path, handbook: str) -> HandbookAudit:
     notebooks = discover_notebooks(root, handbook)
-    if not notebooks:
-        print(f"No notebooks found for handbook '{handbook}'.", file=sys.stderr)
-        return 1
-    summaries = [rewrite_notebook(root, entry) for entry in notebooks]
-    changed = [item for item in summaries if item.changed]
-    print(
-        f"{handbook}: rewritten {len(changed)}/{len(summaries)} notebooks; "
-        f"chapter intros added in {sum(1 for item in summaries if item.intro_added)}; "
-        f"section leads added={sum(item.section_leads_added for item in summaries)}; "
-        f"code cells created={sum(item.code_cells_created for item in summaries)}"
+    toc_entries = parse_toc(root, handbook)
+    toc_path = root / handbook / "TOC.md"
+    toc_text = toc_path.read_text(encoding="utf-8") if toc_path.exists() else ""
+
+    audit = HandbookAudit(
+        handbook=handbook,
+        toc_chapter_count=len(toc_entries),
+        notebook_count=len(notebooks),
+        intro_issues_in_toc=has_banned_meta("\n".join(toc_text.splitlines()[:12])),
     )
-    samples = choose_representative_entries(notebooks)
-    if samples:
-        print("spot-check sample notebooks:")
-        for sample in samples:
-            print(f"  - {sample.relative_path}")
-    return 0
+
+    notebook_lookup = {record.relative_path.split("/", 1)[1]: record for record in notebooks}
+    referenced_notebooks: set[str] = set()
+
+    for record in notebooks:
+        notebook = load_notebook(record.path)
+        if has_banned_meta(first_markdown_text(notebook)):
+            audit.notebook_intro_issues.append(record.relative_path)
+
+    for entry in toc_entries:
+        display_name = f"Chapter {entry.number}: {entry.title}"
+        if not entry.link:
+            audit.missing_toc_links.append(display_name)
+        else:
+            linked_path = root / handbook / entry.link
+            if not linked_path.exists():
+                audit.broken_toc_links.append(f"{display_name} -> {entry.link}")
+            else:
+                referenced_notebooks.add(linked_path.relative_to(root).as_posix())
+
+        match = best_notebook_match(entry, notebooks)
+        if not match:
+            audit.unmatched_toc_chapters.append(display_name)
+            continue
+        referenced_notebooks.add(match.relative_path)
+        notebook = load_notebook(match.path)
+        headings = notebook_headings(notebook)
+        full_text = notebook_markdown_text(notebook)
+        missing = [subtopic for subtopic in entry.subtopics if not subtopic_is_covered(subtopic, headings, full_text)]
+        if missing:
+            audit.likely_missing_subtopics[display_name] = missing[:12]
+
+    for record in notebooks:
+        if record.relative_path not in referenced_notebooks:
+            audit.orphan_notebooks.append(record.relative_path)
+
+    for path in (root / handbook).rglob("*"):
+        if path.is_dir() and path.name.endswith(".ipynb"):
+            audit.malformed_directories.append(path.relative_to(root).as_posix())
+
+    return audit
 
 
-def choose_representative_entries(notebooks: list[NotebookEntry]) -> list[NotebookEntry]:
-    if not notebooks:
-        return []
-    indices = {0, len(notebooks) // 2, len(notebooks) - 1}
-    mixed_index = None
-    for index, entry in enumerate(notebooks):
-        notebook = load_json_from_text(entry.path.read_text(encoding="utf-8"), entry.relative_path)
-        if any(cell.get("cell_type") == "code" for cell in notebook.get("cells", [])):
-            mixed_index = index
+def cleanup_handbook(root: Path, handbook: str) -> CleanupSummary:
+    summary = CleanupSummary(handbook=handbook)
+    toc_path = root / handbook / "TOC.md"
+    if toc_path.exists():
+        cleaned_toc, changed = clean_toc_text(toc_path.read_text(encoding="utf-8"), handbook)
+        if changed:
+            toc_path.write_text(cleaned_toc, encoding="utf-8")
+            summary.toc_changed = True
+
+    for record in discover_notebooks(root, handbook):
+        notebook = load_notebook(record.path)
+        for cell in notebook.get("cells", []):
+            if cell.get("cell_type") != "markdown":
+                continue
+            original = source_to_text(cell.get("source"))
+            cleaned, changed = clean_notebook_intro_text(original)
+            if changed:
+                cell["source"] = text_to_source(cleaned)
+                record.path.write_text(json.dumps(notebook, indent=1) + "\n", encoding="utf-8")
+                summary.notebooks_changed += 1
             break
-    if mixed_index is not None:
-        indices.add(mixed_index)
-    return [notebooks[index] for index in sorted(indices)]
+
+    return summary
 
 
-def validate_notebook(root: Path, entry: NotebookEntry) -> list[str]:
-    baseline_text = run_git_show(root, entry.relative_path)
-    if baseline_text is None:
-        return [f"{entry.relative_path}: missing git baseline; cannot validate against HEAD"]
-    current_text = entry.path.read_text(encoding="utf-8")
-    original = load_json_from_text(baseline_text, f"HEAD:{entry.relative_path}")
-    current = load_json_from_text(current_text, entry.relative_path)
-    return compare_notebooks(original, current, entry.relative_path)
+def normalize_structural_anomalies(root: Path, handbooks: list[str]) -> list[tuple[str, str]]:
+    renames: list[tuple[str, str]] = []
+    for handbook in handbooks:
+        for path in sorted((root / handbook).rglob("*")):
+            if not path.is_dir() or not path.name.endswith(".ipynb"):
+                continue
+            target = path.with_name(path.name[: -len(".ipynb")])
+            if target.exists():
+                raise FileExistsError(f"Cannot rename {path} to {target}: target already exists.")
+            path.rename(target)
+            renames.append((path.relative_to(root).as_posix(), target.relative_to(root).as_posix()))
+    return renames
 
 
-def validate_command(root: Path, handbook: str) -> int:
-    notebooks = discover_notebooks(root, handbook)
-    if not notebooks:
-        print(f"No notebooks found for handbook '{handbook}'.", file=sys.stderr)
-        return 1
-    problems = []
-    for entry in notebooks:
-        problems.extend(validate_notebook(root, entry))
-    if problems:
-        print(f"{handbook}: validation failed")
-        for problem in problems[:50]:
-            print(f"  - {problem}")
-        if len(problems) > 50:
-            print(f"  ... and {len(problems) - 50} more")
-        return 1
-    samples = choose_representative_entries(notebooks)
-    print(f"{handbook}: validation passed for {len(notebooks)} notebooks")
-    if samples:
-        print("validated sample notebooks:")
-        for sample in samples:
-            print(f"  - {sample.relative_path}")
-    return 0
+def run_helper(root: Path, script_name: str, handbooks: list[str]) -> None:
+    if not handbooks:
+        return
+    subprocess.run(
+        [sys.executable, script_name, *handbooks],
+        cwd=root,
+        check=True,
+    )
+
+
+def write_report(root: Path, audits: list[HandbookAudit]) -> tuple[Path, Path]:
+    report_dir = root / "reports" / "handbook_rewrite"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    json_path = report_dir / "audit.json"
+    markdown_path = report_dir / "audit.md"
+
+    json_path.write_text(json.dumps([asdict(audit) for audit in audits], indent=2) + "\n", encoding="utf-8")
+
+    lines = [
+        "# Handbook Rewrite Audit",
+        "",
+        "| Handbook | TOC Chapters | Notebooks | Missing Links | Broken Links | Orphans | Intro Issues | Malformed Dirs | Likely Missing Subtopic Sections |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ]
+
+    for audit in audits:
+        intro_issue_count = audit.intro_issues_in_toc + len(audit.notebook_intro_issues)
+        lines.append(
+            f"| {audit.handbook} | {audit.toc_chapter_count} | {audit.notebook_count} | "
+            f"{len(audit.missing_toc_links)} | {len(audit.broken_toc_links)} | {len(audit.orphan_notebooks)} | "
+            f"{intro_issue_count} | {len(audit.malformed_directories)} | {len(audit.likely_missing_subtopics)} |"
+        )
+
+    for audit in audits:
+        lines.extend(
+            [
+                "",
+                f"## {audit.handbook}",
+                "",
+            ]
+        )
+        if audit.intro_issues_in_toc:
+            lines.append("- TOC intro/meta text still needs cleanup.")
+        if audit.notebook_intro_issues:
+            lines.append(f"- Notebook intro cleanup needed: {', '.join(audit.notebook_intro_issues[:8])}")
+        if audit.missing_toc_links:
+            lines.append(f"- Missing TOC links: {', '.join(audit.missing_toc_links[:8])}")
+        if audit.broken_toc_links:
+            lines.append(f"- Broken TOC links: {', '.join(audit.broken_toc_links[:8])}")
+        if audit.orphan_notebooks:
+            lines.append(f"- Orphan notebooks: {', '.join(audit.orphan_notebooks[:8])}")
+        if audit.malformed_directories:
+            lines.append(f"- Malformed directories: {', '.join(audit.malformed_directories[:8])}")
+        if audit.unmatched_toc_chapters:
+            lines.append(f"- TOC chapters without notebook match: {', '.join(audit.unmatched_toc_chapters[:8])}")
+        if audit.likely_missing_subtopics:
+            lines.append("- Chapters with likely missing TOC-covered subtopics:")
+            for chapter, subtopics in list(audit.likely_missing_subtopics.items())[:8]:
+                lines.append(f"  - {chapter}: {', '.join(subtopics[:5])}")
+        if lines[-1] == "":
+            continue
+
+    markdown_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    return json_path, markdown_path
 
 
 def parse_args(argv: Iterable[str]) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Rewrite handbook notebooks for first-time learners.")
-    subparsers = parser.add_subparsers(dest="command", required=True)
-
-    subparsers.add_parser("inventory", help="List handbook inventory and notebook shape information.")
-
-    rewrite_parser = subparsers.add_parser("rewrite", help="Rewrite one handbook's notebooks in-place.")
-    rewrite_parser.add_argument("--handbook", required=True, help="Handbook directory name.")
-
-    validate_parser = subparsers.add_parser("validate", help="Validate rewritten notebooks against git HEAD.")
-    validate_parser.add_argument("--handbook", required=True, help="Handbook directory name.")
-
+    parser = argparse.ArgumentParser(description="Audit and clean handbook intro/meta content.")
+    parser.add_argument("--audit", action="store_true", help="Audit selected handbooks.")
+    parser.add_argument("--cleanup-intros", action="store_true", help="Remove intro/meta framing from TOCs and notebook first markdown cells.")
+    parser.add_argument("--handbooks", nargs="+", help="Optional list of handbook directories to process.")
+    parser.add_argument("--report", action="store_true", help="Write audit reports to reports/handbook_rewrite/.")
+    parser.add_argument(
+        "--normalize-structure",
+        action="store_true",
+        help="Rename malformed directories that end with .ipynb before relinking and auditing.",
+    )
+    parser.add_argument(
+        "--regenerate-links",
+        action="store_true",
+        help="Run TOC link and notebook navigation regeneration for the selected handbooks.",
+    )
     return parser.parse_args(list(argv))
 
 
 def main(argv: Iterable[str]) -> int:
     args = parse_args(argv)
+    if not any((args.audit, args.cleanup_intros, args.normalize_structure, args.regenerate_links)):
+        print("No action requested. Use --audit, --cleanup-intros, --normalize-structure, or --regenerate-links.", file=sys.stderr)
+        return 1
+
     root = Path.cwd()
     if not (root / "README.md").exists():
         print("Run this utility from the repository root.", file=sys.stderr)
         return 1
-    if args.command == "inventory":
-        return inventory_command(root)
-    if args.command == "rewrite":
-        return rewrite_command(root, args.handbook)
-    if args.command == "validate":
-        return validate_command(root, args.handbook)
-    print(f"Unknown command: {args.command}", file=sys.stderr)
-    return 1
+
+    handbooks = ordered_handbooks(root, args.handbooks)
+    if not handbooks:
+        print("No matching handbooks found.", file=sys.stderr)
+        return 1
+
+    if args.normalize_structure:
+        renames = normalize_structural_anomalies(root, handbooks)
+        if renames:
+            print("Normalized malformed directories:")
+            for old, new in renames:
+                print(f"  - {old} -> {new}")
+        else:
+            print("No malformed directories needed renaming.")
+
+    if args.cleanup_intros:
+        for handbook in handbooks:
+            summary = cleanup_handbook(root, handbook)
+            print(
+                f"{handbook}: toc_changed={'yes' if summary.toc_changed else 'no'}, "
+                f"notebooks_changed={summary.notebooks_changed}"
+            )
+
+    if args.regenerate_links or args.cleanup_intros or args.normalize_structure:
+        run_helper(root, "update_toc_links.py", handbooks)
+        run_helper(root, "add_nav_links.py", handbooks)
+
+    audits: list[HandbookAudit] = []
+    if args.audit or args.report:
+        audits = [audit_handbook(root, handbook) for handbook in handbooks]
+        for audit in audits:
+            intro_issues = audit.intro_issues_in_toc + len(audit.notebook_intro_issues)
+            print(
+                f"{audit.handbook}: missing_links={len(audit.missing_toc_links)}, "
+                f"broken_links={len(audit.broken_toc_links)}, orphans={len(audit.orphan_notebooks)}, "
+                f"intro_issues={intro_issues}, malformed_dirs={len(audit.malformed_directories)}, "
+                f"coverage_flags={len(audit.likely_missing_subtopics)}"
+            )
+
+    if args.report:
+        json_path, markdown_path = write_report(root, audits)
+        print(f"Report written to {json_path.relative_to(root)} and {markdown_path.relative_to(root)}")
+
+    return 0
 
 
 if __name__ == "__main__":

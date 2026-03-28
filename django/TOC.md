@@ -1,8 +1,7 @@
-# Django Mastery Workbook — Table of Contents (Beginner → Advanced, Industry-Standard)
-
+# Django Handbook — Table of Contents (Beginner → Advanced, Industry-Standard)
 ## Part I — Foundations (Setup, Web Basics, Django Mental Model)
 
-### [1. Web Development Essentials (Crash Course)](1.%20Foundations/1.%20web_dev_essentials.ipynb)
+### [1. Web Development Essentials](1.%20Foundations/1.%20web_dev_essentials.ipynb)
 1. HTTP/HTTPS, request–response lifecycle
 2. URLs, routing, query strings
 3. HTML/CSS/JS basics (what Django renders vs what frontend frameworks do)
@@ -19,7 +18,7 @@
 6. Exceptions and logging basics
 7. File I/O and environment variables
 
-### [3. Developer Tooling and Workflow (Industry Standard)](1.%20Foundations/3.%20developer_tooling_and_workflow.ipynb)
+### [3. Developer Tooling and Workflow](1.%20Foundations/3.%20developer_tooling_and_workflow.ipynb)
 1. Git fundamentals and branching workflow
 2. Editor/IDE setup (PyCharm/VS Code)
 3. Linting/formatting: Ruff/Flake8, Black, isort (recommended baseline)
@@ -27,7 +26,7 @@
 5. Debugging: breakpoints, Django Debug Toolbar
 6. Docs reading strategy: how to use Django docs effectively
 
-### [4. Installing Django + First Project (The Right Way)](1.%20Foundations/4.%20installing_django_plus_first_project.ipynb)
+### [4. Installing Django + First Project](1.%20Foundations/4.%20installing_django_plus_first_project.ipynb)
 1. Choosing Django version (LTS vs latest)
 2. Creating a project and app (project vs app mental model)
 3. Running the dev server and exploring settings
@@ -44,7 +43,7 @@
 
 ---
 
-## Part II — Core Django (CRUD Web Apps Done Right)
+## Part II — Core Django
 
 ### [6. URL Routing and Views (Function-Based and Class-Based)](2.%20Core_Django/6.%20url_routing_and_views.ipynb)
 1. URL patterns, path converters, namespacing
@@ -72,7 +71,7 @@
 6. Model methods and properties
 7. Lab: design models for a blog/news app
 
-### [9. Django ORM (Querying Like a Pro)](2.%20Core_Django/9.%20django_orm.ipynb)
+### [9. Django ORM](2.%20Core_Django/9.%20django_orm.ipynb)
 1. QuerySets, laziness, evaluation
 2. Filtering, ordering, slicing
 3. Lookups, Q objects, F expressions
@@ -415,14 +414,14 @@
 ---
 
 ## Appendices (Reference + Checklists)
-A. Django Commands and Project Skeleton Reference  
-B. Settings Reference (Dev/Staging/Prod) Template  
-C. Security Checklist (OWASP-inspired)  
-D. ORM Optimization Cheat Sheet  
-E. Testing Checklist + Sample Patterns  
-F. Deployment Checklist (Nginx/Gunicorn/Uvicorn/ASGI)  
-G. Common Errors and Debugging Playbook  
-H. Glossary (Django + Web + DevOps terms)  
+A. Django Commands and Project Skeleton Reference
+B. Settings Reference (Dev/Staging/Prod) Template
+C. Security Checklist (OWASP-inspired)
+D. ORM Optimization Cheat Sheet
+E. Testing Checklist + Sample Patterns
+F. Deployment Checklist (Nginx/Gunicorn/Uvicorn/ASGI)
+G. Common Errors and Debugging Playbook
+H. Glossary (Django + Web + DevOps terms)
 I. Recommended Reading (Official Docs + Key Topics)
 
 ---

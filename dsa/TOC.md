@@ -1,12 +1,4 @@
-
-
----
-
-# **The Complete DSA Developer Handbook**
-## *From Fundamentals to Production-Ready Systems*
-
----
-
+# DSA Developer Handbook
 ## **Part I: Foundations & Complexity Analysis**
 **[Chapter 1: Mathematical Prerequisites](1.%20foundations_complexity_analysis/1.%20mathematical_prerequisites.ipynb)**
 - Discrete Mathematics Essentials (Sets, Relations, Functions)
@@ -344,4 +336,3 @@
 - Research Papers and Advanced Topics
 
 ---
-

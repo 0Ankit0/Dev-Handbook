@@ -1,44 +1,6 @@
-
-
----
-
- **Building Cloud-Native Apps with .NET Aspire: The Definitive Guide from Start to Production**
-
----
+# Aspire Handbook
 
 ## Part I: Laying the Foundation (Beginner)
-
-**[Chapter 1: Welcome to the Distributed World](1.%20laying_the_foundation/1.%20welcome_to_the_distributed_world.ipynb)**
-- The Problem: The complexity of modern cloud-native development (service discovery, configuration, health checks, orchestration).
-- The Solution: What is .NET Aspire?
-- Core Concepts: Orchestrator, App Model, Components.
-- The Developer's Inner Loop: How Aspire simplifies local development.
-- Setting up the Development Environment: Installing the latest .NET SDK, Docker Desktop, and the Aspire workload.
-
-**[Chapter 2: Your First .NET Aspire Application](1.%20laying_the_foundation/2.%20your_first_net_aspire_application.ipynb)**
-- Creating a new Aspire project from a template (`aspire-starter`).
-- Anatomy of an Aspire Solution: Understanding the four projects (AppHost, ServiceDefaults, ApiService, Web).
-- Running the AppHost: Seeing the Aspire Dashboard for the first time.
-- The Aspire Dashboard Deep Dive: Exploring logs, traces, and metrics in real-time.
-- **Hands-on:** Run the starter template and navigate the dashboard.
-
-**[Chapter 3: The Service Defaults Project](1.%20laying_the_foundation/3.%20the_service_defaults_project.ipynb)**
-- What is `ServiceDefaults` and why is it crucial?
-- OpenTelemetry Deep Dive: Metrics, Logs, and Traces (The pillars of observability).
-- Health Checks HTTP endpoints and standard health checks.
-- Resilience: Adding default resilience patterns (timeouts, retries) with Polly.
-- Service Discovery: How the defaults enable service-to-service communication.
-- **Hands-on:** Modify the defaults to add a custom health check.
-
-**[Chapter 4: The AppHost Project & Application Modeling](1.%20laying_the_foundation/4.%20the_apphost_project_application_modeling.ipynb)**
-- The `IDistributedApplicationBuilder`: The heart of the orchestrator.
-- Adding Resources: `.AddProject<T>`, `.AddContainer`, `.AddExecutable`.
-- Resource Relationships: Connecting a frontend to a backend API using `.WithReference()`.
-- Environment Variables and Configuration: Passing settings between services.
-- **Hands-on:** Add a new .NET project to the solution and connect it to the existing API.
-
----
-
 ## Part II: Integrating with Data and Services (Intermediate)
 
 **[Chapter 5: .NET Aspire Components](2.%20integrating_with_data_and_services/5.%20net_aspire_components.ipynb)**

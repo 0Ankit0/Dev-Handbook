@@ -1,22 +1,7 @@
-# Dev Handbook: Complete Guide to CI/CD with Docker and Kubernetes
-
-## Table of Contents
-
----
-
-## Preface
-- About This Handbook
-- Who Should Read This Book
-- How to Use This Book
-- Prerequisites and Setup
-- What You'll Learn
-- Community and Resources
-
----
-
+# Dev Handbook: CI/CD with Docker and Kubernetes
 ## Part I: Foundations
 
-### [Chapter 1: Introduction to CI/CD](11.%20real_world_projects/1.%20simple_web_app.ipynb)
+### [Chapter 1: Introduction to CI/CD](1.%20foundations/1.%20introduction_to_cicd.ipynb)
 - 1.1 What is Continuous Integration?
 - 1.2 What is Continuous Deployment?
 - 1.3 What is Continuous Delivery?
@@ -26,7 +11,7 @@
 - 1.7 Industry Standards and Best Practices
 - 1.8 Quick History of DevOps Evolution
 
-### [Chapter 2: Essential Concepts and Terminology](11.%20real_world_projects/2.%20microservices_architecture.ipynb)
+### [Chapter 2: Essential Concepts and Terminology](1.%20foundations/2.%20essential_concepts_and_terminology.ipynb)
 - 2.1 Version Control Fundamentals
 - 2.2 Build vs. Deploy vs. Release
 - 2.3 Environments: Development, Staging, Production
@@ -36,7 +21,7 @@
 - 2.7 Container Orchestration Concepts
 - 2.8 Pipeline Stages and Gates
 
-### [Chapter 3: Development Environment Setup](11.%20real_world_projects/3.%20multi_environment_enterprise_app.ipynb)
+### [Chapter 3: Development Environment Setup](1.%20foundations/3.%20development_environment_setup.ipynb)
 - 3.1 Local Development Tools
 - 3.2 Installing Docker
 - 3.3 Installing Kubernetes (Minikube/Kind)
@@ -50,7 +35,7 @@
 
 ## Part II: Docker Fundamentals
 
-### [Chapter 4: Docker Basics](11.%20real_world_projects/4.%20database_intensive_app.ipynb)
+### [Chapter 4: Docker Basics](2.%20docker_fundamentals/4.%20docker_basics.ipynb)
 - 4.1 What are Containers?
 - 4.2 Docker Architecture Overview
 - 4.3 Running Your First Container

@@ -1,6 +1,4 @@
 # Table of Contents: Cloud Computing
----
-
 ## **Module I: Foundations of Cloud Computing**
 
 ### **[Chapter 1: Introduction to Cloud Computing](1.%20foundations_of_cloud_computing/1.%20introduction_to_cloud_computing.ipynb)**

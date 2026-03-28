@@ -1,16 +1,7 @@
+# Networking Handbook
 
-
----
-
-### The Complete Network Engineering Handbook: From Fundamentals to Automation
-
-**Subtitle:** *A Progressive Guide to Modern Networking, Aligning with Industry Standards (CompTIA, Cisco, IEEE, IETF)*
-
----
-
+### Network Engineering Handbook
 ### Part I: Foundations – How Data Begins Its Journey
-
-*This section assumes no prior knowledge and builds the essential mental model of how communication works.*
 
 ### [Chapter 1: The What and Why of Networks](1.%20foundations_how_data_begins_its_journey/1.%20the_what_and_why_of_networks.ipynb)
     - 1.1 Defining a Network: Beyond Just Computers
@@ -64,8 +55,6 @@
 ---
 
 ### Part III: The Network and Transport Layers – Addressing, Routing, and Reliable Delivery
-
-*This is the core of the book, covering IP addressing, subnetting, and the protocols that govern internetwork communication.*
 
 ### [Chapter 6: The Network Layer (L3): IP Addressing (IPv4)](3.%20the_network_and_transport_layers_addressing_routing_and_reliable_delivery/6.%20the_network_layer_ip_addressing.ipynb)
     - 6.1 The Purpose of the Network Layer: End-to-End Delivery
@@ -131,8 +120,6 @@
 
 ### Part IV: Essential Services and Application Layer
 
-*This section connects the lower layers to the applications users actually interact with.*
-
 ### [Chapter 12: Name Resolution: The Domain Name System (DNS)](4.%20essential_services_and_application_layer/12.%20name_resolution_the_domain_name_system.ipynb)
     - 12.1 The Problem: Remembering IP Addresses
     - 12.2 The DNS Hierarchy: Root, TLDs (`.com`, `.org`), and Authoritative Servers
@@ -157,8 +144,6 @@
 ---
 
 ### Part V: Network Scale and Management
-
-*This section expands the scope to larger networks, introducing WAN technologies, redundancy, and critical management concepts.*
 
 ### [Chapter 15: Wide Area Networks (WANs) and Access Technologies](5.%20network_scale_and_management/15.%20wide_area_networks_and_access_technologies.ipynb)
     - 15.1 Leased Lines, MPLS, and Metro Ethernet
@@ -186,8 +171,6 @@
 
 ### Part VI: Network Security
 
-*A critical, layered approach to protecting the network infrastructure and data.*
-
 ### [Chapter 18: Security Fundamentals and Threat Landscape](6.%20network_security/18.%20security_fundamentals_and_threat_landscape.ipynb)
     - 18.1 The CIA Triad: Confidentiality, Integrity, Availability
     - 18.2 Common Threats: Malware, Phishing, DoS/DDoS, Man-in-the-Middle
@@ -211,8 +194,6 @@
 ---
 
 ### Part VII: Advanced Topics and Modern Networking
-
-*This section explores cutting-edge technologies and concepts for the advanced learner.*
 
 ### [Chapter 21: Network Virtualization and Cloud Networking](7.%20advanced_topics_and_modern_networking/21.%20network_virtualization_and_cloud_networking.ipynb)
     - 21.1 Virtual Switches (vSwitches)
