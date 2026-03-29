@@ -1,5 +1,4 @@
 # Share Analysis Handbook
-
 ### Part I: Laying the Foundation – The Investor's Toolkit
 ### [Chapter 1: Understanding the Stock Market Landscape](1.%20laying_the_foundation_the_investors_toolkit/1.%20understanding_the_stock_market_landscape.ipynb)
 - 1.1 What are Shares? Common, Preferred, and ADRs

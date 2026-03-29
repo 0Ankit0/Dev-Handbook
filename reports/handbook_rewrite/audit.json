@@ -1,8 +1,93 @@
 [
   {
+    "handbook": "python",
+    "toc_chapter_count": 22,
+    "notebook_count": 22,
+    "toc_chapter_count_excluding_appendix": 22,
+    "notebook_count_excluding_appendix": 22,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 2: Variables, Data Types, and Basic Syntax": [
+        "2.1 Variables and Memory: How Python handles memory management and references.",
+        "2.2 Primitive Data Types: Integers, Floats, Strings, Booleans, and None.",
+        "2.5 Type Conversion: Implicit vs. Explicit casting."
+      ],
+      "Chapter 3: Control Flow": [
+        "3.2 Structural Pattern Matching: The match statement (Python 3.10+).",
+        "3.3 Loops: for loops, while loops, and loop controls (break, continue).",
+        "3.4 Comprehensions: List, Dictionary, Set, and Generator comprehensions (Best Practices)."
+      ],
+      "Chapter 4: Core Data Structures": [
+        "4.1 Lists: Creation, methods, mutability, and algorithmic complexity.",
+        "4.2 Tuples: Immutability, packing/unpacking, and NamedTuples.",
+        "4.4 Sets: Uniqueness, mathematical operations, and frozensets.",
+        "4.5 The collections Module: defaultdict, Counter, deque, and OrderedDict."
+      ],
+      "Chapter 5: Functions and Modular Programming": [
+        "5.4 Closures: Function factories and retaining state.",
+        "5.6 Modules and Packages: Import mechanisms, __init__.py, and package structure."
+      ],
+      "Chapter 6: Classes and Objects": [
+        "6.2 Methods: Instance methods, class methods (@classmethod), and static methods (@staticmethod).",
+        "6.4 Multiple Inheritance: The Diamond Problem and MRO (Method Resolution Order)."
+      ],
+      "Chapter 7: Advanced OOP Concepts": [
+        "7.1 Encapsulation: Public, Protected, and Private members (name mangling).",
+        "7.3 Magic/Dunder Methods: __init__, __str__, __repr__, __call__, and operator overloading.",
+        "7.4 Properties: Getters, setters, and the @property decorator.",
+        "7.5 Abstraction: Abstract Base Classes (ABCs) and interfaces."
+      ],
+      "Chapter 8: Code Style and Quality (PEP 8)": [
+        "8.2 Docstrings: Google, NumPy, and reStructuredText styles.",
+        "8.3 Type Hinting: Variable annotations, function signatures, and the typing module.",
+        "8.4 Advanced Type Hinting: Generics, Protocol, TypedDict, and Union types."
+      ],
+      "Chapter 9: Error Handling and Debugging": [
+        "9.2 Raising Exceptions: Custom exception classes and error hierarchies.",
+        "9.3 Debugging: Using pdb, IDE debuggers, and reading stack traces.",
+        "9.4 Logging: The logging module (levels, handlers, formatters) vs. print()."
+      ],
+      "Chapter 10: Testing and Quality Assurance": [
+        "10.2 Pytest: Fixtures, parametrization, and plugins.",
+        "10.4 Mocking and Patching: Isolating dependencies with unittest.mock.",
+        "10.5 Coverage: Measuring test effectiveness."
+      ],
+      "Chapter 12: File I/O and Data Persistence": [
+        "12.1 Context Managers: The with statement and resource management."
+      ],
+      "Chapter 13: Concurrency and Parallelism": [
+        "13.5 Concurrent Futures: ThreadPoolExecutor and ProcessPoolExecutor."
+      ],
+      "Chapter 14: Web Basics and APIs": [
+        "14.2 RESTful Architecture: Design principles and verbs (GET, POST, PUT, DELETE)."
+      ],
+      "Chapter 15: Modern Web Frameworks": [
+        "15.1 FastAPI: Building high-performance APIs, dependency injection, and Pydantic validation.",
+        "15.2 Flask: Micro-frameworks, routing, templates, and extensions.",
+        "15.3 Django: The \"Batteries-Included\" approach, ORM, Admin panel, and MTV architecture."
+      ],
+      "Chapter 18: Automation and Scripting": [
+        "18.1 System Automation: Interacting with the OS via os, sys, and shutil.",
+        "18.3 Scheduling: Automating tasks with schedule or APScheduler."
+      ],
+      "Chapter 20: Containerization and Deployment": [
+        "20.3 CI/CD Pipelines: GitHub Actions for testing and deployment.",
+        "20.4 Cloud Deployment: Deploying to PaaS (Render/Railway/Heroku) and Serverless (AWS Lambda)."
+      ]
+    }
+  },
+  {
     "handbook": "django",
     "toc_chapter_count": 50,
     "notebook_count": 50,
+    "toc_chapter_count_excluding_appendix": 50,
+    "notebook_count_excluding_appendix": 50,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -18,6 +103,8 @@
     "handbook": "fastapi",
     "toc_chapter_count": 25,
     "notebook_count": 25,
+    "toc_chapter_count_excluding_appendix": 25,
+    "notebook_count_excluding_appendix": 25,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -109,9 +196,104 @@
     }
   },
   {
+    "handbook": "flask",
+    "toc_chapter_count": 19,
+    "notebook_count": 19,
+    "toc_chapter_count_excluding_appendix": 19,
+    "notebook_count_excluding_appendix": 19,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 1: Getting Started with Flask": [
+        "1.1 What is Flask?: The micro-framework philosophy, Werkzeug, Jinja2, and the Flask ecosystem."
+      ],
+      "Chapter 2: Routing and URL Building": [
+        "2.5 Redirects and abort(): Redirecting users and returning HTTP errors cleanly."
+      ],
+      "Chapter 3: Templates with Jinja2": [
+        "3.4 Template Filters: Built-in filters (upper, length, default) and custom filters."
+      ],
+      "Chapter 4: Forms and User Input": [
+        "4.4 Flash Messages: Communicating feedback to users across redirects."
+      ],
+      "Chapter 5: Sessions and Cookies": [
+        "5.2 Working with Cookies: Setting, reading, and deleting cookies manually.",
+        "5.4 Session vs. Cookie: When to use each, size limits, and security trade-offs."
+      ],
+      "Chapter 6: Databases with Flask-SQLAlchemy": [
+        "6.1 Flask-SQLAlchemy Setup: Installation, db = SQLAlchemy(app), configuration.",
+        "6.2 Defining Models: db.Model, column types, primary keys, constraints.",
+        "6.3 CRUD Operations: db.session.add(), db.session.commit(), .query, .filter_by().",
+        "6.5 Querying: Filtering, ordering, paginating, and aggregating data."
+      ],
+      "Chapter 7: Database Migrations with Flask-Migrate": [
+        "7.1 Why Migrations?: The problem with dropping and recreating tables in production.",
+        "7.2 Flask-Migrate Setup: Integrating Alembic via Flask-Migrate.",
+        "7.4 Writing Migration Scripts: Auto-generated vs. manual migrations."
+      ],
+      "Chapter 8: Blueprints and the Application Factory": [
+        "8.1 The Problem with One Big File: Why small apps grow into unmaintainable monsters.",
+        "8.2 Blueprints: Registering, prefixing, and organizing routes into modules.",
+        "8.4 Professional Project Layout: The structure used in real Flask production apps."
+      ],
+      "Chapter 9: Configuration Management": [
+        "9.1 Flask Configuration: app.config, built-in keys, and accessing config values.",
+        "9.4 Instance Folders: Keeping secrets out of version control."
+      ],
+      "Chapter 10: User Authentication with Flask-Login": [
+        "10.5 Remember Me: Persistent sessions and remember=True."
+      ],
+      "Chapter 11: Security Best Practices": [
+        "11.2 XSS Prevention: Jinja2 autoescaping and why you should never use | safe carelessly.",
+        "11.3 SQL Injection: Why ORMs protect you (and when raw SQL is dangerous).",
+        "11.4 Secure Headers: Flask-Talisman, HTTPS, HSTS, and CSP.",
+        "11.5 Input Validation: Never trust user data \u2014 validate everything server-side."
+      ],
+      "Chapter 12: Building REST APIs with Flask": [
+        "12.1 REST Principles: Resources, statelessness, uniform interface, and JSON.",
+        "12.3 Request Parsing: Reading JSON bodies, query params, and headers."
+      ],
+      "Chapter 14: File Uploads and Static Assets": [
+        "14.2 Validating Uploads: File type, size limits, and MIME type checking.",
+        "14.3 Storing Files: Local storage, organised directory structure, and cloud storage intro."
+      ],
+      "Chapter 15: Error Handling and Logging": [
+        "15.4 Debug Mode vs. Production: app.debug, the Werkzeug debugger, and why to turn it off in prod."
+      ],
+      "Chapter 16: Testing Flask Applications": [
+        "16.3 pytest Fixtures: Setting up a test app, test database, and authenticated client.",
+        "16.4 Testing Routes and Views: GET/POST requests, status codes, and response content."
+      ],
+      "Chapter 17: Caching and Performance": [
+        "17.1 Why Caching?: The performance impact of repeated DB queries and computations.",
+        "17.2 Flask-Caching: In-memory cache, Redis backend, @cache.cached(), @cache.memoize().",
+        "17.5 Profiling Flask Apps: Finding bottlenecks with flask-profiler and cProfile."
+      ],
+      "Chapter 18: Deployment": [
+        "18.5 Cloud Deployment: Deploying to Railway, Render, or AWS."
+      ],
+      "Chapter 19: Building a Full-Stack Flask Blog": [
+        "19.4 Authentication: Registration, login, profile, and role-based access.",
+        "19.5 Blog Features: CRUD posts, rich text, pagination, search, and tagging.",
+        "19.10 What's Next?: Extending the blog and your Flask learning path.",
+        "Appendix A: Flask Cheat Sheet \u2014 quick reference for routes, templates, DB, auth.",
+        "Appendix B: Flask Extension Directory \u2014 the best extensions and when to use them.",
+        "Appendix C: Glossary \u2014 WSGI, ORM, CSRF, JWT, and other key terms defined.",
+        "Appendix D: Recommended Resources \u2014 books, docs, courses, and communities."
+      ]
+    }
+  },
+  {
     "handbook": "asp_net",
     "toc_chapter_count": 25,
     "notebook_count": 25,
+    "toc_chapter_count_excluding_appendix": 25,
+    "notebook_count_excluding_appendix": 25,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -131,6 +313,8 @@
     "handbook": "csharp",
     "toc_chapter_count": 29,
     "notebook_count": 29,
+    "toc_chapter_count_excluding_appendix": 29,
+    "notebook_count_excluding_appendix": 29,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -173,6 +357,8 @@
     "handbook": "aspire",
     "toc_chapter_count": 12,
     "notebook_count": 16,
+    "toc_chapter_count_excluding_appendix": 12,
+    "notebook_count_excluding_appendix": 16,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -204,9 +390,538 @@
     }
   },
   {
+    "handbook": "frontend",
+    "toc_chapter_count": 30,
+    "notebook_count": 30,
+    "toc_chapter_count_excluding_appendix": 30,
+    "notebook_count_excluding_appendix": 30,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 1: How the Web Works": [
+        "How information travels across the web",
+        "Status codes and their meanings"
+      ],
+      "Chapter 2: HTML \u2014 The Structure of the Web": [
+        "Marking, deleting, and inserting text",
+        "List styling possibilities",
+        "Content categories"
+      ],
+      "Chapter 3: CSS \u2014 Styling the Web": [
+        "When to use each method",
+        "Current color keyword",
+        "Choosing color palettes"
+      ],
+      "Chapter 4: JavaScript \u2014 Adding Interactivity": [
+        "Client-side vs server-side JavaScript",
+        "Declaring and initializing variables",
+        "Symbol (introduction)",
+        "Working with numbers",
+        "Rounding, random numbers, min/max",
+        "String concatenation",
+        "String immutability"
+      ],
+      "Chapter 5: Control Flow and Functions": [
+        "Syntax and usage",
+        "Case fall-through",
+        "Avoiding infinite loops",
+        "Calling/invoking functions",
+        "Passing arguments",
+        "Temporal dead zone (let/const)"
+      ],
+      "Chapter 7: Forms in HTML": [
+        "Explicit labeling (for attribute)",
+        "Implicit labeling (wrapping)",
+        "Pattern matching"
+      ],
+      "Chapter 9: Multimedia and Embedded Content": [
+        "9.1 Images Revisited"
+      ],
+      "Chapter 10: HTML5 APIs Overview": [
+        "Browser APIs vs third-party APIs",
+        "The navigator object",
+        "Handling permissions",
+        "The element"
+      ],
+      "Chapter 11: CSS Layouts \u2014 Positioning": [
+        "Historical use of floats"
+      ],
+      "Chapter 12: CSS Layouts \u2014 Flexbox": [
+        "Enabling flexbox (display: flex)",
+        "Navigation menus",
+        "Accessibility considerations",
+        "Common pitfalls"
+      ],
+      "Chapter 13: CSS Layouts \u2014 Grid": [
+        "Why Grid?",
+        "Enabling grid (display: grid)",
+        "13.7 Common Grid Patterns",
+        "Dashboard layouts",
+        "Photo galleries"
+      ],
+      "Chapter 14: Responsive Web Design": [
+        "Percentage widths",
+        "srcset and sizes attributes",
+        "CSS background images",
+        "Avoiding horizontal scroll"
+      ],
+      "Chapter 15: Advanced CSS Styling": [
+        "15.1 Pseudo-Classes",
+        "User action: :hover, :active, :focus",
+        "Form states: :checked, :disabled, :valid, :invalid",
+        "Structural: :first-child, :last-child, :nth-child()",
+        "Modern pseudo-classes: :is(), :where(), :has()",
+        "15.2 Pseudo-Elements",
+        "::first-letter and ::first-line",
+        "translate()",
+        "rotate()",
+        "skew()",
+        "Combining transforms",
+        "@keyframes rule"
+      ],
+      "Chapter 16: CSS Architecture and Organization": [
+        "16.1 The Challenges of CSS",
+        "Code duplication",
+        "Using @import (and its problems)",
+        "Avoiding ID selectors",
+        "Managing !important",
+        "16.6 Writing Maintainable CSS",
+        "Consistent formatting",
+        "Refactoring strategies"
+      ],
+      "Chapter 17: Objects in JavaScript": [
+        "this in global context",
+        "call(), apply(), bind()"
+      ],
+      "Chapter 18: Arrays in JavaScript": [
+        "The length property",
+        "Spread in function calls"
+      ],
+      "Chapter 19: Functions Deep Dive": [
+        "Hoisting differences",
+        "Returning functions from functions",
+        "Creating your own",
+        "Stack overflow considerations"
+      ],
+      "Chapter 20: The DOM \u2014 Document Object Model": [
+        "20.3 Traversing the DOM",
+        "Parent nodes: parentNode, parentElement",
+        "Child nodes: childNodes, children, firstElementChild, lastElementChild",
+        "Siblings: nextElementSibling, previousElementSibling",
+        "textContent vs innerHTML",
+        "innerText",
+        "Changing styles: style property",
+        "Manipulating classes: className, classList",
+        "Manipulating attributes: getAttribute(), setAttribute(), removeAttribute()",
+        "Data attributes: dataset",
+        "createElement()",
+        "createTextNode()"
+      ],
+      "Chapter 21: Events in JavaScript": [
+        "onclick and similar properties",
+        "type, timeStamp, and other properties",
+        "click, dblclick",
+        "mousedown, mouseup, mousemove",
+        "mouseenter, mouseleave, mouseover, mouseout",
+        "keydown, keyup, keypress (deprecated)",
+        "Key codes and key values",
+        "Modifier keys (Shift, Ctrl, Alt)",
+        "submit",
+        "focus, blur",
+        "reset",
+        "21.7 Window and Document Events"
+      ],
+      "Chapter 22: Forms and JavaScript": [
+        "Getting values",
+        "Setting values",
+        "Displaying error messages",
+        "Debouncing input handlers"
+      ],
+      "Chapter 24: JavaScript and Browser APIs": [
+        "Online/offline status",
+        "Parsing URLs",
+        "setItem(), getItem(), removeItem()",
+        "Watching for DOM changes",
+        "Watching for element resize"
+      ],
+      "Chapter 28: Web Security Fundamentals": [
+        "SSL/TLS certificates"
+      ],
+      "Chapter 30: Building Real-World Projects": [
+        "Designing the structure",
+        "Choosing the right approach",
+        "Fetching and displaying data",
+        "Complete alphabetical reference",
+        "Elements by category",
+        "Attributes reference",
+        "Global attributes",
+        "Event attributes",
+        "Common properties",
+        "Values and units",
+        "Selectors reference",
+        "Pseudo-classes reference"
+      ]
+    }
+  },
+  {
+    "handbook": "typescript",
+    "toc_chapter_count": 46,
+    "notebook_count": 46,
+    "toc_chapter_count_excluding_appendix": 46,
+    "notebook_count_excluding_appendix": 46,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 15: Introduction to Generics": [
+        "15.3 Generic Type Variables",
+        "15.3.1 Naming Conventions (T, U, K, V)"
+      ],
+      "Chapter 16: Generics in Depth": [
+        "16.1.3 Generic Function Types in Interfaces",
+        "16.2.2 Static Members and Generics"
+      ],
+      "Chapter 20: Template Literal Types": [
+        "20.5.2 Getter/Setter Generation"
+      ],
+      "Chapter 23: Type Inference": [
+        "23.7.2 Using NoInfer Utility Type"
+      ],
+      "Chapter 25: Modules": [
+        "25.2.4 Export All (export *)"
+      ],
+      "Chapter 26: Namespaces": [
+        "26.3.1 Using Triple-Slash Directives"
+      ],
+      "Chapter 35: TypeScript with Angular": [
+        "35.6 Typing HTTP Responses"
+      ],
+      "Chapter 36: Testing TypeScript Code": [
+        "36.1 Testing Philosophy",
+        "36.2.2 Typing Tests",
+        "36.2.3 Mocks and Spies",
+        "36.5.1 Playwright",
+        "36.5.2 Cypress"
+      ],
+      "Chapter 37: Linting and Formatting": [
+        "37.1.3 Recommended Configurations"
+      ],
+      "Chapter 40: Bundle Size Optimization": [
+        "40.2 Avoiding Common Bloat Patterns"
+      ],
+      "Chapter 45: Migration Strategies": [
+        "45.1.2 allowJs Option"
+      ],
+      "Chapter 46: Latest TypeScript Features": [
+        "A.1 Primitive Types Reference",
+        "A.2 Utility Types Reference",
+        "A.3 Compiler Options Reference",
+        "A.4 Common Patterns Reference",
+        "B.1 Type Checking Options",
+        "B.2 Module Options",
+        "B.3 Emit Options",
+        "B.4 Editor Options",
+        "B.5 Advanced Options",
+        "C.1 Key TypeScript Terminology",
+        "D.1 Official Documentation",
+        "D.2 Community Resources"
+      ]
+    }
+  },
+  {
+    "handbook": "nextjs",
+    "toc_chapter_count": 54,
+    "notebook_count": 54,
+    "toc_chapter_count_excluding_appendix": 54,
+    "notebook_count_excluding_appendix": 54,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 27: Real-Time Features": [
+        "27.4 Live Updates Implementation"
+      ],
+      "Chapter 29: Progressive Web Applications": [
+        "29.5 Push Notifications",
+        "29.7 PWA Best Practices"
+      ],
+      "Chapter 30: AI Integration": [
+        "30.7 Real-World AI Use Cases"
+      ],
+      "Chapter 31: Internationalization": [
+        "31.3 Translated Routes"
+      ],
+      "Chapter 33: Analytics & Monitoring": [
+        "33.6 Privacy Compliance (GDPR, CCPA)",
+        "33.7 Analytics Best Practices"
+      ],
+      "Chapter 34: Content Management": [
+        "34.4 Strapi Integration"
+      ],
+      "Chapter 36: File Handling & Uploads": [
+        "36.1 File Upload Strategies",
+        "36.2 Cloud Storage Integration (S3, Cloudflare R2)"
+      ],
+      "Chapter 37: Development Tooling": [
+        "37.7 Development Best Practices"
+      ],
+      "Chapter 38: Turbopack Deep Dive": [
+        "38.3 Performance Benefits"
+      ],
+      "Chapter 39: Build Adapters API": [
+        "39.4 Build Process Customization",
+        "39.5 Advanced Adapter Patterns",
+        "39.6 Adapter Testing"
+      ],
+      "Chapter 40: Next.js DevTools": [
+        "40.5 State Debugging"
+      ],
+      "Chapter 41: TypeScript Advanced": [
+        "41.6 Type-Safe Database Queries"
+      ],
+      "Chapter 43: Pages Router to App Router Migration": [
+        "43.7 Testing After Migration"
+      ],
+      "Chapter 46: Building an E-commerce Store": [
+        "46.5 User Accounts"
+      ],
+      "Chapter 47: Building a SaaS Dashboard": [
+        "47.3 Data Visualization"
+      ],
+      "Chapter 50: Serverless Architecture": [
+        "50.6 Scaling Serverless Apps",
+        "50.7 Serverless Best Practices"
+      ],
+      "Chapter 52: Advanced Performance Techniques": [
+        "52.5 Advanced Caching",
+        "52.6 Performance Testing",
+        "52.7 Continuous Optimization"
+      ],
+      "Chapter 54: Future of Next.js": [
+        "54.3 Performance Trends",
+        "54.4 Developer Experience Improvements",
+        "54.6 Community Developments",
+        "54.7 Staying Ahead",
+        "A.1 Common CLI Commands",
+        "A.2 Configuration Options",
+        "A.5 Hook Reference",
+        "A.6 Utility Functions",
+        "B.1 Common Issues and Solutions",
+        "B.2 Performance Issues",
+        "B.3 Build Errors",
+        "B.4 Runtime Errors"
+      ]
+    }
+  },
+  {
+    "handbook": "flutter",
+    "toc_chapter_count": 54,
+    "notebook_count": 54,
+    "toc_chapter_count_excluding_appendix": 54,
+    "notebook_count_excluding_appendix": 54,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 2: Development Environment Setup": [
+        "Environment variables and PATH configuration",
+        "Setting up emulators and physical device debugging"
+      ],
+      "Chapter 4: Dart Language Fundamentals": [
+        "Functions: named parameters, optional parameters, arrow syntax",
+        "Exception handling (try/catch/finally, custom exceptions)"
+      ],
+      "Chapter 10: Input, Forms, and Validation": [
+        "InputDecoration and styling text inputs"
+      ],
+      "Chapter 11: State Management Fundamentals": [
+        "Lifting state up and prop drilling",
+        "InheritedWidget and InheritedModel"
+      ],
+      "Chapter 22: Local Data Persistence": [
+        "Floor and Moor (ORM alternatives)"
+      ],
+      "Chapter 25: Native iOS Integration": [
+        "Swift/Objective-C interop with Flutter"
+      ],
+      "Chapter 29: Widget Testing": [
+        "Golden tests and screenshot testing"
+      ],
+      "Chapter 30: Integration & E2E Testing": [
+        "Performance testing and profiling"
+      ],
+      "Chapter 32: Build Optimization": [
+        "RepaintBoundary usage",
+        "Avoiding unnecessary rebuilds (Selector, Consumer)"
+      ],
+      "Chapter 33: Memory Management": [
+        "Disposing controllers and listeners"
+      ],
+      "Chapter 35: Custom Widgets & Painters": [
+        "ImplicitlyAnimatedWidget and TweenAnimationBuilder"
+      ],
+      "Chapter 44: Project 1: E-Commerce App": [
+        "Product catalog with search and filters"
+      ],
+      "Chapter 45: Project 2: Social Media Feed": [
+        "Like/comment functionality",
+        "Push notifications"
+      ],
+      "Chapter 48: Performance Optimization": [
+        "Identifying and fixing jank",
+        "Memory leak detection and resolution"
+      ],
+      "Chapter 53: Resources & Community": [
+        "Recommended courses and tutorials",
+        "Influential blogs and YouTube channels",
+        "Open-source projects to contribute to"
+      ],
+      "Chapter 54: Debugging & Troubleshooting": [
+        "Conceptual Explanation: Theory and \"why\" behind the technology",
+        "Step-by-Step Implementation: Progressive code building",
+        "Complete Code Examples: Production-ready, copy-pasteable snippets",
+        "Common Pitfalls: Mistakes to avoid with explanations",
+        "Best Practices: Industry standards and architectural recommendations",
+        "Performance Considerations: Optimization tips specific to the topic",
+        "Platform-Specific Notes: iOS/Android/desktop/web differences",
+        "Hands-On Exercises: Practice problems with solutions"
+      ]
+    }
+  },
+  {
+    "handbook": "postgres",
+    "toc_chapter_count": 48,
+    "notebook_count": 48,
+    "toc_chapter_count_excluding_appendix": 48,
+    "notebook_count_excluding_appendix": 48,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 3: First Steps with psql (Your Primary Interface)": [
+        "Connecting, roles, databases, schemas",
+        "psql essentials (meta-commands, variables, scripting)",
+        "Running SQL files and repeatable workflows",
+        "Output formatting, timing, error handling"
+      ],
+      "Chapter 4: Core Concepts You Must Get Right Early": [
+        "Tables vs views vs materialized views",
+        "Rows, pages, heap, TOAST (high-level)"
+      ],
+      "Chapter 5: Data Types Done Right": [
+        "Text types, collations, case-sensitivity considerations"
+      ],
+      "Chapter 6: Creating Tables and Constraints": [
+        "CREATE TABLE patterns",
+        "Common modeling mistakes and fixes"
+      ],
+      "Chapter 7: CRUD and Filtering": [
+        "Sorting and pagination (including keyset pagination)",
+        "Working safely with parameters (SQL injection prevention)"
+      ],
+      "Chapter 13: Partitioning (Declarative)": [
+        "Managing partitions over time (rolling windows)"
+      ],
+      "Chapter 15: Index Fundamentals": [
+        "B-tree indexes: the default workhorse",
+        "When indexes hurt (write amplification, bloat)"
+      ],
+      "Chapter 16: Advanced Index Types (When You Need Them)": [
+        "Index-only scans and visibility map implications"
+      ],
+      "Chapter 17: EXPLAIN Like You Mean It": [
+        "Common anti-patterns: functions in predicates, mismatched types"
+      ],
+      "Chapter 18: Performance Tuning Playbook (Developer-Focused)": [
+        "Avoiding N+1 queries at the SQL layer",
+        "Practical checklist for slow endpoints"
+      ],
+      "Chapter 19: Transactions and MVCC": [
+        "What MVCC means in practice"
+      ],
+      "Chapter 20: Isolation Levels and Locking": [
+        "READ COMMITTED vs REPEATABLE READ vs SERIALIZABLE",
+        "Deadlocks: causes, detection, prevention",
+        "SELECT ... FOR UPDATE patterns (and pitfalls)"
+      ],
+      "Chapter 23: PL/pgSQL Essentials": [
+        "Variables, control flow, records"
+      ],
+      "Chapter 24: Triggers (Use Sparingly, Use Well)": [
+        "Auditing, denormalized cache updates"
+      ],
+      "Chapter 25: Extensions and Ecosystem": [
+        "Commonly used extensions (e.g., pgcrypto, uuid-ossp, citext)",
+        "Policy for adopting extensions in teams"
+      ],
+      "Chapter 28: Application Security Patterns": [
+        "Parameterization and avoiding SQL injection",
+        "Data masking approaches (practical options)"
+      ],
+      "Chapter 29: Backup and Restore Fundamentals": [
+        "pg_dump / pg_restore best practices"
+      ],
+      "Chapter 30: Point-in-Time Recovery (PITR) and WAL": [
+        "What WAL is and why it matters",
+        "RPO/RTO framing for teams",
+        "Recovery runbooks"
+      ],
+      "Chapter 31: Schema Migrations in Real Teams": [
+        "Compatibility across multiple app versions"
+      ],
+      "Chapter 34: Logical Replication": [
+        "Replicating subsets of data",
+        "Conflict handling and limitations"
+      ],
+      "Chapter 35: Connection Management and Pooling": [
+        "Why connection count matters",
+        "Timeouts and safe defaults"
+      ],
+      "Chapter 36: Scaling Strategies (What Actually Works)": [
+        "Vertical scaling and tuning priorities",
+        "Caching layers and consistency considerations"
+      ],
+      "Chapter 38: Vacuum, Analyze, and Bloat": [
+        "Autovacuum tuning signals",
+        "Detecting and addressing bloat"
+      ],
+      "Chapter 39: Monitoring and Diagnostics": [
+        "Core metrics to watch (latency, locks, WAL, vacuum)",
+        "Slow query logging and sampling approaches",
+        "Investigating incidents (a step-by-step workflow)"
+      ],
+      "Chapter 45: Local Development Workflows": [
+        "Seed data and fixtures"
+      ]
+    }
+  },
+  {
     "handbook": "graphql",
     "toc_chapter_count": 17,
     "notebook_count": 17,
+    "toc_chapter_count_excluding_appendix": 17,
+    "notebook_count_excluding_appendix": 17,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -227,9 +942,424 @@
     }
   },
   {
+    "handbook": "ai_engineering",
+    "toc_chapter_count": 32,
+    "notebook_count": 32,
+    "toc_chapter_count_excluding_appendix": 32,
+    "notebook_count_excluding_appendix": 32,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 1: Mathematical Foundations for AI": [
+        "Workbook Labs: NumPy implementations of each concept, Gradient descent visualization"
+      ],
+      "Chapter 2: Python for AI Development": [
+        "2.1 Python Fundamentals: Data Types, Control Flow, Functions, OOP",
+        "2.4 Jupyter Ecosystem: Notebook optimization, Magic commands, Debugging"
+      ],
+      "Chapter 3: Computer Science Fundamentals": [
+        "3.2 Algorithms: Sorting, Searching, Dynamic Programming, Greedy Algorithms",
+        "3.4 Software Engineering Principles: Design Patterns, SOLID principles, Testing (Unit/Integration)",
+        "Workbook Labs: Implement ML-specific algorithms from scratch (KNN, Decision Trees)"
+      ],
+      "Chapter 4: Development Environment & Tools": [
+        "4.1 Version Control: Git deep dive, Branching strategies, GitHub/GitLab workflows"
+      ],
+      "Chapter 5: Data Preprocessing & Feature Engineering": [
+        "5.2 Feature Scaling: Standardization, Normalization, Robust Scaling",
+        "5.4 Feature Engineering: Polynomial features, Interaction terms, Binning, Domain-specific features",
+        "5.5 Dimensionality Reduction: PCA, t-SNE, UMAP, Feature selection methods"
+      ],
+      "Chapter 6: Supervised Learning - Regression": [
+        "6.3 Advanced Regression: SVR, Decision Trees, Random Forests, Gradient Boosting (XGBoost, LightGBM, CatBoost)",
+        "Workbook Labs: House price prediction, Energy consumption forecasting"
+      ],
+      "Chapter 7: Supervised Learning - Classification": [
+        "7.4 Support Vector Machines: Kernels, Margin maximization",
+        "Workbook Labs: Fraud detection, Medical diagnosis, Customer churn prediction"
+      ],
+      "Chapter 8: Unsupervised Learning": [
+        "8.1 Clustering: K-Means, Hierarchical, DBSCAN, Gaussian Mixture Models, Spectral Clustering"
+      ],
+      "Chapter 9: Model Evaluation, Validation & Selection": [
+        "9.5 Model Comparison: Statistical significance testing, Business metric alignment"
+      ],
+      "Chapter 10: Neural Network Fundamentals": [
+        "10.2 Feedforward Neural Networks: Architecture, Forward Propagation",
+        "10.4 Backpropagation: Chain rule, Computational graphs, Automatic differentiation",
+        "10.6 Regularization: Dropout, Batch Normalization, Layer Normalization, Weight Decay, Early Stopping, Data Augmentation",
+        "Workbook Labs: Implement NN from scratch (NumPy), MNIST classifier with PyTorch/TensorFlow"
+      ],
+      "Chapter 11: Deep Learning Frameworks": [
+        "11.1 PyTorch Deep Dive: Tensors, Autograd, nn.Module, DataLoader, Transforms",
+        "11.2 TensorFlow/Keras: Eager execution, Functional API, Subclassing, tf.data",
+        "11.3 JAX/Flax: Functional programming, JIT compilation, vmap",
+        "11.5 Model Export: ONNX, TorchScript, TensorRT, Quantization basics"
+      ],
+      "Chapter 13: Recurrent Neural Networks & Sequence Modeling": [
+        "13.2 LSTM and GRU: Gating mechanisms, Peephole connections, Bidirectional RNNs",
+        "Workbook Labs: Character-level text generation, Stock price prediction, Attention visualization"
+      ],
+      "Chapter 14: Transformers & Modern NLP": [
+        "14.3 Pre-training Strategies: Masked Language Modeling (MLM), Causal LM, Span corruption",
+        "14.4 Fine-tuning & Transfer: BERT, GPT, RoBERTa, DeBERTa, T5, BART"
+      ],
+      "Chapter 15: Large Language Models (LLMs) & Generative AI": [
+        "15.5 Prompt Engineering: Zero-shot, Few-shot, Chain-of-Thought, Tree-of-Thoughts, ReAct, Self-consistency"
+      ],
+      "Chapter 16: Computer Vision Advanced": [
+        "16.2 Self-Supervised Learning: SimCLR, MoCo, DINO, MAE (Masked Autoencoders), Contrastive learning",
+        "16.4 Video Understanding: 3D CNNs, Video Transformers, Action recognition, Temporal modeling",
+        "16.5 Multimodal Vision: CLIP, ALIGN, Florence, Image captioning, Visual Question Answering (VQA)"
+      ],
+      "Chapter 17: Reinforcement Learning (RL)": [
+        "17.4 Model-Based RL: Dyna-Q, Monte Carlo Tree Search (MCTS), World models",
+        "17.5 Multi-Agent RL: Game theory, Nash equilibrium, Cooperative vs Competitive agents",
+        "Workbook Labs: Train agent to play Atari games (DQN), Implement PPO for continuous control, Build multi-agent system"
+      ],
+      "Chapter 18: Specialized Applications": [
+        "Workbook Labs: Build Netflix-style recommender, Forecast stock prices with DeepAR, Node classification on citation networks"
+      ],
+      "Chapter 19: ML System Design & Architecture": [
+        "19.3 Scalability: Horizontal vs Vertical scaling, Load balancing, Caching strategies",
+        "Workbook Labs: Design system for 1M QPS recommendation service, Architecture diagram for fraud detection"
+      ],
+      "Chapter 20: Data Engineering for ML": [
+        "20.4 Data Validation: Great Expectations, Schema validation, Drift detection (data drift vs concept drift)",
+        "20.5 Streaming Data: Apache Kafka, Spark Streaming, Real-time feature computation",
+        "Workbook Labs: Build end-to-end data pipeline with Airflow, Implement feature store for recommendation system"
+      ],
+      "Chapter 22: Model Deployment & Serving": [
+        "22.1 Model Serialization: Pickle, Joblib, ONNX, TorchScript, SavedModel",
+        "22.3 Containerization: Docker optimization for ML, Multi-stage builds, GPU support (NVIDIA Docker)",
+        "22.4 Orchestration: Kubernetes for ML (Kubeflow, KServe), Helm charts, Auto-scaling (HPA/VPA)",
+        "Workbook Labs: Deploy BERT as FastAPI microservice with Kubernetes, Build streaming inference pipeline"
+      ],
+      "Chapter 23: Monitoring & Maintenance": [
+        "23.3 A/B Testing for ML: Statistical significance, Multi-armed bandits, Counterfactual evaluation"
+      ],
+      "Chapter 24: Responsible AI & Ethics": [
+        "24.2 Explainability: LIME, SHAP, Integrated Gradients, Attention visualization, Concept-based explanations",
+        "24.3 Privacy: Differential Privacy, Federated Learning, Homomorphic Encryption basics, PII handling",
+        "24.4 Security: Model inversion attacks, Adversarial examples, Model stealing, Poisoning attacks",
+        "Workbook Labs: Audit model for bias using Fairlearn, Implement federated learning simulation, Generate adversarial examples"
+      ],
+      "Chapter 26: Generative AI & Diffusion Models": [
+        "DCGAN, Conditional GANs, CycleGAN, StyleGAN architectures"
+      ],
+      "Chapter 27: Multimodal AI": [
+        "27.2 Large Multimodal Models (LMMs): GPT-4V, Gemini, LLaVA, Qwen-VL",
+        "27.3 Text-to-Image/Video: DALL-E 3, Midjourney, Sora, Video diffusion",
+        "27.5 Multimodal Training Strategies: Contrastive learning, Prefix tuning, Adapter layers"
+      ],
+      "Chapter 29: AI System Design & Architecture": [
+        "29.2 Feature Platform Design: Real-time vs batch features, Feature stores (Feast, Tecton), Feature monitoring",
+        "29.3 Training Infrastructure: Distributed training design, Spot instance training, Check-pointing strategies",
+        "29.4 Serving Patterns: Model servers (TF Serving, TorchServe, Triton), Edge deployment, Serverless (AWS Lambda)",
+        "29.5 Case Studies:",
+        "Computer Vision at scale (Tesla Autopilot, Instagram)",
+        "Workbook Labs: Design system for real-time fraud detection, Architect LLM serving system for 10M users"
+      ],
+      "Chapter 30: Building Production AI Portfolio": [
+        "30.1 Project Scoping: Problem definition, Success metrics, MVP vs Production",
+        "Workbook Labs: Complete 5 end-to-end projects with deployment"
+      ],
+      "Chapter 31: Interview Preparation & Career Strategy": [
+        "Bias-variance, Overfitting solutions",
+        "CNN/RNN/Transformer architecture details",
+        "Loss function selection",
+        "31.5 Career Tracks: ML Engineer vs Research Scientist vs Data Scientist vs AI Product Manager",
+        "31.6 Salary Negotiation & Leveling: Big Tech levels (L4-L6), Compensation structures, RSUs",
+        "Workbook Labs: Mock interviews with solutions, System design practice problems"
+      ],
+      "Chapter 32: Future Trends & Continuous Learning": [
+        "A.1 Matrix Calculus Cheat Sheet",
+        "A.2 Probability Distributions Reference",
+        "A.3 Optimization Convergence Proofs",
+        "B.1 GPU Setup: CUDA, cuDNN, NVIDIA drivers",
+        "B.2 Cloud Platforms: AWS (SageMaker, EC2), GCP (Vertex AI, Compute Engine), Azure (ML Studio)",
+        "B.3 Local Development: Docker for ML, VS Code extensions, JupyterLab",
+        "B.4 Hardware Guide: GPU selection (A100 vs H100 vs consumer), TPUs, Distributed hardware setup",
+        "C.1 Classic ML Datasets: UCI, Kaggle, OpenML",
+        "C.2 Vision Datasets: ImageNet, COCO, Open Images, CIFAR",
+        "C.3 NLP Datasets: GLUE, SuperGLUE, The Pile, Common Crawl",
+        "C.4 RL Environments: OpenAI Gym, Gymnasium, MuJoCo, Unity ML-Agents",
+        "C.5 Benchmarking: MLPerf, HELM (Holistic Evaluation of Language Models)"
+      ]
+    }
+  },
+  {
+    "handbook": "time_series_prediction",
+    "toc_chapter_count": 99,
+    "notebook_count": 99,
+    "toc_chapter_count_excluding_appendix": 99,
+    "notebook_count_excluding_appendix": 99,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 1: Introduction to Time-Series Prediction Systems": [
+        "1.7 Industry Trends and Best Practices"
+      ],
+      "Chapter 3: Setting Up Your Development Environment": [
+        "3.2.1 Windows Configuration",
+        "3.2.2 macOS Configuration",
+        "3.2.3 Linux Configuration",
+        "3.4.1 venv",
+        "3.4.2 conda",
+        "3.4.3 poetry",
+        "3.5.3 Visualization Libraries"
+      ],
+      "Chapter 6: Data Cleaning and Preprocessing": [
+        "6.5.2 Pattern Analysis",
+        "6.6.1 K-Nearest Neighbors Imputation",
+        "6.7.2 Machine Learning Methods",
+        "6.7.3 Domain Knowledge Integration"
+      ],
+      "Chapter 11: Basic Feature Creation": [
+        "11.7.1 Hour of Day",
+        "11.7.4 Holiday Flags"
+      ],
+      "Chapter 12: Advanced Rolling Window Features": [
+        "12.2.1 Mean, Median, Mode",
+        "12.2.2 Standard Deviation, Variance"
+      ],
+      "Chapter 19: Defining Prediction Targets": [
+        "19.3.3 Long-Term"
+      ],
+      "Chapter 22: Tree-Based Models": [
+        "22.5.3 Optimization Techniques"
+      ],
+      "Chapter 24: Support Vector Machines": [
+        "24.5 Hyperparameter Optimization"
+      ],
+      "Chapter 26: Recurrent Neural Networks": [
+        "26.4.1 Cell Structure",
+        "26.4.3 Implementation"
+      ],
+      "Chapter 32: Evaluation Metrics for Classification": [
+        "32.4 Specificity"
+      ],
+      "Chapter 34: Cross-Validation Techniques": [
+        "34.2 Stratified K-Fold"
+      ],
+      "Chapter 35: Hyperparameter Tuning": [
+        "35.1 Understanding Hyperparameters",
+        "35.7 Evolutionary Algorithms"
+      ],
+      "Chapter 37: Error Analysis": [
+        "37.9 Improvement Strategies"
+      ],
+      "Chapter 40: Building Prediction Services": [
+        "40.2.1 API Best Practices",
+        "40.2.3 Request/Response Format"
+      ],
+      "Chapter 44: Monitoring and Observability": [
+        "44.5.3 Cloud Monitoring",
+        "44.8 Anomaly Detection",
+        "44.9 Root Cause Analysis",
+        "44.10 Incident Response"
+      ],
+      "Chapter 45: Model Drift Detection": [
+        "45.2.3 Hybrid Approaches"
+      ],
+      "Chapter 47: A/B Testing and Model Comparison": [
+        "47.9 Incrementality Measurement"
+      ],
+      "Chapter 51: Ensemble Methods": [
+        "51.4.3 Multi-Level Stacking"
+      ],
+      "Chapter 54: Reinforcement Learning for Time-Series": [
+        "54.1 RL Fundamentals",
+        "54.2 MDP Formulation"
+      ],
+      "Chapter 59: Causal Inference": [
+        "59.10 Applications"
+      ],
+      "Chapter 63: Feature Stores": [
+        "63.5.2 Tecton",
+        "63.5.3 Hopsworks",
+        "63.5.4 Custom Solutions",
+        "63.10 Implementation Guide"
+      ],
+      "Chapter 64: Experiment Tracking": [
+        "64.4 Experiment Organization",
+        "64.7 Artifact Management"
+      ],
+      "Chapter 65: Data and Model Lineage": [
+        "65.6 Lineage Visualization",
+        "65.10 Implementation"
+      ],
+      "Chapter 68: Monitoring and Alerting": [
+        "68.2 Metrics Collection",
+        "68.7 SLO/SLA Definition"
+      ],
+      "Chapter 70: Building Dashboards": [
+        "70.3.1 Fundamentals",
+        "70.3.4 State Management",
+        "70.4.1 Fundamentals",
+        "70.6 Gradio",
+        "70.7 Custom Solutions"
+      ],
+      "Chapter 71: Data Visualization": [
+        "71.4.2 Bokeh",
+        "71.4.3 Altair",
+        "71.5 Geographic Visualization",
+        "71.6 Network Visualization",
+        "71.7 Dashboard Design"
+      ],
+      "Chapter 72: Interactive Exploration Tools": [
+        "72.9 Collaboration Features",
+        "72.10 Implementation"
+      ],
+      "Chapter 73: Alerting and Notification Systems": [
+        "73.1 Alert Design Principles",
+        "73.5 Alert Suppression",
+        "73.8 Alert Testing"
+      ],
+      "Chapter 75: Retail Sales Forecasting System": [
+        "75.1 Business Requirements",
+        "75.2 Data Sources",
+        "75.5 Seasonality Handling",
+        "75.7 Multi-Location Forecasting",
+        "75.10 Results and Insights"
+      ],
+      "Chapter 76: Weather and Climate Prediction": [
+        "76.2 Spatial Considerations"
+      ],
+      "Chapter 77: Healthcare Prediction Systems": [
+        "77.7 Risk Assessment"
+      ],
+      "Chapter 78: IoT and Sensor Analytics": [
+        "78.3 Edge Computing",
+        "78.7 Implementation",
+        "78.8 Scalability",
+        "78.10 Case Studies"
+      ],
+      "Chapter 79: Energy Demand Forecasting": [
+        "79.1 Energy Market Dynamics",
+        "79.5 Short-Term vs. Long-Term",
+        "79.6 Multi-Region Forecasting",
+        "79.7 Implementation",
+        "79.9 Business Impact"
+      ],
+      "Chapter 80: Supply Chain Optimization": [
+        "80.9 Challenges"
+      ],
+      "Chapter 81: Microservices Architecture": [
+        "81.2 Service Decomposition",
+        "81.6 API Gateway"
+      ],
+      "Chapter 82: Event-Driven Architecture": [
+        "82.4 Message Brokers",
+        "82.5 Event Streaming",
+        "82.7 Implementation",
+        "82.9 Testing"
+      ],
+      "Chapter 84: Real-Time Learning Systems": [
+        "84.5 Implementation",
+        "84.8 Testing"
+      ],
+      "Chapter 85: Distributed Systems": [
+        "85.7 Implementation",
+        "85.8 Optimization"
+      ],
+      "Chapter 87: Team Collaboration": [
+        "87.7 Mentoring"
+      ],
+      "Chapter 89: Documentation Strategies": [
+        "89.10 Best Practices"
+      ],
+      "Chapter 91: Performance Optimization": [
+        "91.1 Optimization Strategy",
+        "91.4 Algorithmic Optimization",
+        "91.10 Best Practices"
+      ],
+      "Chapter 92: Troubleshooting and Debugging": [
+        "92.10 Best Practices"
+      ],
+      "Chapter 93: Foundation Models for Time-Series": [
+        "93.6 Applications"
+      ],
+      "Chapter 95: Automated Scientific Discovery": [
+        "95.9 Case Studies",
+        "95.10 Best Practices"
+      ],
+      "Chapter 96: Edge AI and TinyML": [
+        "96.1 Edge Computing",
+        "96.9 Best Practices"
+      ],
+      "Chapter 97: Quantum Machine Learning": [
+        "97.8 Future Directions"
+      ],
+      "Chapter 98: Ethical AI and Responsible ML": [
+        "98.6 Safety",
+        "98.7 Governance",
+        "98.9 Best Practices",
+        "98.10 Implementation"
+      ],
+      "Chapter 99: Future of Time-Series Prediction": [
+        "A.1 pandas Essentials",
+        "A.2 numpy Operations",
+        "A.3 scikit-learn API",
+        "A.4 Common Patterns",
+        "A.5 Code Templates",
+        "B.1 Statistics Review",
+        "B.4 Probability Theory",
+        "B.5 Optimization Theory",
+        "C.1 Public Datasets",
+        "C.2 Data Providers",
+        "C.3 API Documentation",
+        "C.4 Data Quality Checklist"
+      ]
+    }
+  },
+  {
+    "handbook": "share_analysis",
+    "toc_chapter_count": 21,
+    "notebook_count": 21,
+    "toc_chapter_count_excluding_appendix": 21,
+    "notebook_count_excluding_appendix": 21,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 2: Core Concepts of Risk and Return": [
+        "2.1 Defining Investment Risk: Market, Business, and Liquidity Risk"
+      ],
+      "Chapter 9: Relative Valuation \u2013 Comparables and Multiples": [
+        "9.1 The Power of Comparables: Finding Peers"
+      ],
+      "Chapter 21: A Step-by-Step Walkthrough: Analyzing a Real Company": [
+        "21.2 Business and Financial Due Diligence",
+        "21.4 Technical Timing",
+        "Conclusion:* The Journey of Continuous Learning",
+        "III. Glossary of Key Terms",
+        "IV. Resources for Ongoing Research",
+        "Bibliography and Recommended Reading*",
+        "Index*"
+      ]
+    }
+  },
+  {
     "handbook": "dsa",
     "toc_chapter_count": 40,
     "notebook_count": 40,
+    "toc_chapter_count_excluding_appendix": 40,
+    "notebook_count_excluding_appendix": 40,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -299,9 +1429,11 @@
     }
   },
   {
-    "handbook": "project_management",
-    "toc_chapter_count": 20,
-    "notebook_count": 20,
+    "handbook": "design_patterns",
+    "toc_chapter_count": 22,
+    "notebook_count": 22,
+    "toc_chapter_count_excluding_appendix": 22,
+    "notebook_count_excluding_appendix": 22,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -310,19 +1442,124 @@
     "orphan_notebooks": [],
     "unmatched_toc_chapters": [],
     "likely_missing_subtopics": {
-      "Chapter 20: The Future of Technical Project Management": [
-        "Appendix A: Templates and Boilerplates*",
-        "A.1 Project Charter Template",
-        "A.2 Sprint Planning Template",
-        "A.3 Risk Register Template",
-        "A.4 Status Report Template",
-        "A.5 Retrospective Template",
-        "Appendix B: Code Repository*",
-        "B.1 Automation Scripts (Python, Bash, JavaScript)",
-        "B.2 CI/CD Pipeline Examples",
-        "B.3 Dashboard Configurations (Grafana, Tableau)",
-        "Appendix C: Glossary of Terms*",
-        "C.2 Software Development Terms"
+      "Chapter 3: Documentation and Communication": [
+        "Goal:* Master the standard 23 GoF patterns, understood as the shared language of developers."
+      ],
+      "Chapter 10: State Management": [
+        "Goal:* Adapt classic patterns to modern languages (C#, Java, Python, JS) and functional paradigms."
+      ],
+      "Chapter 12: Functional Programming Patterns": [
+        "Goal:* Zoom out from class-level design to system-level architecture."
+      ],
+      "Chapter 15: Service-Oriented Architecture (SOA)": [
+        "Goal:* Address the challenges of scalability, latency, and resilience in the cloud era (CNCF standards)."
+      ],
+      "Chapter 18: Integration and Scalability": [
+        "Goal:* Incorporate security and safety by design."
+      ],
+      "Chapter 20: Domain-Driven Design (DDD)": [
+        "Goal: Learn how to fix broken code and recognize when not* to use patterns."
+      ]
+    }
+  },
+  {
+    "handbook": "system_design",
+    "toc_chapter_count": 26,
+    "notebook_count": 26,
+    "toc_chapter_count_excluding_appendix": 26,
+    "notebook_count_excluding_appendix": 26,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 2: Prerequisites & Core Concepts": [
+        "Concurrency Basics: Threads, Processes, and Event Loops"
+      ],
+      "Chapter 3: Databases: The Persistence Layer": [
+        "Indexing Strategies: B-Trees, LSM Trees, Inverted Indexes"
+      ],
+      "Chapter 7: Communication Protocols & Data Formats": [
+        "REST API Design: Resource Modeling, HTTP Methods, Status Codes, Pagination",
+        "GraphQL: Schema Design, Resolvers, N+1 Problem, Federation",
+        "Webhooks, WebSockets, and Server-Sent Events (SSE)",
+        "Data Serialization: JSON, XML, Protocol Buffers, Avro, Thrift, MessagePack",
+        "Idempotency and Exactly-Once Processing"
+      ],
+      "Chapter 8: Distributed Data Management": [
+        "The Distributed Systems Problem Space",
+        "Consistency Models: Strong, Eventual, Causal, Sequential",
+        "Distributed Transactions: 2PC, 3PC, Saga Pattern, Outbox Pattern",
+        "Data Replication Strategies: Single Leader, Multi-Leader, Leaderless",
+        "Conflict Resolution: Last-Write-Wins, Vector Clocks, CRDTs",
+        "Distributed Consensus: Raft, Paxos (Conceptual Understanding)"
+      ],
+      "Chapter 9: Scalability Patterns": [
+        "Horizontal vs. Vertical Scaling Decision Matrix",
+        "Stateless vs. Stateful Architecture",
+        "Database Federation and Functional Partitioning",
+        "Hot Spot Mitigation: Salting, Promotion",
+        "Auto-scaling: Reactive vs. Predictive Scaling",
+        "Multi-tenancy Architecture: Isolated vs. Shared Resources"
+      ],
+      "Chapter 13: Monolithic vs. Microservices": [
+        "Monolithic Architecture: When It Still Makes Sense",
+        "Configuration Management: Externalized Config, Feature Flags"
+      ],
+      "Chapter 20: Performance Optimization": [
+        "JVM/Python/Node.js Performance Tuning"
+      ],
+      "Chapter 25: Interview Strategy & Communication": [
+        "How to Drive the Conversation",
+        "Time Management: 45-60 Minute Interview Breakdown"
+      ],
+      "Chapter 26: Mock Interviews & Solutions": [
+        "Detailed Walkthroughs of 10 Classic Problems",
+        "Interviewer Perspective: What They're Really Looking For",
+        "System Design Checklist: Did You Cover Everything?",
+        "Behavioral Aspects: Collaboration and Trade-off Discussion",
+        "Latency Numbers Cheat Sheet",
+        "Common QPS/Storage Estimates by Company Size",
+        "Database Comparison Matrix",
+        "Cloud Service Equivalents (AWS vs. GCP vs. Azure)",
+        "Sample Implementations in Python/Java/Go",
+        "Docker Compose Files for Local Testing",
+        "Kubernetes Manifests Examples",
+        "Classic Papers (Google File System, MapReduce, Bigtable, Dynamo)"
+      ]
+    }
+  },
+  {
+    "handbook": "networking",
+    "toc_chapter_count": 24,
+    "notebook_count": 24,
+    "toc_chapter_count_excluding_appendix": 24,
+    "notebook_count_excluding_appendix": 24,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 4: The Physical Layer (L1): Cables, Connectors, and Signals": [
+        "4.3 Ethernet over Coaxial (Legacy) and other media"
+      ],
+      "Chapter 11: The Transport Layer (L4): The Conductor of Communication": [
+        "Error Recovery and Sequencing"
+      ],
+      "Chapter 24: Network Troubleshooting Methodology": [
+        "ping, traceroute, telnet, ssh",
+        "Appendix A: The Command Line Crash Course (Essential CLI commands for Windows, Linux/macOS)",
+        "Appendix B: Binary, Decimal, and Hexadecimal Conversion (Detailed guide and practice problems)",
+        "Appendix C: Well-Known Port Number Reference",
+        "Appendix D: IEEE 802 Standards Reference",
+        "Appendix E: Glossary of Networking Terms",
+        "Appendix F: Practice Questions and Scenarios (for self-testing)"
       ]
     }
   },
@@ -330,6 +1567,8 @@
     "handbook": "ci_cd",
     "toc_chapter_count": 62,
     "notebook_count": 66,
+    "toc_chapter_count_excluding_appendix": 62,
+    "notebook_count_excluding_appendix": 66,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -420,9 +1659,87 @@
     }
   },
   {
+    "handbook": "cloud_computing",
+    "toc_chapter_count": 24,
+    "notebook_count": 24,
+    "toc_chapter_count_excluding_appendix": 24,
+    "notebook_count_excluding_appendix": 24,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 1: Introduction to Cloud Computing": [
+        "IaaS (Infrastructure as a Service): Core concepts (virtualization, networking, storage). Examples: AWS EC2, Azure VMs, GCE.",
+        "Public Cloud: Benefits, considerations, major providers (AWS, Azure, GCP).",
+        "Private Cloud: On-premises vs. hosted, use cases, management.",
+        "Hybrid Cloud: Connecting public and private, data and application portability, governance.",
+        "Multi-Cloud: Strategies to avoid vendor lock-in, best-of-breed service selection, management challenges."
+      ],
+      "Chapter 4: Core Cloud Services - The Universal Toolkit": [
+        "Connectivity: Public IPs, load balancers, DNS, VPNs/Direct Connect.",
+        "Best Practices: Least privilege, separation of duties, MFA."
+      ],
+      "Chapter 6: Infrastructure as Code (IaC)": [
+        "State Management: What it is, why it matters, remote state backends."
+      ],
+      "Chapter 8: Container Orchestration with Kubernetes": [
+        "8.2 Kubernetes (K8s) Essentials:",
+        "8.3 Packaging and Deployment: Helm charts, creating and deploying a simple application.",
+        "8.4 Code Snippet: Example Kubernetes Deployment and Service manifest for a web app."
+      ],
+      "Chapter 11: Hybrid and Multi-Cloud Architectures": [
+        "11.1 Design Principles for Portability: Avoiding vendor lock-in, using open standards and APIs.",
+        "11.2 Connectivity Models: VPNs, Direct Connect/ExpressRoute/Interconnect, API gateways."
+      ],
+      "Chapter 13: Identity and Access Management (IAM) Deep Dive": [
+        "13.3 Service Accounts & Machine Identities: Managing non-human identities securely."
+      ],
+      "Chapter 14: Securing Cloud Infrastructure": [
+        "Encryption at Rest: Customer-managed keys (CMKs), key management services (KMS).",
+        "Encryption in Transit: TLS/SSL, VPNs.",
+        "14.3 Secrets Management: Storing and rotating database credentials, API keys, tokens (e.g., AWS Secrets Manager)."
+      ],
+      "Chapter 15: Cloud Security Operations": [
+        "15.1 Threat Detection and Response: SIEM integration, anomaly detection, incident response playbooks.",
+        "15.2 Zero Trust Architecture: Principles in the cloud, implementation strategies (verify explicitly, use least privilege, assume breach)."
+      ],
+      "Chapter 16: Understanding Cloud Economics": [
+        "16.2 The Hidden Costs of Cloud: Data transfer (egress fees), idle resources, over-provisioning.",
+        "16.3 Total Cost of Ownership (TCO) Analysis: Cloud vs. on-premises, long-term projections."
+      ],
+      "Chapter 18: Cloud Observability and Site Reliability Engineering (SRE)": [
+        "18.1 Beyond Monitoring: Observability (metrics, logs, traces) for deeper insights.",
+        "18.4 Chaos Engineering: Proactively testing resilience (e.g., AWS FIS, Azure Chaos Studio)."
+      ],
+      "Chapter 20: AI-Native Cloud Computing": [
+        "20.3 AI-Enhanced Operations: AIOps for automated monitoring, troubleshooting, and resource optimization.",
+        "20.4 Generative AI in the Cloud: Building and deploying gen AI applications, vector databases, model orchestration."
+      ],
+      "Chapter 23: End-to-End Cloud Project": [
+        "23.1 Project Scenarios: Choose from complex, real-world projects (e.g., \"Build a scalable, serverless e-commerce backend with multi-region resilience\").",
+        "23.2 Architecture Design: Create detailed diagrams, select services, plan security and cost.",
+        "23.3 Implementation: Apply all learned skills \u2013 IaC, CI/CD, containerization, monitoring."
+      ],
+      "Chapter 24: Cloud Certifications and Career Paths": [
+        "24.3 Building a Portfolio: Highlighting projects on GitHub, writing technical blog posts, contributing to open-source.",
+        "Appendix A: Glossary of Cloud Terms",
+        "Appendix B: Comparison of Major Cloud Services (Cheat Sheets)",
+        "Appendix C: Essential Command-Line Tools (AWS CLI, Azure CLI, gcloud CLI)",
+        "Appendix D: Sample IAM Policies and Security Best Practices Checklists",
+        "Appendix E: Further Learning Resources: Official Documentation, Communities, Blogs"
+      ]
+    }
+  },
+  {
     "handbook": "cybersecurity",
     "toc_chapter_count": 19,
     "notebook_count": 19,
+    "toc_chapter_count_excluding_appendix": 19,
+    "notebook_count_excluding_appendix": 19,
     "intro_issues_in_toc": false,
     "notebook_intro_issues": [],
     "malformed_directories": [],
@@ -443,6 +1760,109 @@
         "E: Further Reading and Recommended Resources",
         "Index*",
         "Key Features of this Structure:*"
+      ]
+    }
+  },
+  {
+    "handbook": "software_testing",
+    "toc_chapter_count": 77,
+    "notebook_count": 77,
+    "toc_chapter_count_excluding_appendix": 77,
+    "notebook_count_excluding_appendix": 77,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 77: Continuous Quality Assurance": [
+        "Note: Each chapter will include:*",
+        "Detailed explanations of concepts",
+        "Code examples in multiple languages (Python, Java, JavaScript)",
+        "Practical exercises and hands-on labs",
+        "Best practices and industry standards",
+        "Common pitfalls and how to avoid them",
+        "Real-world scenarios and case studies",
+        "Summary and key takeaways",
+        "Review questions and quizzes"
+      ]
+    }
+  },
+  {
+    "handbook": "blockchain",
+    "toc_chapter_count": 40,
+    "notebook_count": 40,
+    "toc_chapter_count_excluding_appendix": 40,
+    "notebook_count_excluding_appendix": 40,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 3: Blockchain Architecture and Data Structures": [
+        "3.5.1 Project Setup"
+      ],
+      "Chapter 5: Proof of Work (PoW)": [
+        "5.5.1 Implementing Mining Logic",
+        "5.5.3 Complete Mining Example"
+      ],
+      "Chapter 6: Proof of Stake (PoS)": [
+        "6.5.2 Block Finalization Logic"
+      ],
+      "Chapter 7: Other Consensus Mechanisms": [
+        "7.5.1 Performance Metrics"
+      ],
+      "Chapter 35: Building a Decentralized Exchange (DEX)": [
+        "35.3.2 Wallet Integration",
+        "35.3.3 Trade Execution"
+      ],
+      "Chapter 38: Building a DeFi Yield Aggregator": [
+        "38.2.4 Yield Distribution",
+        "38.3 Integration with External Protocols",
+        "38.4 Complete Walkthrough"
+      ],
+      "Chapter 39: Account Abstraction (ERC-4337)": [
+        "39.3.4 Code Examples"
+      ],
+      "Chapter 40: The Future of Blockchain": [
+        "Comprehensive blockchain terminology and definitions",
+        "Detailed vulnerability descriptions and mitigations",
+        "Testnet faucets, RPC endpoints, and chain IDs"
+      ]
+    }
+  },
+  {
+    "handbook": "project_management",
+    "toc_chapter_count": 20,
+    "notebook_count": 20,
+    "toc_chapter_count_excluding_appendix": 20,
+    "notebook_count_excluding_appendix": 20,
+    "intro_issues_in_toc": false,
+    "notebook_intro_issues": [],
+    "malformed_directories": [],
+    "missing_toc_links": [],
+    "broken_toc_links": [],
+    "orphan_notebooks": [],
+    "unmatched_toc_chapters": [],
+    "likely_missing_subtopics": {
+      "Chapter 20: The Future of Technical Project Management": [
+        "Appendix A: Templates and Boilerplates*",
+        "A.1 Project Charter Template",
+        "A.2 Sprint Planning Template",
+        "A.3 Risk Register Template",
+        "A.4 Status Report Template",
+        "A.5 Retrospective Template",
+        "Appendix B: Code Repository*",
+        "B.1 Automation Scripts (Python, Bash, JavaScript)",
+        "B.2 CI/CD Pipeline Examples",
+        "B.3 Dashboard Configurations (Grafana, Tableau)",
+        "Appendix C: Glossary of Terms*",
+        "C.2 Software Development Terms"
       ]
     }
   }

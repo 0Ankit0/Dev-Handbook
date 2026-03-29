@@ -1,6 +1,4 @@
 # Postgres Handbook
-
-## PostgreSQL Developer Handbook — Table of Contents (Simple → Advanced)
 ## Part I — Foundations (Getting Oriented)
 
 ### [1. What PostgreSQL Is (and Isn’t)](1.%20Foundations/1.%20what_postgresql_is.ipynb)

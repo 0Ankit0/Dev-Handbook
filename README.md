@@ -51,6 +51,24 @@ This handbook contains structured content across 25+ technology domains:
 
 The repository includes Python utilities for content management:
 
+- **`rewrite_handbooks_for_beginners.py`** - Deterministic rewrite orchestrator for auditing, intro cleanup, structural normalization, and relinking
+  ```bash
+  # Audit all handbooks and write report files
+  python3 rewrite_handbooks_for_beginners.py --audit --report
+
+  # Cleanup intro meta text only and regenerate links/navigation
+  python3 rewrite_handbooks_for_beginners.py --cleanup-intros --regenerate-links
+
+  # Run full pre-wave normalization plus Wave 1-4 maintenance sweep
+  python3 rewrite_handbooks_for_beginners.py --run-full-sweep --audit --report
+  ```
+
+  ```bash
+  # Target specific handbooks
+  python3 rewrite_handbooks_for_beginners.py --audit --handbooks ai_engineering system_design
+  python3 rewrite_handbooks_for_beginners.py --cleanup-intros --handbooks django ci_cd
+  ```
+
 - **`create_folders.py`** - Generates folder structure from Table of Contents (TOC.md) files
   ```bash
   python create_folders.py <folder_path>
@@ -101,11 +119,22 @@ Each topic folder typically contains:
 
 ## 🤝 Contributing
 
-When adding new content:
-1. Create/update the TOC.md file with chapter structure
-2. Run `create_folders.py` to generate folder structure and notebooks
-3. Fill in the content in the generated notebooks
-4. Run `add_nav_links.py` to add navigation links between notebooks
+When adding or revising content:
+1. Update chapter content and TOC structure.
+2. Run a focused audit and generate a report:
+   ```bash
+   python3 rewrite_handbooks_for_beginners.py --audit --handbooks <handbook_name> --report
+   ```
+3. Run intro cleanup only when banned meta framing is present:
+   ```bash
+   python3 rewrite_handbooks_for_beginners.py --cleanup-intros --handbooks <handbook_name>
+   ```
+4. Regenerate TOC links and notebook navigation:
+   ```bash
+   python3 update_toc_links.py <handbook_name>
+   python3 add_nav_links.py <handbook_name>
+   ```
+5. Re-run the audit and confirm no missing links, broken links, malformed `.ipynb` directories, or orphan notebooks remain.
 
 ## 📄 License
 

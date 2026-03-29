@@ -42,6 +42,16 @@ HANDBOOK_ORDER = [
     "project_management",
 ]
 
+
+REWRITE_WAVES = {
+    "wave1": ["ai_engineering", "system_design", "time_series_prediction", "django", "ci_cd", "blockchain"],
+    "wave2": ["cloud_computing", "cybersecurity", "networking", "nextjs", "flutter", "design_patterns"],
+    "wave3": ["python", "frontend", "typescript", "fastapi", "flask", "asp_net", "csharp", "aspire", "postgres", "graphql"],
+    "wave4": ["dsa", "software_testing", "share_analysis", "project_management"],
+}
+
+PRE_WAVE_NORMALIZATION = ["ai_engineering", "system_design", "flutter", "django", "ci_cd"]
+
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 HEADING_RE = re.compile(r"^#{1,6}\s+(.+?)\s*$", re.MULTILINE)
 PART_RE = re.compile(r"^#{2,6}\s+\*{0,2}(?:Part|Module)\b", re.IGNORECASE)
@@ -132,6 +142,8 @@ class HandbookAudit:
     handbook: str
     toc_chapter_count: int
     notebook_count: int
+    toc_chapter_count_excluding_appendix: int
+    notebook_count_excluding_appendix: int
     intro_issues_in_toc: bool
     notebook_intro_issues: list[str] = field(default_factory=list)
     malformed_directories: list[str] = field(default_factory=list)
@@ -502,6 +514,15 @@ def parse_toc(root: Path, handbook: str) -> list[TocChapter]:
     return chapters
 
 
+def is_appendix_text(value: str) -> bool:
+    lowered = normalize_text(value)
+    return lowered.startswith("appendix") or " appendix " in f" {lowered} "
+
+
+def is_appendix_notebook(path: Path) -> bool:
+    return is_appendix_text(path.stem) or any(is_appendix_text(part) for part in path.parts)
+
+
 def best_notebook_match(entry: TocChapter, notebooks: list[NotebookRecord]) -> NotebookRecord | None:
     candidates = [record for record in notebooks if record.chapter_number == entry.number]
     if not candidates:
@@ -550,6 +571,8 @@ def audit_handbook(root: Path, handbook: str) -> HandbookAudit:
         handbook=handbook,
         toc_chapter_count=len(toc_entries),
         notebook_count=len(notebooks),
+        toc_chapter_count_excluding_appendix=len([entry for entry in toc_entries if not is_appendix_text(entry.title)]),
+        notebook_count_excluding_appendix=len([record for record in notebooks if not is_appendix_notebook(record.path.relative_to(root / handbook))]),
         intro_issues_in_toc=has_banned_meta("\n".join(toc_text.splitlines()[:12])),
     )
 
@@ -662,7 +685,7 @@ def write_report(root: Path, audits: list[HandbookAudit]) -> tuple[Path, Path]:
     for audit in audits:
         intro_issue_count = audit.intro_issues_in_toc + len(audit.notebook_intro_issues)
         lines.append(
-            f"| {audit.handbook} | {audit.toc_chapter_count} | {audit.notebook_count} | "
+            f"| {audit.handbook} | {audit.toc_chapter_count_excluding_appendix}/{audit.toc_chapter_count} | {audit.notebook_count_excluding_appendix}/{audit.notebook_count} | "
             f"{len(audit.missing_toc_links)} | {len(audit.broken_toc_links)} | {len(audit.orphan_notebooks)} | "
             f"{intro_issue_count} | {len(audit.malformed_directories)} | {len(audit.likely_missing_subtopics)} |"
         )
@@ -716,12 +739,13 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
         action="store_true",
         help="Run TOC link and notebook navigation regeneration for the selected handbooks.",
     )
+    parser.add_argument("--run-full-sweep", action="store_true", help="Run maintenance in the required wave order.")
     return parser.parse_args(list(argv))
 
 
 def main(argv: Iterable[str]) -> int:
     args = parse_args(argv)
-    if not any((args.audit, args.cleanup_intros, args.normalize_structure, args.regenerate_links)):
+    if not any((args.audit, args.cleanup_intros, args.normalize_structure, args.regenerate_links, args.run_full_sweep)):
         print("No action requested. Use --audit, --cleanup-intros, --normalize-structure, or --regenerate-links.", file=sys.stderr)
         return 1
 
@@ -735,26 +759,49 @@ def main(argv: Iterable[str]) -> int:
         print("No matching handbooks found.", file=sys.stderr)
         return 1
 
-    if args.normalize_structure:
-        renames = normalize_structural_anomalies(root, handbooks)
-        if renames:
-            print("Normalized malformed directories:")
-            for old, new in renames:
-                print(f"  - {old} -> {new}")
-        else:
-            print("No malformed directories needed renaming.")
+    if args.run_full_sweep:
+        print("Running pre-wave normalization and wave-ordered maintenance.")
+        pre_wave = [name for name in PRE_WAVE_NORMALIZATION if name in handbooks]
+        if pre_wave:
+            if normalize_structural_anomalies(root, pre_wave):
+                print("Pre-wave normalization complete.")
+            for handbook in pre_wave:
+                summary = cleanup_handbook(root, handbook)
+                print(f"{handbook}: toc_changed={'yes' if summary.toc_changed else 'no'}, notebooks_changed={summary.notebooks_changed}")
+            run_helper(root, "update_toc_links.py", pre_wave)
+            run_helper(root, "add_nav_links.py", pre_wave)
 
-    if args.cleanup_intros:
-        for handbook in handbooks:
-            summary = cleanup_handbook(root, handbook)
-            print(
-                f"{handbook}: toc_changed={'yes' if summary.toc_changed else 'no'}, "
-                f"notebooks_changed={summary.notebooks_changed}"
-            )
+        for wave_name in ("wave1", "wave2", "wave3", "wave4"):
+            wave_targets = [name for name in REWRITE_WAVES[wave_name] if name in handbooks]
+            if not wave_targets:
+                continue
+            print(f"\n== {wave_name} ==")
+            for handbook in wave_targets:
+                summary = cleanup_handbook(root, handbook)
+                print(f"{handbook}: toc_changed={'yes' if summary.toc_changed else 'no'}, notebooks_changed={summary.notebooks_changed}")
+            run_helper(root, "update_toc_links.py", wave_targets)
+            run_helper(root, "add_nav_links.py", wave_targets)
+    else:
+        if args.normalize_structure:
+            renames = normalize_structural_anomalies(root, handbooks)
+            if renames:
+                print("Normalized malformed directories:")
+                for old, new in renames:
+                    print(f"  - {old} -> {new}")
+            else:
+                print("No malformed directories needed renaming.")
 
-    if args.regenerate_links or args.cleanup_intros or args.normalize_structure:
-        run_helper(root, "update_toc_links.py", handbooks)
-        run_helper(root, "add_nav_links.py", handbooks)
+        if args.cleanup_intros:
+            for handbook in handbooks:
+                summary = cleanup_handbook(root, handbook)
+                print(
+                    f"{handbook}: toc_changed={'yes' if summary.toc_changed else 'no'}, "
+                    f"notebooks_changed={summary.notebooks_changed}"
+                )
+
+        if args.regenerate_links or args.cleanup_intros or args.normalize_structure:
+            run_helper(root, "update_toc_links.py", handbooks)
+            run_helper(root, "add_nav_links.py", handbooks)
 
     audits: list[HandbookAudit] = []
     if args.audit or args.report:

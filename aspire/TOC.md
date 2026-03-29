@@ -1,5 +1,4 @@
 # Aspire Handbook
-
 ## Part I: Laying the Foundation (Beginner)
 ## Part II: Integrating with Data and Services (Intermediate)
 
