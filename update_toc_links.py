@@ -170,6 +170,22 @@ def parse_chapter_line(line: str) -> ParsedChapterLine | None:
             "list_bold",
             re.compile(r"^(\d+\.\s+)\*\*(.+?)\*\*\s*$"),
         ),
+        (
+            "bullet_chapter_link",
+            re.compile(r"^([*-]\s+)\[Chapter (\d+): (.+?)\]\(([^)]+)\)\s*$"),
+        ),
+        (
+            "bullet_chapter",
+            re.compile(r"^([*-]\s+)Chapter (\d+): (.+?)\s*$"),
+        ),
+        (
+            "bullet_numbered_link",
+            re.compile(r"^([*-]\s+)\[(\d+)\. (.+?)\]\(([^)]+)\)\s*$"),
+        ),
+        (
+            "bullet_numbered",
+            re.compile(r"^([*-]\s+)(\d+)\. (.+?)\s*$"),
+        ),
     ]
     for style, pattern in patterns:
         match = pattern.match(stripped)
@@ -202,6 +218,12 @@ def parse_chapter_line(line: str) -> ParsedChapterLine | None:
             prefix, title = groups
             number = int(prefix.split(".", 1)[0])
             return ParsedChapterLine(style, prefix, number, title, None)
+        if style in {"bullet_chapter_link", "bullet_numbered_link"}:
+            prefix, number, title, link = groups
+            return ParsedChapterLine(style, prefix, int(number), title, link)
+        if style in {"bullet_chapter", "bullet_numbered"}:
+            prefix, number, title = groups
+            return ParsedChapterLine(style, prefix, int(number), title, None)
     return None
 
 
@@ -228,6 +250,10 @@ def render_linked_line(parsed: ParsedChapterLine, relative_path: str) -> str:
         return f"{parsed.prefix}[{title}]({encoded})"
     if parsed.style == "list_bold":
         return f"{parsed.prefix}**[{title}]({encoded})**"
+    if parsed.style in {"bullet_chapter_link", "bullet_chapter"}:
+        return f"{parsed.prefix}[Chapter {parsed.number}: {title}]({encoded})"
+    if parsed.style in {"bullet_numbered_link", "bullet_numbered"}:
+        return f"{parsed.prefix}[{parsed.number}. {title}]({encoded})"
     return f"{parsed.prefix}[{title}]({encoded})"
 
 

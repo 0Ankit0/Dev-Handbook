@@ -6,6 +6,7 @@ import json
 import os
 import re
 from pathlib import Path
+from urllib.parse import unquote
 
 
 def chapter_number(path: Path) -> int:
@@ -21,6 +22,41 @@ def discover_notebooks(handbook_dir: Path) -> list[Path]:
     ]
     notebooks.sort(key=lambda item: (chapter_number(item), item.relative_to(handbook_dir).as_posix()))
     return notebooks
+
+
+
+
+def discover_toc_order(handbook_dir: Path, notebooks: list[Path]) -> list[Path]:
+    toc_path = handbook_dir / "TOC.md"
+    if not toc_path.exists():
+        return notebooks
+
+    notebook_lookup = {path.relative_to(handbook_dir).as_posix(): path for path in notebooks}
+    ordered: list[Path] = []
+    seen: set[Path] = set()
+    link_patterns = [
+        re.compile(r"\[Chapter \d+: [^\]]+\]\(([^)]+)\)"),
+        re.compile(r"\[\d+\. [^\]]+\]\(([^)]+)\)"),
+        re.compile(r"\[[^\]]+\]\(([^)]+\.ipynb)\)"),
+    ]
+    for line in toc_path.read_text(encoding="utf-8").splitlines():
+        for pattern in link_patterns:
+            match = pattern.search(line)
+            if not match:
+                continue
+            relative = unquote(match.group(1).strip())
+            notebook = notebook_lookup.get(relative)
+            if notebook and notebook not in seen:
+                ordered.append(notebook)
+                seen.add(notebook)
+            break
+
+    if not ordered:
+        return notebooks
+    for notebook in notebooks:
+        if notebook not in seen:
+            ordered.append(notebook)
+    return ordered
 
 
 def source_to_text(source: object) -> str:
@@ -112,7 +148,7 @@ def main() -> int:
         if not handbook_dir.is_dir():
             print(f"{target}: skipped (directory not found)")
             continue
-        notebooks = discover_notebooks(handbook_dir)
+        notebooks = discover_toc_order(handbook_dir, discover_notebooks(handbook_dir))
         print(f"{target}: found {len(notebooks)} notebook(s)")
         updated = 0
         for index, notebook_path in enumerate(notebooks):

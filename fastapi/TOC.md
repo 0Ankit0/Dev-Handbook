@@ -1,6 +1,4 @@
 # Fastapi Handbook
-
-## Table of Contents
 ### Part I: Foundations of FastAPI
 
 **[Chapter 1: Setting Up the Development Environment](1.%20foundations_of_fastapi/1.%20setting_up_the_development_environment.ipynb)**

@@ -1,6 +1,4 @@
 # ASP.NET Handbook
-
-### ASP.NET Developer's Handbook
 ### Part I: The Foundation (Beginner)
 
 **[Chapter 1: C# Fundamentals for Web Developers](1.%20the_foundation/1.%20csharp_fundamentals_for_web_developers.ipynb)**
@@ -110,7 +108,7 @@
 - **15.3** ValueTask vs. Task
 - **15.4** Source Generators
 
-**[Chapter 16: Testing Your Application (Industry Standard)](4.%20advanced_architecture_integration/16.%20testing_your_application.ipynb)**
+**[Chapter 16: Testing Your Application](4.%20advanced_architecture_integration/16.%20testing_your_application.ipynb)**
 - **16.1** Unit Testing with xUnit or NUnit
 - **16.2** Mocking Dependencies with Moq (or NSubstitute)
 - **16.3** Integration Testing with `WebApplicationFactory<T>`

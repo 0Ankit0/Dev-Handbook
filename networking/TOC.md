@@ -1,6 +1,4 @@
 # Networking Handbook
-
-### Network Engineering Handbook
 ### Part I: Foundations – How Data Begins Its Journey
 
 ### [Chapter 1: The What and Why of Networks](1.%20foundations_how_data_begins_its_journey/1.%20the_what_and_why_of_networks.ipynb)

@@ -1,5 +1,4 @@
 # Nextjs Handbook
-
 ## Part 1: Foundations (Beginner Level)
 ### **[Chapter 1: Introduction to Next.js](1.%20Foundations/1.%20introduction_to_nextjs.ipynb)**
 - 1.1 What is Next.js and Why It Matters

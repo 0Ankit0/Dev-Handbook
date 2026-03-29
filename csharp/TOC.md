@@ -1,6 +1,4 @@
 # Csharp Handbook
-
-### The C# Developer's Handbook
 ### Part I: The Foundation - Core Concepts
 
 *This part assumes no prior programming knowledge and builds a solid base in C# syntax and logic.*
@@ -112,7 +110,7 @@
 - LINQ to Objects (In-Memory Collections)
 - Projections and Anonymous Types
 
-**[Chapter 16: Asynchronous Programming with `async`/`await`](3.%20advanced_language_features/16.%20asynchronous_programming_with_asyncawait.ipynb)**
+**[Chapter 16: Asynchronous Programming with async/await](3.%20advanced_language_features/16.%20asynchronous_programming_with_asyncawait.ipynb)**
 - The Problem of Blocking Calls
 - Understanding `Task` and `Task<T>`
 - The `async` and `await` Keywords
@@ -132,7 +130,7 @@
 
 *This part focuses on the tools and libraries that make up the modern .NET developer's environment.*
 
-**[Chapter 18: Managing Resources - Garbage Collection & `IDisposable`](4.%20modern_c_and_net_ecosystem/18.%20managing_resources_garbage_collection_idisposable.ipynb)**
+**[Chapter 18: Managing Resources - Garbage Collection & IDisposable](4.%20modern_c_and_net_ecosystem/18.%20managing_resources_garbage_collection_idisposable.ipynb)**
 - How the .NET Garbage Collector Works (Generations)
 - The `IDisposable` Interface and the `using` Statement (`using` declaration)
 - Finalizers (Destructors) - When and Why to Use Them
