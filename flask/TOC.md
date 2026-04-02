@@ -1,4 +1,16 @@
 # Flask Developer's Handbook
+
+> A structured, beginner-friendly handbook for building web applications and APIs with Flask.
+>
+> **Official References:**
+> - [Flask Documentation](https://flask.palletsprojects.com/en/stable/) — routing, contexts, blueprints, configuration
+> - [Jinja2 Documentation](https://jinja.palletsprojects.com/en/stable/) — template syntax, filters, template inheritance
+> - [Werkzeug Documentation](https://werkzeug.palletsprojects.com/en/stable/) — WSGI utilities, security helpers
+> - [SQLAlchemy 2.0 Docs](https://docs.sqlalchemy.org/en/20/) — ORM models, relationships, query interface
+> - [Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) — free 23-part community tutorial
+
+---
+
 ## Part I: Flask Foundations
 
 ### [Chapter 1: Getting Started with Flask](1.%20flask_foundations/1.%20getting_started.ipynb)
@@ -168,7 +180,12 @@
 ---
 
 ## Appendices
-* **Appendix A**: Flask Cheat Sheet — quick reference for routes, templates, DB, auth.
-* **Appendix B**: Flask Extension Directory — the best extensions and when to use them.
-* **Appendix C**: Glossary — WSGI, ORM, CSRF, JWT, and other key terms defined.
-* **Appendix D**: Recommended Resources — books, docs, courses, and communities.
+
+* **[Appendix A: Flask Quick-Reference Cheat Sheet](./appendix.md#appendix-a-flask-quick-reference-cheat-sheet)** — routes, templates, SQLAlchemy, Login, JWT, Migrate at a glance
+* **[Appendix B: Flask Extension Directory](./appendix.md#appendix-b-flask-extension-directory)** — the most important extensions, when to use them, and install commands
+* **[Appendix C: Security Checklist](./appendix.md#appendix-c-security-checklist)** — pre-deployment checklist covering config, auth, CSRF, XSS, SQL injection, headers
+* **[Appendix D: Deployment Runbook](./appendix.md#appendix-d-deployment-runbook)** — Gunicorn, Nginx, Docker, docker-compose step-by-step
+* **[Appendix E: Testing Quick Reference](./appendix.md#appendix-e-testing-quick-reference)** — pytest fixtures, test client patterns, coverage
+* **[Appendix F: Common Error Messages and Fixes](./appendix.md#appendix-f-common-error-messages-and-fixes)** — runtime errors, context errors, CORS, Jinja2 errors
+* **[Appendix G: Glossary](./appendix.md#appendix-g-glossary)** — WSGI, ORM, JWT, Blueprint, CSRF, Session and other key terms defined
+* **[Appendix H: Recommended Resources and Official Docs Map](./appendix.md#appendix-h-recommended-resources-and-official-docs-map)** — books, tutorials, official docs, and what to learn next
