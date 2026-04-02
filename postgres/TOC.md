@@ -1,4 +1,13 @@
-# Postgres Handbook
+# PostgreSQL Developer Handbook
+
+> A structured, beginner-friendly handbook for learning PostgreSQL — from first concepts to production-grade expertise.
+>
+> **How to use this handbook:** Work through parts sequentially if you're new to PostgreSQL. If you have experience, jump to the part you need. Each chapter links to the next, and all appendices are at the end.
+>
+> **Official reference:** [PostgreSQL Documentation](https://www.postgresql.org/docs/current/) — use alongside this handbook for authoritative detail on any feature.
+
+---
+
 ## Part I — Foundations (Getting Oriented)
 
 ### [1. What PostgreSQL Is (and Isn’t)](1.%20Foundations/1.%20what_postgresql_is.ipynb)
@@ -341,15 +350,15 @@
 
 ## Appendices (Reference + Checklists)
 
-### A. `psql` Command Cheat Sheet
-### B. SQL Style Guide (Recommended Conventions)
-### C. Index Selection Cheat Sheet
-### D. EXPLAIN Plan Reading Patterns
-### E. Lock Types and Common Symptoms
-### F. Backup/Restore Runbook Templates
-### G. Migration Patterns Catalog (Zero-Downtime)
-### H. Common Postgres Error Messages and What They Mean
-### I. Glossary
-### J. Recommended Reading / Official Docs Map
+### [A. `psql` Command Cheat Sheet](./appendix.md#appendix-a-psql-command-cheat-sheet)
+### [B. SQL Style Guide (Recommended Conventions)](./appendix.md#appendix-b-sql-style-guide-recommended-conventions)
+### [C. Index Selection Cheat Sheet](./appendix.md#appendix-c-index-selection-cheat-sheet)
+### [D. EXPLAIN Plan Reading Patterns](./appendix.md#appendix-d-explain-plan-reading-patterns)
+### [E. Lock Types and Common Symptoms](./appendix.md#appendix-e-lock-types-and-common-symptoms)
+### [F. Backup/Restore Runbook Templates](./appendix.md#appendix-f-backuprestore-runbook-templates)
+### [G. Migration Patterns Catalog (Zero-Downtime)](./appendix.md#appendix-g-migration-patterns-catalog-zero-downtime)
+### [H. Common Postgres Error Messages and What They Mean](./appendix.md#appendix-h-common-postgres-error-messages-and-what-they-mean)
+### [I. Glossary](./appendix.md#appendix-i-glossary)
+### [J. Recommended Reading / Official Docs Map](./appendix.md#appendix-j-recommended-reading--official-docs-map)
 
 ---
