@@ -84,7 +84,7 @@
 - 12.2 Momentum Oscillators: Relative Strength Index (RSI) and Stochastic
 - 12.3 Volatility Indicators: Bollinger Bands
 - 12.4 Volume Indicators: On-Balance Volume (OBV) and Accumulation/Distribution
-- 12.5 Sentiment Indicators: Retail Mood, Turnover Spikes, and News Flow
+- 12.5 Sentiment Indicators: Retail Sentiment, Turnover Patterns, and News Flow
 
 ### [Chapter 13: Candlestick Patterns](3.%20technical_analysis_mastering_the_chart/13.%20candlestick_patterns.ipynb)
 - 13.1 Single-Session Indicators: Doji, Marubozu, Hammer
