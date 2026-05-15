@@ -8,7 +8,7 @@ These rules distill the wisdom of successful investors into actionable principle
 
 1.  **Invest in what you understand.** Never buy a business whose products, customers, or economics you cannot explain in simple terms. (Buffett's circle of competence)
 
-2.  **Think like an owner, not a trader.** When you buy a share, you are buying a piece of a business. Focus on its long‑term value, not short‑term price fluctuations.
+2.  **Think like an owner, not a trader.** When you buy a share, you are buying a piece of a business. Focus on its long-term value, not short-term price fluctuations.
 
 3.  **Margin of safety is everything.** Always buy with a cushion. If intrinsic value is $100, try to buy at $70 or less. This protects against errors and bad luck.
 
@@ -18,15 +18,15 @@ These rules distill the wisdom of successful investors into actionable principle
 
 6.  **Focus on the process, not the outcome.** A good decision can have a bad outcome, and vice versa. Judge your success by whether you followed your disciplined process.
 
-7.  **Keep costs low.** Brokerage, DP charges, taxes, and frequent trading can quietly erode returns in Nepal. Use low-cost diversified vehicles or a simple NEPSE watchlist for core holdings, and minimise unnecessary turnover.
+7.  **Keep costs low.** Brokerage, DP charges, taxes, and frequent trading can quietly erode returns in Nepal. Use low-cost diversified vehicles or a simple NEPSE watchlist for core holdings, and minimize unnecessary turnover.
 
-8.  **Let your winners run, and cut your losers short.** The disposition effect (selling winners too early and holding losers too long) destroys value. Set pre‑determined exit rules.
+8.  **Let your winners run, and cut your losers short.** The disposition effect (selling winners too early and holding losers too long) destroys value. Set pre-determined exit rules.
 
 9.  **Be fearful when others are greedy, and greedy when others are fearful.** On NEPSE, extreme optimism and panic usually show up through turnover spikes, crowded sector moves, and one-sided social-media narratives rather than option-market indicators.
 
-10. **No one can consistently predict the short‑term direction of the market.** Time in the market beats timing the market. Stay invested according to your plan.
+10. **No one can consistently predict the short-term direction of the market.** Time in the market beats timing the market. Stay invested according to your plan.
 
-11. **The best time to plant a tree was 20 years ago; the second‑best time is now.** Don't wait for the perfect entry – if a stock is attractive, start building a position gradually.
+11. **The best time to plant a tree was 20 years ago; the second-best time is now.** Don't wait for the perfect entry – if a stock is attractive, start building a position gradually.
 
 12. **Read annual reports, not just stock screens.** The footnotes and management's discussion reveal more than the numbers. Look for red flags.
 
@@ -34,9 +34,9 @@ These rules distill the wisdom of successful investors into actionable principle
 
 14. **Have a checklist.** Before any purchase, run through your investment checklist to ensure you haven't overlooked critical factors.
 
-15. **Position size matters.** Never risk more than you can afford to lose on a single idea. Use fractional risk (e.g., 1‑2% of portfolio) to size positions.
+15. **Position size matters.** Never risk more than you can afford to lose on a single idea. Use fractional risk (e.g., 1-2% of portfolio) to size positions.
 
-16. **Use stop‑losses, but place them wisely.** Avoid round numbers; place stops below support levels or based on volatility (e.g., 2× ATR).
+16. **Use stop-losses, but place them wisely.** Avoid round numbers; place stops below support levels or based on volatility (e.g., 2× ATR).
 
 17. **Rebalance periodically.** Selling winners and buying losers forces you to buy low and sell high, maintaining your target asset allocation.
 
@@ -50,7 +50,7 @@ These rules distill the wisdom of successful investors into actionable principle
 
 22. **Growth and value are joined at the hip.** Value without growth is a value trap; growth at any price can lead to losses. Seek growth at a reasonable price (GARP).
 
-23. **The best businesses generate high returns on invested capital (ROIC) and reinvest at those high rates.** Look for consistent ROE/ROIC above 15‑20%.
+23. **The best businesses generate high returns on invested capital (ROIC) and reinvest at those high rates.** Look for consistent ROE/ROIC above 15-20%.
 
 24. **Don't fight the trend.** In technical analysis, the trend is your friend. Avoid shorting strong uptrends or buying into clear downtrends.
 
@@ -62,7 +62,7 @@ These rules distill the wisdom of successful investors into actionable principle
 
 28. **Keep a trading journal.** Record your reasons for entry and exit, your emotional state, and the outcome. Review regularly to learn from mistakes.
 
-29. **Taxes matter.** Always check the latest Nepali capital-gains, dividend, and transaction tax rules before trading. Your after-tax return is what matters, not just the quoted gain.
+29. **Taxes matter.** Always check the latest Nepali capital gains, dividend, and transaction tax rules before trading. Your after-tax return is what matters, not just the quoted gain.
 
 30. **The most important rule: Never lose money.** (Rule 2: Never forget rule 1.) – Warren Buffett.
 
@@ -88,7 +88,7 @@ This appendix lists the most important formulas used in fundamental and technica
 |-------|---------|----------------|
 | Gross Margin | \( \frac{\text{Gross Profit}}{\text{Revenue}} \) | Profitability after direct costs. |
 | Operating Margin | \( \frac{\text{Operating Income}}{\text{Revenue}} \) | Profitability from core operations. |
-| Net Margin | \( \frac{\text{Net Income}}{\text{Revenue}} \) | Bottom‑line profitability. |
+| Net Margin | \( \frac{\text{Net Income}}{\text{Revenue}} \) | Bottom-line profitability. |
 | Return on Assets (ROA) | \( \frac{\text{Net Income}}{\text{Average Total Assets}} \) | Efficiency of asset use. |
 | Return on Equity (ROE) | \( \frac{\text{Net Income}}{\text{Average Shareholders' Equity}} \) | Return on shareholders' capital. |
 | Return on Invested Capital (ROIC) | \( \frac{\text{NOPAT}}{\text{Invested Capital}} \) | Return on capital employed in the business. |
@@ -97,15 +97,15 @@ This appendix lists the most important formulas used in fundamental and technica
 
 | Ratio | Formula | Interpretation |
 |-------|---------|----------------|
-| Current Ratio | \( \frac{\text{Current Assets}}{\text{Current Liabilities}} \) | Ability to pay short‑term obligations. |
-| Quick Ratio (Acid‑Test) | \( \frac{\text{Current Assets} - \text{Inventory}}{\text{Current Liabilities}} \) | Stricter liquidity measure. |
+| Current Ratio | \( \frac{\text{Current Assets}}{\text{Current Liabilities}} \) | Ability to pay short-term obligations. |
+| Quick Ratio (Acid-Test) | \( \frac{\text{Current Assets} - \text{Inventory}}{\text{Current Liabilities}} \) | Stricter liquidity measure. |
 | Cash Ratio | \( \frac{\text{Cash + Equivalents}}{\text{Current Liabilities}} \) | Most conservative liquidity metric. |
 
 ### Solvency Ratios
 
 | Ratio | Formula | Interpretation |
 |-------|---------|----------------|
-| Debt‑to‑Equity | \( \frac{\text{Total Debt}}{\text{Shareholders' Equity}} \) | Degree of financial leverage. |
+| Debt-to-Equity | \( \frac{\text{Total Debt}}{\text{Shareholders' Equity}} \) | Degree of financial leverage. |
 | Interest Coverage | \( \frac{\text{EBIT}}{\text{Interest Expense}} \) | Ability to meet interest payments. |
 | Debt Ratio | \( \frac{\text{Total Liabilities}}{\text{Total Assets}} \) | Proportion of assets financed by debt. |
 
@@ -124,10 +124,10 @@ This appendix lists the most important formulas used in fundamental and technica
 
 | Multiple | Formula | Description |
 |----------|---------|-------------|
-| Price‑to‑Earnings (P/E) | \( \frac{\text{Price per Share}}{\text{EPS}} \) | Market price per dollar of earnings. |
-| Price‑to‑Book (P/B) | \( \frac{\text{Price per Share}}{\text{Book Value per Share}} \) | Market value relative to accounting book value. |
-| Price‑to‑Sales (P/S) | \( \frac{\text{Price per Share}}{\text{Sales per Share}} \) | Market price per dollar of revenue. |
-| Price‑to‑Cash Flow (P/CF) | \( \frac{\text{Price per Share}}{\text{Cash Flow per Share}} \) | Market price per dollar of cash flow. |
+| Price-to-Earnings (P/E) | \( \frac{\text{Price per Share}}{\text{EPS}} \) | Market price per dollar of earnings. |
+| Price-to-Book (P/B) | \( \frac{\text{Price per Share}}{\text{Book Value per Share}} \) | Market value relative to accounting book value. |
+| Price-to-Sales (P/S) | \( \frac{\text{Price per Share}}{\text{Sales per Share}} \) | Market price per dollar of revenue. |
+| Price-to-Cash Flow (P/CF) | \( \frac{\text{Price per Share}}{\text{Cash Flow per Share}} \) | Market price per dollar of cash flow. |
 | PEG Ratio | \( \frac{\text{P/E}}{\text{Annual EPS Growth Rate (\%)}} \) | P/E adjusted for growth. |
 | EV/EBITDA | \( \frac{\text{Enterprise Value}}{\text{EBITDA}} \) | Firm value relative to operating earnings. |
 | EV/Sales | \( \frac{\text{Enterprise Value}}{\text{Revenue}} \) | Firm value relative to revenue. |
@@ -147,7 +147,7 @@ This appendix lists the most important formulas used in fundamental and technica
 |---------|---------|-------------|
 | Cost of Equity (CAPM) | \( r_e = r_f + \beta \times (r_m - r_f) \) | Expected return required by equity investors. |
 | Weighted Average Cost of Capital (WACC) | \( \frac{E}{V} r_e + \frac{D}{V} r_d (1 - T) \) | Blended cost of capital for the firm. |
-| After‑Tax Cost of Debt | \( r_d \times (1 - T) \) | Effective cost of debt after tax shield. |
+| After-Tax Cost of Debt | \( r_d \times (1 - T) \) | Effective cost of debt after tax shield. |
 
 ### Technical Indicators
 
@@ -159,7 +159,7 @@ This appendix lists the most important formulas used in fundamental and technica
 | RSI | \( 100 - \frac{100}{1 + \text{RS}} \) where RS = avg gain / avg loss (14 periods) | Measures speed and change of price movements. |
 | Stochastic Oscillator | \( \%K = \frac{C - L_n}{H_n - L_n} \times 100 \) | Compares close to price range. |
 | Bollinger Bands | Middle: SMA(20); Upper: Middle + 2σ; Lower: Middle – 2σ | Volatility bands. |
-| On‑Balance Volume (OBV) | Cumulative: add volume on up days, subtract on down days | Volume‑based momentum. |
+| On-Balance Volume (OBV) | Cumulative: add volume on up days, subtract on down days | Volume-based momentum. |
 
 ---
 
@@ -169,13 +169,13 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Beta:** A measure of a stock's volatility relative to the overall market. Beta > 1 means more volatile than the market; < 1 means less volatile.
 
-**Bid‑Ask Spread:** The difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
+**Bid-Ask Spread:** The difference between the highest price a buyer is willing to pay (bid) and the lowest price a seller is willing to accept (ask).
 
-**Blue Chip:** A large, well‑established, financially sound company with a long history of stable earnings.
+**Blue Chip:** A large, well-established, financially sound company with a long history of stable earnings.
 
 **Book Value:** The value of a company's common equity according to its balance sheet (assets – liabilities). Also known as shareholders' equity.
 
-**Bottom‑Up Investing:** An investment approach that focuses on analyzing individual companies rather than macroeconomic trends.
+**Bottom-Up Investing:** An investment approach that focuses on analyzing individual companies rather than macroeconomic trends.
 
 **Bull Market / Bear Market:** A prolonged period of rising (bull) or falling (bear) stock prices.
 
@@ -201,7 +201,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Dead Cat Bounce:** A temporary recovery in a declining market, followed by a continuation of the downtrend.
 
-**Depreciation:** The allocation of the cost of a tangible asset over its useful life. A non‑cash expense.
+**Depreciation:** The allocation of the cost of a tangible asset over its useful life. A non-cash expense.
 
 **Derivative:** A financial instrument whose value is derived from an underlying asset (e.g., options, futures).
 
@@ -223,7 +223,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Dow Theory:** A theory of technical analysis based on the writings of Charles Dow, focusing on trends, confirmation, and volume.
 
-**Drawdown:** The peak‑to‑trough decline in an investment's value during a specific period.
+**Drawdown:** The peak-to-trough decline in an investment's value during a specific period.
 
 **Due Diligence:** The research and analysis performed before making an investment decision.
 
@@ -243,9 +243,9 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Equity:** Ownership interest in a company, represented by shares.
 
-**Exchange‑Traded Fund (ETF):** A basket of securities that trades on an exchange like a stock.
+**Exchange-Traded Fund (ETF):** A basket of securities that trades on an exchange like a stock.
 
-**Ex‑Dividend Date:** The date on which a stock begins trading without the value of its next dividend payment. Buyers on or after this date do not receive the dividend.
+**Ex-Dividend Date:** The date on which a stock begins trading without the value of its next dividend payment. Buyers on or after this date do not receive the dividend.
 
 **Fair Value:** The estimated intrinsic value of an asset, based on fundamental analysis.
 
@@ -259,11 +259,11 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Fundamental Analysis:** The analysis of a company's financial statements, management, industry, and economy to determine its intrinsic value.
 
-**Golden Cross:** A bullish signal occurring when a short‑term moving average (e.g., 50‑day) crosses above a long‑term moving average (e.g., 200‑day).
+**Golden Cross:** A bullish signal occurring when a short-term moving average (e.g., 50-day) crosses above a long-term moving average (e.g., 200-day).
 
 **Goodwill:** An intangible asset that arises when a company acquires another for more than the fair value of its net identifiable assets.
 
-**Growth Investing:** An investment style focused on companies with above‑average earnings growth, often paying higher valuations.
+**Growth Investing:** An investment style focused on companies with above-average earnings growth, often paying higher valuations.
 
 **Hammer / Hanging Man:** Candlestick patterns with a small body and long lower shadow; hammer is bullish in downtrend, hanging man bearish in uptrend.
 
@@ -293,7 +293,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Long Position:** Owning a security with the expectation that its price will rise.
 
-**MACD (Moving Average Convergence Divergence):** A trend‑following momentum indicator showing the relationship between two moving averages.
+**MACD (Moving Average Convergence Divergence):** A trend-following momentum indicator showing the relationship between two moving averages.
 
 **Margin of Safety:** The difference between intrinsic value and market price, providing a cushion against errors.
 
@@ -331,7 +331,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Price Target:** The projected price level of a stock as estimated by an analyst or based on a valuation model.
 
-**Primary Trend:** The major, long‑term direction of the market (bull or bear), according to Dow Theory.
+**Primary Trend:** The major, long-term direction of the market (bull or bear), according to Dow Theory.
 
 **Prospectus:** A formal document approved through SEBON that explains an IPO, FPO, debenture, or rights offering before investors apply.
 
@@ -345,7 +345,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Random Walk Theory:** The hypothesis that stock prices follow a random path and cannot be predicted.
 
-**Real Estate Investment Trust (REIT):** A company that owns and operates income‑producing real estate and is required to distribute most of its taxable income as dividends.
+**Real Estate Investment Trust (REIT):** A company that owns and operates income-producing real estate and is required to distribute most of its taxable income as dividends.
 
 **Rebalancing:** Adjusting portfolio weights back to target allocations by selling winners and buying losers.
 
@@ -359,31 +359,31 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Risk Premium:** The excess return an investor expects for taking on additional risk.
 
-**Risk‑Free Rate:** The theoretical return of an investment with zero risk, often approximated in Nepal by short-term government treasury bills or similar sovereign instruments.
+**Risk-Free Rate:** The theoretical return of an investment with zero risk, often approximated in Nepal by short-term government treasury bills or similar sovereign instruments.
 
 **Secondary Offering:** The sale of new or existing shares by a company (or insiders) after the IPO.
 
 **Sentiment Analysis:** The use of natural language processing to gauge market mood from news, social media, etc.
 
-**Sharpe Ratio:** A measure of risk‑adjusted return: (return – risk‑free rate) / standard deviation of return.
+**Sharpe Ratio:** A measure of risk-adjusted return: (return – risk-free rate) / standard deviation of return.
 
 **Short Selling:** Selling borrowed shares with the expectation of buying them back at a lower price.
 
 **Signal Line:** A moving average of the MACD line, used to generate crossover signals.
 
-**Special Situation:** An investment opportunity arising from a corporate event such as a merger, spin‑off, or bankruptcy.
+**Special Situation:** An investment opportunity arising from a corporate event such as a merger, spin-off, or bankruptcy.
 
-**Spin‑Off:** The creation of an independent company through the distribution of new shares to existing shareholders of a parent company.
+**Spin-Off:** The creation of an independent company through the distribution of new shares to existing shareholders of a parent company.
 
 **Standard Deviation:** A statistical measure of volatility; the degree to which returns vary from their average.
 
 **Stochastic Oscillator:** A momentum indicator comparing a closing price to its price range over a given period.
 
-**Stop‑Loss Order:** An order to sell a security if it falls to a specified price, used to limit losses.
+**Stop-Loss Order:** An order to sell a security if it falls to a specified price, used to limit losses.
 
 **Support:** A price level where buying pressure is strong enough to halt or reverse a downtrend.
 
-**Systematic Risk:** Market‑wide risk that cannot be eliminated through diversification.
+**Systematic Risk:** Market-wide risk that cannot be eliminated through diversification.
 
 **Technical Analysis:** The study of price charts and indicators to forecast future price movements.
 
@@ -391,11 +391,11 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Time Value of Money:** The concept that money available today is worth more than the same amount in the future due to its earning capacity.
 
-**Top‑Down Investing:** An investment approach that starts with macroeconomic analysis, then narrows to sectors and companies.
+**Top-Down Investing:** An investment approach that starts with macroeconomic analysis, then narrows to sectors and companies.
 
 **Trendline:** A straight line drawn on a chart connecting successive highs (downtrend) or lows (uptrend) to show the trend direction.
 
-**Unsystematic Risk:** Company‑specific risk that can be eliminated through diversification.
+**Unsystematic Risk:** Company-specific risk that can be eliminated through diversification.
 
 **Value Investing:** An investment style focused on buying stocks trading below their intrinsic value.
 
@@ -405,9 +405,9 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **WACC (Weighted Average Cost of Capital):** The blended cost of a company's debt and equity capital.
 
-**When‑Issued Trading:** Trading of a security before it has been officially issued (e.g., in a spin‑off).
+**When-Issued Trading:** Trading of a security before it has been officially issued (e.g., in a spin-off).
 
-**Working Capital:** Current assets minus current liabilities; measures short‑term liquidity.
+**Working Capital:** Current assets minus current liabilities; measures short-term liquidity.
 
 ---
 
@@ -438,7 +438,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Portfolio Management & General Investing**
 - Burton Malkiel, *A Random Walk Down Wall Street* – Efficient markets perspective.
-- Charles D. Ellis, *Winning the Loser's Game* – Long‑term investing.
+- Charles D. Ellis, *Winning the Loser's Game* – Long-term investing.
 - David Swensen, *Unconventional Success* – Yale endowment approach.
 - William Bernstein, *The Four Pillars of Investing* – Asset allocation.
 
@@ -502,19 +502,19 @@ This appendix lists the most important formulas used in fundamental and technica
 
 This bibliography includes works cited and influential texts that shaped the content of this book.
 
-1.  Bernstein, William J. *The Four Pillars of Investing: Lessons for Building a Winning Portfolio*. McGraw‑Hill, 2002.
+1.  Bernstein, William J. *The Four Pillars of Investing: Lessons for Building a Winning Portfolio*. McGraw-Hill, 2002.
 2.  Buffett, Warren E. *Berkshire Hathaway Inc. Shareholder Letters*. 1977–2023.
 3.  Damodaran, Aswath. *Investment Valuation: Tools and Techniques for Determining the Value of Any Asset*. 3rd ed., Wiley, 2012.
 4.  Dorsey, Pat. *The Five Rules for Successful Stock Investing*. Wiley, 2004.
 5.  Edwards, Robert D., and John Magee. *Technical Analysis of Stock Trends*. 10th ed., CRC Press, 2012.
 6.  Fisher, Philip A. *Common Stocks and Uncommon Profits*. Wiley, 1958.
 7.  Graham, Benjamin. *The Intelligent Investor*. Revised ed., HarperBusiness, 2006.
-8.  Graham, Benjamin, and David L. Dodd. *Security Analysis*. 6th ed., McGraw‑Hill, 2008.
+8.  Graham, Benjamin, and David L. Dodd. *Security Analysis*. 6th ed., McGraw-Hill, 2008.
 9.  Greenblatt, Joel. *The Little Book That Still Beats the Market*. Wiley, 2010.
 10. Greenwald, Bruce C.N., et al. *Value Investing: From Graham to Buffett and Beyond*. Wiley, 2001.
 11. Hull, John C. *Options, Futures, and Other Derivatives*. 10th ed., Pearson, 2017.
 12. Kahneman, Daniel. *Thinking, Fast and Slow*. Farrar, Straus and Giroux, 2011.
-13. Klarman, Seth A. *Margin of Safety: Risk‑Averse Value Investing Strategies for the Thoughtful Investor*. HarperBusiness, 1991.
+13. Klarman, Seth A. *Margin of Safety: Risk-Averse Value Investing Strategies for the Thoughtful Investor*. HarperBusiness, 1991.
 14. Lefèvre, Edwin. *Reminiscences of a Stock Operator*. Wiley, 1923.
 15. Lynch, Peter, and John Rothchild. *One Up On Wall Street*. Simon & Schuster, 1989.
 16. Malkiel, Burton G. *A Random Walk Down Wall Street*. 12th ed., W.W. Norton & Company, 2019.
@@ -523,11 +523,11 @@ This bibliography includes works cited and influential texts that shaped the con
 19. Montier, James. *The Little Book of Behavioral Investing*. Wiley, 2010.
 20. Murphy, John J. *Technical Analysis of the Financial Markets*. New York Institute of Finance, 1999.
 21. Nison, Steve. *Japanese Candlestick Charting Techniques*. 2nd ed., Prentice Hall Press, 2001.
-22. O'Shaughnessy, James P. *What Works on Wall Street*. 4th ed., McGraw‑Hill, 2012.
-23. Pring, Martin J. *Technical Analysis Explained*. 5th ed., McGraw‑Hill, 2014.
+22. O'Shaughnessy, James P. *What Works on Wall Street*. 4th ed., McGraw-Hill, 2012.
+23. Pring, Martin J. *Technical Analysis Explained*. 5th ed., McGraw-Hill, 2014.
 24. Sharpe, William F. "Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk." *Journal of Finance*, vol. 19, no. 3, 1964, pp. 425–442.
 25. Shiller, Robert J. *Irrational Exuberance*. 3rd ed., Princeton University Press, 2015.
-26. Siegel, Jeremy J. *Stocks for the Long Run*. 5th ed., McGraw‑Hill, 2014.
+26. Siegel, Jeremy J. *Stocks for the Long Run*. 5th ed., McGraw-Hill, 2014.
 27. Thaler, Richard H. *Misbehaving: The Making of Behavioral Economics*. W.W. Norton & Company, 2015.
 28. Wilder, J. Welles. *New Concepts in Technical Trading Systems*. Trend Research, 1978.
 
@@ -548,9 +548,9 @@ This bibliography includes works cited and influential texts that shaped the con
 - Bankruptcy
 - Behavioral finance
 - Beta
-- Bid‑ask spread
+- Bid-ask spread
 - Bollinger Bands
-- Bottom‑up analysis
+- Bottom-up analysis
 - Business model analysis
 - Buy disciplines
 - Candlestick patterns
@@ -567,7 +567,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Contrarian investing
 - Cost of capital
 - Cup and handle
-- Debt‑to‑equity ratio
+- Debt-to-equity ratio
 - Discounted cash flow (DCF)
 - Diversification
 - Dividend discount model (DDM)
@@ -630,7 +630,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Multiple expansion/contraction
 - Net margin
 - News sentiment
-- On‑Balance Volume (OBV)
+- On-Balance Volume (OBV)
 - Operating margin
 - Opportunity cost
 - Options
@@ -658,7 +658,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Rights issues
 - Risk and return
 - Risk management
-- Risk‑free rate
+- Risk-free rate
 - RSI
 - Scenario analysis
 - Screening
@@ -670,16 +670,16 @@ This bibliography includes works cited and influential texts that shaped the con
 - Social media sentiment
 - Solvency ratios
 - Special situations
-- Spin‑offs
+- Spin-offs
 - Stochastic oscillator
-- Stop‑loss orders
+- Stop-loss orders
 - Support and resistance
 - Systematic risk
 - Technical analysis
 - Terminal value
 - Three white soldiers / black crows
 - Time value of money
-- Top‑down analysis
+- Top-down analysis
 - Trading journal
 - Trend analysis
 - Trendlines
