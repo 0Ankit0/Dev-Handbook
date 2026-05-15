@@ -18,11 +18,11 @@ These rules distill the wisdom of successful investors into actionable principle
 
 6.  **Focus on the process, not the outcome.** A good decision can have a bad outcome, and vice versa. Judge your success by whether you followed your disciplined process.
 
-7.  **Keep costs low.** Fees, taxes, and trading costs compound into large drags on returns. Use low‑cost ETFs for core holdings, and minimise turnover.
+7.  **Keep costs low.** Brokerage, DP charges, taxes, and frequent trading can quietly erode returns in Nepal. Use low-cost diversified vehicles or a simple NEPSE watchlist for core holdings, and minimise unnecessary turnover.
 
 8.  **Let your winners run, and cut your losers short.** The disposition effect (selling winners too early and holding losers too long) destroys value. Set pre‑determined exit rules.
 
-9.  **Be fearful when others are greedy, and greedy when others are fearful.** Contrarian sentiment indicators (VIX, put/call ratios) can help identify extremes.
+9.  **Be fearful when others are greedy, and greedy when others are fearful.** On NEPSE, extreme optimism and panic usually show up through turnover spikes, crowded sector moves, and one-sided social-media narratives rather than option-market indicators.
 
 10. **No one can consistently predict the short‑term direction of the market.** Time in the market beats timing the market. Stay invested according to your plan.
 
@@ -62,7 +62,7 @@ These rules distill the wisdom of successful investors into actionable principle
 
 28. **Keep a trading journal.** Record your reasons for entry and exit, your emotional state, and the outcome. Review regularly to learn from mistakes.
 
-29. **Taxes matter.** Hold investments for more than a year to benefit from lower long‑term capital gains rates. Use tax‑advantaged accounts where possible.
+29. **Taxes matter.** Always check the latest Nepali capital-gains, dividend, and transaction tax rules before trading. Your after-tax return is what matters, not just the quoted gain.
 
 30. **The most important rule: Never lose money.** (Rule 2: Never forget rule 1.) – Warren Buffett.
 
@@ -185,7 +185,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Catalyst:** An event or development that triggers a revaluation of a company's stock, such as a new product launch, regulatory approval, or management change.
 
-**Chapter 11 / Chapter 7:** U.S. bankruptcy code chapters. Chapter 11 is reorganization; Chapter 7 is liquidation.
+**Corporate rehabilitation / liquidation:** Terms used for restructuring or winding up a distressed company under applicable Nepali insolvency and company law processes.
 
 **Confirmation:** The principle that multiple technical indicators or time frames should align before taking a trading signal.
 
@@ -215,7 +215,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Dividend:** A distribution of a portion of a company's earnings to its shareholders.
 
-**Dividend Aristocrat:** A company in the S&P 500 that has increased its dividend for at least 25 consecutive years.
+**Consistent dividend payer:** A NEPSE-listed company with a long record of paying regular cash or bonus dividends, often valued for stability and income visibility.
 
 **Doji:** A candlestick with a very small real body, indicating indecision between buyers and sellers.
 
@@ -279,7 +279,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Initial Public Offering (IPO):** The first sale of stock by a private company to the public.
 
-**Insider:** An officer, director, or large shareholder of a company. Insider transactions are reported to the SEC.
+**Insider / promoter-related party:** An officer, director, promoter, or major shareholder whose transactions and disclosures should be monitored through company notices, NEPSE updates, and SEBON filings.
 
 **Intrinsic Value:** The true, inherent worth of a business, based on its fundamentals, independent of its market price.
 
@@ -333,13 +333,13 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Primary Trend:** The major, long‑term direction of the market (bull or bear), according to Dow Theory.
 
-**Prospectus:** A formal document required by the SEC that provides details about an investment offering (e.g., IPO).
+**Prospectus:** A formal document approved through SEBON that explains an IPO, FPO, debenture, or rights offering before investors apply.
 
 **Pullback:** A temporary decline in price within a continuing uptrend.
 
 **Put Option:** An option contract that gives the holder the right to sell an underlying asset at a specified price.
 
-**Put/Call Ratio:** The ratio of put option volume to call option volume, used as a sentiment indicator.
+**Sentiment gauge:** In the NEPSE context, investors often approximate market mood through turnover, breadth, delivery trend, and the intensity of newsflow because listed options data is limited.
 
 **Quantitative Analysis:** The use of mathematical and statistical models to evaluate securities.
 
@@ -359,7 +359,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Risk Premium:** The excess return an investor expects for taking on additional risk.
 
-**Risk‑Free Rate:** The theoretical return of an investment with zero risk, typically proxied by short‑term government bonds.
+**Risk‑Free Rate:** The theoretical return of an investment with zero risk, often approximated in Nepal by short-term government treasury bills or similar sovereign instruments.
 
 **Secondary Offering:** The sale of new or existing shares by a company (or insiders) after the IPO.
 
@@ -447,48 +447,34 @@ This appendix lists the most important formulas used in fundamental and technica
 - Seth Klarman, *Margin of Safety* – Out of print but worth finding.
 - Howard Marks, *The Most Important Thing* – Memos on investing.
 
-### Websites and Blogs
+### Websites and Research Sources
 
-**Data and Screening**
-- Yahoo Finance (finance.yahoo.com) – Free data, charts, news.
-- Google Finance (google.com/finance) – Basic quotes and news.
-- Finviz (finviz.com) – Excellent stock screener and charts.
-- TradingView (tradingview.com) – Advanced charting and community.
-- Koyfin (koyfin.com) – Free institutional‑grade analytics.
-- SEC EDGAR (sec.gov/edgar) – Original filings (10‑K, 10‑Q, etc.).
-- FRED (fred.stlouisfed.org) – Economic data from the St. Louis Fed.
+**Official NEPSE Sources**
+- NEPSE (nepalstock.com) – Prices, notices, listed companies, and market summaries.
+- SEBON (sebon.gov.np) – Issue approvals, investor education, and regulatory notices.
+- CDSC (cdsc.com.np) – Demat, settlement, and beneficiary account guidance.
+- Nepal Rastra Bank (nrb.org.np) – Monetary policy, banking data, and macro context.
+- Ministry of Finance (mof.gov.np) – Economic survey and budget documents.
 
-**Analysis and Research**
-- Seeking Alpha (seekingalpha.com) – Crowdsourced investment research.
-- Morningstar (morningstar.com) – Mutual fund and stock analysis.
-- GuruFocus (gurufocus.com) – Value investing tools and guru portfolios.
-- Simply Wall St (simplywall.st) – Visual financial analysis.
-- MarketWatch (marketwatch.com) – News and data.
-- Bloomberg (bloomberg.com) – Professional news and analysis (paid).
+**Local Market Research**
+- ShareSansar (sharesansar.com) – Company news, dividends, and market commentary.
+- Merolagani (merolagani.com) – Screeners, market stats, and watchlists.
+- NEPSE Alpha (nepsealpha.com) – Technical charts and indicator tools.
+- Company investor-relations pages – Annual reports, AGM notices, and strategic updates.
 
-**Technical Analysis**
-- StockCharts.com – Charting tools and education.
-- TradingView – As above.
-- Barchart.com – Futures and options data.
+**Sentiment and Monitoring**
+- NEPSE turnover and sector pages – Useful for watching crowd focus and breadth.
+- ShareSansar and Merolagani news feeds – Helpful for tracking local narratives and event-driven moves.
+- Company notices on NEPSE – Best source for confirmations when rumors start circulating.
 
-**Alternative Data / Sentiment**
-- Google Trends (trends.google.com) – Search interest.
-- Reddit (reddit.com/r/wallstreetbets, r/investing) – Social sentiment.
-- Twitter – Follow analysts and investors.
-- NewsAPI (newsapi.org) – News headlines for sentiment analysis.
-- Quiver Quantitative (quiverquant.com) – Alternative data for retail.
+### Data and Analysis Tools
 
-### Python Libraries for Finance
-
-- `yfinance` – Yahoo Finance data download.
-- `pandas_datareader` – Access FRED, Yahoo, Google, etc.
-- `numpy` / `pandas` – Data manipulation.
-- `matplotlib` / `seaborn` – Charting.
-- `mplfinance` – Financial charts.
-- `ta` (Technical Analysis library) – Pre‑built indicators.
-- `backtrader` / `zipline` – Backtesting frameworks.
-- `scikit‑learn` – Machine learning for predictions.
-- `transformers` / `finbert` – NLP for sentiment analysis.
+- Spreadsheet models – Useful for dividend, DCF, and peer-comparison work with NEPSE data.
+- `pandas` / `numpy` – Cleaning exported NEPSE price and financial-statement data.
+- `matplotlib` / `seaborn` / `mplfinance` – Visualising trends, volume, and technical setups.
+- `requests` / `beautifulsoup4` – Collecting public notices and tables from official sites when allowed.
+- `ta` – Calculating technical indicators on local price series.
+- Journal templates – Recording thesis, catalyst dates, and post-trade review notes.
 
 ### Podcasts
 
@@ -551,7 +537,7 @@ This bibliography includes works cited and influential texts that shaped the con
 
 *(This space would typically contain a detailed index with page numbers. Since this is a digital manuscript, the index would be generated during final typesetting. Key terms covered in the book include:)*
 
-- 10‑K, 10‑Q filings
+- Annual reports, quarterly reports, and NEPSE filings
 - Accumulation/distribution line
 - Alpha
 - Alternative data
@@ -607,7 +593,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Free cash flow (FCFF, FCFE)
 - Fundamental analysis
 - Golden rules
-- Google Trends
+- Local newsflow and turnover-trend monitoring
 - Gordon growth model
 - Gross margin
 - Growth investing
@@ -659,7 +645,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Price multiples (P/E, P/B, P/S, P/CF)
 - Primary trend
 - Profitability ratios
-- Put/call ratio
+- Sentiment gauges based on turnover, breadth, and newsflow
 - Random Walk Hypothesis
 - Ratio analysis
 - Rebalancing
@@ -701,7 +687,7 @@ This bibliography includes works cited and influential texts that shaped the con
 - Unsystematic risk
 - Valuation
 - Value investing
-- VIX (Volatility Index)
+- Volatility observed through NEPSE index swings and turnover spikes
 - Volume indicators
 - WACC
 - Working capital
