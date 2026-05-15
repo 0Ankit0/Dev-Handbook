@@ -62,7 +62,7 @@ These rules distill the wisdom of successful investors into actionable principle
 
 28. **Keep a trading journal.** Record your reasons for entry and exit, your emotional state, and the outcome. Review regularly to learn from mistakes.
 
-29. **Taxes matter.** Always check the latest Nepali capital gains, dividend, and transaction tax rules before trading. Your after-tax return is what matters, not just the quoted gain.
+29. **Taxes matter.** Always check the latest Nepali capital gains, dividend, and transaction tax rules before trading. Use current notices from the Inland Revenue Department (ird.gov.np) and relevant SEBON guidance so your after-tax return stays realistic.
 
 30. **The most important rule: Never lose money.** (Rule 2: Never forget rule 1.) – Warren Buffett.
 
@@ -185,7 +185,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Catalyst:** An event or development that triggers a revaluation of a company's stock, such as a new product launch, regulatory approval, or management change.
 
-**Corporate rehabilitation / liquidation:** Terms used for restructuring or winding up a distressed company under applicable Nepali insolvency and company law processes.
+**Corporate rehabilitation / liquidation:** Terms used for restructuring or winding up a distressed company under Nepal's Insolvency Act, 2063 and related company law processes.
 
 **Confirmation:** The principle that multiple technical indicators or time frames should align before taking a trading signal.
 
@@ -359,7 +359,7 @@ This appendix lists the most important formulas used in fundamental and technica
 
 **Risk Premium:** The excess return an investor expects for taking on additional risk.
 
-**Risk-Free Rate:** The theoretical return of an investment with zero risk, often approximated in Nepal by short-term government treasury bills or similar sovereign instruments.
+**Risk-Free Rate:** The theoretical return of an investment with zero risk, often approximated in Nepal by 91-day or 364-day government treasury bills and similar sovereign instruments.
 
 **Secondary Offering:** The sale of new or existing shares by a company (or insiders) after the IPO.
 
