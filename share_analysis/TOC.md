@@ -1,7 +1,7 @@
 # Share Analysis Handbook
 ### Part I: Laying the Foundation – The Investor's Toolkit
 ### [Chapter 1: Understanding the Stock Market Landscape](1.%20laying_the_foundation_the_investors_toolkit/1.%20understanding_the_stock_market_landscape.ipynb)
-- 1.1 What are Shares? Common, Preferred, and ADRs
+- 1.1 What are Shares? Ordinary Shares, Promoter Shares, and Public Float in Nepal
 - 1.2 How Securities Are Traded: From Exchanges to Order Types
 - 1.3 Market Participants and Market Makers
 - 1.4 An Overview of Investment Alternatives: Stocks, Bonds, ETFs, and Funds
@@ -23,7 +23,7 @@
 ### Part II: Fundamental Analysis – Valuing the Business
 
 ### [Chapter 4: Navigating the Financial Statements](2.%20fundamental_analysis_valuing_the_business/4.%20navigating_the_financial_statements.ipynb)
-- 4.1 The Primary Documents: Annual Reports (10-K) and Quarterly Reports (10-Q)
+- 4.1 The Primary Documents: Annual Reports, Quarterly Reports, and NEPSE Filings
 - 4.2 The Balance Sheet: Assets, Liabilities, and Equity
 - 4.3 The Income Statement: Revenue, Expenses, and Profits
 - 4.4 The Cash Flow Statement: Operating, Investing, and Financing Activities
@@ -84,7 +84,7 @@
 - 12.2 Momentum Oscillators: Relative Strength Index (RSI) and Stochastic
 - 12.3 Volatility Indicators: Bollinger Bands
 - 12.4 Volume Indicators: On-Balance Volume (OBV) and Accumulation/Distribution
-- 12.5 Sentiment Indicators: Put/Call Ratios, VIX
+- 12.5 Sentiment Indicators: Retail Sentiment, Turnover Patterns, and News Flow
 
 ### [Chapter 13: Candlestick Patterns](3.%20technical_analysis_mastering_the_chart/13.%20candlestick_patterns.ipynb)
 - 13.1 Single-Session Indicators: Doji, Marubozu, Hammer
